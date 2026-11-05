@@ -62,6 +62,13 @@ The 50 reviewed records were used for guideline development and non-blind
 adjudication, not independent evaluation. Manual labels were not used
 to fit NMF.
 
+## Annotation guide
+
+The [frozen v2 annotation guide](docs/ANNOTATION_GUIDE.md) documents all eight
+manual coding categories, values and interpretation boundaries. These
+categories are separate from the NMF topics and describe expressed language,
+not a speaker's internal psychological state.
+
 ## Reproduction
 
 Install dependencies:
