@@ -1,0 +1,9 @@
+# Direct dependencies; original versions are in the NMF run manifest.
+requests
+beautifulsoup4
+pandas
+numpy
+scipy
+scikit-learn
+matplotlib
+notebook

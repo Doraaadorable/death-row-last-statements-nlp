@@ -1,0 +1,7 @@
+{
+  "source_sha256": "d66a330b121ae5e59d96b58fb12d34b0c4fdbd9059d427abdc7bd182b07bcc2c",
+  "minimum_words_comparison": 10,
+  "features": "Fixed vocabulary and IDF fitted on full eligible corpus",
+  "initialization": "nndsvda, random_state=42",
+  "scope": "Exploratory document-removal sensitivity, including any resulting initialization changes. Not a population test."
+}

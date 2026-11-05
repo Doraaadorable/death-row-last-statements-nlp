@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+data/raw/
+data/processed/
+*.bak
+*.backup_*
+*.zip
+tmp/
+results/nmf_v1/
+results/nmf_v2/topic_review_*.md
+results/nmf_v2/zero_feature_records.csv
+results/short_text_sensitivity_v1/short_records_in_comparison.csv
+results/prayer_sensitivity_v1/selected_prayer_records.csv
