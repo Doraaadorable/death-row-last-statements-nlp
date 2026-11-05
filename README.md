@@ -71,19 +71,82 @@ not a speaker's internal psychological state.
 
 ## Reproduction
 
-Install dependencies:
+### 1. Set up a fresh working copy
+
+Use a new folder so the snapshot does not overwrite existing local data.
 
 ```bash
+git clone https://github.com/Doraaadorable/death-row-last-statements-nlp.git
+cd death-row-last-statements-nlp
+python3 -m venv .venv
+source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-The notebook reads saved model outputs. Model fitting and robustness
-procedures are in `src/`.
+### 2. Obtain the curated inputs
 
-Curated data under `data/processed/` are currently excluded from Git.
-A clone therefore requires the original data snapshots before the
-notebook can be rerun. A public snapshot distribution route is not yet
-provided.
+Download [data_snapshot_v1.zip](https://github.com/Doraaadorable/death-row-last-statements-nlp/releases/download/data-v1/data_snapshot_v1.zip)
+from [Data snapshot v1](https://github.com/Doraaadorable/death-row-last-statements-nlp/releases/tag/data-v1)
+and place it in the project root. Select the named data attachment, not
+GitHub's automatically generated source-code ZIP.
+
+Expected ZIP SHA-256:
+
+```text
+c56a4be1915cdaefd5ea1878da47d009f0cb9de8082401f7de241d42a7266168
+```
+
+On macOS, verify the downloaded bytes before extraction:
+
+```bash
+shasum -a 256 data_snapshot_v1.zip
+```
+
+After confirming the hash matches, extract into the fresh project folder:
+
+```bash
+unzip -n data_snapshot_v1.zip
+```
+
+The archive contains four curated CSV inputs under `data/processed/`,
+the model-text change log, preparation metadata, a snapshot manifest
+with per-file hashes, and source/use notes. Curated data remain ignored
+by Git and are distributed through the Release attachment.
+
+### 3. Read or rerun the analysis notebook
+
+```bash
+python -m notebook
+```
+
+Open `notebooks/01_last_statements_analysis.ipynb` and select
+**Restart Kernel and Run All Cells**. The notebook reads the published
+model outputs and verifies the model-corpus hash; it does not refit NMF.
+
+### 4. Optional: refit the models and robustness experiments
+
+Run these in order in a separate working copy if you want to preserve
+the published result files for comparison:
+
+```bash
+python src/prepare_model_text.py
+python src/run_nmf_v2.py
+python src/check_nmf_stability.py
+python src/check_short_text_sensitivity.py
+python src/check_prayer_sensitivity.py
+```
+
+The original environment versions and parameters are recorded in
+`results/nmf_v2/run_manifest.json`. The dependency list is not a lockfile.
+Numerical results and tied keyword rankings can vary across versions;
+the existing reference checks compare ranked terms and may stop if the
+ordering differs.
+
+This snapshot supports downstream reproduction from curated inputs.
+Raw HTML, upstream extraction tables and every manual review decision
+are not included, so it is not a complete reconstruction of source
+collection and extraction. The index dates describe the supplied
+snapshot, not the archive's packaging date.
 
 ## Source and assistance
 
