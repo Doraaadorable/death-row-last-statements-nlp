@@ -38,6 +38,16 @@ thanks and support, and encouragement.
 Topic coefficients are not probabilities. The project does not infer
 actual guilt, sincerity, remorse or psychological state.
 
+## Results at a glance
+
+### Six-topic exploratory summary
+
+![Six-topic NMF results](reports/figures/notebook_topics_k6.png)
+
+### Robustness checks
+
+![Topic robustness](reports/figures/notebook_robustness.png)
+
 ## Methods
 
 TF-IDF uses unigrams and bigrams. NMF models with 4, 6 and 8 components
