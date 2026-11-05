@@ -201,5 +201,8 @@ was built in [the inclusion-review notebook](notebooks/03_inclusion_review.ipynb
 using the owner's upstream cleaning table. That full table is not in the
 Release; its SHA-256 is recorded in the committed evidence extract.
 
-The supplementary notebook reads these tables and is supplied without saved
-outputs. Historical result directories and frozen labels remain unchanged.
+The supplementary notebook reads these tables. Its owner-executed outputs were
+committed in `5bfe829`: three code cells numbered 1 through 3, four saved display
+outputs and no stored error outputs. This verifies result loading and display,
+not a new model fit or independent execution. Historical result directories
+and frozen labels remain unchanged.
