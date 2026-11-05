@@ -1,6 +1,5 @@
 """Check initialization stability on a fixed corpus and vocabulary."""
 
-import ast
 import hashlib
 import json
 import re
@@ -13,11 +12,11 @@ import sklearn
 from scipy.optimize import linear_sum_assignment
 from sklearn.decomposition import NMF
 from sklearn.exceptions import ConvergenceWarning
-from sklearn.feature_extraction.text import TfidfVectorizer
+from text_features import make_vectorizer, identical_column_groups, group_jaccard, verify_reference
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "results/nmf_v2"
-OUT = ROOT / "results/nmf_stability_v1"
+OUT = ROOT / "results/nmf_stability_v2"
 OUT.mkdir(parents=True, exist_ok=True)
 
 source = ROOT / "data/processed/model_corpus_v1.csv"
@@ -27,43 +26,16 @@ digest = hashlib.sha256(source.read_bytes()).hexdigest()
 if digest != manifest["source_sha256"]:
     raise ValueError("Model corpus changed since the v2 run")
 
-# Load only the reviewed normalization function, without running v2.
-script_path = ROOT / "src/run_nmf_v2.py"
-script = script_path.read_text(encoding="utf-8")
-tree = ast.parse(script)
-functions = [
-    node for node in tree.body
-    if isinstance(node, ast.FunctionDef) and node.name == "normalize"
-]
-if len(functions) != 1:
-    raise ValueError("Expected one normalize function")
-
-namespace = {"re": re}
-exec(
-    compile(ast.get_source_segment(script, functions[0]),
-            str(script_path), "exec"),
-    namespace,
-)
-normalize = namespace["normalize"]
-
 df = pd.read_csv(source, keep_default_na=False)
 df = df.loc[
     df["preparation_status"].eq("ready_for_exploration")
 ].sort_values("execution_number").reset_index(drop=True)
 
-params = manifest["vectorizer_parameters"].copy()
-params["ngram_range"] = tuple(params["ngram_range"])
-
-vectorizer = TfidfVectorizer(
-    preprocessor=normalize,
-    lowercase=False,
-    token_pattern=r"(?u)\b[a-z][a-z]+\b",
-    **params,
-)
-
+vectorizer = make_vectorizer(manifest["vectorizer_parameters"])
 X = vectorizer.fit_transform(df["model_text"])
 X = X[np.asarray(X.getnnz(axis=1)).ravel() > 0]
 terms = vectorizer.get_feature_names_out()
+groups = identical_column_groups(X)
 
 if X.shape != (
     manifest["documents_modeled"], manifest["features"]
@@ -97,19 +69,7 @@ runs = []
 for k in [4, 6, 8]:
     reference, H_ref, reference_ok = fit(k, "nndsvda", 42)
 
-    # Check that reference topic ordering reproduces the saved v2 terms.
-    saved = pd.read_csv(BASE / f"topic_terms_k{k}.csv")
-    for topic in range(k):
-        expected = saved.loc[
-            saved["topic"].eq(topic + 1)
-        ].sort_values("rank")["term"].tolist()
-        actual = terms[
-            H_ref[topic].argsort()[::-1][:len(expected)]
-        ].tolist()
-        if actual != expected:
-            raise ValueError(
-                f"k={k}: reference terms differ from saved v2"
-            )
+    verify_reference(BASE, k, H_ref, terms, X)
 
     for seed in [0, 1, 2, 3, 4]:
         model, H_new, converged = fit(k, "random", seed)
@@ -121,9 +81,7 @@ for k in [4, 6, 8]:
         matched = []
         for ref_id, new_id in zip(ref_ids, new_ids):
             cosine = float(similarity[ref_id, new_id])
-            left = set(H_ref[ref_id].argsort()[-15:])
-            right = set(H_new[new_id].argsort()[-15:])
-            jaccard = len(left & right) / len(left | right)
+            jaccard = group_jaccard(H_ref[ref_id], H_new[new_id], terms, groups)
 
             details.append({
                 "k": k,
@@ -131,7 +89,7 @@ for k in [4, 6, 8]:
                 "reference_topic": int(ref_id + 1),
                 "matched_topic": int(new_id + 1),
                 "cosine_similarity": cosine,
-                "top15_jaccard": jaccard,
+                "top15_group_jaccard": jaccard,
                 "converged": converged,
                 "reference_converged": reference_ok,
             })
@@ -169,7 +127,7 @@ topic_summary = detail_df.groupby(
 ).agg(
     mean_cosine=("cosine_similarity", "mean"),
     minimum_cosine=("cosine_similarity", "min"),
-    mean_top15_jaccard=("top15_jaccard", "mean"),
+    mean_top15_group_jaccard=("top15_group_jaccard", "mean"),
 )
 
 print("\nOVERALL INITIALIZATION STABILITY")
@@ -182,7 +140,7 @@ print(topic_summary.round(3).to_string())
     json.dumps({
         "source_sha256": digest,
         "normalization_script_sha256":
-            hashlib.sha256(script_path.read_bytes()).hexdigest(),
+            hashlib.sha256((ROOT / "src/text_features.py").read_bytes()).hexdigest(),
         "sklearn": sklearn.__version__,
         "seeds": [0, 1, 2, 3, 4],
         "comparison": "Random initialization versus v2 NNDSVDa reference",
@@ -193,3 +151,4 @@ print(topic_summary.round(3).to_string())
 
 print("\nSaved:", OUT)
 print("Source data, manual labels and v2 results were not modified.")
+

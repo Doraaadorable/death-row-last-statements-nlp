@@ -14,8 +14,9 @@ from sklearn.decomposition import NMF
 from sklearn.exceptions import ConvergenceWarning
 from sklearn.feature_extraction.text import (
     ENGLISH_STOP_WORDS,
-    TfidfVectorizer,
 )
+
+from text_features import make_vectorizer
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "data/processed/model_corpus_v1.csv"
@@ -30,58 +31,15 @@ df = df.loc[
 assert df["execution_number"].is_unique
 assert df["model_text"].str.strip().ne("").all()
 
-def normalize(text):
-    text = text.replace("’", "'").replace("‘", "'").lower()
-
-    # Normalize alternative spellings of plural "you".
-    text = re.sub(r"\b(?:y'all|ya'll)s\b", "your", text)
-    text = re.sub(r"\b(?:y'all|ya'll)\b", "you all", text)
-
-    # Preserve negation while expanding standard contractions.
-    text = re.sub(r"\bwon't\b", "will not", text)
-    text = re.sub(r"\bcan't\b", "can not", text)
-    text = re.sub(r"\bshan't\b", "shall not", text)
-
-    # "Ain't" has several possible auxiliaries; retain only
-    # its clear negation rather than inventing an auxiliary.
-    text = re.sub(r"\bain't\b", "not", text)
-    text = re.sub(r"n't\b", " not", text)
-
-    text = re.sub(r"\bi'm\b", "i am", text)
-    text = re.sub(r"\blet's\b", "let us", text)
-    text = re.sub(r"\bma'am\b", "madam", text)
-
-    text = re.sub(r"'re\b", " are", text)
-    text = re.sub(r"'ve\b", " have", text)
-    text = re.sub(r"'ll\b", " will", text)
-
-    # 'd may mean had/would. Remove the suffix without
-    # choosing an interpretation. Both are baseline stopwords.
-    text = re.sub(r"'d\b", "", text)
-
-    # 's can be possessive or is/has. Retain the base word;
-    # do not assign a grammatical interpretation.
-    text = re.sub(r"'s\b", "", text)
-
-    return text
-
-
 # Preserve common negation terms. TF-IDF still does not understand negation.
 stop_words = sorted(
     set(ENGLISH_STOP_WORDS) - {"no", "not", "nor", "never"}
 )
 
-vectorizer = TfidfVectorizer(
-    preprocessor=normalize,
-    lowercase=False,
-    stop_words=stop_words,
-    token_pattern=r"(?u)\b[a-z][a-z]+\b",
-    ngram_range=(1, 2),
-    min_df=2,
-    max_df=0.85,
-    max_features=5000,
-    sublinear_tf=True,
-)
+vectorizer = make_vectorizer({
+    "stop_words": stop_words, "ngram_range": (1, 2), "min_df": 2,
+    "max_df": 0.85, "max_features": 5000, "sublinear_tf": True,
+})
 
 X = vectorizer.fit_transform(df["model_text"])
 
@@ -240,3 +198,4 @@ for k in [4, 6, 8]:
 
 print("\nSaved:", OUT)
 print("Manual labels were not used. Source files were not modified.")
+
