@@ -28,9 +28,11 @@ The follow-up script fitted 18 models: k=4/6/8, each with five random seeds and
 one NNDSVDa reference. All converged. Short-text sensitivity was rerun against
 the saved full matrices. Syntax compilation and a synthetic identical-column
 and ranking check passed. Environment versions and input hashes are in the
-follow-up manifest. The supplementary notebook is supplied without outputs;
-its cells read the executed script outputs, and it has not been independently
-executed as a notebook in this follow-up environment.
+follow-up manifest. The owner subsequently executed the supplementary notebook
+and committed its outputs in `5bfe829`. Inspection of the committed artifact
+found three code cells numbered 1 through 3, four display outputs, no stored
+errors and no personal absolute paths. Its cells read saved script outputs;
+this is not evidence of refitting models or independent notebook execution.
 
 ## Initialization results
 
@@ -85,9 +87,9 @@ the upstream cleaning table, which is not bundled in the Release.
 No retrospective annotation change log has been fabricated. The v1-to-v2
 history needs contemporaneous records or explicitly reconstructed provenance.
 A complete dependency lock and independent fresh-environment execution of the
-new notebook remain follow-up work. Existing notebook outputs describe an
-older historical run. The supplementary notebook avoids personal paths and
-contains no stored output.
+new notebook remain follow-up work. The main analysis notebook retains its
+historical outputs; the supplementary notebook now includes the owner's
+executed outputs without personal paths.
 
 ## Interpretation corrections
 The selected-prayer deletion is a targeted influence check informed by the
