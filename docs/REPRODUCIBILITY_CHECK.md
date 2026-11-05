@@ -14,7 +14,11 @@ older outputs, including local paths.
 
 The [follow-up audit](FOLLOWUP_AUDIT.md) documents actual script executions,
 versions, input hashes, regenerated numerical references and separate new
-result directories. The supplementary notebook has no saved outputs; its
-independent execution remains to be completed. Neither notebook reproduction
-nor downstream model reproduction establishes source collection accuracy.
+result directories. The owner-executed supplementary notebook is now committed
+at `5bfe829`; the current file contains three code cells numbered 1 through 3,
+four display outputs and no stored errors or personal absolute paths.
+This inspection establishes that execution evidence is available in the
+repository. The notebook reads saved results; it does not refit NMF. Independent
+execution remains separate from this owner-run evidence. Neither notebook
+reproduction nor downstream model reproduction establishes source collection accuracy.
 Raw HTML and upstream extraction decisions are not included in the release.
