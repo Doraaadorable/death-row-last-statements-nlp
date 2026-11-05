@@ -58,12 +58,29 @@ claim, classifier evaluation, or population inference. Execution 117 is in the
 sample; previously inspected counterexamples 391 and 499 are not.
 
 ## Remaining evidence gaps
-The inclusion ledger supports 480 included records and 102 exclusions based
-on the inventory's shared-notice link category. For 21 additional absent
-records, the upstream decision evidence is unavailable in the released
-snapshot; their status remains unknown and their reason fields remain blank.
-Link-category evidence does not establish the contents of a shared notice page.
-Recover the upstream extraction and cleaning tables before resolving those rows.
+The original v1 ledger left 21 absent records unknown because upstream
+cleaning evidence was missing from the Release. That evidence has now been
+extracted from the owner's local cleaning table and committed in
+[the 21-record evidence table](../reports/inclusion_evidence_21_v1.csv), with
+the upstream file's SHA-256 and original cleaning notes. The full upstream
+table and raw HTML remain outside the Release.
+
+The [v2 ledger](../reports/inclusion_ledger_v2.csv) records 480 included and
+123 historically excluded records: 102 shared-notice links, 13 reports of no
+statement, four ambiguous short responses and four summaries or references.
+Here excluded denotes documented exclusion from the frozen candidate corpus,
+not a claim that the exclusion rule has been independently validated.
+Link-category evidence alone does not establish shared-page content.
+
+The owner's supplied cached-page text does not resolve speaker attribution
+for executions 463, 533, 539 and 567 (No/None). They remain excluded with an
+explicit unresolved-attribution flag. Execution 241 reports the translation
+Goodbye and is a future inclusion candidate; its treatment should be reviewed
+against other supplied translations. No frozen corpus, annotation or model
+was changed. The historical v1 ledger remains available. The baseline ledger
+script still regenerates v1; v2 construction is documented in the
+[inclusion-review notebook](../notebooks/03_inclusion_review.ipynb) and requires
+the upstream cleaning table, which is not bundled in the Release.
 
 No retrospective annotation change log has been fabricated. The v1-to-v2
 history needs contemporaneous records or explicitly reconstructed provenance.
