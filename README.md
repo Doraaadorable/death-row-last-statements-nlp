@@ -177,8 +177,15 @@ reconstruction captures approximately 7.3%, 8.7% and 10.0% of squared TF-IDF
 Frobenius norm at k=4/6/8; this is neither semantic coverage nor regression R².
 
 Frozen-label contrasts report n and quartiles for 0/1/u separately and are
-strictly descriptive. The inclusion ledger records 480 included, 102 excluded
-shared-notice links, and 21 unknown decisions pending upstream evidence.
+strictly descriptive. The [current inclusion ledger](reports/inclusion_ledger_v2.csv)
+records 480 included and 123 excluded records: 102 shared-notice links,
+13 reports of no statement, four ambiguous short responses, and four summaries
+or references. The [21-record evidence extract](reports/inclusion_evidence_21_v1.csv)
+documents previously missing historical exclusion reasons. This establishes
+current-version inclusion history, not that every exclusion is substantively
+settled: speaker attribution remains unresolved for executions 463, 533, 539
+and 567; execution 241 contains an explicit supplied translation and is flagged
+for reconsideration in a future corpus version. Frozen data and models are unchanged.
 Zero-feature execution IDs are 83 and 238.
 
 To regenerate only the new follow-up tables after obtaining the data snapshot:
@@ -187,6 +194,12 @@ To regenerate only the new follow-up tables after obtaining the data snapshot:
 python src/run_followup_audit.py
 python src/build_inclusion_ledger.py
 ```
+
+`build_inclusion_ledger.py` regenerates the historical v1 ledger from the Release
+snapshot; it does not regenerate the evidence-enriched v2 ledger. The latter
+was built in [the inclusion-review notebook](notebooks/03_inclusion_review.ipynb)
+using the owner's upstream cleaning table. That full table is not in the
+Release; its SHA-256 is recorded in the committed evidence extract.
 
 The supplementary notebook reads these tables and is supplied without saved
 outputs. Historical result directories and frozen labels remain unchanged.
