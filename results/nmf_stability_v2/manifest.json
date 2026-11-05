@@ -1,0 +1,14 @@
+{
+  "source_sha256": "d66a330b121ae5e59d96b58fb12d34b0c4fdbd9059d427abdc7bd182b07bcc2c",
+  "normalization_script_sha256": "7a75986fc5d341054306cfd199f30babfaf7ad0d092479693b3b937c9fcacb43",
+  "sklearn": "1.8.0",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "comparison": "Random initialization versus v2 NNDSVDa reference",
+  "scope": "Fixed-data initialization stability only; not semantic validity or sampling robustness."
+}

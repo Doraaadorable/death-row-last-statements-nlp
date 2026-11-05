@@ -1,0 +1,16 @@
+{
+  "scope": "Follow-up on fixed v2 feature space; no independent validation",
+  "source_sha256": "d66a330b121ae5e59d96b58fb12d34b0c4fdbd9059d427abdc7bd182b07bcc2c",
+  "annotation_sha256": "64cd6e1376527bb7a79a97bc16afab6193db7777a921ceb749f6a218bc9384ef",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "scipy": "1.17.0",
+  "sklearn": "1.8.0",
+  "features": 3196,
+  "groups": 3011,
+  "duplicate_groups": 90,
+  "features_in_duplicate_groups": 275,
+  "protocol_commit": "2b4157c1a01d7c99e419d1059af1eb487b9090bf",
+  "reference_provenance": "Regenerated after protocol; validated against historical partial term weights and full document coefficients. Historical full H was not available."
+}

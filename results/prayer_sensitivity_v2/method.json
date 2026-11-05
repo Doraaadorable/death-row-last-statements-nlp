@@ -1,0 +1,20 @@
+{
+  "source_sha256": "d66a330b121ae5e59d96b58fb12d34b0c4fdbd9059d427abdc7bd182b07bcc2c",
+  "selected_phrase_pattern": "\\bthe lord is my shepherd\\b|\\bour father\\b.{0,40}\\bheaven\\b",
+  "omitted_execution_numbers": [
+    195,
+    221,
+    274,
+    300,
+    304,
+    338,
+    352,
+    423,
+    435,
+    443
+  ],
+  "removal_unit": "Entire record, including its non-prayer content",
+  "features": "Fixed vocabulary and IDF fitted on full eligible corpus",
+  "initialization": "nndsvda, random_state=42",
+  "scope": "Selected-prayer record-removal sensitivity, including any resulting initialization changes. Not a population test."
+}

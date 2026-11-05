@@ -56,7 +56,10 @@ omission of modeled texts shorter than ten words, and omission of ten
 records containing selected prayer phrases.
 
 The removal experiments keep vocabulary and IDF fixed and remove entire
-records. They do not isolate the effects of prayer passages alone.
+records. They do not isolate the effects of prayer passages alone. The ten
+prayer records were selected using the observed component's content: this is
+a targeted influence check, not independent confirmation. The prayer component
+reflects repeated expression form; its substantive interpretation remains open.
 
 The 50 reviewed records were used for guideline development and non-blind
 adjudication, not independent evaluation. Manual labels were not used
@@ -138,9 +141,10 @@ python src/check_prayer_sensitivity.py
 
 The original environment versions and parameters are recorded in
 `results/nmf_v2/run_manifest.json`. The dependency list is not a lockfile.
-Numerical results and tied keyword rankings can vary across versions;
-the existing reference checks compare ranked terms and may stop if the
-ordering differs.
+Numerical results can vary across versions. Repaired checks use numerical
+reference weights and regenerated full matrices rather than keyword ordering.
+They save diagnostics in new v2 directories, preserving historical outputs.
+See [the follow-up report](docs/FOLLOWUP_AUDIT.md) for tolerances and provenance.
 
 This snapshot supports downstream reproduction from curated inputs.
 Raw HTML, upstream extraction tables and every manual review decision
@@ -159,3 +163,30 @@ Statement-level source links are retained in the corpus.
 AI assisted with code, documentation and interpretation discussions.
 The project owner reviewed and approved the v2 coding decisions.
 This does not constitute independent expert validation.
+
+## Follow-up audit
+
+Read [the follow-up notebook](notebooks/02_followup_audit.ipynb),
+[the dated protocol](docs/MODEL_SELECTION_PROTOCOL.md) and
+[the execution report](docs/FOLLOWUP_AUDIT.md).
+
+The follow-up retains all 3,196 features, saves complete regenerated numerical
+references, and separates random-seed pairwise comparisons from comparisons
+with the NNDSVDa reference. No unique winning k is established. Reference
+reconstruction captures approximately 7.3%, 8.7% and 10.0% of squared TF-IDF
+Frobenius norm at k=4/6/8; this is neither semantic coverage nor regression R².
+
+Frozen-label contrasts report n and quartiles for 0/1/u separately and are
+strictly descriptive. The inclusion ledger records 480 included, 102 excluded
+shared-notice links, and 21 unknown decisions pending upstream evidence.
+Zero-feature execution IDs are 83 and 238.
+
+To regenerate only the new follow-up tables after obtaining the data snapshot:
+
+```bash
+python src/run_followup_audit.py
+python src/build_inclusion_ledger.py
+```
+
+The supplementary notebook reads these tables and is supplied without saved
+outputs. Historical result directories and frozen labels remain unchanged.
