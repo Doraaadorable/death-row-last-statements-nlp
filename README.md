@@ -29,14 +29,30 @@ thanks and support, and encouragement.
 
 ## Main findings
 
-- Contraction normalization removed a tokenization-driven topic.
-- Topic sensitivity differs across initialization and record-removal
-  experiments.
-- Lexical stability does not guarantee semantic validity: similar words
-  can express denial, uncertainty or quoted denial followed by admission.
+- The six-component exploratory reading identifies recurring expressions of
+  apology and forgiveness, affection, case-related denial and explanation,
+  repeated prayer, thanks and support, and encouragement. These are overlapping
+  linguistic patterns, not validated categories assigned to every person.
+- Initialization results do not identify a unique best topic count. At k=6,
+  the lower quartile of matched cosines across random-seed pairs is 0.938,
+  but the weakest match is 0.054. Typical agreement can conceal a fragile component.
+- In the 50-record development sample, Topic 1's median coefficient is 0.181
+  for apology/forgiveness-positive records (n=22), versus 0 for negative records
+  (n=26). Topic 3's corresponding medians for the innocence-dispute label are
+  0.145 (n=8) and 0.033 (n=40). These are descriptive contrasts, not independent
+  validation; [all prespecified contrasts](results/followup_audit_v1/topic_label_descriptive.csv),
+  including uncertainty groups, are reported.
+- Lexical stability does not guarantee semantic validity: similar words can
+  express denial, uncertainty or quoted denial followed by admission. Repeated
+  prayer wording also forms a component of expression style, whose substantive
+  meaning requires separate judgment.
+- Contraction normalization removed a tokenization-driven topic. The prayer
+  removal experiment is a targeted influence check, not independent confirmation.
 
 Topic coefficients are not probabilities. The project does not infer
 actual guilt, sincerity, remorse or psychological state.
+
+For a short project explanation, see the [project brief](docs/PROJECT_BRIEF.md).
 
 ## Results at a glance
 
