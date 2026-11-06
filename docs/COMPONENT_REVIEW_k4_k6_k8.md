@@ -7,14 +7,14 @@ this is not independent blind coding or a completed owner-adjudicated review.
 Frozen eight-label annotations and all model outputs are unchanged.
 
 The planned review covers 18 components. Evidence entries have been started for
-four: k6 topics 1, 4, 5 and k8 topic 5. No component is declared fully reviewed.
-The other 14 components remain pending this uniform review.
+six: k6 topics 1, 4, 5 and k8 topics 5, 7, 8. No component is declared fully reviewed.
+The other 12 components remain pending this uniform review.
 
 ## Reading procedure and limits
 Notebook 04 ranks positive coefficients, restricts displayed examples to at
 least 20 words and breaks coefficient ties by execution number.
 For k6 topic 1, displayed ranks 1-6 and 151-153 were read (offsets 0, 3 and 150).
-For the other three entries, only ranks 1-3 were read. These are purposive
+For the other five entries, only ranks 1-3 were read. These are purposive
 diagnostic readings, not representative samples or estimates of semantic purity.
 Additional lower-ranked and short-text checks remain pending.
 
@@ -100,6 +100,51 @@ This reference solution is interpretable, but prior random-initialization
 comparison gave mean matched cosine about 0.326 for this component. Clear
 reference examples do not establish reproducible component recovery.
 
+## k8, topic 8
+Provisional description: gratitude and acknowledgment of support, with
+relational and closing language. Documents examined: 558, 531 and 345.
+
+1. Specific pattern: thank, friends, family, support and conventional thanks
+frames; religious vocabulary is less prominent in the leading terms than in
+k6 topic 5.
+2. Documentary support: 558 thanks community and overseas supporters; 531
+thanks supporters and loved ones; 345 thanks family, friends and people who
+continued their friendship despite disagreement.
+3. Contradictions and mixed content: 558 also apologizes and explicitly permits
+the procedure to continue. 531 combines thanks and affection, but thanking the
+warden alone is not an explicit readiness statement. 345 ends by addressing
+the warden; the ellipsis does not justify reconstructing an unreported
+instruction. The unspecified decision mentioned in 345 is not identified here.
+
+Compared with the three reviewed k6 topic-5 examples, these examples support
+a narrower gratitude/support description in this reference fit. They do not
+establish purity across the component or a causal split between fitted models.
+
+## k8, topic 7
+Provisional description: procedural readiness and statement-closing language,
+sometimes mixed with farewell or home imagery.
+Documents examined: 129, 398 and 461.
+
+1. Specific pattern: ready, ready warden and related closing expressions.
+2. Documentary support: 129 explicitly says ready to the warden; 398 explicitly
+says ready to go; 461 explicitly says ready to go to the warden.
+3. Contradictions and mixed content: 129 refers to a prepared media statement,
+whose content cannot be inferred from this excerpt. 398 also expresses
+affection and invokes eternity/home imagery. 461 combines affection and
+readiness with granting forgiveness to others, not asking for forgiveness.
+The referent of atrocity and the meaning of coming home dad are not resolved
+by this reading. No acceptance of the justice of the sentence, calmness or
+private willingness is inferred from readiness wording.
+
+Prior numerical checks illustrate distinct stability questions: topic 7 had
+mean reference-matched cosine about 0.998 across random starts, but only about
+0.278 after removing modeled texts shorter than ten words. Numerical
+convergence and initialization agreement do not imply robustness to document
+composition. The removal refits also change the optimization problem and its
+initialization, so the comparison does not isolate a causal effect of short
+wording alone. Inspect short examples next: the current 20-word display rule
+omits precisely some texts implicated in that sensitivity.
+
 ## Cross-k observations
 Full-vector cosine between k6 topic 4 and k8 topic 4 is about 0.983, supporting
 lexical similarity of these two reference components, not semantic equivalence
@@ -112,7 +157,7 @@ that fitting k8 causally split a single k6 component: these are separately
 fitted models, and similarities are neither probabilities nor additive shares.
 
 ## Next review actions
-Read k8 topics 8 and 7 using the same questions, then check lower-ranked and
-short examples. Continue to the other components, including every k4 component.
+Check lower-ranked and short examples, starting with k8 topic 7. Continue to
+the remaining components, including every k4 component.
 Do not mark the protocol's interpretation stage complete until every component
 has an evidence entry and the remaining boundary checks are documented.
