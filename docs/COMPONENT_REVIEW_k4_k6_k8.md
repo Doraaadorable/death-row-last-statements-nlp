@@ -7,14 +7,14 @@ this is not independent blind coding or a completed owner-adjudicated review.
 Frozen eight-label annotations and all model outputs are unchanged.
 
 The planned review covers 18 components. Evidence entries have been started for
-six: k6 topics 1, 4, 5 and k8 topics 5, 7, 8. No component is declared fully reviewed.
-The other 12 components remain pending this uniform review.
+eight: k6 topics 1, 2, 4, 5, 6 and k8 topics 5, 7, 8. No component is declared fully reviewed.
+The other 10 components remain pending this uniform review.
 
 ## Reading procedure and limits
 Notebook 04 ranks positive coefficients, restricts displayed examples to at
 least 20 words and breaks coefficient ties by execution number.
 For k6 topic 1, displayed ranks 1-6 and 151-153 were read (offsets 0, 3 and 150).
-For the other five entries, only ranks 1-3 were read. These are purposive
+For the other seven entries, only ranks 1-3 were read. These are purposive
 diagnostic readings, not representative samples or estimates of semantic purity.
 Additional lower-ranked and short-text checks remain pending.
 
@@ -182,6 +182,42 @@ refitted solution; the refit also changes initialization and optimization.
 It does not isolate why the component changed. A high remaining coefficient
 mass does not guarantee preservation of a component after refitting.
 
+## k6, topic 2
+Provisional description: expressed affection and relational messages.
+Documents examined: 201, 399 and 445.
+
+1. Specific pattern: love, tell family, mom and associated relational words.
+2. Documentary support: 201 addresses family and Kami with love and continued
+presence; 399 asks for love to be conveyed to family; 445 addresses family and
+named people with love and anticipated separation.
+3. Contradictions and mixed content: 399 also encourages listeners to keep
+their head up, while 445 also says ready. Do not treat affection, encouragement
+and procedural closure as mutually exclusive person-level categories.
+The source wording I live y'all in 445 is retained; no silent correction is
+introduced or used as proof of a different intent.
+
+## k6, topic 6
+Provisional description: stay-strong encouragement with relational language.
+Documents examined: 360, 428 and 236.
+
+1. Specific pattern: strong, stay strong and stay dominate the leading features.
+2. Documentary support: all three explicitly urge recipients to stay strong
+while expressing love. 360 and 236 repeat that instruction; 428 also thanks
+supporters and says at peace.
+3. Contradictions and formulaic repetition: the examples contain affection
+as well as encouragement; repeated stay strong may help explain lexical
+concentration but has not been isolated experimentally. Their coefficients
+do not measure a person's own psychological strength. The presence of an
+encouragement expression is not evidence that encouragement is absent from
+topic-2 examples.
+
+Execution 399 says keep your head up, illustrating encouragement without the
+exact stay-strong formula. This motivates a natural-language boundary check;
+its topic-6 coefficient has not yet been inspected in this review, so it is
+not established as a missed detection. Neither component is a validated
+speech-act detector. Distinguishing communicative functions and distinguishing
+lexical formulas are separate interpretation questions.
+
 ## Cross-k observations
 Full-vector cosine between k6 topic 4 and k8 topic 4 is about 0.983, supporting
 lexical similarity of these two reference components, not semantic equivalence
@@ -195,7 +231,8 @@ fitted models, and similarities are neither probabilities nor additive shares.
 
 ## Next review actions
 The initial k8 topic-7 short-text diagnostic is now recorded. Continue with
-k6 topics 2 and 6, then the remaining components, including every k4 component.
+the k4 relational component and its correspondence to k6 topics 2 and 6,
+then the remaining components, including k6 topic 3 and every k4 component.
 Lower-ranked and short-text checks for the other entries remain pending.
 Do not mark the protocol's interpretation stage complete until every component
 has an evidence entry and the remaining boundary checks are documented.
