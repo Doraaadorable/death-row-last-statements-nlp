@@ -7,14 +7,14 @@ this is not independent blind coding or a completed owner-adjudicated review.
 Frozen eight-label annotations and all model outputs are unchanged.
 
 The planned review covers 18 components. Evidence entries have been started for
-twelve: k4 topics 1, 2, 3; all six k6 topics; and k8 topics 5, 7, 8. No component is declared fully reviewed.
-The other six components remain pending this uniform review.
+fourteen: all four k4 topics; all six k6 topics; and k8 topics 4, 5, 7, 8. No component is declared fully reviewed.
+The other four components remain pending this uniform review.
 
 ## Reading procedure and limits
 Notebook 04 ranks positive coefficients, restricts displayed examples to at
 least 20 words and breaks coefficient ties by execution number.
 For k6 topic 1, displayed ranks 1-6 and 151-153 were read (offsets 0, 3 and 150).
-For the other eleven entries, only ranks 1-3 were read. These are purposive
+For the other thirteen entries, only ranks 1-3 were read. These are purposive
 diagnostic readings, not representative samples or estimates of semantic purity.
 Additional lower-ranked and short-text checks remain pending.
 
@@ -322,6 +322,41 @@ representation retains negation words but does not explicitly encode their
 predicate, object, quotation attribution or scope. A new experiment and its
 evaluation would require a separate plan; none is claimed by this reading.
 
+## k4 topic 4 and k8 topic 4
+Provisional description for both: scripture and formulaic prayer.
+Documents examined under each fit: 352, 423 and 274 (different ordering at k8).
+These were already read under k6 topic 4; they are three reused documents,
+not nine independent examples.
+
+1. Specific pattern: thy, heaven, kingdom, evil, shall and related words occur
+among the leading groups across the reference fits.
+2. Documentary support: all three contain overlapping extended prayer text.
+352 also apologizes and acknowledges harm; 423 includes extensive affection;
+274 is almost entirely prayer.
+3. Contradictions and formulaic repetition: the component captures repeated
+wording, while personal material in the same documents remains mixed. No
+inference is made about private faith, sincerity or psychological comfort.
+Positive coefficients and the eligible-document counts are not counts of
+people reciting a particular prayer.
+
+k4 topic 4 and k8 topic 4 have full-vector cosine approximately 0.989.
+Combined with the earlier k6/k8 comparison (about 0.983), this supports
+persistence of the lexical form across these reference fits, not all possible
+initializations or independent semantic validation. Different eligibility
+counts (199 at k4 and 180 at k8 under the display rule) must not be interpreted
+as a change in religious prevalence; the documents have not changed.
+
+The large k8 display group containing terms such as daily bread and bread
+forgive is one group of identical full-corpus TF-IDF columns. Its members
+are not independently recurring concepts. The vectorizer forms bigrams after
+stopword filtering and does not enforce sentence boundaries; displayed
+features such as thy earth must not automatically be quoted as literal
+adjacent words in the source.
+
+The higher coefficient for a document at k8 does not establish better fit to
+its meaning or more faith: the component bases differ across fitted models.
+The narrow wording-based description remains preferable to broad religion.
+
 ## Cross-k observations
 Full-vector cosine between k6 topic 4 and k8 topic 4 is about 0.983, supporting
 lexical similarity of these two reference components, not semantic equivalence
@@ -335,8 +370,7 @@ fitted models, and similarities are neither probabilities nor additive shares.
 
 ## Next review actions
 The initial k8 topic-7 short-text diagnostic is now recorded. Continue with
-k4 topic 4 and k8 topic 4 using the same questions. The other remaining
-k8 components are topics 1, 2, 3 and 6. Lower-ranked and short-document checks
+k8 topics 1 and 3, then k8 topics 2 and 6, using the same questions. Lower-ranked and short-document checks
 for most existing entries are still pending.
 Lower-ranked and short-text checks for the other entries remain pending.
 Do not mark the protocol's interpretation stage complete until every component
