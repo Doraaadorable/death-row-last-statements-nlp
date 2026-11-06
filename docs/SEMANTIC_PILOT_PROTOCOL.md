@@ -85,3 +85,14 @@ If source attribution cannot be resolved consistently, narrow the target or
 remain with a descriptive audit. If too few authentic cases support evaluation,
 report that limitation instead of training on four examples or manufacturing
 a claim of generalization.
+
+## Development decisions recorded after discussion
+On 2026-11-06 the owner confirmed all four proposed interpretations after
+AI-assisted discussion, including other as the source and self as the actor
+for the embedded denial in execution 499. Decisions and evidence notes are
+recorded in reports/semantic_pilot_decisions_v1.csv with the process explicitly
+marked non-blind and development-only. Notebook 05 retains blank initial
+worksheets; notebook 06 creates a separate reviewed copy after validating IDs,
+context hashes and span offsets. No agreement statistic or generalization
+claim is inferred. See SEMANTIC_SCREENING_PROTOCOL.md for the next retrieval
+screen; its counts are not semantic class counts.

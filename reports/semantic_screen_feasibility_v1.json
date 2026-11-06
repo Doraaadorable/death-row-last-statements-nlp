@@ -1,0 +1,27 @@
+{
+  "scope": "Literal-cue feasibility counts; not verified semantic labels or performance",
+  "source_sha256": "d66a330b121ae5e59d96b58fb12d34b0c4fdbd9059d427abdc7bd182b07bcc2c",
+  "module_sha256": "48af6d7381f99f6be903e3cbcd539027feb24fda28b63a4156a49e5f9218434e",
+  "python": "3.12.14",
+  "pandas": "2.2.3",
+  "prepared_documents": 479,
+  "candidate_documents": 128,
+  "noncandidate_documents": 351,
+  "cue_counts": {
+    "action_or_innocence_cue": 97,
+    "negated_knowledge_cue": 45,
+    "reporting_or_saying_cue": 249
+  },
+  "cue_combinations": {
+    "action=0;knowledge=0;reporting=0": 193,
+    "action=0;knowledge=0;reporting=1": 158,
+    "action=0;knowledge=1;reporting=0": 7,
+    "action=0;knowledge=1;reporting=1": 24,
+    "action=1;knowledge=0;reporting=0": 30,
+    "action=1;knowledge=0;reporting=1": 53,
+    "action=1;knowledge=1;reporting=0": 0,
+    "action=1;knowledge=1;reporting=1": 14
+  },
+  "execution_evidence": "Notebook code-cell bodies executed in-process and repeat-export checked; no separate Jupyter-kernel execution",
+  "protected_input_hashes_unchanged": true
+}

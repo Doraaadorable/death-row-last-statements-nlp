@@ -256,3 +256,12 @@ claim source, event actor, event type and polarity. Labels start blank;
 no new classifier, performance result or independent evaluation is claimed.
 The notebook code-cell bodies and safe repeat-export behavior were checked
 in-process; a separate Jupyter-kernel execution remains for the owner.
+
+The four pilot decisions have since been confirmed by the owner after discussion;
+[their recorded process](reports/semantic_pilot_decisions_v1.csv) remains non-blind
+and development-only. [Notebook 06](notebooks/06_semantic_candidate_screen.ipynb)
+creates a separate reviewed worksheet and screens all 479 prepared documents
+under a [cue-screening protocol](docs/SEMANTIC_SCREENING_PROTOCOL.md).
+The [feasibility counts](reports/semantic_screen_feasibility_v1.json) report
+128 candidate documents and 351 nonmatches. These are regex hits, not confirmed
+semantic classes, task accuracy or independent evaluation material.
