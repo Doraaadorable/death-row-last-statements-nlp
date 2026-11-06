@@ -7,14 +7,14 @@ this is not independent blind coding or a completed owner-adjudicated review.
 Frozen eight-label annotations and all model outputs are unchanged.
 
 The planned review covers 18 components. Evidence entries have been started for
-fourteen: all four k4 topics; all six k6 topics; and k8 topics 4, 5, 7, 8. No component is declared fully reviewed.
-The other four components remain pending this uniform review.
+sixteen: all four k4 topics; all six k6 topics; and k8 topics 1, 3, 4, 5, 7, 8. No component is declared fully reviewed.
+The other two components remain pending this uniform review.
 
 ## Reading procedure and limits
 Notebook 04 ranks positive coefficients, restricts displayed examples to at
 least 20 words and breaks coefficient ties by execution number.
 For k6 topic 1, displayed ranks 1-6 and 151-153 were read (offsets 0, 3 and 150).
-For the other thirteen entries, only ranks 1-3 were read. These are purposive
+For the other fifteen entries, only ranks 1-3 were read. These are purposive
 diagnostic readings, not representative samples or estimates of semantic purity.
 Additional lower-ranked and short-text checks remain pending.
 
@@ -357,6 +357,47 @@ The higher coefficient for a document at k8 does not establish better fit to
 its meaning or more faith: the component bases differ across fitted models.
 The narrow wording-based description remains preferable to broad religion.
 
+## k8, topic 1
+Provisional description: apology and forgiveness requests with peace wishes.
+Documents examined: 293, 414 and 433. All were already read under k6 topic 1.
+
+1. Specific pattern: sorry, peace, hope, forgive, pain and caused.
+2. Documentary support: 293 explicitly attributes family pain to the speaker;
+433 also explicitly attributes pain to the speaker. 414 apologizes and seeks
+forgiveness but does not specify comparable harm attribution. All contain
+requests for forgiveness alongside other relational or religious language.
+3. Contradictions and mixed content: requesting forgiveness and acknowledging
+caused harm are distinct textual acts. 414's report of divine forgiveness
+does not itself establish a specific harm admission. Isolated pray in 433
+does not change its frozen F=u label.
+
+The inspected k8 examples retain the earlier apology/harm distinction. This
+is a boundary finding for these reused examples, not evidence that all
+component documents were audited or that k8 offers no semantic improvement
+anywhere.
+
+## k8, topic 3
+Provisional description: denial, knowing/not-knowing and case-related
+explanation language, retaining the uncertainty mixture.
+Documents examined: 152, 391 and 367; the same three were read at k4 and k6.
+
+1. Specific pattern: not, did, did not, know, say and kill.
+2. Documentary support: 152 explicitly denies killing; 367 denies killing
+and separately objects to the execution; 391 repeatedly expresses not knowing
+what to say and not knowing anybody was there. These are not interchangeable
+propositions, despite shared vocabulary.
+3. Contradictions and mixed content: 391's topic coefficient (about 0.4133)
+is close to 152's (about 0.4135). This does not mean equal innocence, semantic
+equivalence or an equally strong denial. The coefficient is not a calibrated
+stance score. 367 also includes love, peace and closing language.
+
+The same strong examples and semantic boundary persist across k4/6/8
+reference solutions. Increased k did not resolve these particular cases.
+This is not an independent test, a quantified model-wide error rate or a
+claim that context-aware methods must succeed. The specific lost distinction
+concerns the predicate and object of negation/knowing statements; a future
+experiment would need its own target definition and evaluation design.
+
 ## Cross-k observations
 Full-vector cosine between k6 topic 4 and k8 topic 4 is about 0.983, supporting
 lexical similarity of these two reference components, not semantic equivalence
@@ -370,7 +411,9 @@ fitted models, and similarities are neither probabilities nor additive shares.
 
 ## Next review actions
 The initial k8 topic-7 short-text diagnostic is now recorded. Continue with
-k8 topics 1 and 3, then k8 topics 2 and 6, using the same questions. Lower-ranked and short-document checks
+k8 topics 2 and 6 using the same questions. This will complete initial
+leading-example coverage of all 18 components, not all boundary checks or
+independent semantic validation. Lower-ranked and short-document checks
 for most existing entries are still pending.
 Lower-ranked and short-text checks for the other entries remain pending.
 Do not mark the protocol's interpretation stage complete until every component
