@@ -7,14 +7,14 @@ this is not independent blind coding or a completed owner-adjudicated review.
 Frozen eight-label annotations and all model outputs are unchanged.
 
 The planned review covers 18 components. Evidence entries have been started for
-nine: k4 topic 2; k6 topics 1, 2, 4, 5, 6; and k8 topics 5, 7, 8. No component is declared fully reviewed.
-The other nine components remain pending this uniform review.
+ten: k4 topics 1, 2; k6 topics 1, 2, 4, 5, 6; and k8 topics 5, 7, 8. No component is declared fully reviewed.
+The other eight components remain pending this uniform review.
 
 ## Reading procedure and limits
 Notebook 04 ranks positive coefficients, restricts displayed examples to at
 least 20 words and breaks coefficient ties by execution number.
 For k6 topic 1, displayed ranks 1-6 and 151-153 were read (offsets 0, 3 and 150).
-For the other eight entries, only ranks 1-3 were read. These are purposive
+For the other nine entries, only ranks 1-3 were read. These are purposive
 diagnostic readings, not representative samples or estimates of semantic purity.
 Additional lower-ranked and short-text checks remain pending.
 
@@ -261,6 +261,34 @@ the result. Length, other words and repetition also differ across documents.
 A finer lexical distinction at k6 is useful for description but does not
 establish better semantic detection or justify selecting k6 by itself.
 
+## k4, topic 1
+Provisional description: apology and forgiveness requests, mixed with thanks
+and religious expression. Documents examined: 277, 568 and 413.
+
+1. Specific pattern: sorry and forgive alongside thank, family, peace, Lord,
+God, Jesus and pain.
+2. Documentary support: 277 combines explicit harm attribution, requests for
+forgiveness, thanks to supporters and Christian expression; 568 apologizes
+for grief the speaker caused, requests forgiveness, thanks others and invokes
+Jesus; 413 combines explicit pain attribution with requests to families and
+God for forgiveness, thanks and extended religious expression.
+3. Contradictions and mixed content: all three serve multiple functions.
+The component does not isolate harm acknowledgment, religion or gratitude.
+The initially hesitant forgiveness language in 568 and 413 must be read
+alongside their later requests, not coded from one clause alone. Mixed
+language is not evidence of insincerity or private psychological state.
+
+277 and 413 were already read under k6 topic 1. They are reused cross-model
+examples, not new independent semantic validation. This demonstrates
+interpretive continuity in these reference solutions, not added sample size.
+
+k4 topic 1 has full-vector cosine approximately 0.869 with k6 topic 1 and
+0.676 with k6 topic 5. The leading groups and examples support a broader
+mixture at k4. These similarities are not proportions, and the relation
+does not establish that fitting k6 causally split k4 topic 1. k6 topic 5
+itself remains mixed. Greater granularity is not by itself better semantic
+validity or a reason to declare a unique winning k.
+
 ## Cross-k observations
 Full-vector cosine between k6 topic 4 and k8 topic 4 is about 0.983, supporting
 lexical similarity of these two reference components, not semantic equivalence
@@ -274,7 +302,7 @@ fitted models, and similarities are neither probabilities nor additive shares.
 
 ## Next review actions
 The initial k8 topic-7 short-text diagnostic is now recorded. Continue with
-the remaining k4 components, starting with topic 1; k6 topic 3 and the
+k4 topic 3 and k6 topic 3 using the same questions. k4 topic 4 and the
 remaining k8 components also await this uniform review.
 Lower-ranked and short-text checks for the other entries remain pending.
 Do not mark the protocol's interpretation stage complete until every component
