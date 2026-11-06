@@ -2,7 +2,7 @@
 
 ## Status
 AI-assisted draft interpretations of the fixed sample, based on texts supplied
-by the owner from notebook 07. Seven of 21 documents have been discussed.
+by the owner from notebook 07. All 21 documents have now been discussed. The first-seven notes below are retained as the initial reading record; the complete coverage and selected propositions are recorded in reports/semantic_development_document_coverage_v1.csv and reports/semantic_development_proposals_v1.csv.
 These notes are not owner-adjudicated reference labels or independent blind
 annotations. The editable review worksheet may still show pending; discussion
 coverage does not automatically change its status. The four original pilot
@@ -80,7 +80,11 @@ through a knowledge cue; they are not proven whole-document retrieval misses.
 Keep the current rules and sample fixed; assess revisions separately after
 reviewing hits and nonhits.
 
-## Next
-Read fixed positions 8-10 without redrawing. Record disagreements and proposed
-scope changes before freezing another guideline version. Source/type/actor/
-polarity assignments beyond the four approved pilot spans remain provisional.
+## Completed reading and next stage
+All 21 supplied texts have been discussed. A post-observation draft addendum
+and 27 illustrative proposition proposals from 18 documents now support owner
+review in notebook 08. Three documents (141, 414, 538) have no selected target
+proposition, with reasons retained in the coverage table. This is not an
+exhaustive span inventory. All owner decisions remain pending.
+See SEMANTIC_CLAIM_ADDENDUM_DRAFT_v1.md. Do not infer independent agreement,
+class prevalence or retrieval performance. The original worksheet stays intact.
