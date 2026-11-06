@@ -241,3 +241,18 @@ not a completed joint numerical-and-interpretive model-selection exercise.
 See [tested environments and provenance](docs/TESTED_ENVIRONMENTS.md) for
 executed checks, reviewer-reported evidence and the unresolved historical
 code-hash gap. Dependencies remain unpinned; tested environments are not a lockfile.
+
+## Semantic interpretation extension: development only
+
+The initial [cross-k component review](docs/COMPONENT_REVIEW_k4_k6_k8.md)
+now covers leading examples for all 18 components; broader boundary checks
+remain limited. [Initial literature positioning](docs/LITERATURE_POSITIONING.md)
+identifies substantial related work and does not establish novelty.
+
+The next [four-span pilot](notebooks/05_claim_interpretation_pilot.ipynb)
+uses previously inspected development material under a
+[separate working protocol](docs/SEMANTIC_PILOT_PROTOCOL.md). It separates
+claim source, event actor, event type and polarity. Labels start blank;
+no new classifier, performance result or independent evaluation is claimed.
+The notebook code-cell bodies and safe repeat-export behavior were checked
+in-process; a separate Jupyter-kernel execution remains for the owner.
