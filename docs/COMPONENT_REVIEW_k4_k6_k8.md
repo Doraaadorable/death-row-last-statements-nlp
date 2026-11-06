@@ -7,14 +7,14 @@ this is not independent blind coding or a completed owner-adjudicated review.
 Frozen eight-label annotations and all model outputs are unchanged.
 
 The planned review covers 18 components. Evidence entries have been started for
-eight: k6 topics 1, 2, 4, 5, 6 and k8 topics 5, 7, 8. No component is declared fully reviewed.
-The other 10 components remain pending this uniform review.
+nine: k4 topic 2; k6 topics 1, 2, 4, 5, 6; and k8 topics 5, 7, 8. No component is declared fully reviewed.
+The other nine components remain pending this uniform review.
 
 ## Reading procedure and limits
 Notebook 04 ranks positive coefficients, restricts displayed examples to at
 least 20 words and breaks coefficient ties by execution number.
 For k6 topic 1, displayed ranks 1-6 and 151-153 were read (offsets 0, 3 and 150).
-For the other seven entries, only ranks 1-3 were read. These are purposive
+For the other eight entries, only ranks 1-3 were read. These are purposive
 diagnostic readings, not representative samples or estimates of semantic purity.
 Additional lower-ranked and short-text checks remain pending.
 
@@ -213,10 +213,53 @@ topic-2 examples.
 
 Execution 399 says keep your head up, illustrating encouragement without the
 exact stay-strong formula. This motivates a natural-language boundary check;
-its topic-6 coefficient has not yet been inspected in this review, so it is
-not established as a missed detection. Neither component is a validated
+its subsequently inspected topic-6 coefficient is zero despite that
+encouragement wording. This is a semantic boundary case, not a classification
+error, because NMF did not produce a binary encouragement prediction. Neither component is a validated
 speech-act detector. Distinguishing communicative functions and distinguishing
 lexical formulas are separate interpretation questions.
+
+## k4, topic 2
+Provisional description: relational affection and care, mixed with stay-strong
+encouragement and support. Documents examined: 560, 201 and 374.
+
+1. Specific pattern: love and tell lead the terms, alongside strong, stay
+strong, family and care.
+2. Documentary support: 560 repeats I love you and closes with take care;
+201 expresses love to family and Kami; 374 thanks family and friends and
+urges them to stay strong and take care of themselves.
+3. Contradictions and mixed content: 374 combines thanks, encouragement and
+closing language rather than explicit I love you wording. The phrase about
+five dollars in 560 is not assigned a motive or reconstructed cultural
+meaning here. The component remains a lexical mixture, not a pure affection
+or encouragement category.
+
+## Affection/encouragement: cross-k and within-document check
+k4 topic 2 has cosine approximately 0.904 with k6 topic 2 and 0.556 with k6
+topic 6. These are overlapping vector similarities, not additive fractions or
+proof that the k4 component was causally split by increasing k.
+
+The owner inspected the following frozen k6 coefficients:
+
+| Execution | Topic 2 | Topic 6 |
+|---|---:|---:|
+| 201 | 0.4334 | 0.0000 |
+| 236 | 0.0000 | 0.5033 |
+| 360 | 0.0000 | 0.7104 |
+| 399 | 0.4189 | 0.0000 |
+| 428 | 0.0319 | 0.5847 |
+| 445 | 0.3865 | 0.0000 |
+
+236 and 360 explicitly express love despite zero topic-2 coefficients. 399
+says keep your head up despite a zero topic-6 coefficient. Zero coefficients
+do not establish absence of the associated communicative function; nonnegative
+factorization coefficients depend on the joint reconstruction across components.
+The examples support sensitivity to wording and component overlap, not a
+controlled causal finding that replacing one phrase with another changes
+the result. Length, other words and repetition also differ across documents.
+
+A finer lexical distinction at k6 is useful for description but does not
+establish better semantic detection or justify selecting k6 by itself.
 
 ## Cross-k observations
 Full-vector cosine between k6 topic 4 and k8 topic 4 is about 0.983, supporting
@@ -231,8 +274,8 @@ fitted models, and similarities are neither probabilities nor additive shares.
 
 ## Next review actions
 The initial k8 topic-7 short-text diagnostic is now recorded. Continue with
-the k4 relational component and its correspondence to k6 topics 2 and 6,
-then the remaining components, including k6 topic 3 and every k4 component.
+the remaining k4 components, starting with topic 1; k6 topic 3 and the
+remaining k8 components also await this uniform review.
 Lower-ranked and short-text checks for the other entries remain pending.
 Do not mark the protocol's interpretation stage complete until every component
 has an evidence entry and the remaining boundary checks are documented.
