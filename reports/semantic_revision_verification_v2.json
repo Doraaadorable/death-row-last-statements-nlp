@@ -1,0 +1,13 @@
+{
+  "status": "local direct cell execution and seven synthetic tests passed; not Jupyter kernel execution or semantic validation",
+  "python": "3.12.14",
+  "pandas": "2.2.3",
+  "numpy": "2.3.5",
+  "files_sha256": {
+    "src/claim_adjudication.py": "c377de2a21b2d9838d84ef74eb6fa47bb222d883f9af257f80edf515133916a0",
+    "tests/test_claim_adjudication.py": "fc70e5a75a1584ede31b5e8fc5d66ca7b3414f167acf6f836ebc2fcf1081dd99",
+    "notebooks/09_semantic_claim_review_v2.ipynb": "024f07953a01bdf7b6bc8865ae1eec36beb06bfbc28d3d7dd808d72b16386915",
+    "reports/semantic_development_proposals_v2.csv": "48052579b898786c6ce02b47b8e02d86713f405987f9f316ef51a805812d74fe",
+    "docs/SEMANTIC_CLAIM_GUIDELINE_v2_DRAFT.md": "de5cf0dd25a996c94f619076c569ae751f8dbde1229e7b22507841bccf308ab0"
+  }
+}
