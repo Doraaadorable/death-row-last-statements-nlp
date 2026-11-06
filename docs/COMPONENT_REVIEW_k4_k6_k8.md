@@ -7,14 +7,14 @@ this is not independent blind coding or a completed owner-adjudicated review.
 Frozen eight-label annotations and all model outputs are unchanged.
 
 The planned review covers 18 components. Evidence entries have been started for
-ten: k4 topics 1, 2; k6 topics 1, 2, 4, 5, 6; and k8 topics 5, 7, 8. No component is declared fully reviewed.
-The other eight components remain pending this uniform review.
+twelve: k4 topics 1, 2, 3; all six k6 topics; and k8 topics 5, 7, 8. No component is declared fully reviewed.
+The other six components remain pending this uniform review.
 
 ## Reading procedure and limits
 Notebook 04 ranks positive coefficients, restricts displayed examples to at
 least 20 words and breaks coefficient ties by execution number.
 For k6 topic 1, displayed ranks 1-6 and 151-153 were read (offsets 0, 3 and 150).
-For the other nine entries, only ranks 1-3 were read. These are purposive
+For the other eleven entries, only ranks 1-3 were read. These are purposive
 diagnostic readings, not representative samples or estimates of semantic purity.
 Additional lower-ranked and short-text checks remain pending.
 
@@ -289,6 +289,39 @@ does not establish that fitting k6 causally split k4 topic 1. k6 topic 5
 itself remains mixed. Greater granularity is not by itself better semantic
 validity or a reason to declare a unique winning k.
 
+## k4 topic 3 and k6 topic 3
+Provisional description for both: denial, knowing/not-knowing and case-related
+explanation language; retain the uncertainty mixture explicitly.
+Documents examined under each reference fit: 367, 152 and 391. These are the
+same three documents with different ordering, not six independent examples.
+
+1. Specific pattern: not, did, know, did not, say and kill lead both sets.
+2. Documentary support: 152 explicitly denies killing the listener's sister.
+367 explicitly denies killing and also describes the speaker's execution as
+murder; it includes separate negated predicates about walking and knowing.
+391 repeatedly says the speaker does not know what to say and also says the
+speaker did not know anybody was there. That latter clause may relate to
+awareness of an event, but it is not an explicit denial of killing.
+3. Contradictions and mixed content: similar negation/knowing vocabulary
+co-occurs with different predicates, objects and communicative functions.
+367 also includes affection, peace wishes and procedural readiness.
+Do not infer actual innocence, a particular psychological state or absence
+of case-related meaning from these readings. Neither component is an
+innocence classifier.
+
+Cross-k full-vector cosine is approximately 0.996. The same mixture and the
+same three high-ranking documents recur. This supports lexical persistence
+between these two reference fits, not independent semantic validation.
+Increasing k from four to six did not resolve this particular observed
+distinction. It does not establish that no possible k or representation can
+resolve it. The previously inspected quoted-denial/admission example 499
+remains supplementary development evidence, not a newly selected or unseen test.
+
+A possible later research question is which information is lost when a
+representation retains negation words but does not explicitly encode their
+predicate, object, quotation attribution or scope. A new experiment and its
+evaluation would require a separate plan; none is claimed by this reading.
+
 ## Cross-k observations
 Full-vector cosine between k6 topic 4 and k8 topic 4 is about 0.983, supporting
 lexical similarity of these two reference components, not semantic equivalence
@@ -302,8 +335,9 @@ fitted models, and similarities are neither probabilities nor additive shares.
 
 ## Next review actions
 The initial k8 topic-7 short-text diagnostic is now recorded. Continue with
-k4 topic 3 and k6 topic 3 using the same questions. k4 topic 4 and the
-remaining k8 components also await this uniform review.
+k4 topic 4 and k8 topic 4 using the same questions. The other remaining
+k8 components are topics 1, 2, 3 and 6. Lower-ranked and short-document checks
+for most existing entries are still pending.
 Lower-ranked and short-text checks for the other entries remain pending.
 Do not mark the protocol's interpretation stage complete until every component
 has an evidence entry and the remaining boundary checks are documented.
