@@ -6,15 +6,17 @@ subsequent reading discussions. Interpretations are provisional and AI-assisted;
 this is not independent blind coding or a completed owner-adjudicated review.
 Frozen eight-label annotations and all model outputs are unchanged.
 
-The planned review covers 18 components. Evidence entries have been started for
-sixteen: all four k4 topics; all six k6 topics; and k8 topics 1, 3, 4, 5, 7, 8. No component is declared fully reviewed.
-The other two components remain pending this uniform review.
+The planned review covers 18 components. Initial leading-example reading now
+covers all four k4 topics, all six k6 topics and all eight k8 topics. Every
+component has a provisional description and responses to the same three
+questions. Initial coverage is complete; exhaustive boundary review,
+independent validation and final owner adjudication are not.
 
 ## Reading procedure and limits
 Notebook 04 ranks positive coefficients, restricts displayed examples to at
 least 20 words and breaks coefficient ties by execution number.
 For k6 topic 1, displayed ranks 1-6 and 151-153 were read (offsets 0, 3 and 150).
-For the other fifteen entries, only ranks 1-3 were read. These are purposive
+For the other seventeen entries, only ranks 1-3 were read. These are purposive
 diagnostic readings, not representative samples or estimates of semantic purity.
 Additional lower-ranked and short-text checks remain pending.
 
@@ -398,6 +400,51 @@ claim that context-aware methods must succeed. The specific lost distinction
 concerns the predicate and object of negation/knowing statements; a future
 experiment would need its own target definition and evaluation design.
 
+## k8, topic 2
+Provisional description: expressed affection and relational messages.
+Documents examined: 201, 399 and 445, the same three read for k6 topic 2.
+
+1. Specific pattern: love, tell, family love, tell family and relational words.
+2. Support: 201 addresses family and Kami with love and continued presence;
+399 asks for love to be conveyed to family; 445 expresses love and separation.
+3. Mixed content: 399 also encourages listeners to keep their head up; 445
+also expresses readiness. The source's I live y'all wording is not silently
+corrected. These are reused examples, not new independent validation.
+
+## k8, topic 6
+Provisional description: stay-strong encouragement with relational language.
+Documents examined: 360, 428 and 236, the same three read for k6 topic 6.
+
+1. Specific pattern: strong, stay strong and stay dominate the leading groups.
+2. Support: all three explicitly urge recipients to stay strong alongside
+love. 360 and 236 repeat the instruction; 428 also thanks supporters.
+3. Mixed content and repetition: all contain affection. Repetition may
+contribute to the lexical pattern but its causal role was not isolated.
+No private psychological strength or effect on listeners is inferred.
+The k6 zero-coefficient boundary cases are not assumed to have the same
+coefficients at k8 without checking.
+
+## Initial-coverage synthesis
+| k | Observed descriptive structure | Limit |
+|---|---|---|
+| 4 | Broad apology/thanks/religious mixture; relational/encouragement mixture; case-related negation; repeated prayer | Broad lexical summaries do not isolate communicative functions |
+| 6 | More explicit affection versus stay-strong distinction; apology versus mixed thanks/closing language | Zero coefficients can coexist with the named expression; mixtures remain |
+| 8 | Additional reference components for Christian praise, procedural readiness and thanks/support | Finer names do not establish stable recovery or better semantic detection |
+
+The same case-related examples remain mixed across k4/6/8; repeated prayer
+persists across reference solutions; relational components retain overlap.
+This supports k6 as an illustrative working summary, not a unique optimum
+or validated semantic taxonomy. Numerical tradeoffs remain: k6 has the largest
+random-pair lower quartile but a weak minimum; the k8 Christian component is
+initialization-sensitive and readiness is short-text-removal-sensitive.
+
+No semantic accuracy or human agreement statistic follows from this reading.
+Most entries use three highest-ranked documents of at least 20 words; reused
+documents are not independent samples. The planned three questions now have
+provisional entries for every component. Broader interpretation remains limited
+until lower-ranked/short-document coverage and owner adjudication are documented.
+Frozen labels and the original protocol have not been retrospectively changed.
+
 ## Cross-k observations
 Full-vector cosine between k6 topic 4 and k8 topic 4 is about 0.983, supporting
 lexical similarity of these two reference components, not semantic equivalence
@@ -409,12 +456,15 @@ the latter components to investigate finer distinctions. It does not prove
 that fitting k8 causally split a single k6 component: these are separately
 fitted models, and similarities are neither probabilities nor additive shares.
 
-## Next review actions
-The initial k8 topic-7 short-text diagnostic is now recorded. Continue with
-k8 topics 2 and 6 using the same questions. This will complete initial
-leading-example coverage of all 18 components, not all boundary checks or
-independent semantic validation. Lower-ranked and short-document checks
-for most existing entries are still pending.
-Lower-ranked and short-text checks for the other entries remain pending.
-Do not mark the protocol's interpretation stage complete until every component
-has an evidence entry and the remaining boundary checks are documented.
+## Next actions
+Initial leading-example coverage is complete. Preserve the bounded synthesis
+rather than presenting it as exhaustive validation. Remaining boundary checks
+and owner adjudication are still open.
+
+Before adding a method, define one semantic distinction. An audit-informed
+candidate is whether case-related lexical similarity distinguishes the
+speaker's explicit denial or admission of killing from quoted statements and
+knowing/not-knowing language. Prior examples are development material.
+Check literature and define the unit, target, ambiguity policy and independent
+evaluation before a comparative experiment. Novelty and improvement have not
+been established.
