@@ -4,6 +4,7 @@ import hashlib
 import json
 import re
 import warnings
+from run_provenance import code_provenance
 from pathlib import Path
 
 import numpy as np
@@ -139,8 +140,7 @@ print(topic_summary.round(3).to_string())
 (OUT / "manifest.json").write_text(
     json.dumps({
         "source_sha256": digest,
-        "normalization_script_sha256":
-            hashlib.sha256((ROOT / "src/text_features.py").read_bytes()).hexdigest(),
+        "execution_provenance": code_provenance(__file__),
         "sklearn": sklearn.__version__,
         "seeds": [0, 1, 2, 3, 4],
         "comparison": "Random initialization versus v2 NNDSVDa reference",
@@ -151,4 +151,5 @@ print(topic_summary.round(3).to_string())
 
 print("\nSaved:", OUT)
 print("Source data, manual labels and v2 results were not modified.")
+
 

@@ -11,7 +11,21 @@
   diagnostics; preserved historical outputs.
 - Added random-seed pairwise comparisons, prespecified descriptive label
   contrasts, an evidence-based inclusion ledger, and an English follow-up
-  notebook without saved outputs.
+  notebook initially without saved outputs; owner-executed outputs were later
+  committed in `5bfe829`.
 - Corrected reproducibility evidence scope and targeted-prayer interpretation.
-- Left 21 unsupported exclusion decisions unknown. Historical annotation
-  revisions and a complete environment lock remain unresolved.
+- Initially left 21 exclusion decisions unknown; the v2 ledger later added
+  upstream evidence for those decisions while preserving unresolved boundaries.
+  Historical annotation revisions and a complete environment lock remain unresolved.
+
+## Second audit closure
+
+- Added consistent execution-time source hashes to all three diagnostic scripts.
+  Rerun metadata is distinguished from the unavailable original generation hash.
+- Ignored record-level text exports in both v1 and v2 sensitivity directories.
+- Disclosed the weak broad-faith/repeated-prayer construct match and very small
+  uncertainty groups; clarified the evidence basis for shared-notice exclusions.
+- Marked the planned uniform component interpretation review as incomplete.
+- Reframed the normalization comparison as requiring a rerun; no v1 comparison
+  output is bundled. Documented tested versus reviewer-reported environments.
+- Numerical model outputs, frozen labels and source data remain unchanged.

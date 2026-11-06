@@ -41,13 +41,20 @@ thanks and support, and encouragement.
   (n=26). Topic 3's corresponding medians for the innocence-dispute label are
   0.145 (n=8) and 0.033 (n=40). These are descriptive contrasts, not independent
   validation; [all prespecified contrasts](results/followup_audit_v1/topic_label_descriptive.csv),
-  including uncertainty groups, are reported.
+  including uncertainty groups, are reported. Topic 4 is a weaker construct
+  match for broad faith/spirituality: F=1 has median 0.013 and Q3 0.027 (n=27),
+  versus median 0 for F=0 (n=20). Its narrow repeated-prayer pattern should not
+  be treated as a general faith detector. Uncertain groups contain only 1-6
+  records where present; their quartiles are descriptive, not stable estimates.
 - Lexical stability does not guarantee semantic validity: similar words can
   express denial, uncertainty or quoted denial followed by admission. Repeated
   prayer wording also forms a component of expression style, whose substantive
   meaning requires separate judgment.
-- Contraction normalization removed a tokenization-driven topic. The prayer
-  removal experiment is a targeted influence check, not independent confirmation.
+- The historical normalization comparison can be rerun with
+  `src/run_nmf_v1.py` and `src/run_nmf_v2.py`; a v1/v2 comparison artifact is
+  not supplied, so removal of a tokenization-driven component is not presented
+  here as a self-contained published finding. Prayer removal remains a
+  targeted influence check, not independent confirmation.
 
 Topic coefficients are not probabilities. The project does not infer
 actual guilt, sincerity, remorse or psychological state.
@@ -63,6 +70,9 @@ For a short project explanation, see the [project brief](docs/PROJECT_BRIEF.md).
 ### Robustness checks
 
 ![Topic robustness](reports/figures/notebook_robustness.png)
+
+This historical figure shows reference-based comparisons. New random-pair
+comparisons are in the follow-up notebook and should be read separately.
 
 ## Methods
 
@@ -222,3 +232,12 @@ committed in `5bfe829`: three code cells numbered 1 through 3, four saved displa
 outputs and no stored error outputs. This verifies result loading and display,
 not a new model fit or independent execution. Historical result directories
 and frozen labels remain unchanged.
+
+## Release audit status
+
+The uniform component-by-component interpretive review planned for k=4/6/8
+has not been completed. Current k comparisons are numerical diagnostics,
+not a completed joint numerical-and-interpretive model-selection exercise.
+See [tested environments and provenance](docs/TESTED_ENVIRONMENTS.md) for
+executed checks, reviewer-reported evidence and the unresolved historical
+code-hash gap. Dependencies remain unpinned; tested environments are not a lockfile.

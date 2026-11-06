@@ -1,5 +1,22 @@
 {
   "source_sha256": "d66a330b121ae5e59d96b58fb12d34b0c4fdbd9059d427abdc7bd182b07bcc2c",
+  "execution_provenance": {
+    "status": "Observed source bytes at this execution; not historical provenance",
+    "executed_at_utc": "2026-11-06T02:52:09.763091+00:00",
+    "git_head_if_available": null,
+    "code_sha256": {
+      "src/check_short_text_sensitivity.py": "d4eeb681f925bea149243b220df7ae827981d898f975566ced3c0ef9efd2074d",
+      "src/text_features.py": "2e627cab677a6a060adffa62d335dca6a40ed05f2f1d4ad992d83413ad578ff7",
+      "src/run_provenance.py": "835734680f0a67d346be8df958abca521dfc2d69f9227cf2b016efbc48ed114f"
+    },
+    "environment": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0",
+      "sklearn": "1.8.0"
+    }
+  },
   "minimum_words_comparison": 10,
   "features": "Fixed vocabulary and IDF fitted on full eligible corpus",
   "initialization": "nndsvda, random_state=42",

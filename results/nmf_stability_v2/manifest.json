@@ -1,6 +1,22 @@
 {
   "source_sha256": "d66a330b121ae5e59d96b58fb12d34b0c4fdbd9059d427abdc7bd182b07bcc2c",
-  "normalization_script_sha256": "7a75986fc5d341054306cfd199f30babfaf7ad0d092479693b3b937c9fcacb43",
+  "execution_provenance": {
+    "status": "Observed source bytes at this execution; not historical provenance",
+    "executed_at_utc": "2026-11-06T02:51:30.822690+00:00",
+    "git_head_if_available": null,
+    "code_sha256": {
+      "src/check_nmf_stability.py": "04112a7a6c58d9a33813c69ac697b4de230de087832828f7f89c02aa794d102d",
+      "src/text_features.py": "2e627cab677a6a060adffa62d335dca6a40ed05f2f1d4ad992d83413ad578ff7",
+      "src/run_provenance.py": "835734680f0a67d346be8df958abca521dfc2d69f9227cf2b016efbc48ed114f"
+    },
+    "environment": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0",
+      "sklearn": "1.8.0"
+    }
+  },
   "sklearn": "1.8.0",
   "seeds": [
     0,

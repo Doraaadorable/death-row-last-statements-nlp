@@ -129,3 +129,4 @@ def verify_reference(base, k, H, terms, X):
     if not vocab.exists():
         vocab.write_text(json.dumps(vocabulary) + '\n')
     return minimum_cosine
+

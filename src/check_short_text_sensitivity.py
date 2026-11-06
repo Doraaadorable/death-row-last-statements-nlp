@@ -4,6 +4,7 @@ import hashlib
 import json
 import re
 import warnings
+from run_provenance import code_provenance
 from pathlib import Path
 
 import numpy as np
@@ -112,6 +113,7 @@ pd.DataFrame(rows).to_csv(
 (OUT / "method.json").write_text(
     json.dumps({
         "source_sha256": manifest["source_sha256"],
+        "execution_provenance": code_provenance(__file__),
         "minimum_words_comparison": 10,
         "features": "Fixed vocabulary and IDF fitted on full eligible corpus",
         "initialization": "nndsvda, random_state=42",
@@ -125,4 +127,5 @@ pd.DataFrame(rows).to_csv(
 
 print("\nSaved:", OUT)
 print("Main corpus, manual labels and previous results were not modified.")
+
 

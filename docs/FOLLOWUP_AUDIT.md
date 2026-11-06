@@ -27,7 +27,8 @@ In the recorded follow-up environment, all three repaired checks completed.
 The follow-up script fitted 18 models: k=4/6/8, each with five random seeds and
 one NNDSVDa reference. All converged. Short-text sensitivity was rerun against
 the saved full matrices. Syntax compilation and a synthetic identical-column
-and ranking check passed. Environment versions and input hashes are in the
+and ranking check passed as an ad hoc check. Its executable test was not
+preserved in the original package; this is not a claim of a committed test suite. Environment versions and input hashes are in the
 follow-up manifest. The owner subsequently executed the supplementary notebook
 and committed its outputs in `5bfe829`. Inspection of the committed artifact
 found three code cells numbered 1 through 3, four display outputs, no stored
@@ -58,6 +59,11 @@ complete table retains every specified mapping, all three coding values,
 quartiles and group sizes. The data do not support an independent-validity
 claim, classifier evaluation, or population inference. Execution 117 is in the
 sample; previously inspected counterexamples 391 and 499 are not.
+
+The broad F label and narrow repeated-prayer component are a weaker construct
+match: F=1 median is 0.013 and Q3 0.027 (n=27), versus median 0 for F=0 (n=20).
+This is not evidence of a general religion/spirituality detector. Nonempty u
+groups have only 1-6 records; their quartiles are purely descriptive.
 
 ## Remaining evidence gaps
 The original v1 ledger left 21 absent records unknown because upstream
@@ -91,9 +97,32 @@ new notebook remain follow-up work. The main analysis notebook retains its
 historical outputs; the supplementary notebook now includes the owner's
 executed outputs without personal paths.
 
+## Protocol completion status
+
+Numerical initialization comparisons and the prespecified descriptive contrasts
+are complete. The uniform interpretive review of every component at k=4/6/8
+has not been completed or documented. No claim is made that the protocol's
+joint numerical-and-interpretive selection procedure has been completed.
+Six components remain illustrative; no unique optimum is established by the
+available numerical evidence.
+
 ## Interpretation corrections
 The selected-prayer deletion is a targeted influence check informed by the
 component's content. Losing that component after removing its supporting
 records is expected, not independent confirmation. Formulaic prayer is an
 NMF component driven by repeated expression form; whether it represents a
 substantive research theme requires separate judgment.
+
+## Second review and metadata repair
+
+A reviewer reported successful script and notebook execution in a different
+environment, with numerical agreement at approximately 1e-15. These are
+reviewer-reported checks, not additional executions by the project owner.
+The original stability metadata contained a code hash whose source bytes
+were not preserved. The hash is documented in TESTED_ENVIRONMENTS.md.
+New executions record actual script and shared-module bytes consistently;
+rerun metadata must not be read as recovered historical generation provenance.
+
+Three focused regression tests are now preserved in `tests/test_text_features.py`
+and pass. They cover exact column grouping and group ranking/overlap; they do
+not retroactively turn the original ad hoc check into a historical test suite.

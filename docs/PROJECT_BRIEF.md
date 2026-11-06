@@ -11,7 +11,9 @@ or an individual's psychological state.
 ## Data and approach
 An inventory of 603 execution records leads to 480 person-level candidate
 documents, 479 prepared documents and 477 documents with retained TF-IDF
-features. The current inclusion ledger documents 123 historical exclusions.
+features. The ledger records 21 exclusions supported by upstream cleaning
+extracts and 102 supported only by shared-notice link categories; shared-page
+contents were not re-audited.
 Four short-response attribution questions and one translated-utterance
 inclusion boundary remain explicit.
 
@@ -30,7 +32,8 @@ already used in guideline development and non-blind review.
 The six-component reading includes apology and forgiveness, close relationships,
 case-related denial and explanation, repeated prayer, thanks and support, and
 encouragement. This is an illustrative interpretation rather than a unique
-optimal taxonomy.
+optimal taxonomy. The planned uniform interpretive review of every component
+at k=4/6/8 has not been completed, so selection evidence is numerical only.
 
 At six components, the lower quartile of random-pair matched cosines is 0.938,
 but the minimum is 0.054. High typical agreement does not remove isolated
@@ -40,6 +43,10 @@ Manual-label contrasts show higher corresponding coefficients for some
 prespecified positive groups, including apology/forgiveness and innocence
 disputes. Complete 0/1/u results and group sizes remain visible; this is not
 independent validation or evidence of a working innocence classifier.
+The Topic 4 / faith-spirituality mapping is weaker: the F=1 coefficient median
+is 0.013 (Q3 0.027, n=27), while F=0 has median 0 (n=20). A repeated-prayer
+component does not cover the broader faith label. Uncertain groups with only
+1-6 records provide examples of ambiguity, not reliable distribution estimates.
 
 Close reading reveals a central failure mode: a lexically similar component
 can score an explicit denial, uncertainty about what to say, and a quotation

@@ -4,6 +4,7 @@ import hashlib
 import json
 import re
 import warnings
+from run_provenance import code_provenance
 from pathlib import Path
 
 import numpy as np
@@ -127,6 +128,7 @@ pd.DataFrame(rows).to_csv(
 (OUT / "method.json").write_text(
     json.dumps({
         "source_sha256": manifest["source_sha256"],
+        "execution_provenance": code_provenance(__file__),
         "selected_phrase_pattern": prayer_pattern,
         "omitted_execution_numbers":
             df.loc[~keep, "execution_number"].astype(int).tolist(),
@@ -143,4 +145,5 @@ pd.DataFrame(rows).to_csv(
 
 print("\nSaved:", OUT)
 print("Main corpus, manual labels and previous results were not modified.")
+
 
