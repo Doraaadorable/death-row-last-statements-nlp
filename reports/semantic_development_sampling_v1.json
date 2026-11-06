@@ -1,0 +1,80 @@
+{
+  "sampling_seed": 20261106,
+  "rng": "numpy.random.default_rng; sorted combinations and execution IDs",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "source_sha256": "d66a330b121ae5e59d96b58fb12d34b0c4fdbd9059d427abdc7bd182b07bcc2c",
+  "screening_table_sha256": "a8d0e04c803b96d69073ce193b51aed1d453d2bcc25357dd70af44730b3baa30",
+  "annotation_source_sha256": "64cd6e1376527bb7a79a97bc16afab6193db7777a921ceb749f6a218bc9384ef",
+  "excluded_pilot_ids": [
+    117,
+    391,
+    499
+  ],
+  "execution_ids_in_display_order": [
+    147,
+    450,
+    524,
+    137,
+    451,
+    471,
+    297,
+    390,
+    542,
+    9,
+    335,
+    375,
+    79,
+    287,
+    383,
+    60,
+    141,
+    231,
+    198,
+    414,
+    538
+  ],
+  "allocation": [
+    {
+      "cue_combination": "action=0;knowledge=0;reporting=0",
+      "eligible_documents": 193,
+      "selected_documents": 3
+    },
+    {
+      "cue_combination": "action=0;knowledge=0;reporting=1",
+      "eligible_documents": 158,
+      "selected_documents": 3
+    },
+    {
+      "cue_combination": "action=0;knowledge=1;reporting=0",
+      "eligible_documents": 7,
+      "selected_documents": 3
+    },
+    {
+      "cue_combination": "action=0;knowledge=1;reporting=1",
+      "eligible_documents": 23,
+      "selected_documents": 3
+    },
+    {
+      "cue_combination": "action=1;knowledge=0;reporting=0",
+      "eligible_documents": 29,
+      "selected_documents": 3
+    },
+    {
+      "cue_combination": "action=1;knowledge=0;reporting=1",
+      "eligible_documents": 52,
+      "selected_documents": 3
+    },
+    {
+      "cue_combination": "action=1;knowledge=1;reporting=1",
+      "eligible_documents": 14,
+      "selected_documents": 3
+    }
+  ],
+  "scope": "Development review only; no unseen status, labels or performance inferred",
+  "prepared_documents": 479,
+  "selected_documents": 21,
+  "selected_candidates": 15,
+  "selected_nonmatches": 6,
+  "inspection_status": "Selection checks executed without displaying selected full texts; worksheet pending review"
+}
