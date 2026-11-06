@@ -145,6 +145,43 @@ initialization, so the comparison does not isolate a causal effect of short
 wording alone. Inspect short examples next: the current 20-word display rule
 omits precisely some texts implicated in that sensitivity.
 
+## k8 topic 7: short-text diagnostic extension
+The owner inspected the ten highest positive topic-7 coefficients among
+documents shorter than ten words. Execution IDs were 38, 525, 447, 285, 15,
+133, 161, 475, 34 and 396. These IDs are execution_number values, not the
+DataFrame row index. This expands the topic-7 entry; it does not complete the
+other component reviews.
+
+Ready and statement-closing expressions dominate the highest examples.
+475 says no final statement without explicitly saying ready; 396 expresses
+love and anticipated separation but has coefficient only about 0.0015.
+The component therefore does not capture every farewell expression. No
+psychological acceptance, sincerity or religious interpretation is inferred.
+
+A full-corpus diagnostic of the frozen k8 coefficients gave:
+
+| Length group | Documents | Positive topic-7 coefficients | Median coefficient | Coefficient sum | Share of coefficient sum |
+|---|---:|---:|---:|---:|---:|
+| At least 10 words | 456 | 245 | 0.0034 | 14.8663 | 81.7947% |
+| Under 10 words | 21 | 10 | 0.0000 | 3.3088 | 18.2053% |
+
+The 21 short documents are approximately 4.4% of the 477 modeled documents.
+Seven of the ten highest coefficients, and seven of the twenty highest,
+belong to short documents. Thus short documents are concentrated at the
+extreme high end, but most coefficient mass comes from longer documents.
+Do not describe this component as mostly supported by short documents on the
+basis of coefficient totals, or claim that every short document receives a
+high score: 11 of the 21 have zero coefficients.
+
+These totals are descriptive coefficient-mass summaries within one fixed fit,
+not theme prevalence, semantic validity or the fraction of reconstruction
+causally attributable to short documents. The sums are not an exact feature-
+space energy decomposition because NMF components overlap. The previous
+removal fit's low matched cosine (about 0.278) describes a change in the
+refitted solution; the refit also changes initialization and optimization.
+It does not isolate why the component changed. A high remaining coefficient
+mass does not guarantee preservation of a component after refitting.
+
 ## Cross-k observations
 Full-vector cosine between k6 topic 4 and k8 topic 4 is about 0.983, supporting
 lexical similarity of these two reference components, not semantic equivalence
@@ -157,7 +194,8 @@ that fitting k8 causally split a single k6 component: these are separately
 fitted models, and similarities are neither probabilities nor additive shares.
 
 ## Next review actions
-Check lower-ranked and short examples, starting with k8 topic 7. Continue to
-the remaining components, including every k4 component.
+The initial k8 topic-7 short-text diagnostic is now recorded. Continue with
+k6 topics 2 and 6, then the remaining components, including every k4 component.
+Lower-ranked and short-text checks for the other entries remain pending.
 Do not mark the protocol's interpretation stage complete until every component
 has an evidence entry and the remaining boundary checks are documented.
