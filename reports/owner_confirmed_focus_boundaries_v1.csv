@@ -1,0 +1,8 @@
+claim_id,execution_number,predicate_focus,focus_start,focus_end,focus_decision,semantic_label_change,process,historical_message_time
+v3-dev21-007,451,hurt,425,429,owner_confirmed,none,AI_assisted_guided_review_not_blind,not_recorded
+v3-dev21-013,9,cold-blooded killer,172,191,owner_confirmed,none,AI_assisted_guided_review_not_blind,not_recorded
+v3-dev21-014,9,shot,199,203,owner_confirmed,none,AI_assisted_guided_review_not_blind,not_recorded
+v3-dev21-027,198,did,623,626,owner_confirmed,none,AI_assisted_guided_review_not_blind,not_recorded
+v3-added-002,450,did,116,119,owner_confirmed,none,AI_assisted_guided_review_not_blind,not_recorded
+v3-added-006,287,murdering,1092,1101,owner_confirmed,none,AI_assisted_guided_review_not_blind,not_recorded
+owner-added-524-occurrence-01,524,happened,216,224,owner_confirmed,none,AI_assisted_guided_review_not_blind,not_recorded
