@@ -42,9 +42,11 @@ development. Across them, 19 documents have selected proposition rows from a
 The known 20-document smoke batch is exposed development material. It cannot
 be re-described as a blind psychological or classifier evaluation sample.
 
-## Minimal contextual extension, not replacement labels
-Retain original 1/0/u labels and all frozen decisions. Pilot supplementary
-evidence notes before creating a revised codebook or expanding annotation.
+## Provisional reading prompts, not a new codebook
+Retain original 1/0/u labels and all frozen decisions. The following are
+sensitizing reading prompts only, not required fields or a frozen set of three
+new dimensions. Open reading may change, combine or discard them. Do not fit
+texts to them or add psychological labels before completing contextual memos.
 
 1. **Explicit affect or self-description:** quote exact wording and identify the
    experiencer. Separate the speaker's current feeling, another person's feeling,
@@ -72,9 +74,8 @@ proposals for analysis, not six new owner-approved psychological labels.
 
 The pilot establishes only that the current materials can support the proposed
 distinctions. It does not establish their frequency, a population association,
-fear absence, coping success or a final thematic finding. Next read the entire
-50-record development set systematically, record counterexamples and revise
-definitions before choosing any further sample. Do not add a bulk labeling
+fear absence, coping success or a final thematic finding. Next begin with a purposive 20-record open-reading set from the existing 50,
+record counterexamples and revise the question before choosing any further sample. Do not add a bulk labeling
 request until the framework and a manageable review budget are agreed.
 
 ### Initial case observations (AI proposals, not final themes)
@@ -116,8 +117,8 @@ and revise the question if it duplicates existing work without a useful extensio
 1. Establish the current framework and evidence pilot (this update). Pause new
    classifier features and additional procedural notebooks. Preserve historical
    methods and audit defects; pausing does not repair those defects.
-2. Extend contextual reading across the existing 50, with evidence and negative
-   cases, and obtain psychological/domain feedback on construct definitions.
+2. Begin with 20 complete statements from the existing 50, with evidence and
+   negative cases, and obtain psychological/domain feedback on construct definitions.
    This remains exploratory framework development, not blind validation.
 3. Once definitions stabilize, decide a bounded additional annotation or full
    corpus design. Use document-level denominators, separate 0/u, disclose missing
@@ -136,3 +137,49 @@ overwrite conflicts, a non-stable runtime model fingerprint, broad other
 categories, negation gaps and overconfident root-presentation heuristics.
 These stay open. No new blind sampling, classifier claims or automated
 psychological inference should rely on the affected outputs until addressed.
+
+## Measurement comparison and open-reading update
+
+The [open reading workbook](OPEN_READING_WORKBOOK_v1.md) contains 20 complete
+candidate texts (2,443 whitespace-separated words), blank memo spaces and no
+new labels. Start with execution 508, then 407 and 461. All are already exposed
+development material. This is a manageable first reading budget, not evidence
+of theoretical saturation or a representative sample.
+
+| Work | Measured object and method | What must not be equated |
+| --- | --- | --- |
+| Hirschmuller & Egloff (2016) | Statement-level LIWC positive/negative word percentages; selected full-text methods/results inspected | Word proportions are not an individual diagnosis or proof of felt serenity |
+| Goranson et al. (2017) | LIWC and independent affect ratings, comparing actual statements with forecasts and poetry; selected full-text sections inspected | Their comparison-group claims cannot be reproduced by our statements alone |
+| Mehra et al. (2024) | BERT-based weighting combined with NRCLex/Text2Emotion signals and valence-arousal category mapping; selected full-text methods/results inspected | Derived dominant categories are not the same measurement as word percentages |
+| Eaton & Theuer (2009) | Apology/remorse-related content analysis; publication/abstract identified, full text unavailable in this access route | Do not reconstruct their codebook or findings from our P/H labels |
+| Zhuo & Chun (2026) | Emotion and moral positioning, 198 statements; abstract only | Detailed codebook, coexistence design and novelty overlap remain unverified |
+
+Mehra et al. also analyze emotion co-occurrence and transitions between four
+notion classes. Therefore co-occurrence or discourse sequencing alone cannot
+serve as our novelty claim. Their reported anger/fear category share and the
+earlier positive-word proportions differ in unit and method; the contrast does
+not isolate a causal effect of measurement. Audit underlying definitions and
+samples before treating findings as directly contradictory.
+
+Priority access gap: obtain the full Zhuo/Chun and Eaton/Theuer papers through
+legitimate university/library access. Current access does not establish what
+their complete designs cover. Do not claim a gap while those close comparisons
+are unresolved.
+
+Additional verified reference:
+Eaton, J., & Theuer, A. (2009). Apology and Remorse in the Last Statements of
+Death Row Prisoners. Justice Quarterly, 26(2), 327–347.
+https://doi.org/10.1080/07418820802245078
+
+### What to do after the first reading sessions
+Write a short memo per complete statement, preserving exact evidence,
+addressee/experiencer distinctions, alternatives and uncertainty. Look for
+unexpected observations, not only examples matching the earlier six-case
+notes. These notes are exploratory and AI-informed; the owner's subsequent
+memos must not be represented as blind or independent agreement.
+
+Then write one page connecting the research question, closest literature,
+observations and missing evidence. Decide whether one or two analytic axes
+are sufficient; the number is a practical preference, not a methodological
+law. No new codebook, prevalence estimate, model run or additional notebook
+is required in this phase.
