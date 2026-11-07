@@ -1,0 +1,375 @@
+{
+  "scope": "post_prediction_development_triage_not_error_rate",
+  "inputs_sha256": {
+    "reports/sampled_focus_smoke_v1.json": "a137eb4aac2edac0cc8ffeab83d3b5871ff870bbd4db36bf2cb36c1f1c673703",
+    "src/audit_smoke_failures_v1.py": "9bfe3c5f3b4a58c3452899704e1d688763dd3d95a8af884694b12acc97e6de61"
+  },
+  "original_rule_reason_counts": {
+    "unresolved_selected_action_or_responsibility": 23,
+    "selected_agent_or_construction_not_covered": 6,
+    "possible_reporting_frame_in_bounded_prefix": 1
+  },
+  "proposed_triage_counts": {
+    "auxiliary_selected_without_lexical_head": 7,
+    "ellipsis_needs_reconstruction_and_scope_check": 2,
+    "nominal_action_word_not_independent_verb": 2,
+    "nearby_life_token_crosses_selected_predicate": 1,
+    "self_speech_frame_triggers_reporting_abstention": 1,
+    "multiword_expression_not_resolved": 2,
+    "procedural_do_context_needs_scope_filter": 6,
+    "remaining_action_reference_agent_or_mood_limit": 9
+  },
+  "abstention_triage": [
+    {
+      "execution_number": 211,
+      "stratum": "candidate",
+      "focus_start": 754,
+      "focus_end": 756,
+      "predicate_focus": "do",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "auxiliary_selected_without_lexical_head",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 320,
+      "stratum": "candidate",
+      "focus_start": 94,
+      "focus_end": 97,
+      "predicate_focus": "did",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "auxiliary_selected_without_lexical_head",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 320,
+      "stratum": "candidate",
+      "focus_start": 162,
+      "focus_end": 165,
+      "predicate_focus": "did",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "auxiliary_selected_without_lexical_head",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 372,
+      "stratum": "candidate",
+      "focus_start": 256,
+      "focus_end": 259,
+      "predicate_focus": "did",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "auxiliary_selected_without_lexical_head",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 372,
+      "stratum": "candidate",
+      "focus_start": 283,
+      "focus_end": 286,
+      "predicate_focus": "did",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "auxiliary_selected_without_lexical_head",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 372,
+      "stratum": "candidate",
+      "focus_start": 331,
+      "focus_end": 334,
+      "predicate_focus": "did",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "auxiliary_selected_without_lexical_head",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 256,
+      "stratum": "nonmatch",
+      "focus_start": 644,
+      "focus_end": 647,
+      "predicate_focus": "Did",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "auxiliary_selected_without_lexical_head",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 372,
+      "stratum": "candidate",
+      "focus_start": 6,
+      "focus_end": 8,
+      "predicate_focus": "do",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "ellipsis_needs_reconstruction_and_scope_check",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 378,
+      "stratum": "nonmatch",
+      "focus_start": 331,
+      "focus_end": 335,
+      "predicate_focus": "does",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "ellipsis_needs_reconstruction_and_scope_check",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 248,
+      "stratum": "candidate",
+      "focus_start": 1145,
+      "focus_end": 1152,
+      "predicate_focus": "killing",
+      "prediction": "abstain",
+      "reason": "selected_agent_or_construction_not_covered",
+      "proposed_primary_triage": "nominal_action_word_not_independent_verb",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 273,
+      "stratum": "candidate",
+      "focus_start": 51,
+      "focus_end": 58,
+      "predicate_focus": "murders",
+      "prediction": "abstain",
+      "reason": "selected_agent_or_construction_not_covered",
+      "proposed_primary_triage": "nominal_action_word_not_independent_verb",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 211,
+      "stratum": "candidate",
+      "focus_start": 1483,
+      "focus_end": 1487,
+      "predicate_focus": "take",
+      "prediction": "abstain",
+      "reason": "selected_agent_or_construction_not_covered",
+      "proposed_primary_triage": "nearby_life_token_crosses_selected_predicate",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 372,
+      "stratum": "candidate",
+      "focus_start": 264,
+      "focus_end": 270,
+      "predicate_focus": "murder",
+      "prediction": "abstain",
+      "reason": "possible_reporting_frame_in_bounded_prefix",
+      "proposed_primary_triage": "self_speech_frame_triggers_reporting_abstention",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 273,
+      "stratum": "candidate",
+      "focus_start": 31,
+      "focus_end": 33,
+      "predicate_focus": "do",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "multiword_expression_not_resolved",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 122,
+      "stratum": "nonmatch",
+      "focus_start": 406,
+      "focus_end": 408,
+      "predicate_focus": "do",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "multiword_expression_not_resolved",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 211,
+      "stratum": "candidate",
+      "focus_start": 1964,
+      "focus_end": 1966,
+      "predicate_focus": "do",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "procedural_do_context_needs_scope_filter",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 211,
+      "stratum": "candidate",
+      "focus_start": 1984,
+      "focus_end": 1986,
+      "predicate_focus": "do",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "procedural_do_context_needs_scope_filter",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 256,
+      "stratum": "nonmatch",
+      "focus_start": 735,
+      "focus_end": 737,
+      "predicate_focus": "do",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "procedural_do_context_needs_scope_filter",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 256,
+      "stratum": "nonmatch",
+      "focus_start": 755,
+      "focus_end": 757,
+      "predicate_focus": "do",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "procedural_do_context_needs_scope_filter",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 256,
+      "stratum": "nonmatch",
+      "focus_start": 810,
+      "focus_end": 812,
+      "predicate_focus": "Do",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "procedural_do_context_needs_scope_filter",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 256,
+      "stratum": "nonmatch",
+      "focus_start": 822,
+      "focus_end": 824,
+      "predicate_focus": "do",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "procedural_do_context_needs_scope_filter",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 211,
+      "stratum": "candidate",
+      "focus_start": 248,
+      "focus_end": 251,
+      "predicate_focus": "did",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "remaining_action_reference_agent_or_mood_limit",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 211,
+      "stratum": "candidate",
+      "focus_start": 659,
+      "focus_end": 667,
+      "predicate_focus": "happened",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "remaining_action_reference_agent_or_mood_limit",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 211,
+      "stratum": "candidate",
+      "focus_start": 724,
+      "focus_end": 727,
+      "predicate_focus": "did",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "remaining_action_reference_agent_or_mood_limit",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 211,
+      "stratum": "candidate",
+      "focus_start": 928,
+      "focus_end": 936,
+      "predicate_focus": "happened",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "remaining_action_reference_agent_or_mood_limit",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 211,
+      "stratum": "candidate",
+      "focus_start": 1467,
+      "focus_end": 1471,
+      "predicate_focus": "take",
+      "prediction": "abstain",
+      "reason": "selected_agent_or_construction_not_covered",
+      "proposed_primary_triage": "remaining_action_reference_agent_or_mood_limit",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 211,
+      "stratum": "candidate",
+      "focus_start": 1549,
+      "focus_end": 1553,
+      "predicate_focus": "kill",
+      "prediction": "abstain",
+      "reason": "selected_agent_or_construction_not_covered",
+      "proposed_primary_triage": "remaining_action_reference_agent_or_mood_limit",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 248,
+      "stratum": "candidate",
+      "focus_start": 1051,
+      "focus_end": 1058,
+      "predicate_focus": "killing",
+      "prediction": "abstain",
+      "reason": "selected_agent_or_construction_not_covered",
+      "proposed_primary_triage": "remaining_action_reference_agent_or_mood_limit",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 320,
+      "stratum": "candidate",
+      "focus_start": 170,
+      "focus_end": 172,
+      "predicate_focus": "do",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "remaining_action_reference_agent_or_mood_limit",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    },
+    {
+      "execution_number": 372,
+      "stratum": "candidate",
+      "focus_start": 291,
+      "focus_end": 293,
+      "predicate_focus": "do",
+      "prediction": "abstain",
+      "reason": "unresolved_selected_action_or_responsibility",
+      "proposed_primary_triage": "remaining_action_reference_agent_or_mood_limit",
+      "review_status": "AI_post_prediction_inspection_not_owner_adjudicated"
+    }
+  ],
+  "zero_focus_document_notes": [
+    {
+      "execution_number": 108,
+      "note": "Religious message includes innocent ones; this is not automatically a personal legal innocence claim. No exhaustive scope judgment is claimed."
+    },
+    {
+      "execution_number": 216,
+      "note": "Religious crucified-with-Christ wording is outside the literal focus inventory. Figurative/religious harm language needs an explicit scope decision, not automatic literal killing interpretation."
+    },
+    {
+      "execution_number": 409,
+      "note": "Biblical comfort and closure language; no literal focus found. This is not proof of complete extraction."
+    }
+  ],
+  "limitations": [
+    "Categories are manually assigned AI observations after predictions, not reference truth.",
+    "Primary triage categories are mutually exclusive for bookkeeping; mechanisms can overlap.",
+    "Abstention is not by itself an error, and remaining predictions were not exhaustively adjudicated.",
+    "No automatic-extraction recall can be estimated without a complete independent predicate inventory.",
+    "B2 and literal adapter remain unchanged."
+  ]
+}
