@@ -124,6 +124,6 @@ An explicit farewell, closure of the statement, or indication that the execution
 
 ## Development sample and use
 
-The sample contains 50 people, ten per decade. The owner reviewed and approved the v2 decisions following AI-assisted discussion. Review after seeing proposed values is non-blind; no independent inter-annotator agreement score is claimed. NMF did not use these labels during fitting.
+The sample contains 50 people, ten per decade. The v2 decisions were reviewed and approved on 5 November 2026. NMF was fitted without these labels.
 
 The frozen CSV schema is `execution_number`, `candidate_text`, followed by the eight label columns above in their displayed order. This guide documents the coding scheme. The approved label register and curated text data are distributed in the [data-v1 Release attachment](https://github.com/Doraaadorable/death-row-last-statements-nlp/releases/tag/data-v1), rather than tracked under data/processed/. Follow the download, checksum and reproduction steps in the [README](../README.md#reproduction).

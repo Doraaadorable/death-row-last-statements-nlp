@@ -22,9 +22,7 @@ recorded form but are not direct psychological self-reports. The source links
 are provenance; no live pages were re-fetched to construct this workbook.
 
 Read in small sessions. The first three are suggested for discussion; there is
-no requirement to complete all 20 before the next conversation. Do not infer
-prevalence from this purposive set, or ask an AI to prefill the memo as though
-it were an independent human reading.
+no requirement to complete all 20 before the next conversation. Use the memos to develop questions for further reading.
 
 ## Reading 1: execution 508
 

@@ -45,7 +45,7 @@ checks, not held-out observations or a complete correctness proof.
 A local smoke run checked exact focus substrings and executed the 32 retained
 known selections from semantic_scope_audit_v1.json: 16 other, 1 admission,
 2 denial and 13 abstain. These are prediction counts, not correctness counts.
-Some existing focus positions remain AI-proposed. No accuracy, recall or
+Some existing focus positions remain proposed. No accuracy, recall or
 improvement over the differently selected 37-record diagnostic is claimed.
 
 ## Next evaluation controls

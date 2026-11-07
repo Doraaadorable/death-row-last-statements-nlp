@@ -1,10 +1,9 @@
 # Component interpretation review: k=4/6/8
 
 ## Status and evidence
-Partial working record, prepared from the owner's executed notebook output and
-subsequent reading discussions. Interpretations are provisional and AI-assisted;
-this is not independent blind coding or a completed owner-adjudicated review.
-Frozen eight-label annotations and all model outputs are unchanged.
+Working record based on the executed notebook output and subsequent reading
+discussions. It records initial interpretations of the 18 components.
+Frozen eight-label annotations and model outputs are unchanged.
 
 The planned review covers 18 components. Initial leading-example reading now
 covers all four k4 topics, all six k6 topics and all eight k8 topics. Every

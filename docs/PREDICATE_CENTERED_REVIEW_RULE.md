@@ -45,7 +45,7 @@ I know you think I did this:
   inclusion criteria, not silently ignored.
 
 ## Preservation and evaluation
-The four focus suggestions in SELECTED_SPAN_ABSTENTION_AND_FOCUS_DRAFT.md are
+The four focus suggestions in METHODS.md are
 illustrations, not an exhaustive predicate inventory. This approval does not
 retroactively add focus offsets or new owner-confirmed predicate rows to the
 existing 37 selections. Those selections and diagnostic results stay intact.

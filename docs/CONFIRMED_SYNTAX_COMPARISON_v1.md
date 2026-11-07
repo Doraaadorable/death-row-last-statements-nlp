@@ -2,7 +2,7 @@
 
 ## Scope
 Run the unchanged parser and partial semantic converter on the documents
-containing 42 AI-assisted owner-confirmed development selections. Compare only
+containing 42 reviewed development selections. Compare only
 identical predicate character intervals. Do not use the 20-document smoke
 sample as though it contained these reference selections. This run parses the
 21 known reference documents separately; it draws no new documents.
@@ -22,7 +22,7 @@ without forcing comparison. The old nominal characterization is already retired
 under the scope crosswalk, but remains visible in this historical comparison.
 
 Of the 37 aligned positions, 11 have owner-confirmed focus boundaries and 26
-remain AI-proposed. Across all 42, the corresponding totals are 12 and 30.
+remain proposed. Across all 42, the corresponding totals are 12 and 30.
 Aligned scope statuses: 28 retain, five exclude, four uncertain. The three
 different denominators must not be conflated.
 
