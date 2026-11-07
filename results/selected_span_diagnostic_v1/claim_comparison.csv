@@ -1,0 +1,75 @@
+claim_id,execution_number,evidence_span,claim_source,event_type,event_actor,polarity,proposition_status,method,reference_class,prediction,rule_reason,outcome,span_action_or_innocence_cue,document_action_or_innocence_cue,span_negated_knowledge_cue,document_negated_knowledge_cue,span_reporting_or_saying_cue,document_reporting_or_saying_cue
+v3-dev21-001,147,"I do not know why, Mindy, you are doing this",self,knowledge,self,negated,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,False,True,True,False,False
+v3-dev21-001,147,"I do not know why, Mindy, you are doing this",self,knowledge,self,negated,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,False,False,True,True,False,False
+v3-dev21-002,450,I don't understand why I did it.,self,knowledge,self,negated,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,False,True,True,False,False
+v3-dev21-002,450,I don't understand why I did it.,self,knowledge,self,negated,presented_as_true,B1_constrained,other,abstain,unresolved_action_or_responsibility,abstention,False,False,True,True,False,False
+v3-dev21-003,524,I didn't know what happened.,self,knowledge,self,negated,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,False,True,True,False,False
+v3-dev21-003,524,I didn't know what happened.,self,knowledge,self,negated,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,False,False,True,True,False,False
+v3-dev21-004,137,I don’t know what to say to you,self,other,self,negated,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,False,True,True,True,True
+v3-dev21-004,137,I don’t know what to say to you,self,other,self,negated,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,False,False,True,True,True,True
+v3-dev21-005,137,forgive me for taking his life,self,killing_action,self,affirmed,presented_as_true,B0_lexical,admission,admission,first_person_mention_plus_killing_lexeme,match,False,False,False,True,False,True
+v3-dev21-005,137,forgive me for taking his life,self,killing_action,self,affirmed,presented_as_true,B1_constrained,admission,admission,explicit_life_taking_in_self_forgiveness_frame,match,False,False,False,True,False,True
+v3-dev21-006,451,I don't know who you are.,self,knowledge,self,negated,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,False,True,True,False,True
+v3-dev21-006,451,I don't know who you are.,self,knowledge,self,negated,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,False,False,True,True,False,True
+v3-dev21-007,451,I hurt a lot of people with decisions I made.,self,other,self,affirmed,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,False,False,True,False,True
+v3-dev21-007,451,I hurt a lot of people with decisions I made.,self,other,self,affirmed,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,False,False,False,True,False,True
+v3-dev21-008,471,I don't know if you believe me,self,knowledge,self,negated,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,False,True,True,True,True
+v3-dev21-008,471,I don't know if you believe me,self,knowledge,self,negated,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,False,False,True,True,True,True
+v3-dev21-009,471,I take the full blame for this.,self,wrongdoing_unspecified,self,affirmed,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,False,False,True,False,True
+v3-dev21-009,471,I take the full blame for this.,self,wrongdoing_unspecified,self,affirmed,presented_as_true,B1_constrained,other,abstain,unresolved_action_or_responsibility,abstention,False,False,False,True,False,True
+v3-dev21-010,297,Texas has executed innocent people,self,killing_action,other,affirmed,presented_as_true,B0_lexical,other,other,no_first_person_mention,match,True,True,False,False,False,False
+v3-dev21-010,297,Texas has executed innocent people,self,killing_action,other,affirmed,presented_as_true,B1_constrained,other,other,not_explicit_self_agent,match,True,True,False,False,False,False
+v3-dev21-011,390,you executed an innocent man,self,killing_action,other,affirmed,presented_as_true,B0_lexical,other,other,no_first_person_mention,match,True,True,False,False,False,False
+v3-dev21-011,390,you executed an innocent man,self,killing_action,other,affirmed,presented_as_true,B1_constrained,other,other,not_explicit_self_agent,match,True,True,False,False,False,False
+v3-dev21-012,542,anyone who would of killed my children,self,killing_action,unspecified,affirmed,nonasserted,B0_lexical,other,admission,first_person_mention_plus_killing_lexeme,disagreement,True,True,False,False,False,False
+v3-dev21-012,542,anyone who would of killed my children,self,killing_action,unspecified,affirmed,nonasserted,B1_constrained,other,other,hypothetical_or_modal_frame,match,True,True,False,False,False,False
+v3-dev21-013,9,they call me a cold-blooded killer,other,other,self,affirmed,presented_as_true,B0_lexical,other,admission,first_person_mention_plus_killing_lexeme,disagreement,False,True,False,False,False,True
+v3-dev21-013,9,they call me a cold-blooded killer,other,other,self,affirmed,presented_as_true,B1_constrained,other,other,agent_noun_characterization,match,False,True,False,False,False,True
+v3-dev21-014,9,I shot a man that shot me first.,self,other,self,affirmed,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,True,False,False,False,True
+v3-dev21-014,9,I shot a man that shot me first.,self,other,self,affirmed,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,False,True,False,False,False,True
+v3-dev21-016,375,I continue to say I am innocent.,self,other,self,affirmed,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,True,True,False,False,True,True
+v3-dev21-016,375,I continue to say I am innocent.,self,other,self,affirmed,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,True,True,False,False,True,True
+v3-dev21-017,375,a crime I did not commit,self,wrongdoing_unspecified,self,negated,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,True,True,False,False,False,True
+v3-dev21-017,375,a crime I did not commit,self,wrongdoing_unspecified,self,negated,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,True,True,False,False,False,True
+v3-dev21-018,79,I don’t know why Marta Glass wasn’t allowed in here.,self,knowledge,self,negated,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,True,True,True,False,True
+v3-dev21-018,79,I don’t know why Marta Glass wasn’t allowed in here.,self,knowledge,self,negated,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,False,True,True,True,False,True
+v3-dev21-019,79,They are taking the life of an innocent man.,self,killing_action,other,affirmed,presented_as_true,B0_lexical,other,other,no_first_person_mention,match,True,True,False,True,False,True
+v3-dev21-019,79,They are taking the life of an innocent man.,self,killing_action,other,affirmed,presented_as_true,B1_constrained,other,other,not_explicit_self_agent,match,True,True,False,True,False,True
+v3-dev21-020,287,I know you think I did this,other,wrongdoing_unspecified,self,affirmed,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,True,False,True,False,True
+v3-dev21-020,287,I know you think I did this,other,wrongdoing_unspecified,self,affirmed,presented_as_true,B1_constrained,other,abstain,unresolved_action_or_responsibility,abstention,False,True,False,True,False,True
+v3-dev21-021,287,Three people at different times confessed to killing these people,other,killing_action,other,affirmed,presented_as_true,B0_lexical,other,other,no_first_person_mention,match,True,True,False,True,False,True
+v3-dev21-021,287,Three people at different times confessed to killing these people,other,killing_action,other,affirmed,presented_as_true,B1_constrained,other,other,not_explicit_self_agent,match,True,True,False,True,False,True
+v3-dev21-022,287,They did not know me.,self,knowledge,other,negated,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,True,True,True,False,True
+v3-dev21-022,287,They did not know me.,self,knowledge,other,negated,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,False,True,True,True,False,True
+v3-dev21-023,287,I did not kill anyone in my life.,self,killing_action,self,negated,presented_as_true,B0_lexical,denial,denial,first_person_mention_plus_killing_lexeme,match,True,True,False,True,False,True
+v3-dev21-023,287,I did not kill anyone in my life.,self,killing_action,self,negated,presented_as_true,B1_constrained,denial,denial,direct_first_person_action,match,True,True,False,True,False,True
+v3-dev21-024,383,"Warden, murder me.",self,killing_action,other,affirmed,nonasserted,B0_lexical,other,admission,first_person_mention_plus_killing_lexeme,disagreement,True,True,False,True,False,True
+v3-dev21-024,383,"Warden, murder me.",self,killing_action,other,affirmed,nonasserted,B1_constrained,other,other,imperative_directed_at_other,match,True,True,False,True,False,True
+v3-dev21-025,60,I was responsible for the ’75 and ’79 cases.,self,wrongdoing_unspecified,self,affirmed,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,False,False,False,False,False
+v3-dev21-025,60,I was responsible for the ’75 and ’79 cases.,self,wrongdoing_unspecified,self,affirmed,presented_as_true,B1_constrained,other,abstain,unresolved_action_or_responsibility,abstention,False,False,False,False,False,False
+v3-dev21-026,231,whose lives were not taken by me,self,killing_action,self,negated,presented_as_true,B0_lexical,denial,denial,first_person_mention_plus_killing_lexeme,match,False,False,False,False,False,False
+v3-dev21-026,231,whose lives were not taken by me,self,killing_action,self,negated,presented_as_true,B1_constrained,denial,denial,passive_by_me,match,False,False,False,False,False,False
+v3-dev21-027,198,"I did this, I chose this",self,unclear,self,affirmed,presented_as_true,B0_lexical,reference_uncertain,other,no_killing_lexeme,reference_uncertain,False,False,False,False,False,True
+v3-dev21-027,198,"I did this, I chose this",self,unclear,self,affirmed,presented_as_true,B1_constrained,reference_uncertain,abstain,unresolved_action_or_responsibility,reference_uncertain,False,False,False,False,False,True
+v3-added-001,147,he is a murderer,self,other,other,affirmed,presented_as_true,B0_lexical,other,other,no_first_person_mention,match,False,False,False,True,False,False
+v3-added-001,147,he is a murderer,self,other,other,affirmed,presented_as_true,B1_constrained,other,other,agent_noun_characterization,match,False,False,False,True,False,False
+v3-added-002,450,"I did it, I don't understand why I did it",self,unclear,self,affirmed,presented_as_true,B0_lexical,reference_uncertain,other,no_killing_lexeme,reference_uncertain,False,False,True,True,False,False
+v3-added-002,450,"I did it, I don't understand why I did it",self,unclear,self,affirmed,presented_as_true,B1_constrained,reference_uncertain,abstain,unresolved_action_or_responsibility,reference_uncertain,False,False,True,True,False,False
+v3-added-003,9,I didn’t tie anyone to a stretcher.,self,other,self,negated,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,True,False,False,False,True
+v3-added-003,9,I didn’t tie anyone to a stretcher.,self,other,self,negated,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,False,True,False,False,False,True
+v3-added-004,9,I didn’t pump any poison into anybody’s veins from behind a locked door.,self,other,self,negated,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,True,False,False,False,True
+v3-added-004,9,I didn’t pump any poison into anybody’s veins from behind a locked door.,self,other,self,negated,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,False,True,False,False,False,True
+v3-added-005,287,I did not molest that kid of yours.,self,other,self,negated,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,True,False,True,False,True
+v3-added-005,287,I did not molest that kid of yours.,self,other,self,negated,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,False,True,False,True,False,True
+v3-added-006,287,You are murdering me and I feel sorry for you.,self,killing_action,other,affirmed,presented_as_true,B0_lexical,other,admission,first_person_mention_plus_killing_lexeme,disagreement,True,True,False,True,False,True
+v3-added-006,287,You are murdering me and I feel sorry for you.,self,killing_action,other,affirmed,presented_as_true,B1_constrained,other,other,not_explicit_self_agent,match,True,True,False,True,False,True
+v3-added-007,390,"Go ahead Warden, murder me.",self,killing_action,other,affirmed,nonasserted,B0_lexical,other,admission,first_person_mention_plus_killing_lexeme,disagreement,True,True,False,False,False,False
+v3-added-007,390,"Go ahead Warden, murder me.",self,killing_action,other,affirmed,nonasserted,B1_constrained,other,other,imperative_directed_at_other,match,True,True,False,False,False,False
+owner-added-524-occurrence-01,524,What happened between me and Rocky happened too fast.,self,unclear,unspecified,affirmed,presented_as_true,B0_lexical,reference_uncertain,other,no_killing_lexeme,reference_uncertain,False,False,False,True,False,False
+owner-added-524-occurrence-01,524,What happened between me and Rocky happened too fast.,self,unclear,unspecified,affirmed,presented_as_true,B1_constrained,reference_uncertain,other,no_explicit_killing_proposition,reference_uncertain,False,False,False,True,False,False
+owner-added-538-speech-01,538,I don't have anything to say,self,other,self,negated,presented_as_true,B0_lexical,other,other,no_killing_lexeme,match,False,False,False,False,True,True
+owner-added-538-speech-01,538,I don't have anything to say,self,other,self,negated,presented_as_true,B1_constrained,other,other,no_explicit_killing_proposition,match,False,False,False,False,True,True
+owner-added-538-permission-01,538,you can proceed Warden Jones.,self,other,other,affirmed,nonasserted,B0_lexical,other,other,no_killing_lexeme,match,False,False,False,False,False,True
+owner-added-538-permission-01,538,you can proceed Warden Jones.,self,other,other,affirmed,nonasserted,B1_constrained,other,other,no_explicit_killing_proposition,match,False,False,False,False,False,True
+owner-added-335-rhetorical-death-01,335,but will kill me otherwise.,self,killing_action,other,affirmed,presented_as_true,B0_lexical,other,admission,first_person_mention_plus_killing_lexeme,disagreement,True,True,False,False,False,True
+owner-added-335-rhetorical-death-01,335,but will kill me otherwise.,self,killing_action,other,affirmed,presented_as_true,B1_constrained,other,other,not_explicit_self_agent,match,True,True,False,False,False,True

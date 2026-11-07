@@ -1,0 +1,12 @@
+method,reference_class,prediction,outcome,selected_propositions
+B0_lexical,admission,admission,match,1
+B0_lexical,denial,denial,match,2
+B0_lexical,other,admission,disagreement,6
+B0_lexical,other,other,match,25
+B0_lexical,reference_uncertain,other,reference_uncertain,3
+B1_constrained,admission,admission,match,1
+B1_constrained,denial,denial,match,2
+B1_constrained,other,abstain,abstention,4
+B1_constrained,other,other,match,27
+B1_constrained,reference_uncertain,abstain,reference_uncertain,2
+B1_constrained,reference_uncertain,other,reference_uncertain,1

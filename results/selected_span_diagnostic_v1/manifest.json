@@ -1,0 +1,30 @@
+{
+  "inputs_sha256": {
+    "owner_decisions": "eb48f2d63e379d05e0a2ab971419458a502d07bf825f9a3b0bfa9cf0cc848122",
+    "model_corpus": "d66a330b121ae5e59d96b58fb12d34b0c4fdbd9059d427abdc7bd182b07bcc2c",
+    "protocol": "6cc05e32e9e517be852c26eeaaf48a7823bbf9b73eba61aee8b031371cb94698"
+  },
+  "code_sha256": {
+    "selected_span_rules.py": "3eb9cd0be0e5485a59a2e57ef2c79df96d6e85b5429fb5e82c8306d44777ad3b",
+    "run_selected_span_diagnostic.py": "c8cf74d9e127f39895464ffd366d35e3e496bf3bc5ebaa1cc619403842ae9c6c",
+    "semantic_screening.py": "48af6d7381f99f6be903e3cbcd539027feb24fda28b63a4156a49e5f9218434e",
+    "prepare_confirmed_claims.py": "c9e54bd68cfd0b1d5f53b1e793757369b3a2dece361cf713a459ac0534a0e981",
+    "claim_adjudication_v3.py": "854ea9ab4ac39a3efef1daf053ce74821151d77531df433f936bb4abc65d3b12"
+  },
+  "output_sha256": {
+    "claim_comparison.csv": "7792d3bac9af99ee94e9986130b546eb7e786fbf74a4207caa724c0439127374",
+    "reference_prediction_counts.csv": "aa364b24b8113fcf70b6d1038ca9cf7e4e1b89cf35f52cb84c3cd279c98af18e",
+    "outcome_counts.csv": "df0c7b3146f2722b6cd70e4d0b6aa4a06e815a4ec0fe8cca287bd9b38e59f518"
+  },
+  "python": "3.12.14",
+  "pandas": "2.2.3",
+  "unit": "human-selected evidence span with context; selection is an oracle advantage",
+  "scope": "Known-example-informed development diagnostic, not unseen evaluation or corpus retrieval recall",
+  "propositions": 37,
+  "reference_counts": {
+    "other": 31,
+    "reference_uncertain": 3,
+    "denial": 2,
+    "admission": 1
+  }
+}
