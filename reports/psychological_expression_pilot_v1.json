@@ -1,0 +1,211 @@
+{
+  "status": "exploratory_psychological_expression_pilot_not_psychological_measurement",
+  "annotation_sha256": "64cd6e1376527bb7a79a97bc16afab6193db7777a921ceb749f6a218bc9384ef",
+  "selection": "six purposive known cases chosen for contrasting interpretation issues; not representative",
+  "cases": [
+    {
+      "execution_number": 138,
+      "source_text_layer": "frozen_annotation_candidate_text_not_prepared_model_text",
+      "context_sha256": "809351f9b1d2eaf96e10cbf307cd21aa86b02d843d27cc6070cad552d660e683",
+      "frozen_v2_labels": {
+        "relational_affection": "1",
+        "gratitude": "1",
+        "faith_spirituality": "1",
+        "apology_forgiveness": "1",
+        "harm_acknowledgment": "0",
+        "innocence_dispute": "0",
+        "justice_criticism": "1",
+        "farewell_readiness": "1"
+      },
+      "evidence": [
+        {
+          "quote": "I feel like my punishment is over, but my friends are now being punished.",
+          "start": 289,
+          "end": 362,
+          "note": "Speaker evaluates punishment and consequences for friends, rather than explicitly naming a current emotion."
+        },
+        {
+          "quote": "killing me is not going to solve nothing.",
+          "start": 457,
+          "end": 498,
+          "note": "Criticism of execution outcome, distinct from religious appreciation."
+        }
+      ],
+      "proposed_case_observation": "Religious gratitude and claimed personal change coexist with opposition to execution.",
+      "inference_limit": "Do not infer successful coping, inner calm or opposition to mortality itself.",
+      "review_status": "AI_contextual_pilot_not_new_owner_adjudication"
+    },
+    {
+      "execution_number": 330,
+      "source_text_layer": "frozen_annotation_candidate_text_not_prepared_model_text",
+      "context_sha256": "e83b9944b64de9631fa12ca5e57f8548b5df9863df753da44ee8d727644b2d7e",
+      "frozen_v2_labels": {
+        "relational_affection": "1",
+        "gratitude": "1",
+        "faith_spirituality": "u",
+        "apology_forgiveness": "u",
+        "harm_acknowledgment": "0",
+        "innocence_dispute": "0",
+        "justice_criticism": "0",
+        "farewell_readiness": "1"
+      },
+      "evidence": [
+        {
+          "quote": "And I am so sorry you are going through what you are now.",
+          "start": 161,
+          "end": 218,
+          "note": "The addressed other is the explicit target of concern; apology versus sympathy remains unresolved in frozen coding."
+        },
+        {
+          "quote": "I am ready Warden.",
+          "start": 547,
+          "end": 565,
+          "note": "Procedure-readiness expression, not a direct calmness self-report."
+        }
+      ],
+      "proposed_case_observation": "Relational appreciation and concern occur alongside procedural readiness.",
+      "inference_limit": "Better place and blessing do not resolve religion or psychological acceptance; retain original F=u and P=u.",
+      "review_status": "AI_contextual_pilot_not_new_owner_adjudication"
+    },
+    {
+      "execution_number": 407,
+      "source_text_layer": "frozen_annotation_candidate_text_not_prepared_model_text",
+      "context_sha256": "e2da03f42651d32fccb46a89f97b4abe4a69f509704c80e23c6c5d81e148e6f4",
+      "frozen_v2_labels": {
+        "relational_affection": "1",
+        "gratitude": "0",
+        "faith_spirituality": "0",
+        "apology_forgiveness": "1",
+        "harm_acknowledgment": "u",
+        "innocence_dispute": "0",
+        "justice_criticism": "1",
+        "farewell_readiness": "0"
+      },
+      "evidence": [
+        {
+          "quote": "I know I was wrong; I accept responsibility as a man.",
+          "start": 378,
+          "end": 431,
+          "note": "Self-attributed wrong and responsibility."
+        },
+        {
+          "quote": "This doesn't solve anything, 'cause it hurts others that love me.",
+          "start": 462,
+          "end": 527,
+          "note": "Execution is criticized in terms of consequences for loved ones."
+        }
+      ],
+      "proposed_case_observation": "Responsibility-taking and criticism of execution coexist in one statement.",
+      "inference_limit": "Do not treat these as logical contradiction, insincerity or a measured defence mechanism. Acceptance of penalty wording is not approval of execution.",
+      "review_status": "AI_contextual_pilot_not_new_owner_adjudication"
+    },
+    {
+      "execution_number": 413,
+      "source_text_layer": "frozen_annotation_candidate_text_not_prepared_model_text",
+      "context_sha256": "39c7272d30b349db6a6d757a74847cb38ee9b9196001e42744f920994021c00f",
+      "frozen_v2_labels": {
+        "relational_affection": "1",
+        "gratitude": "1",
+        "faith_spirituality": "1",
+        "apology_forgiveness": "1",
+        "harm_acknowledgment": "1",
+        "innocence_dispute": "0",
+        "justice_criticism": "0",
+        "farewell_readiness": "1"
+      },
+      "evidence": [
+        {
+          "quote": "I hope that someday you can find peace.",
+          "start": 171,
+          "end": 210,
+          "note": "Peace is wished for the addressee, not asserted as the speaker's current state."
+        },
+        {
+          "quote": "I am ready to go Lord.",
+          "start": 894,
+          "end": 916,
+          "note": "Religious address and readiness wording require context; no automatic calm/acceptance label."
+        }
+      ],
+      "proposed_case_observation": "Apology and self-attributed harm are accompanied by other-directed wishes and religious language.",
+      "inference_limit": "Do not count other-directed peace as self-reported peace or infer authentic remorse from apologies.",
+      "review_status": "AI_contextual_pilot_not_new_owner_adjudication"
+    },
+    {
+      "execution_number": 433,
+      "source_text_layer": "frozen_annotation_candidate_text_not_prepared_model_text",
+      "context_sha256": "0ccf3fbe1b885f57407854023a1ae2aa6b5e044f7c6120cc0cc62ae9c98f4817",
+      "frozen_v2_labels": {
+        "relational_affection": "1",
+        "gratitude": "1",
+        "faith_spirituality": "u",
+        "apology_forgiveness": "1",
+        "harm_acknowledgment": "1",
+        "innocence_dispute": "0",
+        "justice_criticism": "0",
+        "farewell_readiness": "1"
+      },
+      "evidence": [
+        {
+          "quote": "I only have love in my heart.",
+          "start": 92,
+          "end": 121,
+          "note": "Explicit speaker-owned affective self-description using love."
+        },
+        {
+          "quote": "I am ready to go home.",
+          "start": 247,
+          "end": 269,
+          "note": "Departure/home expression; the religious and procedural readings need context."
+        }
+      ],
+      "proposed_case_observation": "Affective self-description, apology and ambiguous departure imagery occur together.",
+      "inference_limit": "Love is not equivalent to lack of fear; home is not independently an explicit religious afterlife. Preserve F=u.",
+      "review_status": "AI_contextual_pilot_not_new_owner_adjudication"
+    },
+    {
+      "execution_number": 461,
+      "source_text_layer": "frozen_annotation_candidate_text_not_prepared_model_text",
+      "context_sha256": "590313fb2bb16b816803ace4e41eaa408e62b4683bd9e18a5768feeb66acb630",
+      "frozen_v2_labels": {
+        "relational_affection": "1",
+        "gratitude": "0",
+        "faith_spirituality": "0",
+        "apology_forgiveness": "1",
+        "harm_acknowledgment": "0",
+        "innocence_dispute": "0",
+        "justice_criticism": "1",
+        "farewell_readiness": "1"
+      },
+      "evidence": [
+        {
+          "quote": "(crying)",
+          "start": 136,
+          "end": 144,
+          "note": "Recorder annotation, not a direct first-person emotional statement."
+        },
+        {
+          "quote": "I am ready to go Warden.",
+          "start": 145,
+          "end": 169,
+          "note": "Procedural readiness."
+        },
+        {
+          "quote": "Coming home dad, coming home dad.",
+          "start": 170,
+          "end": 203,
+          "note": "Family-directed departure imagery; the referent and meaning remain interpretive."
+        }
+      ],
+      "proposed_case_observation": "Observer-recorded crying and procedural readiness coexist in the recorded candidate text.",
+      "inference_limit": "Do not infer fear, serenity or acceptance from this juxtaposition; crying was removed from prepared speech, and the two text layers must not be mixed silently.",
+      "review_status": "AI_contextual_pilot_not_new_owner_adjudication"
+    }
+  ],
+  "limitations": [
+    "No new frozen labels or psychological diagnoses.",
+    "No statement-level frequencies or associations estimated.",
+    "Whole candidate texts were read; excerpts are anchors, not stand-alone interpretation units.",
+    "Explicit emotion, public speech function and inferred internal state must remain separate."
+  ]
+}

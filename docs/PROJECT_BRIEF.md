@@ -1,5 +1,12 @@
 # Project brief
 
+> Current direction updated 7 November 2026: the owner clarified that psychological
+> expression, relationships and meaning making are the substantive research aim.
+> See [CURRENT_RESEARCH_PLAN.md](CURRENT_RESEARCH_PLAN.md). The material below
+> summarizes the earlier exploratory/method phase; it is not a completed
+> psychological study or a claim that classification is the primary question.
+
+
 ## Purpose
 This project explores recurring expressions in published Texas last statements
 and asks how much the resulting NMF components depend on preprocessing,

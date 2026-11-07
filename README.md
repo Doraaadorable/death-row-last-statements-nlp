@@ -1,52 +1,48 @@
-# Last Statements: Themes, Interpretation and Robustness
+# Last Statements: Psychological Expression, Relationships and Meaning
 
-## Current review snapshot: 40 selected propositions
+An exploratory mixed-methods project studying expressed emotions, relational concerns,
+and meaning making in published Texas last statements. The substantive aim is
+psychological understanding through contextual textual evidence, not classifier
+performance or direct diagnosis of private mental states.
 
-Start with [notebook 14](notebooks/14_confirmed_snapshot40.ipynb) and
-[the snapshot guide](docs/CONFIRMED_SNAPSHOT40_v1.md).
-All 40 semantic decisions are owner-confirmed after AI-assisted discussion.
-Ten predicate-focus positions are explicitly confirmed; thirty remain proposed
-mappings. The [candidate backlog](reports/predicate_candidate_backlog_v1.csv)
-keeps six unresolved selection candidates separate from accepted records.
-This is not independent or exhaustive annotation. Older 37-row diagnostics
-and the 39-row audit remain unchanged historical artifacts.
+## Current direction
 
+Start with [the current research plan](docs/CURRENT_RESEARCH_PLAN.md).
+The first contextual pilot uses six previously discussed records and 13 exact
+evidence spans; [pilot notes](reports/psychological_expression_pilot_v1.json) are
+AI-proposed observations, not new owner-adjudicated labels or completed findings.
+The frozen eight-category v2 annotations are preserved. Positive relational
+language, emotional calm, procedural readiness and approval of execution are
+distinct constructs. New classifier and parser expansion is paused as the main
+research line; unresolved audit defects remain open.
 
-## Historical consistency audit: 39 selected development propositions
+## Historical methods and development materials
 
-[Notebook 13](notebooks/13_claim_consistency_audit.ipynb) checks all 39
-conversation-confirmed selections (the original 37 plus the two #287 predicate
-layers). [Audit notes](docs/CLAIM_CONSISTENCY_AUDIT_v1.md) distinguish
-32 rows without a proposed semantic-label change from seven rows needing
-focus-boundary clarification. Proposed focus offsets are manual development
-annotations, not an automatic parser or independent semantic validation.
-No confirmed labels were changed. The earlier 37-row rule diagnostic remains
-unchanged; neither a larger selection nor a supplied focus is unseen performance.
-
-
-## Original 37-selection materialization
-
-Start with [notebook 11](notebooks/11_confirmed_semantic_review.ipynb) and
-[the current review guide](docs/SEMANTIC_CONFIRMED_REVIEW_v3.md).
-The owner-confirmed discussion record now contains 37 selected propositions
-across 19 of the 21 fixed development documents. Two other documents retain
-scope notes. These are AI-assisted development decisions, not exhaustive or
-independent reference annotations.
-The current field is `proposition_status`:
-`presented_as_true / nonasserted / unclear`; background attribution stays in notes.
-Notebooks 08-10 and the 33-row v2 booklet are historical drafts.
-Notebook 11 preserves earlier local worksheets and validates exact evidence
-before materializing separate current files. No new model is fitted.
+- [Original NMF notebook](notebooks/01_last_statements_analysis.ipynb) and follow-up
+  analyses map recurring language and its sensitivity; they do not measure private emotions.
+- [Current 42-selection discussion record](docs/OWNER_CONFIRMED_SHOOTING_NAMING_42.md):
+  AI-assisted development, with 12 confirmed focus positions and 30 proposed ones.
+- [Historical 40-row snapshot](docs/CONFIRMED_SNAPSHOT40_v1.md),
+  [39-row audit](docs/CLAIM_CONSISTENCY_AUDIT_v1.md) and
+  [37-row materialization](docs/SEMANTIC_CONFIRMED_REVIEW_v3.md) retain their original scope.
+- Notebooks 15–18 document an exposed 20-document smoke test, syntax proposals and
+  known-development comparisons. These are auxiliary method experiments, not blind
+  validation or psychological reference labels.
 
 
-An exploratory NLP project analyzing published last statements from
-Texas execution records.
 
 ## Research question
 
-What recurring expressions appear in these statements, and how sensitive
-are the resulting topic structures to initialization, short texts and
-selected formulaic prayers?
+How do people facing execution express emotions, maintain relationships, and
+make sense of death and their own situation in their final statements?
+
+The initial focused question is how affection, gratitude and spiritual language
+coexist with explicit self-described emotional states and stances toward death
+and execution. This is a planned contextual extension, not an established
+psychological measurement or novelty claim.
+
+The completed NMF phase asked which recurring expressions appear and how
+sensitive topic structures are to initialization, short texts and selected prayers.
 
 ## Analysis
 
@@ -61,12 +57,12 @@ The supplied snapshot contains:
 - 477 documents with retained TF-IDF features.
 - 50 manually reviewed records used for coding-guideline development.
 
-The six-topic NMF solution is the main exploratory summary, with an
+In the completed exploratory phase, the six-topic NMF solution is the summary, with an
 eight-topic supplement. Topics concern apology and forgiveness,
 affection, case-related denial and explanation, formulaic prayer,
 thanks and support, and encouragement.
 
-## Main findings
+## Completed exploratory findings
 
 - The six-component exploratory reading identifies recurring expressions of
   apology and forgiveness, affection, case-related denial and explanation,
