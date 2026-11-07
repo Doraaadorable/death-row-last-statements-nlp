@@ -1,0 +1,49 @@
+{
+  "status": "partial_automatic_semantic_proposals_not_reference_labels",
+  "rows": 564,
+  "target_prediction_counts": {
+    "other": 533,
+    "abstain": 28,
+    "denial": 2,
+    "admission": 1
+  },
+  "field_value_counts": {
+    "claim_source": {
+      "self": 217,
+      "unclear": 347
+    },
+    "event_type": {
+      "other": 500,
+      "knowledge": 32,
+      "unclear": 24,
+      "killing_action": 7,
+      "wrongdoing_unspecified": 1
+    },
+    "event_actor": {
+      "self": 213,
+      "unclear": 298,
+      "other": 53
+    },
+    "polarity": {
+      "affirmed": 523,
+      "negated": 41
+    },
+    "proposition_status": {
+      "presented_as_true": 194,
+      "unclear": 370
+    }
+  },
+  "output_sha256": "10c71e13bb9c9a89ce33dde46235f009094c75c539229001f96186eff4ba5851",
+  "inputs_sha256": {
+    "data/processed/syntactic_candidates_v1.json": "5ab0b326801f5c8dc0f4fb03cb89921068431fbd44b807f2e55788f20c666b6d",
+    "src/syntax_semantics_v1.py": "f482e712c7617105fc079152672964a8303adcba3a9741b943be00fb64e0ee92",
+    "src/run_syntax_semantics_v1.py": "e456373a2815429d2482f7fad2e418c8ae4e9b6ed95b6ed38266728afd1a66b5"
+  },
+  "limitations": [
+    "Scope remains unassigned; broad inventory contains many out-of-scope predicates.",
+    "Fields are partial heuristic proposals inherited from fallible parser output.",
+    "Root predicates are heuristically treated as speaker-presented declarations when conditions allow; no discourse-level verification.",
+    "No general modality, coreference, quotation, factivity, negation-scope or ellipsis resolution.",
+    "Counts cannot be compared to B2 as accuracy improvement; units differ and no independent reference exists."
+  ]
+}
