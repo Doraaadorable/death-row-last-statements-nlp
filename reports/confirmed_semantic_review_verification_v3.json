@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "37 unique owner-confirmed selections, exact spans and context hashes validated",
+    "19 documents with selected claims; 21 fixed document IDs retained",
+    "five synthetic integrity tests passed",
+    "notebook 11 code cells executed directly in process; not a separate Jupyter kernel",
+    "repeat run preserved existing outputs and materialization timestamp"
+  ],
+  "python": "3.12.14",
+  "pandas": "2.2.3",
+  "file_sha256": {
+    "src/prepare_confirmed_claims.py": "c9e54bd68cfd0b1d5f53b1e793757369b3a2dece361cf713a459ac0534a0e981",
+    "tests/test_prepare_confirmed_claims.py": "ad6a59cf4b402c7932ca8375321b04a01fd7700bae209ec9821e9f7e31eecc3c",
+    "notebooks/11_confirmed_semantic_review.ipynb": "700e33a56b9bd4597df152cb6b11a9253b0ae426aa7edfcf5de1c8cfc461dbf6",
+    "reports/semantic_owner_decisions_v3_discussion.csv": "eb48f2d63e379d05e0a2ab971419458a502d07bf825f9a3b0bfa9cf0cc848122"
+  },
+  "limitations": "No independent semantic validation, model fitting or exhaustive annotation."
+}

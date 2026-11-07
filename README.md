@@ -1,5 +1,20 @@
 # Last Statements: Themes, Interpretation and Robustness
 
+## Current semantic review: 37 confirmed development propositions
+
+Start with [notebook 11](notebooks/11_confirmed_semantic_review.ipynb) and
+[the current review guide](docs/SEMANTIC_CONFIRMED_REVIEW_v3.md).
+The owner-confirmed discussion record now contains 37 selected propositions
+across 19 of the 21 fixed development documents. Two other documents retain
+scope notes. These are AI-assisted development decisions, not exhaustive or
+independent reference annotations.
+The current field is `proposition_status`:
+`presented_as_true / nonasserted / unclear`; background attribution stays in notes.
+Notebooks 08-10 and the 33-row v2 booklet are historical drafts.
+Notebook 11 preserves earlier local worksheets and validates exact evidence
+before materializing separate current files. No new model is fitted.
+
+
 An exploratory NLP project analyzing published last statements from
 Texas execution records.
 
