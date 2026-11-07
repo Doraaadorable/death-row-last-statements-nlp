@@ -95,19 +95,64 @@ and accepting statements. Religious and relational interpretation is already
 central. Our contextual examples elaborate these established questions rather
 than displace them.
 
-## Additional direct precedent located in the broader check
+## Smith (2019): full-text check
 Smith, R. A. (2019), *Framing Forgiveness: An Analysis from the Offender's Point
 of View*, Review of Religious Research 61(4), 341–363,
-[DOI](https://doi.org/10.1007/s13644-019-00385-y). The publisher abstract was
-checked on 7 November 2026; full methods were not obtained in this check.
+[DOI](https://doi.org/10.1007/s13644-019-00385-y). The supplied full article was
+read on 7 November 2026. Printed pages match PDF pages by adding 340 to the
+PDF page number (for example, PDF page 8 is printed p. 348).
 
-The abstract directly examines forgiveness direction and religious framing in
-death-row last statements. This narrows the novelty claim further: a
-request-versus-grant distinction is established territory. Its precise coding
-and treatment of conditional appeals remain to be checked in full text.
-This is a concrete comparison dependency, not a reason to repeat owner coding.
-The search was targeted rather than systematic; no exhaustive literature-gap
-claim follows from it.
+### Data, units and coding
+The paper reports 537 execution records, 429 oral statements and 115 statements
+with explicit forgiveness language (pp. 347–348). The author and two external
+coders first conducted open coding of the larger set; agreement is reported as
+exceeding 90%, followed by consensus on ambiguities. This is not a reported
+Cohen's kappa. Thirteen advance-written statements are excluded according to
+the footnote on p. 348; this differs from Zhuo & Chun's inclusion of written
+and oral material.
+
+Table 1 (p. 350) uses N=115, not all 429 oral statements or all 537 execution
+records. Its six categories are nonexclusive: seeking others' forgiveness in a
+religious context, seeking God's forgiveness for oneself, forgiving others in a
+religious context, asking God to forgive others, and nonreligious seeking and
+granting of forgiveness. Percentages should not be read as an exclusive
+partition or as psychological-state prevalence. The text explicitly allows
+multiple forgiveness expressions in one statement (p. 348).
+
+### Findings directly overlapping our interpretation
+The paper explicitly separates forgiveness from reconciliation (p. 343).
+It discusses requests for forgiveness and religious meaning (pp. 352–353),
+forgiving others while accusing them and religious warnings to victims'
+relatives (pp. 353–354), and an offender's position as someone also claiming
+injury (p. 360). These are direct precedents for our case discussion, including
+the distinction between attempted repair and achieved reconciliation.
+
+The examples include wording matching passages in our #433 (hope/pray that
+others forgive) and #413 (repeated petitions to the Lord), pp. 352–353. Since
+examples are not identified there by execution number, this is recorded as
+matching text, not a verified reconstruction of every source ID. Neither these
+passages nor the religious-pressure interpretation are treated as independent
+new discoveries in our report.
+
+### Specific methodological difference worth examining
+Smith codes forgiveness as religious when embedded in an explicitly religious
+narrative, while the nonreligious definition requires no accompanying religious
+expression anywhere in the narrative (p. 348). This is a statement-context
+classification. It does not, by itself, mean that each request contains a direct
+religious obligation or that each utterance has one psychological function.
+
+Our complete-text memos can distinguish local functions: God as judge (#508),
+petitions for mercy (#413), a religious condition on another person's forgiveness
+(#600), or a hoped-for afterlife encounter (#595). This offers a possible
+contextual elaboration of an established framework. It is not evidence that
+Smith's categories are wrong or that his entire analysis ignores local meaning.
+No recoding or new religious/nonreligious frequency comparison has been done.
+
+Religious coping theory supplies interpretations of function, not a measured
+causal effect on fear, peace or intimacy in these archived statements. The
+paper also notes that the witness-policy interpretation lacks control for
+potential confounders (pp. 351, 360). No policy-effect estimate is imported into
+this project.
 
 ## 2. Comparison with our work
 | Question from our reading | Prior coverage | Appropriate current claim |
@@ -134,8 +179,9 @@ responsibility?**
 
 Chinese: 面对执行时，人们如何通过请求或给予宽恕，表达自责、维系关系并协商责任？
 
-This is a focused extension question, not a demonstrated gap. Smith (2019) is
-an additional direct precedent for forgiveness direction and religious framing. The 2026 paper's
+This is a focused extension question, not a demonstrated gap. The full Smith (2019) analysis is
+a direct precedent for forgiveness direction, religious framing and the
+forgiveness/reconciliation distinction. The 2026 paper's
 close example must remain part of the argument. It does not replace the project
 with a classification or sincerity-prediction task.
 
@@ -160,9 +206,10 @@ completed reading set. Its practical value is interpretive precision: describe
 what a statement does and what it leaves open, rather than assuming that love,
 religion or apology proves one unified emotional state.
 
-Before a claim of publication-level novelty, obtain Smith's full methods and
-compare its categories with the focused cases. Then decide whether a further
-empirical extension is justified. These two
+Smith's full methods have now been checked. A candidate extension is to
+examine how religious references connect locally to forgiveness requests within
+a complete statement. Broader literature checking is still needed before any
+novelty claim; a difference in analytic granularity is not itself proof of a gap. These two
 papers are enough to demonstrate strong overlap, not enough to prove the absence
 of every narrower contribution.
 

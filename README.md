@@ -42,7 +42,7 @@ of punishment, and why harm acknowledgment, intent and involvement need
 separate interpretation. These are exploratory observations from purposively
 selected texts, not corpus prevalence estimates. Close precedents include
 Schuck & Ward (2008) and Zhuo & Chun (2026); a new literature gap is not established. The two key full texts have now been
-checked; a broader search also found Smith (2019) on forgiveness framing. A focused six-case analysis of relational repair and the boundaries of
+checked; Smith (2019) has also been checked in full for forgiveness framing. A focused six-case analysis of relational repair and the boundaries of
 forgiveness is complete in the report: seeking or granting forgiveness does not
 establish that reconciliation has occurred. The comparison retains ambiguous
 responsibility, changes of addressee and the owner's reading responses separately.

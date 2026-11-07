@@ -372,6 +372,22 @@ Eaton & Theuer already code recipients and separate guilt from responsibility
 statements to examine the relationships being addressed. It does not present
 them as a newly discovered conceptual framework.
 
+### Religious context and the function of a particular appeal
+Smith (2019, p. 348) defines nonreligious forgiveness by the absence of religious
+expression anywhere in the statement. Our memos ask a complementary question:
+what work does a particular religious reference do in its local sequence?
+In #413, petitions address mercy alongside explicit harm acknowledgment; in
+#600, religious consequences bear on the listener's forgiveness; in #508, God
+is invoked as a judge who knows what happened; #595 imagines an encounter beyond
+death. These can all belong to religious-context statements without becoming
+one kind of appeal or demonstrating one psychological outcome.
+
+This is a possible analytical elaboration rather than a competing classifier.
+There is no new recoding, accuracy claim or category-frequency estimate. Nor
+does it establish that earlier qualitative interpretation lacked such nuance.
+It keeps the original question about psychological expression attached to
+specific language and relationships.
+
 ### Boundary and alternative cases
 The comparison should not make forgiveness the meaning of every final statement.
 #49 only requests that love be conveyed to a mother; #15 does not provide enough
@@ -406,10 +422,13 @@ development records and this focused six-case analysis. The narrower question ha
 by the reviewed material. No further owner labeling is required to produce this
 version of the report.
 
-A broader check has now identified Smith (2019), whose publisher abstract
-directly concerns forgiveness direction and religious framing in last statements
-(see the literature comparison). A stronger publication claim needs its full
-methods and a justified extension beyond the current development cases. Before selecting anything
+The supplied Smith (2019) full text now confirms direct prior coverage of
+forgiveness direction, religious warnings and the forgiveness/reconciliation
+distinction. The account above is a contextual elaboration, not the first
+statement of these distinctions. Smith's examples also contain wording matching
+our #413 and #433 passages; these are overlapping textual material, not an
+independent validation set. A stronger publication claim needs a justified
+extension beyond the current development cases. Before selecting anything
 new, state what a further case could change: for example, whether a forgiveness
 appeal clearly accepts the listener's refusal, or whether explicit reconciliation
 is reported. Such examples must not be assumed to exist, and a one-sided public

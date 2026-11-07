@@ -30,7 +30,8 @@ The [full-text literature comparison](LITERATURE_COMPARISON.md) now includes the
 supplied Eaton & Theuer and Zhuo & Chun articles. It confirms substantial overlap,
 including religious admonition during forgiveness and two shared source cases.
 The broader check also located Smith (2019), directly concerning forgiveness
-direction and religious framing; its publisher abstract has been checked.
+direction and religious framing; its supplied full text has now been checked, including the contextual coding
+rule and relevant examples.
 No additional owner annotation is needed at this point.
 
 ## Completed focused comparison
@@ -62,9 +63,12 @@ These summaries describe the old development coding, not population rates or
 independent confirmation of the reading comparisons.
 
 ## Next-stage decision before selecting new cases
-1. Compare Smith's full methods with the existing forgiveness comparison.
-2. Specify the target contribution as a concrete difference from prior analyses;
-   if none is supported, retain the present study as a contextual portfolio result.
+1. The Smith full-text comparison is complete. Retain forgiveness direction
+   and the separation from reconciliation as established concepts.
+2. The candidate elaboration is how religious language connects locally to a
+   forgiveness appeal within a complete statement. First examine the already
+   discussed cases; do not infer that all religious-context requests perform
+   the same function or that this distinction is a proven gap.
 3. Only if new evidence would change the argument, document the selection
    rationale before retrieving additional cases. A later second reader can
    challenge the interpretation; no new owner labeling is requested now.
@@ -87,7 +91,7 @@ particular psychological explanation. Record ambiguity in context.
 | Goranson et al. (2017) | Actual and imagined last words, poetry, LIWC and affect ratings | Selected full-text sections read |
 | Foley & Kelly (2018) | Themes including love, spirituality and forgiveness | Abstract reviewed |
 | Mehra et al. (2024) | 466 statements; embedding-weighted emotion signals, category mapping, co-occurrence and notion transitions | Selected full-text methods/results read |
-| Smith (2019) | Forgiveness direction and religious framing | Publisher abstract checked; full methods outstanding |
+| Smith (2019) | Forgiveness direction and religious framing | Supplied full text read; contextual coding rule, denominator and examples checked |
 | Eaton & Theuer (2009) | Apology and remorse-related content | Supplied full text read; definitions, denominators and reliability checked |
 | Zhuo & Chun (2026) | 198 statements; title specifies White American inmates; emotion and moral positioning | Supplied full text read; scope, coding and close examples checked |
 
