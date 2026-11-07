@@ -26,26 +26,27 @@ and alternative readings for all 20 statements. All 20 have now been discussed
 with the owner. Memos incorporate revised readings, including the withdrawn
 sarcasm interpretation for 524 and unresolved referents in 138 and 433.
 
-The [literature comparison](LITERATURE_COMPARISON.md) now checks the relevant
-Schuck & Ward full-text sections. Its treatment already covers several initial
-observations. Full methods for Eaton & Theuer and Zhuo & Chun remain to be read;
-no additional owner annotation is needed at this point.
+The [full-text literature comparison](LITERATURE_COMPARISON.md) now includes the
+supplied Eaton & Theuer and Zhuo & Chun articles. It confirms substantial overlap,
+including religious admonition during forgiveness and two shared source cases.
+No additional owner annotation is needed at this point.
 
-## Next research decision
-The initial 20-case reading discussion is complete. Two comparison lenses are
-retained: responsibility/judgment, and connection/approaching death. They organize
-the report without adding reference labels or requiring every case to fit both.
+## Focused next comparison
+Within the overall question, ask: How do people facing execution use requests
+for, and declarations of, forgiveness to express self-reproach, sustain
+relationships and negotiate responsibility?
 
-Use the accessible Schuck & Ward sections and obtain the Zhuo & Chun (2026)
-and Eaton & Theuer (2009) full texts before claiming a distinctive contribution. Compare what they distinguish
-about the object of responsibility, addressees, forgiveness and readiness.
-Keep the present result as a contextual case comparison unless a separate
-sampling and coding design is developed for frequency estimates.
+Chinese: 面对执行时，人们如何通过请求或给予宽恕，表达自责、维系关系并协商责任？
 
-The next-case selection, if needed, should seek cases that challenge the current
-readings, including faith with explicit harm acknowledgment and family address
-without an accompanying defense. Specify the selection rationale before reading
-additional cases. Do not turn discussion responses into population claims.
+Use the existing discussed cases 413, 407, 600, 461, 595 and 508 for a focused
+comparison of worthiness, family connection, request conditions, forgiveness
+direction and responsibility. These are comparison questions rather than new
+labels. Retain the brief and differently oriented texts as boundary cases.
+
+This is a literature-grounded extension; a new gap has not been established.
+The next deliverable is a focused account within the existing report. No new
+model, sample or repeat owner review is needed. Broader searching and a stated
+case-selection rationale would precede any new empirical expansion.
 
 ## Useful distinctions
 - A self-description of peace differs from wishing peace for someone else.
@@ -65,8 +66,8 @@ particular psychological explanation. Record ambiguity in context.
 | Goranson et al. (2017) | Actual and imagined last words, poetry, LIWC and affect ratings | Selected full-text sections read |
 | Foley & Kelly (2018) | Themes including love, spirituality and forgiveness | Abstract reviewed |
 | Mehra et al. (2024) | 466 statements; embedding-weighted emotion signals, category mapping, co-occurrence and notion transitions | Selected full-text methods/results read |
-| Eaton & Theuer (2009) | Apology and remorse-related content | Publication/abstract located; full text needed |
-| Zhuo & Chun (2026) | 198 statements; title specifies White American inmates; emotion and moral positioning | Abstract reviewed; full text needed |
+| Eaton & Theuer (2009) | Apology and remorse-related content | Supplied full text read; definitions, denominators and reliability checked |
+| Zhuo & Chun (2026) | 198 statements; title specifies White American inmates; emotion and moral positioning | Supplied full text read; scope, coding and close examples checked |
 
 References:
 - https://doi.org/10.1177/0957926507083687
@@ -80,9 +81,9 @@ References:
 Compare definitions, samples, analytic units and interpretation before comparing
 findings. Word proportions and dominant-emotion categories measure different
 things. Co-occurrence, sequencing and self-presentation already appear in earlier work.
-The current report is an exploratory extension, not evidence of a new field-wide gap. Full
-reading of the closest papers will determine whether this study offers an
-extension, a contextual reanalysis or a narrower case comparison.
+The full-text comparison confirms a contextual extension rather than a new
+field-wide gap. The focused forgiveness comparison will remain explicit about
+prior coverage and overlapping examples.
 
 ## Scope of conclusions
 The documents support analysis of expressed feelings and meaning making.

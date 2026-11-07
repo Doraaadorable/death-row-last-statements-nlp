@@ -163,16 +163,16 @@ initial suspicion of self-presentation from becoming a blanket interpretation
 of affection or faith.
 
 ## Relation to existing research
-The sources below were checked on 7 November 2026. Access status describes this
-report's checks, not a claim that every paper has been read in full.
+The sources below were checked on 7 November 2026. The two previously outstanding papers have now been supplied and read; the
+[full-text comparison](LITERATURE_COMPARISON.md) records methods and page anchors.
 
 | Source | Evidence accessed and relevance | Consequence for this project |
 | --- | --- | --- |
 | Schuck & Ward (2008), [DOI](https://doi.org/10.1177/0957926507083687) | Relevant sections of author-uploaded text checked; see the [literature comparison](LITERATURE_COMPARISON.md) | The broad contextual approach has a direct precedent; it is not a new research gap |
 | Hirschmüller & Egloff (2016), [full text](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01985/full) | Methods/results: LIWC word proportions in 407 statements; more positive than negative emotion words | Word proportions answer a different question from the objects and functions of statements |
-| Eaton & Theuer (2009), [publisher abstract](https://doi.org/10.1080/07418820802245078) | Abstract: apology content and related remorse expressions, often addressed to victims' families | Apology and responsibility already have an established literature; full methods remain to be read |
+| Eaton & Theuer (2009), [publication](https://doi.org/10.1080/07418820802245078) | Full text: separate apology, remorse, guilt and responsibility variables; 305 statements | Compare textual definitions and distinguish explicit peace from perceived peace |
 | Mehra et al. (2024), [full text](https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2024.1463692/full) | Methods/results: 466 statements, computational emotion/notion analysis including co-occurrence and sequencing | Neither mixed expression nor sequence alone can be claimed as novel |
-| Zhuo & Chun (2026), [publisher abstract](https://journals.sagepub.com/doi/abs/10.1177/00302228261437890) | Abstract: 198 statements, emotion, moral reflection and positioning toward justice; title specifies White American inmates | Very close conceptual overlap; full methods and the exact sampling restriction need checking |
+| Zhuo & Chun (2026), [publication](https://journals.sagepub.com/doi/abs/10.1177/00302228261437890) | Full text: 198 White-classified inmates, iterative manual expression coding | Close conceptual and source overlap, including religious admonition and our Green/Mason cases |
 
 The closer full-text check confirms substantial prior coverage; the present
 case distinctions should be framed as illustrations and contextual elaborations,
@@ -186,7 +186,9 @@ The defensible contribution at this stage is a transparent contextual comparison
 on this saved corpus: distinguish the object of responsibility, the direction of
 forgiveness, the experiencer of emotion and the meaning of readiness. It is an
 exploratory extension and research portfolio result. A distinct publication-level
-gap is not established, particularly given the close 2008 and 2026 precedents.
+gap is not established, particularly given the close 2008 and 2026 precedents. The 2009 paper also
+separates guilt and responsibility; the 2026 paper directly discusses forgiveness
+with theological admonition. These points are not claimed as new findings here.
 
 ## Conclusions and limits
 The reviewed statements give examples of attachment alongside dispute, apology
@@ -207,13 +209,35 @@ Interpretations remain open to revision; disagreement and ambiguity are retained
 contradictory and brief cases rather than select only examples supporting the
 initial interpretation.
 
-## Remaining work for a stronger study
-1. Build on the checked Schuck & Ward sections; obtain the full Zhuo & Chun
-   paper and Eaton & Theuer's methods through university access. Compare their units and claims with this
-   report before asserting a contribution.
-2. If estimating frequencies, define a new coding protocol and sampling frame
-   first, then undertake a separate coding study. If retaining a qualitative case
-   comparison, justify further case selection and record disconfirming readings.
+## Focused synthesis after full-text comparison
+The narrower comparison concerns relational repair and the boundaries of
+forgiveness. In #413, harm acknowledgment and doubt about worthiness accompany
+repeated petitions. In #407, forgiveness is presented as unavailable but family
+identity persists. In #600, an appeal carries a religious condition; the owner
+experiences pressure. In #461, the speaker grants forgiveness rather than seeks
+it. In #595, changing addressees changes what he apologizes for; in #508,
+apology coexists with an accident explanation.
 
-No additional classifier, transformer training or model tuning is needed to
-complete the current reading study.
+The common feature is an attempted relation to another person, not a single
+level of remorse or a single hidden motive. Seeking forgiveness, granting it,
+claiming it and receiving it are different positions. A request does not show
+that forgiveness was received, and an appeal's religious framing does not
+resolve that relationship. These comparisons organize existing readings; they
+are neither new frozen categories nor a test of actual sincerity.
+
+This extends the case discussion while acknowledging direct precedents. In
+particular, Zhuo & Chun's Example 10 already discusses reconciliation mixed
+with religious judgment. Our case #600 is a related comparison, not proof that
+the earlier literature missed the phenomenon.
+
+## Next research decision
+The initial full-text dependency is resolved. A focused comparison can now be
+written from the completed memos without another owner-labeling round. Before
+asserting a publication-level contribution, check the broader literature around
+forgiveness demands, relational repair and moral positioning.
+
+Any new cases require a stated selection rationale and attention to
+counterexamples. A second reader may strengthen a future study; prevalence
+estimates would require a separate sampling and coding design. No additional
+classifier, transformer training or model tuning is needed for the current
+qualitative comparison.

@@ -1,104 +1,158 @@
-# Literature comparison and the next research decision
+# Full-text literature comparison and research decision
 
-Checked 7 November 2026. The 20-case reading discussion is complete; no further
-case-by-case owner review is requested for this comparison.
+Updated 7 November 2026 after receipt of the two papers. The 20-case reading
+discussion is complete. This comparison requires no new owner annotation.
 
-## What was obtained
-| Study | Access in this check | Where to verify |
+## Sources and access
+| Study | Material actually examined | Page convention |
 | --- | --- | --- |
-| Schuck & Ward (2008), *Dealing with the inevitable* | Author-uploaded full text located; methods, relevant analysis and appendix sections examined | [Publisher record](https://doi.org/10.1177/0957926507083687); [author copy](https://www.researchgate.net/publication/249713153_Dealing_with_the_inevitable_strategies_of_self-presentation_and_meaning_construction_in_the_final_statements_of_inmates_on_Texas_death_row) |
-| Eaton & Theuer (2009), *Apology and Remorse in the Last Statements of Death Row Prisoners* | Publisher abstract checked; full-text endpoint returned access error | [Publisher](https://doi.org/10.1080/07418820802245078) |
-| Zhuo & Chun (2026), *Emotional Expression and Moral Reflection in the Last Statements of White American Death Row Inmates* | Publisher/indexed abstract checked; full-text endpoint unavailable | [Publisher](https://doi.org/10.1177/00302228261437890); [PubMed](https://pubmed.ncbi.nlm.nih.gov/41855460/) |
+| Schuck & Ward (2008), [DOI](https://doi.org/10.1177/0957926507083687) | Relevant methods, analysis and appendix sections in the author-uploaded copy | Printed journal pages 43–62 |
+| Eaton & Theuer (2009), [DOI](https://doi.org/10.1080/07418820802245078) | Supplied full article: theory, methods, results and discussion | Printed pages 327–347; supplied PDF includes a cover, so printed 334 is PDF page 9 |
+| Zhuo & Chun (2026), [DOI](https://doi.org/10.1177/00302228261437890) | Supplied full article: framework, methods, findings and conclusion | Printed pages 1–25 match PDF page numbers |
 
-A failed retrieval is an access limitation of this check, not proof that a paper
-cannot be obtained elsewhere. The author copy supplies the relevant sections for this comparison.
+The supplied full texts resolve the earlier access dependency. Bibliographic
+links identify the publications; page references below identify the evidence
+used. The PDFs themselves are not added to the public repository.
 
-## Direct comparison with the closest accessible paper
-Schuck and Ward examine 283 statements using sequential and micro-level discourse
-analysis. Relevant locations are methodology/results (pp. 48–49), handling the
-situation (pp. 55–56), closure (p. 57), and the coding appendix (pp. 61–62).
+## 1. What the papers actually measure
 
-| Our observation | What the 2008 paper already covers | Decision |
+### Eaton & Theuer (2009)
+The inventory covers 402 executions in 1982–2007, but statement content is
+analyzed for the 305 people with last statements (pp. 333–334). Table 3's apology
+rate, 32.5%, therefore uses 305, not 402. It is also not a rate for the current
+project's differently selected 50-person sample.
+
+Two raters coded absence, presence and uncertainty, retaining disagreement as
+uncertainty and comparing ratings approximately every 50 records (p. 334).
+Reported kappas range from .89 to .99 for the listed independently coded
+variables. Peace is an exception: it was established through discussion, with
+no independent-coding kappa (Table 3, p. 338).
+
+The paper separates apology, remorse, forgiveness requests, responsibility,
+admission of guilt, innocence, accident accounts and excuses. It explicitly
+explains that admitting guilt need not imply taking responsibility
+(pp. 334–335). Apology and forgiveness requests also have recorded recipients.
+Consequently, neither separating these concepts nor identifying the addressee
+can be claimed as new here.
+
+Sincerity includes apparent earnestness or expressions of love/gratitude toward
+the victim's family. Peace includes explicit self-description and the raters'
+interpretation of appearing at peace (p. 335). The peace/apology analysis uses
+156 classifiable records, excluding many others; it is correlational
+(pp. 340–342). It does not show that apologizing causes peace. The authors
+acknowledge subjective interpretation and the absence of voice, face and bodily
+information (pp. 342–343).
+
+**Implication:** retain our distinction between explicit self-report and a
+reader's interpretation. Do not reuse their sincerity or peace categories as
+validated measurements of a private state. Nor should their result be dismissed
+as if they ignored uncertainty or had no separate responsibility categories.
+
+### Zhuo & Chun (2026)
+The paper describes an initial collection of 575 records in 1984–2021, identifies
+256 attributed to inmates classified as White, and retains 198 after excluding
+blank and formulaic entries (pp. 6–7). These are the authors' reported counts;
+the source collection has not been independently rebuilt here. Oral and
+advance-written statements are included. The analysis is explicitly restricted
+to the TDCJ White classification, not a race-comparative design.
+
+Iterative manual reading develops emotional-expression and evaluative categories.
+The authors state an interpretive, pattern-oriented purpose rather than reporting
+statistical reliability testing (p. 7). Table 1 contains 855 emotional expressions
+and 273 evaluative remarks, totaling 1,128 identified expressions (p. 8).
+The approximately 76% refers to 855/1,128 expressions, not 76% of people,
+statements or all words. Repeated expressions can contribute to that distribution.
+
+The analysis already covers continued family connection (pp. 9–10), apologies to
+different audiences (pp. 11–13), forgiveness with religious admonition
+(pp. 14–15), reformed self-description and intention qualification (pp. 17–18),
+and responsibility alongside judicial criticism (pp. 19–20). Its framework
+explicitly rejects treating statements as transparent access to stable private
+traits (pp. 5–6).
+
+Especially close examples are:
+- Example 10 (pp. 14–15): Barefoot combines forgiveness with a warning of
+  damnation. The authors discuss the mixture of reconciliation and moral judgment.
+  Our #600 pressure reading is a related case, not discovery of that phenomenon.
+- Example 15 (p. 18): Green's reformed/non-threatening self-description is from
+  the same speaker as our #138.
+- Example 19 (pp. 19–20): Mason's complaint about lawyers is from the same
+  statement as our #219.
+- Example 18 (p. 19): Duff-Smith combines responsibility and criticism of his trial,
+  closely overlapping the broader questions raised by our #407 comparison.
+
+**Implication:** family attachment, positive self-presentation, religion,
+reconciliation and mixed moral positioning are not uncovered territory. Some
+examples overlap at source level; our reading cannot be presented as independent
+confirmation on wholly new material.
+
+### Schuck & Ward (2008)
+Their sequential and micro-level analysis of 283 statements directly precedes
+this project's broad approach. Relevant locations include pp. 48–49, 55–57 and
+61–62. They distinguish apology from guilt, allow accepted guilt alongside
+opposition to capital punishment, and identify closing formulas across opposed
+and accepting statements. Religious and relational interpretation is already
+central. Our contextual examples elaborate these established questions rather
+than displace them.
+
+## 2. Comparison with our work
+| Question from our reading | Prior coverage | Appropriate current claim |
 | --- | --- | --- |
-| Apology is not a complete confession | Appendix separates apology from guilt | Established distinction; illustrate, do not claim novelty |
-| Responsibility and protest coexist | Appendix permits opposition despite accepted guilt | Established combination |
-| Ready does not entail approval | Closure occurs across accepted/opposed situations | Established point |
-| Faith, comfort and relationships connect | Analysis includes these functions | Broad overlap |
-| Own peace differs from another person's hoped-for peace | Wishes and self-comfort appear in its scheme | Check finer treatment; absence of a category is not demonstrated absence of analysis |
+| Can apology coexist with qualified responsibility? | Separate variables in Eaton & Theuer; intention qualification in Zhuo & Chun | Compare the precise object and limits of responsibility in complete cases |
+| Does family love prove remorse or sincerity? | Both papers discuss relational expression; Eaton & Theuer also code perceived sincerity | Preserve affection as expression and reader judgment as interpretation |
+| Can forgiveness language impose a moral burden? | Zhuo & Chun's Example 10 directly addresses religious admonition | Develop a comparison, not a first-discovery claim |
+| Can responsibility coexist with criticism of execution? | Explicit in the 2008 appendix and 2026 Example 18 | Established coexistence; detail its local meaning |
+| Does ready imply endorsement? | Closure across opposed/accepting statements in 2008 | Use this distinction consistently, not as a novel result |
+| Does positive language mean the speaker is internally peaceful? | The papers use different definitions and acknowledge interpretation | Retain explicit self-description, addressee and uncertainty separately |
 
-Our response is to contextualize examples, not claim these distinctions were
-previously unknown. Local ambiguities in #138, #433 and #600 remain case questions.
+The frozen eight labels remain retrieval aids. In particular, the combined
+apology/forgiveness category is not equivalent to Eaton & Theuer's distinct
+variables. Our 20 memos are contextual readings, not a directly comparable
+frequency table or replication of either paper's coding.
 
-## Other close work and unresolved overlap
-Eaton and Theuer's abstract describes remorse-related apology content, including
-forgiveness and empathy, in Texas statements through August 2007. That establishes
-overlap with our apology readings, not their exact coding boundaries. Full
-methods and examples are needed before comparing responsibility detail or
-religious pressure to forgive.
+## 3. Focused next analysis: relational repair and the boundaries of forgiveness
+Keep the overall psychological-expression question. Within it, use a more
+specific working question for the next comparison:
 
-Zhuo and Chun's abstract describes 198 statements and connects emotion with moral
-reflection, responsibility and legal authority. The title specifies White
-American inmates. This is close overlap with our overall question. Full text is
-needed to establish the sample restriction, analytic categories and treatment
-of mixed positions; title and abstract alone cannot settle those matters.
+**How do people facing execution use requests for, and declarations of,
+forgiveness to express self-reproach, sustain relationships and negotiate
+responsibility?**
 
-## What the current project contributes now
-The current output is a complete, traceable 20-case exploratory comparison:
-source passages, whole-statement context, reading memos, alternatives and a
-synthesis. Its particular value is showing how interpretations change when the
-object of responsibility, addressee, referent or emotion object is made explicit.
-That is an analytic result for this project, not yet a demonstrated literature
-gap or an estimate of how common a pattern is.
+Chinese: 面对执行时，人们如何通过请求或给予宽恕，表达自责、维系关系并协商责任？
 
-Three example comparisons can anchor the report:
+This is a focused extension question, not a demonstrated gap. The 2026 paper's
+close example must remain part of the argument. It does not replace the project
+with a classification or sincerity-prediction task.
 
-- **Responsibility and meaning:** #508 distinguishes an accident account from
-  broad responsibility; #407 combines responsibility with opposition to a
-  penalty's consequences. These illustrate established questions with explicit
-  contextual reasoning.
-- **Seeking and granting forgiveness:** #413 questions worthiness; #600 invokes
-  a religious consequence for not forgiving; #461 grants forgiveness from the
-  position of someone who says he is being wronged. The direction and terms of
-  forgiveness differ. Whether this specific comparison extends earlier work
-  remains an open literature question.
-- **Connection and approaching death:** #407 maintains kinship without recorded
-  reconciliation; #595 apologizes to wife and children for absence; #49 supplies
-  only a maternal love message. The comparison preserves differences rather
-  than inferring one shared hidden motive.
+| Existing cases | Relational question supported by the texts | Boundary to retain |
+| --- | --- | --- |
+| 413 | How do harm acknowledgment and doubt about worthiness accompany repeated requests? | Seeking relief is not achieved relief |
+| 407 | Can family identity be maintained when forgiveness is unavailable? | Claimed kinship is not recorded reconciliation |
+| 600 | How does a religious condition change the force of a request? | Experienced pressure is not proof of deliberate coercion |
+| 461 | What changes when the speaker grants forgiveness from a position of being wronged? | Claimed injury by execution is not an explicit innocence claim |
+| 595 | How do forgiveness requests change when the addressee shifts from the victim's family to wife/children? | Different objects of apology; no romantic attachment inference |
+| 508 | How can apology for loss coexist with an accident explanation? | Broad responsibility is not a specified admission of intent |
 
-The owner's reaction to #600 is evidence about this reading encounter, not an
-empirical finding that religious appeals pressure audiences in general.
-Similarly, no discussion of sincerity establishes the speaker's private motive.
+These are ways of comparing already discussed material, not new reference labels.
+No new sample has been selected, and no additional owner annotation is needed to
+write this comparison. Short affection-only and readiness-only statements remain
+in the full workbook as boundary cases; not every statement must contain a
+forgiveness exchange.
 
-## Work that can proceed without additional manual annotation
-1. Use the completed 20-case report as the current exploratory project result.
-2. Compare the two outstanding full papers with the questions below when obtained.
-3. Revise the contribution statement, then decide whether further case selection
-   is justified. Do not enlarge the sample solely to make an initial idea appear
-   more persuasive.
+## 4. Decision and remaining evidence
+The immediate outcome is a literature-grounded qualitative comparison on the
+completed reading set. Its practical value is interpretive precision: describe
+what a statement does and what it leaves open, rather than assuming that love,
+religion or apology proves one unified emotional state.
 
-Full-text comparison questions:
-- How do the authors distinguish apology, harm acknowledgment and culpability?
-- Who seeks or grants forgiveness, and are the addressee and terms retained?
-- How are continuing family identity and future absence interpreted?
-- Are responsibility and objections to execution allowed to coexist?
-- What evidence supports a psychological interpretation rather than only a
-  description of language?
+Before a claim of publication-level novelty, check the broader literature on
+forgiveness demands, moral positioning and kinship under punishment. These two
+papers are enough to demonstrate strong overlap, not enough to prove the absence
+of every narrower contribution.
 
-These are literature-reading questions, not a new annotation form for the owner.
-
-## When human work would be needed again
-No additional owner coding is needed to synchronize these documents or finish
-this comparison. University-authenticated access may be needed for the two
-outstanding papers. If a new empirical study is undertaken, the purpose and
-scope of additional reading must be specified first. A second reader could
-challenge interpretations in selected complete cases; it should not be described
-as blind agreement after seeing these memos. A frequency study would require
-its own sampling and coding plan. Neither step has been initiated here.
-
-## Decision
-Keep the psychological-expression question and the present contextual case
-comparison. Do not return to classifier evaluation or add a transformer for
-its own sake. Do not claim discovery of coexistence, self-presentation or
-meaning construction. The immediate remaining dependency is full-text comparison
-with the two close papers, not another round of owner labeling.
+For the current portfolio report, proceed with the focused comparison using
+existing memos. If expanding into a new empirical study, specify why additional
+cases are needed and how they might challenge the account before selecting them.
+An independently recruited second reader would strengthen a later study, but
+repeating the owner's completed 20-case review is not required now. Frequency
+estimates would need a separate coding and sampling plan.
