@@ -1,6 +1,6 @@
 # Responsibility, connection and approaching death in Texas last statements
 
-Exploratory report, 7 November 2026.
+Exploratory report, revised after the 20-case reading discussion, 7 November 2026.
 
 ## Research question
 How do people facing execution express feelings, sustain relationships and make
@@ -24,9 +24,10 @@ and discussions; this is a purposive comparison, not a prevalence sample.
 
 The [workbook](OPEN_READING_WORKBOOK_v1.md) preserves each complete candidate
 text and its existing source-context hash. Every memo separates evidence,
-interpretation and alternative readings. Executions 508, 407 and 461 were
-examined in dialogue with the project owner. The other 17 memos are initial
-analyses awaiting owner review. No new reference labels have been assigned.
+interpretation and alternative readings. All 20 statements were examined in dialogue with the project owner. Memos
+now incorporate her interpretations, subsequent refinements and unresolved
+readings. Completion refers to discussion of the texts, not agreement on every
+possible meaning or a new set of frozen labels. No new reference labels have been assigned.
 The eight-category annotations, NMF results and syntax experiments are retained
 as earlier work; none was refitted for this report.
 
@@ -130,6 +131,37 @@ The remaining cases, including #330, #433 and #138, are retained in full in the
 workbook. The evidence trail covers all 20 texts without treating each as an
 instance of every proposed interpretation.
 
+## Revisions arising from the reading discussion
+The discussion sharpened the following interpretations without changing source
+texts or the earlier labels:
+
+| Cases | Revision or unresolved distinction |
+| --- | --- |
+| 330, 433 | Comfort and continued connection are contextual readings; love and thanks are explicit. The final apology in 433 may concern separation or earlier harm. |
+| 413 | Strong self-reproach is supported; the closing may seek relief, but does not establish achieved peace. The earlier peace wish addresses others. |
+| 138 | Friends being punished may refer to suffering a loss or to imprisoned friends; neither is silently resolved. Completed punishment is not a statement that sins were erased. |
+| 595 | A hoped-for encounter with the victim is read as possible reconciliation, not established fixation. Family apologies address absence; broad wrong-choice language does not specify every act. |
+| 600 | Religious conditionality can be experienced as pressure to forgive. The owner's doubt about sincerity is separated from the observable lack of responsibility detail. |
+| 58, 219, 583 | Readiness and ending a speech coexist with continued protest. Helplessness, irony and resistance are contextual readings, not personality diagnoses. |
+| 153 | Offering death for a religious purpose is distinguished from declaring the punishment deserved. |
+| 524 | The owner withdrew sarcasm in favor of anticipated hostility after reading the context. |
+| 11, 15 | Desert is an explicit evaluation; bare readiness does not identify emotion. |
+| 32, 39, 1, 49 | Identify whose peace, what destination, what object of fear and which explicitly named relationship; do not fill missing content with presumed experience. |
+
+In #600, the owner felt that linking another person's forgiveness to God's
+forgiveness imposed a moral burden on the listener. This concerns the experienced
+force of the words; a deliberate intention to coerce is not established.
+In #433, the owner moved from a sense of moral distance in the declaration of
+love to greater closeness in the forgiveness requests. Together with #461,
+these responses show why the analyst's reactions should be recorded as reactions,
+not converted into facts about the speaker or other listeners.
+
+The counterexamples remain important. #413 combines explicit harm acknowledgment
+with religious petitions; #595 links family attachment with responsibility
+language; #49 expresses love without a developed defense. They prevent the
+initial suspicion of self-presentation from becoming a blanket interpretation
+of affection or faith.
+
 ## Relation to existing research
 The sources below were checked on 7 November 2026. Access status describes this
 report's checks, not a claim that every paper has been read in full.
@@ -166,19 +198,16 @@ time or the speaker's full relationship history. Missing text is particularly
 important: recorded ellipses and editorial notes are preserved, and a complete
 candidate record is not a guarantee of a complete original utterance.
 
-This report completes an initial synthesis. Three case readings have been
-discussed with the owner; the other 17 remain proposed interpretations. Further
-owner review may change the comparisons. Any empirical expansion should retain
+This report completes the synthesis of the 20-case reading discussion.
+Interpretations remain open to revision; disagreement and ambiguity are retained. Any empirical expansion should retain
 contradictory and brief cases rather than select only examples supporting the
 initial interpretation.
 
 ## Remaining work for a stronger study
-1. Review the remaining 17 memos against their full statements; preserve a
-   disagreement or uncertainty rather than requiring agreement.
-2. Obtain the full Schuck & Ward and Zhuo & Chun papers, and Eaton & Theuer's
+1. Obtain the full Schuck & Ward and Zhuo & Chun papers, and Eaton & Theuer's
    methods, through university access. Compare their units and claims with this
    report before asserting a contribution.
-3. If estimating frequencies, define a new coding protocol and sampling frame
+2. If estimating frequencies, define a new coding protocol and sampling frame
    first, then undertake a separate coding study. If retaining a qualitative case
    comparison, justify further case selection and record disconfirming readings.
 

@@ -22,27 +22,28 @@ are useful enough to carry forward.
 ## Current progress
 The [exploratory report](PSYCHOLOGICAL_EXPRESSION_REPORT.md) synthesizes the
 20-case reading. The workbook now includes evidence anchors, contextual memos
-and alternative readings for all 20 statements. Executions 508, 407 and 461
-were discussed with the owner; the other 17 memos await owner review.
+and alternative readings for all 20 statements. All 20 have now been discussed
+with the owner. Memos incorporate revised readings, including the withdrawn
+sarcasm interpretation for 524 and unresolved referents in 138 and 433.
 
-The next task is reviewing these interpretations and reading the closest
-full papers, rather than adding models or notebooks.
+The next task is comparing the closest full papers with these observations
+and specifying a focused extension before selecting further cases.
 
-## Reading phase
-Use the [open reading workbook](OPEN_READING_WORKBOOK_v1.md), beginning with
-executions 508, 407 and 461. Its 20 complete statements were selected from the
-existing development sample to provide contrasting cases, including brief
-statements and ambiguous expressions.
+## Next research decision
+The initial 20-case reading discussion is complete. Two comparison lenses are
+retained: responsibility/judgment, and connection/approaching death. They organize
+the report without adding reference labels or requiring every case to fit both.
 
-Write a short memo for each statement. Record exact wording, who speaks to
-whom, the feelings and concerns explicitly described, and possible meanings.
-Include alternative interpretations and observations that challenge the first
-reading. Treat these as open notes; decide on analytic categories after the
-initial reading sessions.
+Read the full Schuck & Ward (2008), Zhuo & Chun (2026) and Eaton & Theuer (2009)
+papers before claiming a distinctive contribution. Compare what they distinguish
+about the object of responsibility, addressees, forgiveness and readiness.
+Keep the present result as a contextual case comparison unless a separate
+sampling and coding design is developed for frequency estimates.
 
-Then write one page connecting the research question, the closest literature,
-observations and missing evidence. Use it to decide the next reading sample
-and whether a more structured coding scheme is needed.
+The next-case selection, if needed, should seek cases that challenge the current
+readings, including faith with explicit harm acknowledgment and family address
+without an accompanying defense. Specify the selection rationale before reading
+additional cases. Do not turn discussion responses into population claims.
 
 ## Useful distinctions
 - A self-description of peace differs from wishing peace for someone else.

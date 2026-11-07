@@ -27,8 +27,8 @@ These describe textual expression; they are not a psychological scale.
 
 ## Current work
 The 20-case workbook now contains contextual reading memos and alternative
-interpretations. Three cases (508, 407, 461) were discussed with the project
-owner; 17 initial memos await owner review. The accompanying report examines
+interpretations. All 20 cases have been discussed with the project owner; the memos now
+record refinements, reading responses and unresolved interpretations. The accompanying report examines
 responsibility and judgment, family connection, spiritual meaning and readiness.
 
 The case comparisons show why readiness should be separated from endorsement
