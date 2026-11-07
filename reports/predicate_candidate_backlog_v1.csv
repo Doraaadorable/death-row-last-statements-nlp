@@ -1,0 +1,7 @@
+candidate_id,related_claim_id,execution_number,candidate_predicate,focus_start,focus_end,candidate_status,reason
+backlog-focus-01,v3-dev21-007,451,made,463,467,pending_scope_decision_not_added_to_40,Explicitly retained during guided focus review. May be distinct predicate or repeated mention; not an approved extra semantic row.
+backlog-focus-02,v3-dev21-014,9,shot,215,219,pending_scope_decision_not_added_to_40,Explicitly retained during guided focus review. May be distinct predicate or repeated mention; not an approved extra semantic row.
+backlog-focus-03,v3-added-006,287,feel sorry,1111,1121,pending_scope_decision_not_added_to_40,Explicitly retained during guided focus review. May be distinct predicate or repeated mention; not an approved extra semantic row.
+backlog-focus-04,v3-dev21-013,9,call,162,166,pending_scope_decision_not_added_to_40,Explicitly retained during guided focus review. May be distinct predicate or repeated mention; not an approved extra semantic row.
+backlog-focus-05,v3-added-002,450,did,83,86,pending_scope_decision_not_added_to_40,Explicitly retained during guided focus review. May be distinct predicate or repeated mention; not an approved extra semantic row.
+backlog-focus-06,owner-added-524-occurrence-01,524,happened,186,194,pending_scope_decision_not_added_to_40,Explicitly retained during guided focus review. May be distinct predicate or repeated mention; not an approved extra semantic row.

@@ -1,6 +1,18 @@
 # Last Statements: Themes, Interpretation and Robustness
 
-## Current consistency audit: 39 selected development propositions
+## Current review snapshot: 40 selected propositions
+
+Start with [notebook 14](notebooks/14_confirmed_snapshot40.ipynb) and
+[the snapshot guide](docs/CONFIRMED_SNAPSHOT40_v1.md).
+All 40 semantic decisions are owner-confirmed after AI-assisted discussion.
+Ten predicate-focus positions are explicitly confirmed; thirty remain proposed
+mappings. The [candidate backlog](reports/predicate_candidate_backlog_v1.csv)
+keeps six unresolved selection candidates separate from accepted records.
+This is not independent or exhaustive annotation. Older 37-row diagnostics
+and the 39-row audit remain unchanged historical artifacts.
+
+
+## Historical consistency audit: 39 selected development propositions
 
 [Notebook 13](notebooks/13_claim_consistency_audit.ipynb) checks all 39
 conversation-confirmed selections (the original 37 plus the two #287 predicate

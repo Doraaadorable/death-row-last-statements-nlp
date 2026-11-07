@@ -1,0 +1,14 @@
+{
+  "checked": "40 semantic tuples preserved, 10 explicit focus confirmations distinguished from 30 proposed offsets; six tests and direct notebook cell execution passed",
+  "not_checked": "independent semantic accuracy, complete predicate inventory, model performance",
+  "python": "3.12.14",
+  "pandas": "2.2.3",
+  "file_sha256": {
+    "src/build_confirmed_snapshot40.py": "488219a9c0a9db348e88f4f19d0097eeeb6b8c6e0ee8f2d68d77a5d546c32623",
+    "tests/test_snapshot40.py": "fe4488e3da7755c884af9f8d216eab2f5f10a3012435bb93a50493e106d0e70e",
+    "notebooks/14_confirmed_snapshot40.ipynb": "42b8993834f0160505fd2ce018729a3477f7206a32967f98fe9a432b8e48791a",
+    "reports/semantic_confirmed_snapshot40_v1.csv": "e2fc2de370eb6ee8dfd433696bbcd3cffa2037c60cc5b4f8a533d303c63ce050",
+    "reports/semantic_owner_addition_198_choice.csv": "215f5b9e56786b8bbd8f92ce5dcad05a16bd05490777ac589dd5cba78dd1965b",
+    "reports/predicate_candidate_backlog_v1.csv": "04083f61d0bc7fd4d9327a69a1b0e8c12362a95d9296d56cc297194470ce5697"
+  }
+}
