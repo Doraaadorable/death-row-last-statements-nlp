@@ -1,0 +1,84 @@
+{
+  "status": "known_development_comparison_not_independent_accuracy",
+  "reference_selections": 42,
+  "reference_documents": 19,
+  "alignment_counts": {
+    "exact_offsets": 37,
+    "no_exact_predicate_alignment": 5
+  },
+  "aligned_focus_confirmation": {
+    "AI_proposed_not_owner_confirmed": 26,
+    "owner_confirmed": 11
+  },
+  "aligned_scope_status": {
+    "scope_uncertain": 4,
+    "retain_scope": 28,
+    "exclude_scope": 5
+  },
+  "field_relations_all_exact": {
+    "claim_source": {
+      "same_value": 21,
+      "automatic_unclear": 16
+    },
+    "event_type": {
+      "same_value": 34,
+      "definite_value_conflict": 2,
+      "automatic_unclear": 1
+    },
+    "event_actor": {
+      "same_value": 26,
+      "automatic_unclear": 11
+    },
+    "polarity": {
+      "same_value": 37
+    },
+    "proposition_status": {
+      "same_value": 18,
+      "automatic_unclear": 18,
+      "definite_value_conflict": 1
+    }
+  },
+  "field_relations_owner_confirmed_focus": {
+    "claim_source": {
+      "same_value": 4,
+      "automatic_unclear": 7
+    },
+    "event_type": {
+      "same_value": 11
+    },
+    "event_actor": {
+      "same_value": 8,
+      "automatic_unclear": 3
+    },
+    "polarity": {
+      "same_value": 11
+    },
+    "proposition_status": {
+      "same_value": 4,
+      "automatic_unclear": 7
+    }
+  },
+  "model": {
+    "spacy": "3.8.18",
+    "name": "core_web_sm",
+    "version": "3.8.0",
+    "loaded_pipeline_sha256": "12ea1f4e8400e16dc142fc0b599636b814ebedc132ff0201db500081aedaed21"
+  },
+  "inputs_sha256": {
+    "reports/semantic_confirmed_snapshot40_v1.csv": "e2fc2de370eb6ee8dfd433696bbcd3cffa2037c60cc5b4f8a533d303c63ce050",
+    "reports/semantic_owner_additions_9_shooting_naming.csv": "5168793517059691bd099dcc2a84d93377384d491487d00079c3b4f23ae852ab",
+    "reports/semantic_scope_audit_v1.json": "cb683cd373304953ca9cea83d0cef4ac3ee8002d4fe3699cdd130f2ba8e0bf6d",
+    "data/processed/model_corpus_v1.csv": "d66a330b121ae5e59d96b58fb12d34b0c4fdbd9059d427abdc7bd182b07bcc2c",
+    "src/compare_confirmed_syntax_v1.py": "76f558088ef12d665d54b06c3aa4eb8f92926baa4457024c83bf0e17294a92c2",
+    "src/syntactic_candidates_v1.py": "c9b5450052fdd1d2f9d572e94370c8386616919fa47e9d2386f248905b35b75b",
+    "src/syntax_semantics_v1.py": "f482e712c7617105fc079152672964a8303adcba3a9741b943be00fb64e0ee92"
+  },
+  "limitations": [
+    "References were confirmed after AI-assisted discussion and informed method development.",
+    "30 of the 42 historical focus positions remain AI-proposed, not independently confirmed.",
+    "Exact alignment can fail for nominal or multiword reference foci; no forced nearest match.",
+    "Field conflict does not by itself identify parser error, rule gap or genuine ambiguity.",
+    "Same unclear values are counted as same_value, not successful substantive interpretation.",
+    "Task-scope statuses and retired representations are retained rather than silently filtered."
+  ]
+}
