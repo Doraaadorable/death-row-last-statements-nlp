@@ -9,6 +9,7 @@ make sense of death and their own situation in their final statements?
 
 ## Start here
 - [Exploratory report](docs/PSYCHOLOGICAL_EXPRESSION_REPORT.md): case comparisons, literature and conclusions.
+- [Literature comparison](docs/LITERATURE_COMPARISON.md): prior coverage, access status and the next research decision.
 - [Current research plan](docs/CURRENT_RESEARCH_PLAN.md): question, literature and next steps.
 - [Open reading workbook](docs/OPEN_READING_WORKBOOK_v1.md): 20 complete statements with evidence-linked reading memos.
 - [Eight-category annotation guide](docs/ANNOTATION_GUIDE.md): definitions for the existing development sample.

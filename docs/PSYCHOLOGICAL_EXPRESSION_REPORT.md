@@ -168,11 +168,15 @@ report's checks, not a claim that every paper has been read in full.
 
 | Source | Evidence accessed and relevance | Consequence for this project |
 | --- | --- | --- |
-| Schuck & Ward (2008), [DOI](https://doi.org/10.1177/0957926507083687) | Publisher abstract: 283 statements, sequential structure and micro-level self-presentation/meaning analysis | The broad contextual approach has a direct precedent; it is not a new research gap |
+| Schuck & Ward (2008), [DOI](https://doi.org/10.1177/0957926507083687) | Relevant sections of author-uploaded text checked; see the [literature comparison](LITERATURE_COMPARISON.md) | The broad contextual approach has a direct precedent; it is not a new research gap |
 | Hirschmüller & Egloff (2016), [full text](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01985/full) | Methods/results: LIWC word proportions in 407 statements; more positive than negative emotion words | Word proportions answer a different question from the objects and functions of statements |
 | Eaton & Theuer (2009), [publisher abstract](https://doi.org/10.1080/07418820802245078) | Abstract: apology content and related remorse expressions, often addressed to victims' families | Apology and responsibility already have an established literature; full methods remain to be read |
 | Mehra et al. (2024), [full text](https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2024.1463692/full) | Methods/results: 466 statements, computational emotion/notion analysis including co-occurrence and sequencing | Neither mixed expression nor sequence alone can be claimed as novel |
 | Zhuo & Chun (2026), [publisher abstract](https://journals.sagepub.com/doi/abs/10.1177/00302228261437890) | Abstract: 198 statements, emotion, moral reflection and positioning toward justice; title specifies White American inmates | Very close conceptual overlap; full methods and the exact sampling restriction need checking |
+
+The closer full-text check confirms substantial prior coverage; the present
+case distinctions should be framed as illustrations and contextual elaborations,
+not discoveries absent from the 2008 framework.
 
 There is no demonstrated contradiction between positive-word proportions and
 other studies' dominant-emotion classifications: samples, measurement units and
@@ -204,8 +208,8 @@ contradictory and brief cases rather than select only examples supporting the
 initial interpretation.
 
 ## Remaining work for a stronger study
-1. Obtain the full Schuck & Ward and Zhuo & Chun papers, and Eaton & Theuer's
-   methods, through university access. Compare their units and claims with this
+1. Build on the checked Schuck & Ward sections; obtain the full Zhuo & Chun
+   paper and Eaton & Theuer's methods through university access. Compare their units and claims with this
    report before asserting a contribution.
 2. If estimating frequencies, define a new coding protocol and sampling frame
    first, then undertake a separate coding study. If retaining a qualitative case
