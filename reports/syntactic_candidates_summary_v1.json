@@ -1,0 +1,139 @@
+{
+  "status": "parser_proposals_only_not_adjudicated_not_B2_predictions",
+  "provenance": {
+    "spacy": "3.8.18",
+    "model": "core_web_sm",
+    "model_version": "3.8.0",
+    "active_pipeline": [
+      "tok2vec",
+      "tagger",
+      "parser",
+      "attribute_ruler",
+      "lemmatizer"
+    ],
+    "loaded_pipeline_sha256": "f7de09f75540807ca6339339bd6fea924844bd7cd94380a94bb99bd1900d6048",
+    "python": "3.12.14",
+    "inputs_sha256": {
+      "src/syntactic_candidates_v1.py": "c9b5450052fdd1d2f9d572e94370c8386616919fa47e9d2386f248905b35b75b",
+      "src/run_syntactic_candidates_v1.py": "706a15e2eb62b7b5286ab6e804c851d79bde1038045fb67d6b1e9ac2c05d21c6",
+      "reports/sampled_focus_smoke_v1.json": "a137eb4aac2edac0cc8ffeab83d3b5871ff870bbd4db36bf2cb36c1f1c673703"
+    },
+    "corpus_sha256": "d66a330b121ae5e59d96b58fb12d34b0c4fdbd9059d427abdc7bd182b07bcc2c"
+  },
+  "local_output": "data/processed/syntactic_candidates_v1.json",
+  "local_output_sha256": "5ab0b326801f5c8dc0f4fb03cb89921068431fbd44b807f2e55788f20c666b6d",
+  "candidate_kind_counts": {
+    "lexical_verb": 453,
+    "copular_or_be_predicate": 110,
+    "unattached_auxiliary_possible_ellipsis": 1
+  },
+  "document_counts": [
+    {
+      "execution_number": 108,
+      "stratum": "candidate",
+      "parser_candidates": 8
+    },
+    {
+      "execution_number": 211,
+      "stratum": "candidate",
+      "parser_candidates": 76
+    },
+    {
+      "execution_number": 229,
+      "stratum": "candidate",
+      "parser_candidates": 18
+    },
+    {
+      "execution_number": 248,
+      "stratum": "candidate",
+      "parser_candidates": 63
+    },
+    {
+      "execution_number": 273,
+      "stratum": "candidate",
+      "parser_candidates": 13
+    },
+    {
+      "execution_number": 320,
+      "stratum": "candidate",
+      "parser_candidates": 14
+    },
+    {
+      "execution_number": 372,
+      "stratum": "candidate",
+      "parser_candidates": 21
+    },
+    {
+      "execution_number": 465,
+      "stratum": "candidate",
+      "parser_candidates": 46
+    },
+    {
+      "execution_number": 486,
+      "stratum": "candidate",
+      "parser_candidates": 71
+    },
+    {
+      "execution_number": 563,
+      "stratum": "candidate",
+      "parser_candidates": 45
+    },
+    {
+      "execution_number": 113,
+      "stratum": "nonmatch",
+      "parser_candidates": 12
+    },
+    {
+      "execution_number": 122,
+      "stratum": "nonmatch",
+      "parser_candidates": 19
+    },
+    {
+      "execution_number": 125,
+      "stratum": "nonmatch",
+      "parser_candidates": 13
+    },
+    {
+      "execution_number": 216,
+      "stratum": "nonmatch",
+      "parser_candidates": 14
+    },
+    {
+      "execution_number": 256,
+      "stratum": "nonmatch",
+      "parser_candidates": 41
+    },
+    {
+      "execution_number": 283,
+      "stratum": "nonmatch",
+      "parser_candidates": 46
+    },
+    {
+      "execution_number": 347,
+      "stratum": "nonmatch",
+      "parser_candidates": 7
+    },
+    {
+      "execution_number": 378,
+      "stratum": "nonmatch",
+      "parser_candidates": 20
+    },
+    {
+      "execution_number": 409,
+      "stratum": "nonmatch",
+      "parser_candidates": 4
+    },
+    {
+      "execution_number": 481,
+      "stratum": "nonmatch",
+      "parser_candidates": 13
+    }
+  ],
+  "limitations": [
+    "Parser predictions can be wrong on transcription, religious and figurative language.",
+    "No scope filtering, coreference resolution, five-field labels or classification scores.",
+    "Subject/object heads are syntactic evidence, not semantic agent or source labels.",
+    "No automatic expansion of relative clauses or omitted shared subjects.",
+    "More candidates than a literal adapter does not establish improved extraction recall."
+  ]
+}
