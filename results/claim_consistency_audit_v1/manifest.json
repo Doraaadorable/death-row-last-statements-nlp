@@ -1,0 +1,16 @@
+{
+  "inputs_sha256": {
+    "reports/semantic_owner_decisions_v3_discussion.csv": "eb48f2d63e379d05e0a2ab971419458a502d07bf825f9a3b0bfa9cf0cc848122",
+    "reports/semantic_owner_additions_287_focus.csv": "4b4706b1691cc049207aad17ce277c78e3d64976cd2ada67cb26961359c0f265",
+    "reports/predicate_focus_audit_plan_v1.json": "fb2ab598fa41c35ee208d87f4d97368150ff54d7b42bd3f39d957a93fec9d10e",
+    "data/processed/model_corpus_v1.csv": "d66a330b121ae5e59d96b58fb12d34b0c4fdbd9059d427abdc7bd182b07bcc2c"
+  },
+  "code_sha256": "b1e5c23941c6f6b0e690443cd45c7fc52991d01f1a782dc1f08d3c71e2175996",
+  "python": "3.12.14",
+  "pandas": "2.2.3",
+  "outputs_sha256": {
+    "consistency_audit.csv": "45667d86a15257049230e820e123563559f7d957a265581311b1c75be2000fd6",
+    "summary.csv": "422f2dd249df1e529ccc89ec9dddc198e26139bb5f41cbdb7dab25631a34e10c"
+  },
+  "scope": "39 selected records structurally verified; manual AI-proposed focus mapping; no labels changed, no completeness certification, no model evaluation"
+}

@@ -1,0 +1,314 @@
+[
+  {
+    "claim_id": "v3-dev21-001",
+    "predicate_focus": "know",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-002",
+    "predicate_focus": "understand",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-003",
+    "predicate_focus": "know",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-004",
+    "predicate_focus": "know",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Speech-planning formula is operationally other, despite know being the lexical head. Focus alone must not dictate event_type.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-005",
+    "predicate_focus": "taking",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Forgiveness-request frame carries self-attribution. Keep the request in evidence; taking alone loses interpretation.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-006",
+    "predicate_focus": "know",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-007",
+    "predicate_focus": "hurt",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "focus_boundary_confirmation",
+    "audit_note": "Select hurt, not the embedded made. The decisions-made clause supplies context; it is not separately selected here.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-008",
+    "predicate_focus": "know",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "The outer knowledge holder is speaker; inner believe holder is listener. Unknown belief truth is not a denial of belief.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-009",
+    "predicate_focus": "take the full blame",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-010",
+    "predicate_focus": "executed",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-011",
+    "predicate_focus": "executed",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "V3 commitment change already owner-confirmed: future timing alone does not imply nonasserted.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-012",
+    "predicate_focus": "killed",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Positive killed predicate is hypothetical; do not transfer outer inability-to-forgive negation.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-013",
+    "predicate_focus": "cold-blooded killer",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "focus_boundary_confirmation",
+    "audit_note": "Nominal characterization is the selected predicate, not the verb call. Centering on call would instead describe narrator-reported naming by others and change source/actor roles.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-014",
+    "predicate_focus": "shot",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "focus_boundary_confirmation",
+    "audit_note": "Select the first shot (speaker shooting), not the second shot (the other man shooting). The latter remains explanatory context.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-016",
+    "predicate_focus": "am innocent",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-017",
+    "predicate_focus": "commit",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-018",
+    "predicate_focus": "know",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-019",
+    "predicate_focus": "taking",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-020",
+    "predicate_focus": "did",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "did is the action layer; know and think have separate owner-confirmed addition rows, not contradictory labels on this row.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-021",
+    "predicate_focus": "killing",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Select reported confession content killing, not the narrator reporting confessed. No verification of confession or killing.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-022",
+    "predicate_focus": "know",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Acquaintance negation; uncertain individual antecedent does not prevent coarse other role.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-023",
+    "predicate_focus": "kill",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-024",
+    "predicate_focus": "murder",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-025",
+    "predicate_focus": "was responsible",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-026",
+    "predicate_focus": "taken",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Relative-clause attachment ambiguity retained. Exact relatives and relationship to conviction are not filled in.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-dev21-027",
+    "predicate_focus": "did",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "focus_boundary_confirmation",
+    "audit_note": "Existing row contains both did and chose. Proposed focus is did. A separate chose proposition is a candidate omission, not automatically accepted or counted.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-added-001",
+    "predicate_focus": "is a murderer",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Characterization carried under You know; background retained in note, not a separate status class.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-added-002",
+    "predicate_focus": "did",
+    "zero_based_occurrence_in_evidence": 1,
+    "review_priority": "focus_boundary_confirmation",
+    "audit_note": "Two did occurrences appear in the evidence. Propose the second, inside the understanding/why frame; this makes the earlier background interpretation explicit. No new owner confirmation of this offset is inferred.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-added-003",
+    "predicate_focus": "tie",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-added-004",
+    "predicate_focus": "pump",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-added-005",
+    "predicate_focus": "molest",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Denial carried under You know damn well; selected molest predicate remains negative, background commitment retained.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-added-006",
+    "predicate_focus": "murdering",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "focus_boundary_confirmation",
+    "audit_note": "Select murdering; feel sorry is another predicate retained as context, not the selected target in this row.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "v3-added-007",
+    "predicate_focus": "murder",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected predicate supports the existing interpretation; governing context remains required.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "owner-added-524-occurrence-01",
+    "predicate_focus": "happened",
+    "zero_based_occurrence_in_evidence": 1,
+    "review_priority": "focus_boundary_confirmation",
+    "audit_note": "Select the second happened, the matrix occurrence/speed statement. The first is embedded in the subject expression. Participants remain distinct from a specified agent.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "owner-added-538-speech-01",
+    "predicate_focus": "have",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Have is the head of the speech-closure expression; to say is its complement. Do not treat this as knowledge denial.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "owner-added-538-permission-01",
+    "predicate_focus": "proceed",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Selected proceed is permitted, not asserted as occurring. Selecting the act of permission would be a different proposition.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "owner-added-335-rhetorical-death-01",
+    "predicate_focus": "kill",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Nonhuman/rhetorical cause allowed as other by owner clarification. Keep full preceding subject; cannot in the prior clause does not negate kill.",
+    "focus_provenance": "AI_proposed_offset_mapping_not_new_owner_decision"
+  },
+  {
+    "claim_id": "owner-added-287-know-01",
+    "predicate_focus": "know",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Focus offset and five-field interpretation explicitly confirmed in the addition record.",
+    "focus_provenance": "owner_confirmed_addition"
+  },
+  {
+    "claim_id": "owner-added-287-think-01",
+    "predicate_focus": "think",
+    "zero_based_occurrence_in_evidence": 0,
+    "review_priority": "retain_labels",
+    "audit_note": "Focus offset and five-field interpretation explicitly confirmed. Source self describes listener belief; not source other for the inner action.",
+    "focus_provenance": "owner_confirmed_addition"
+  }
+]

@@ -1,6 +1,18 @@
 # Last Statements: Themes, Interpretation and Robustness
 
-## Current semantic review: 37 confirmed development propositions
+## Current consistency audit: 39 selected development propositions
+
+[Notebook 13](notebooks/13_claim_consistency_audit.ipynb) checks all 39
+conversation-confirmed selections (the original 37 plus the two #287 predicate
+layers). [Audit notes](docs/CLAIM_CONSISTENCY_AUDIT_v1.md) distinguish
+32 rows without a proposed semantic-label change from seven rows needing
+focus-boundary clarification. Proposed focus offsets are manual development
+annotations, not an automatic parser or independent semantic validation.
+No confirmed labels were changed. The earlier 37-row rule diagnostic remains
+unchanged; neither a larger selection nor a supplied focus is unseen performance.
+
+
+## Original 37-selection materialization
 
 Start with [notebook 11](notebooks/11_confirmed_semantic_review.ipynb) and
 [the current review guide](docs/SEMANTIC_CONFIRMED_REVIEW_v3.md).
