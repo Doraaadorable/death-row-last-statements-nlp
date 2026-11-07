@@ -95,6 +95,20 @@ and accepting statements. Religious and relational interpretation is already
 central. Our contextual examples elaborate these established questions rather
 than displace them.
 
+## Additional direct precedent located in the broader check
+Smith, R. A. (2019), *Framing Forgiveness: An Analysis from the Offender's Point
+of View*, Review of Religious Research 61(4), 341–363,
+[DOI](https://doi.org/10.1007/s13644-019-00385-y). The publisher abstract was
+checked on 7 November 2026; full methods were not obtained in this check.
+
+The abstract directly examines forgiveness direction and religious framing in
+death-row last statements. This narrows the novelty claim further: a
+request-versus-grant distinction is established territory. Its precise coding
+and treatment of conditional appeals remain to be checked in full text.
+This is a concrete comparison dependency, not a reason to repeat owner coding.
+The search was targeted rather than systematic; no exhaustive literature-gap
+claim follows from it.
+
 ## 2. Comparison with our work
 | Question from our reading | Prior coverage | Appropriate current claim |
 | --- | --- | --- |
@@ -120,7 +134,8 @@ responsibility?**
 
 Chinese: 面对执行时，人们如何通过请求或给予宽恕，表达自责、维系关系并协商责任？
 
-This is a focused extension question, not a demonstrated gap. The 2026 paper's
+This is a focused extension question, not a demonstrated gap. Smith (2019) is
+an additional direct precedent for forgiveness direction and religious framing. The 2026 paper's
 close example must remain part of the argument. It does not replace the project
 with a classification or sincerity-prediction task.
 
@@ -145,8 +160,9 @@ completed reading set. Its practical value is interpretive precision: describe
 what a statement does and what it leaves open, rather than assuming that love,
 religion or apology proves one unified emotional state.
 
-Before a claim of publication-level novelty, check the broader literature on
-forgiveness demands, moral positioning and kinship under punishment. These two
+Before a claim of publication-level novelty, obtain Smith's full methods and
+compare its categories with the focused cases. Then decide whether a further
+empirical extension is justified. These two
 papers are enough to demonstrate strong overlap, not enough to prove the absence
 of every narrower contribution.
 

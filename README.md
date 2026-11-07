@@ -32,12 +32,17 @@ interpretations. All 20 cases have been discussed with the project owner; the me
 record refinements, reading responses and unresolved interpretations. The accompanying report examines
 responsibility and judgment, family connection, spiritual meaning and readiness.
 
+A reproducible descriptive summary adds raw 1/0/u counts and all 28 label
+pairs for the existing 50-person development sample. Run
+`python src/summarize_expression_sample.py` after extracting the snapshot.
+These are sample descriptions, not corpus prevalence estimates.
+
 The case comparisons show why readiness should be separated from endorsement
 of punishment, and why harm acknowledgment, intent and involvement need
 separate interpretation. These are exploratory observations from purposively
 selected texts, not corpus prevalence estimates. Close precedents include
 Schuck & Ward (2008) and Zhuo & Chun (2026); a new literature gap is not established. The two key full texts have now been
-checked. A focused six-case analysis of relational repair and the boundaries of
+checked; a broader search also found Smith (2019) on forgiveness framing. A focused six-case analysis of relational repair and the boundaries of
 forgiveness is complete in the report: seeking or granting forgiveness does not
 establish that reconciliation has occurred. The comparison retains ambiguous
 responsibility, changes of addressee and the owner's reading responses separately.

@@ -42,6 +42,69 @@ not a newly validated codebook:
 Self-reported feelings and changes of addressee are tracked across both lenses.
 Unexpected cases remain visible rather than being forced into both.
 
+## Descriptive context from the frozen 50-person sample
+The existing development labels provide context for the case readings. They
+are unchanged and are not psychological diagnoses. Each decade contributes ten
+people, so the sample's composition differs from the candidate corpus. The
+following are raw document counts in these 50 records, not estimates for 480
+candidate statements or all executed people. Unresolved values remain visible.
+
+| Existing category | Present (1) | Absent (0) | Unresolved (u) |
+| --- | ---: | ---: | ---: |
+| Affection / relational connection | 37 | 12 | 1 |
+| Gratitude | 24 | 26 | 0 |
+| Faith / spirituality | 27 | 20 | 3 |
+| Apology / forgiveness | 22 | 26 | 2 |
+| Harm acknowledgment | 12 | 32 | 6 |
+| Culpability dispute | 8 | 40 | 2 |
+| Justice criticism | 8 | 38 | 4 |
+| Farewell / closure / readiness | 33 | 13 | 4 |
+
+The combined apology/forgiveness category includes different directions and
+objects; its count is not an apology prevalence measure. Likewise, farewell,
+closure and readiness are combined in the old coding, and culpability dispute
+is broader than an explicit claim of complete innocence. Later reading memos
+do not retroactively replace these frozen decisions.
+
+Selected pair counts connect the descriptive material with the case questions.
+Every row retains denominator 50; unresolved means at least one of the two
+labels is u. The display is chosen for interpretive relevance after the reading,
+not as a prespecified hypothesis test. All 28 pairs, their full five-way counts
+and supporting execution IDs are available in the
+[machine-readable summary](../reports/expression_sample_descriptive_v1.json).
+
+| Pair of existing categories | Both present | At least one unresolved | Denominator |
+| --- | ---: | ---: | ---: |
+| Affection / relational connection + Apology / forgiveness | 19 | 3 | 50 |
+| Faith / spirituality + Farewell / closure / readiness | 19 | 7 | 50 |
+| Apology / forgiveness + Culpability dispute | 3 | 3 | 50 |
+| Justice criticism + Farewell / closure / readiness | 5 | 8 | 50 |
+| Culpability dispute + Farewell / closure / readiness | 7 | 6 | 50 |
+
+The three documents coded present for both apology/forgiveness and culpability
+dispute are #508, #595 and #600. Their complete-text readings differ: an accident
+account, denial of harmful intent, and a partially specified involvement account.
+This makes them useful contrasts, not three interchangeable examples of
+apologizing while claiming complete innocence. Similarly, the five documents
+with justice criticism and closing/readiness codes (#58, #138, #219, #461,
+#583) do not establish acceptance of punishment.
+
+These are descriptions of the development labels and partly overlapping
+material already used to choose the reading set. They do not independently
+validate the six-case interpretations. No inferential test, association effect,
+causal inference or population estimate is reported.
+
+Reproduce from the released data snapshot at the project root:
+
+```bash
+python src/summarize_expression_sample.py
+```
+
+The script uses Python's standard library, checks 50 unique IDs and valid
+1/0/u values, records the input SHA-256, and retains unresolved pair counts.
+It produces the same output when rerun on the same input. It does not overwrite
+a differing existing result.
+
 ## Findings from contextual comparison
 
 ### 1. Responsibility has an object; accepting it is not a single all-purpose position
@@ -338,13 +401,15 @@ a population estimate or a demonstration of a previously unstudied phenomenon.
 
 ## Current result and next research decision
 The exploratory project now includes a corpus preparation trail, earlier topic
-analysis, 20 discussed reading memos, a full-text literature comparison and this
-focused six-case analysis. The narrower question has an initial answer supported
+analysis, 20 discussed reading memos, a full-text literature comparison, a reproducible summary of the 50 frozen
+development records and this focused six-case analysis. The narrower question has an initial answer supported
 by the reviewed material. No further owner labeling is required to produce this
 version of the report.
 
-A stronger publication claim would need broader literature checking and a
-justified extension beyond these development cases. Before selecting anything
+A broader check has now identified Smith (2019), whose publisher abstract
+directly concerns forgiveness direction and religious framing in last statements
+(see the literature comparison). A stronger publication claim needs its full
+methods and a justified extension beyond the current development cases. Before selecting anything
 new, state what a further case could change: for example, whether a forgiveness
 appeal clearly accepts the listener's refusal, or whether explicit reconciliation
 is reported. Such examples must not be assumed to exist, and a one-sided public
