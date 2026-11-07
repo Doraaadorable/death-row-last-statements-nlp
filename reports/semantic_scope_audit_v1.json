@@ -1,0 +1,276 @@
+{
+  "version": "semantic_scope_v1",
+  "provenance": "AI-applied scope crosswalk after owner requested direct testing; not individually owner-adjudicated",
+  "scope": "42 known development selections only; not exhaustive predicate inventory or independent evaluation",
+  "inputs_sha256": {
+    "reports/semantic_confirmed_snapshot40_v1.csv": "e2fc2de370eb6ee8dfd433696bbcd3cffa2037c60cc5b4f8a533d303c63ce050",
+    "reports/semantic_owner_additions_9_shooting_naming.csv": "5168793517059691bd099dcc2a84d93377384d491487d00079c3b4f23ae852ab"
+  },
+  "corpus_sha256": "d66a330b121ae5e59d96b58fb12d34b0c4fdbd9059d427abdc7bd182b07bcc2c",
+  "script_sha256": "2d3de5c160ec9e46eb085e34f0273facf0c880dbc9cc3a412889fec6f1338b1d",
+  "counts": {
+    "retain_scope": 32,
+    "exclude_scope": 5,
+    "scope_uncertain": 4,
+    "retire_representation": 1
+  },
+  "decisions": [
+    {
+      "claim_id": "v3-dev21-001",
+      "execution_number": 147,
+      "scope_status": "scope_uncertain",
+      "reason": "The referent of doing this needs a documented task-relevance decision."
+    },
+    {
+      "claim_id": "v3-dev21-002",
+      "execution_number": 450,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-003",
+      "execution_number": 524,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-004",
+      "execution_number": 137,
+      "scope_status": "exclude_scope",
+      "reason": "Uncertainty about what to say, not knowledge of a target act or responsibility claim."
+    },
+    {
+      "claim_id": "v3-dev21-005",
+      "execution_number": 137,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-006",
+      "execution_number": 451,
+      "scope_status": "exclude_scope",
+      "reason": "Acquaintance/identity of the addressee, not knowledge of a target claim."
+    },
+    {
+      "claim_id": "v3-dev21-007",
+      "execution_number": 451,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-008",
+      "execution_number": 471,
+      "scope_status": "scope_uncertain",
+      "reason": "Belief object is implicit; document its link to a target claim before inclusion."
+    },
+    {
+      "claim_id": "v3-dev21-009",
+      "execution_number": 471,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-010",
+      "execution_number": 297,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-011",
+      "execution_number": 390,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-012",
+      "execution_number": 542,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-013",
+      "execution_number": 9,
+      "scope_status": "retire_representation",
+      "reason": "Historical nominal characterization is retained as context of the separate call record; no new independent predicate is supplied here."
+    },
+    {
+      "claim_id": "v3-dev21-014",
+      "execution_number": 9,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-016",
+      "execution_number": 375,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-017",
+      "execution_number": 375,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-018",
+      "execution_number": 79,
+      "scope_status": "exclude_scope",
+      "reason": "Knowledge about witness access, outside the narrowed act/responsibility/stance task."
+    },
+    {
+      "claim_id": "v3-dev21-019",
+      "execution_number": 79,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-020",
+      "execution_number": 287,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-021",
+      "execution_number": 287,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-022",
+      "execution_number": 287,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-023",
+      "execution_number": 287,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-024",
+      "execution_number": 383,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-025",
+      "execution_number": 60,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-026",
+      "execution_number": 231,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-dev21-027",
+      "execution_number": 198,
+      "scope_status": "scope_uncertain",
+      "reason": "Unresolved this; do not assume a criminal act or execution choice."
+    },
+    {
+      "claim_id": "v3-added-001",
+      "execution_number": 147,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-added-002",
+      "execution_number": 450,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-added-003",
+      "execution_number": 9,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-added-004",
+      "execution_number": 9,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-added-005",
+      "execution_number": 287,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-added-006",
+      "execution_number": 287,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "v3-added-007",
+      "execution_number": 390,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "owner-added-524-occurrence-01",
+      "execution_number": 524,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "owner-added-538-speech-01",
+      "execution_number": 538,
+      "scope_status": "exclude_scope",
+      "reason": "Statement closure with no target claim."
+    },
+    {
+      "claim_id": "owner-added-538-permission-01",
+      "execution_number": 538,
+      "scope_status": "exclude_scope",
+      "reason": "Procedural permission without explicit evaluative stance."
+    },
+    {
+      "claim_id": "owner-added-335-rhetorical-death-01",
+      "execution_number": 335,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "owner-added-287-know-01",
+      "execution_number": 287,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "owner-added-287-think-01",
+      "execution_number": 287,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "owner-added-198-choice-01",
+      "execution_number": 198,
+      "scope_status": "scope_uncertain",
+      "reason": "Unresolved choice object; do not assume an admission."
+    },
+    {
+      "claim_id": "owner-added-9-other-shooting-01",
+      "execution_number": 9,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    },
+    {
+      "claim_id": "owner-added-9-naming-01",
+      "execution_number": 9,
+      "scope_status": "retain_scope",
+      "reason": "Known selection concerns an act, responsibility, innocence, execution stance, or a directly linked mental/reporting proposition; retention is a manual crosswalk, not a semantic relabel."
+    }
+  ],
+  "limitations": [
+    "Scope retention does not confirm predicate boundaries.",
+    "Uncertain scope is separate from unclear semantic labels.",
+    "No method predictions, labels, historical files or model results were changed."
+  ]
+}
