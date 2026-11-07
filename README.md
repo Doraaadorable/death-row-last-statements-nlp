@@ -8,8 +8,9 @@ How do people facing execution express emotions, maintain relationships, and
 make sense of death and their own situation in their final statements?
 
 ## Start here
+- [Exploratory report](docs/PSYCHOLOGICAL_EXPRESSION_REPORT.md): case comparisons, literature and conclusions.
 - [Current research plan](docs/CURRENT_RESEARCH_PLAN.md): question, literature and next steps.
-- [Open reading workbook](docs/OPEN_READING_WORKBOOK_v1.md): 20 complete statements with memo space.
+- [Open reading workbook](docs/OPEN_READING_WORKBOOK_v1.md): 20 complete statements with evidence-linked reading memos.
 - [Eight-category annotation guide](docs/ANNOTATION_GUIDE.md): definitions for the existing development sample.
 - [Methods and reproduction](docs/METHODS.md): data preparation, exploratory models and supporting experiments.
 
@@ -25,11 +26,16 @@ criticism, and farewell/closure/readiness. Values are 1, 0 and u (unresolved).
 These describe textual expression; they are not a psychological scale.
 
 ## Current work
-The next phase uses complete statements and short contextual memos to examine
-who is speaking to whom, what feelings and concerns are explicitly expressed,
-and how responsibility, relationships and death are discussed. The workbook
-starts with execution 508. A [six-case pilot](reports/psychological_expression_pilot_v1.json)
-provides evidence anchors for initial discussion.
+The 20-case workbook now contains contextual reading memos and alternative
+interpretations. Three cases (508, 407, 461) were discussed with the project
+owner; 17 initial memos await owner review. The accompanying report examines
+responsibility and judgment, family connection, spiritual meaning and readiness.
+
+The case comparisons show why readiness should be separated from endorsement
+of punishment, and why harm acknowledgment, intent and involvement need
+separate interpretation. These are exploratory observations from purposively
+selected texts, not corpus prevalence estimates. Close precedents include
+Schuck & Ward (2008) and Zhuo & Chun (2026); a new literature gap is not established.
 
 ## Completed exploratory analysis
 The six-component NMF reading identifies apology/forgiveness, affection,

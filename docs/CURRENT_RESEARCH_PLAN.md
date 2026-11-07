@@ -19,6 +19,15 @@ are useful enough to carry forward.
 - Predicate/source/negation experiments as supporting methods.
 - [Six-case pilot notes](../reports/psychological_expression_pilot_v1.json).
 
+## Current progress
+The [exploratory report](PSYCHOLOGICAL_EXPRESSION_REPORT.md) synthesizes the
+20-case reading. The workbook now includes evidence anchors, contextual memos
+and alternative readings for all 20 statements. Executions 508, 407 and 461
+were discussed with the owner; the other 17 memos await owner review.
+
+The next task is reviewing these interpretations and reading the closest
+full papers, rather than adding models or notebooks.
+
 ## Reading phase
 Use the [open reading workbook](OPEN_READING_WORKBOOK_v1.md), beginning with
 executions 508, 407 and 461. Its 20 complete statements were selected from the
@@ -48,14 +57,16 @@ particular psychological explanation. Record ambiguity in context.
 ## Literature comparison
 | Study | Material and measurement | Reading status |
 | --- | --- | --- |
+| Schuck & Ward (2008) | 283 statements; sequential structure and self-presentation | Publisher abstract checked; full text needed |
 | Hirschmuller & Egloff (2016) | 407 statements; LIWC emotional-word proportions | Selected full-text methods/results read |
 | Goranson et al. (2017) | Actual and imagined last words, poetry, LIWC and affect ratings | Selected full-text sections read |
 | Foley & Kelly (2018) | Themes including love, spirituality and forgiveness | Abstract reviewed |
 | Mehra et al. (2024) | 466 statements; embedding-weighted emotion signals, category mapping, co-occurrence and notion transitions | Selected full-text methods/results read |
 | Eaton & Theuer (2009) | Apology and remorse-related content | Publication/abstract located; full text needed |
-| Zhuo & Chun (2026) | 198 statements; emotional expression and moral positioning | Abstract reviewed; full text needed |
+| Zhuo & Chun (2026) | 198 statements; title specifies White American inmates; emotion and moral positioning | Abstract reviewed; full text needed |
 
 References:
+- https://doi.org/10.1177/0957926507083687
 - https://doi.org/10.3389/fpsyg.2015.01985
 - https://doi.org/10.1177/0956797617701186
 - https://doi.org/10.1093/qjmed/hcy062
@@ -65,7 +76,8 @@ References:
 
 Compare definitions, samples, analytic units and interpretation before comparing
 findings. Word proportions and dominant-emotion categories measure different
-things. Co-occurrence and sequencing already appear in earlier work. Full
+things. Co-occurrence, sequencing and self-presentation already appear in earlier work.
+The current report is an exploratory extension, not evidence of a new field-wide gap. Full
 reading of the closest papers will determine whether this study offers an
 extension, a contextual reanalysis or a narrower case comparison.
 
