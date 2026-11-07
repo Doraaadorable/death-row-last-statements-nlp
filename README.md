@@ -9,7 +9,7 @@ make sense of death and their own situation in their final statements?
 
 ## Start here
 - [Exploratory report](docs/PSYCHOLOGICAL_EXPRESSION_REPORT.md): case comparisons, literature and conclusions.
-- [Literature comparison](docs/LITERATURE_COMPARISON.md): full-text methods, overlapping examples and the focused next comparison.
+- [Literature comparison](docs/LITERATURE_COMPARISON.md): full-text methods, overlapping examples and the focused comparison.
 - [Current research plan](docs/CURRENT_RESEARCH_PLAN.md): question, literature and next steps.
 - [Open reading workbook](docs/OPEN_READING_WORKBOOK_v1.md): 20 complete statements with evidence-linked reading memos.
 - [Eight-category annotation guide](docs/ANNOTATION_GUIDE.md): definitions for the existing development sample.
@@ -37,8 +37,10 @@ of punishment, and why harm acknowledgment, intent and involvement need
 separate interpretation. These are exploratory observations from purposively
 selected texts, not corpus prevalence estimates. Close precedents include
 Schuck & Ward (2008) and Zhuo & Chun (2026); a new literature gap is not established. The two key full texts have now been
-checked; the next comparison focuses on relational repair and the boundaries of
-forgiveness using already discussed cases.
+checked. A focused six-case analysis of relational repair and the boundaries of
+forgiveness is complete in the report: seeking or granting forgiveness does not
+establish that reconciliation has occurred. The comparison retains ambiguous
+responsibility, changes of addressee and the owner's reading responses separately.
 
 ## Completed exploratory analysis
 The six-component NMF reading identifies apology/forgiveness, affection,

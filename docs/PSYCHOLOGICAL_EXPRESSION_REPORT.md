@@ -209,35 +209,147 @@ Interpretations remain open to revision; disagreement and ambiguity are retained
 contradictory and brief cases rather than select only examples supporting the
 initial interpretation.
 
-## Focused synthesis after full-text comparison
-The narrower comparison concerns relational repair and the boundaries of
-forgiveness. In #413, harm acknowledgment and doubt about worthiness accompany
-repeated petitions. In #407, forgiveness is presented as unavailable but family
-identity persists. In #600, an appeal carries a religious condition; the owner
-experiences pressure. In #461, the speaker grants forgiveness rather than seeks
-it. In #595, changing addressees changes what he apologizes for; in #508,
-apology coexists with an accident explanation.
+## Focused comparison: forgiveness, responsibility and relational repair
 
-The common feature is an attempted relation to another person, not a single
-level of remorse or a single hidden motive. Seeking forgiveness, granting it,
-claiming it and receiving it are different positions. A request does not show
-that forgiveness was received, and an appeal's religious framing does not
-resolve that relationship. These comparisons organize existing readings; they
-are neither new frozen categories nor a test of actual sincerity.
+### Question and evidence
+How do people facing execution use requests for, and declarations of,
+forgiveness to express self-reproach, sustain relationships and negotiate
+responsibility?
 
-This extends the case discussion while acknowledging direct precedents. In
-particular, Zhuo & Chun's Example 10 already discusses reconciliation mixed
-with religious judgment. Our case #600 is a related comparison, not proof that
-the earlier literature missed the phenomenon.
+The six cases below were chosen from the already discussed 20-case set for
+contrasting forms of forgiveness and relationship address. This is a further
+interpretation of the same material, not an additional sample or a frequency
+analysis. The whole statements remain in the [workbook](OPEN_READING_WORKBOOK_v1.md).
+The comparison uses four questions: who addresses whom, what is being forgiven,
+what position the speaker takes, and what response is actually available in the
+record. No new reference labels are assigned.
 
-## Next research decision
-The initial full-text dependency is resolved. A focused comparison can now be
-written from the completed memos without another owner-labeling round. Before
-asserting a publication-level contribution, check the broader literature around
-forgiveness demands, relational repair and moral positioning.
+| Execution | Evidence in the recorded statement | Relation being attempted | What remains unresolved |
+| --- | --- | --- | --- |
+| 413 | “Please forgive me.”; “I have done some horrible things.” | Harm acknowledgment and repeated requests to families and God | Whether forgiveness is granted or emotional relief achieved |
+| 407 | “I know you can't give your forgiveness”; “I am still your nephew” | Maintaining kinship despite the speaker's account of unavailable forgiveness | The uncle's actual response and whether reconciliation follows |
+| 600 | “I will take the blame if it will help”; “He will not forgive us” | Seeking forgiveness while invoking a religious consequence | Scope of responsibility and the listener's response |
+| 461 | “they are all forgiven by me” | Granting forgiveness from the position of someone who describes being wronged | Exact recipients; this is not an explicit claim of innocence |
+| 595 | “I never meant to hurt her”; “forgive me for giving up on y'all and walking away” | Moving between the victim's family and wife/children with different objects of apology | Specific acts meant by giving up and whether either relationship is repaired |
+| 508 | “sorry for your loss”; “I take full responsibility”; “it was an accident” | Apology and responsibility alongside a qualified account of the event | Exact responsibility accepted and the family's response |
 
-Any new cases require a stated selection rationale and attention to
-counterexamples. A second reader may strengthen a future study; prevalence
-estimates would require a separate sampling and coding design. No additional
-classifier, transformer training or model tuning is needed for the current
-qualitative comparison.
+### 1. Self-reproach does not supply the recipient's answer
+In #413, repeated acknowledgment of harm accompanies questions about whether he
+is worthy of asking for forgiveness. The speaker addresses both people and God,
+but those appeals do not have interchangeable recipients. Forgiveness from one
+would not establish forgiveness from the other. The wish that the people harmed
+find peace also does not describe peace already obtained by the speaker.
+
+#407 provides a contrasting configuration. He says he understands his uncle
+cannot forgive him and still calls himself a nephew. Instead of a completed
+repair, the text presents the persistence of a relationship claim where repair
+is unresolved. The owner reads a wish to remain recognized as family. That
+reading concerns the relation he tries to sustain, not evidence that his uncle
+accepts it or that he privately fears abandonment.
+
+These cases make a useful psychological distinction: expressed self-reproach,
+hope for recognition and achieved reconciliation are different matters. A final
+statement can articulate the first two without recording the third.
+
+### 2. Asking for forgiveness can also define what the other person ought to do
+In #600, the desired response is explicit and repeated: forgive me and do not
+hate me. His account of involvement is less specific, including partial
+participation, uncertain event knowledge and conditional willingness to take
+blame. These features should be retained together rather than reduced to either
+full responsibility or no responsibility.
+
+The religious argument changes the terms of the appeal. Connecting refusal to
+forgive with exclusion from divine forgiveness can make forgiveness sound like
+an obligation for the listener. In discussion, the owner experienced this as
+pressure and felt that the strong request was not matched by equivalent detail
+about responsibility. That is a documented reading response, not proof of
+intentional manipulation or the response of the victim's family.
+
+This interpretation has a close precedent in Zhuo & Chun's Example 10
+(pp. 14–15), which discusses a theological warning in forgiveness language.
+Our contribution here is the explicit within-case comparison between the scope
+of responsibility and the terms of the appeal, not discovery of religious
+pressure as an unknown phenomenon.
+
+### 3. Granting forgiveness changes the speaker's relational position
+#461 reverses the direction of the exchange. Rather than asking forgiveness
+for the original offense, he declares forgiveness for people involved in what
+he calls an atrocity. He thereby speaks from the position of the person wronged
+by execution and authorized, in his own account, to forgive.
+
+His turn toward parents and home then makes family connection salient. The
+owner's reaction moved from irritation, through sympathy, to concern about
+self-presentation. None of those responses establishes insincerity. The
+observable contrast is that he discusses his treatment and family while not
+discussing the original offense or its victims. Those omissions describe the
+statement's focus, not an absence of private remorse or an explicit declaration
+of innocence.
+
+Placed beside #413, the word forgiveness does not indicate a uniform stance.
+In one, it is sought after harm acknowledgment; in the other, it is granted
+from an asserted position of injury. Their emotional meanings depend partly
+on the different relations each utterance constructs.
+
+### 4. A change of addressee can change what the apology is about
+In #595, an appeal to the victim's family includes a denial of intending harm
+and a wished-for afterlife encounter with the dead person. The owner came to
+read this as possible reconciliation rather than fixation. The statement then
+addresses wife and daughters about giving up and leaving, explicitly telling
+them they did nothing wrong. The latter apology concerns absence and family
+roles, even though its precise circumstances are not specified.
+
+The broad acknowledgment of wrong choices later in the statement does not
+remove those differences. It offers a life-level summary without specifying
+every act. Similarly, #508 apologizes for loss while maintaining an accident
+account. Sorrow about a consequence, acknowledgment of involvement and a
+claim about intent should remain distinguishable.
+
+Eaton & Theuer already code recipients and separate guilt from responsibility
+(pp. 334–335). The present comparison uses those distinctions in complete
+statements to examine the relationships being addressed. It does not present
+them as a newly discovered conceptual framework.
+
+### Boundary and alternative cases
+The comparison should not make forgiveness the meaning of every final statement.
+#49 only requests that love be conveyed to a mother; #15 does not provide enough
+information to name an emotion. Their brevity does not license a missing
+forgiveness narrative. #58 expresses readiness while asserting innocence; it
+prevents procedural readiness from becoming a proxy for reconciliation.
+
+Nor does religious language invariably reduce acknowledgment of harm. #413
+explicitly acknowledges serious harm while praying; #153 joins a sinner identity,
+petitions for mercy and hopes of reunion. These cases challenge a blanket
+interpretation that faith or affection serves only to avoid responsibility.
+They do not establish the opposite blanket claim of authentic remorse either.
+
+### Answer to the focused question
+In these selected cases, forgiveness language helps articulate several relational
+positions: seeking acceptance after acknowledged harm, maintaining kinship
+without recorded forgiveness, urging another to forgive, granting forgiveness
+from a position of injury, or addressing different harms to different audiences.
+These positions can coexist with self-reproach, faith, attachment or dispute.
+They should not be ranked as a scale of sincerity.
+
+A useful interpretive conclusion is that **a statement can attempt relational
+repair without establishing that repair has occurred**. The direction, object
+and terms of forgiveness clarify that attempt. This conclusion concerns the
+reviewed texts and aligns with an existing literature; it is not a causal model,
+a population estimate or a demonstration of a previously unstudied phenomenon.
+
+## Current result and next research decision
+The exploratory project now includes a corpus preparation trail, earlier topic
+analysis, 20 discussed reading memos, a full-text literature comparison and this
+focused six-case analysis. The narrower question has an initial answer supported
+by the reviewed material. No further owner labeling is required to produce this
+version of the report.
+
+A stronger publication claim would need broader literature checking and a
+justified extension beyond these development cases. Before selecting anything
+new, state what a further case could change: for example, whether a forgiveness
+appeal clearly accepts the listener's refusal, or whether explicit reconciliation
+is reported. Such examples must not be assumed to exist, and a one-sided public
+statement still cannot verify the other person's experience.
+
+For now, retain the case-comparison result and its psychological-expression
+question. Do not substitute a classifier or add model complexity to compensate
+for an unestablished literature gap.

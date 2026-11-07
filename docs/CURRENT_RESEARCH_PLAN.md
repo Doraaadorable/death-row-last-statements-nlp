@@ -31,22 +31,24 @@ supplied Eaton & Theuer and Zhuo & Chun articles. It confirms substantial overla
 including religious admonition during forgiveness and two shared source cases.
 No additional owner annotation is needed at this point.
 
-## Focused next comparison
+## Completed focused comparison
 Within the overall question, ask: How do people facing execution use requests
 for, and declarations of, forgiveness to express self-reproach, sustain
 relationships and negotiate responsibility?
 
 Chinese: 面对执行时，人们如何通过请求或给予宽恕，表达自责、维系关系并协商责任？
 
-Use the existing discussed cases 413, 407, 600, 461, 595 and 508 for a focused
-comparison of worthiness, family connection, request conditions, forgiveness
-direction and responsibility. These are comparison questions rather than new
+The report now compares discussed cases 413, 407, 600, 461, 595 and 508 on
+worthiness, family connection, request conditions, forgiveness direction and
+responsibility. These are comparison questions rather than new
 labels. Retain the brief and differently oriented texts as boundary cases.
 
 This is a literature-grounded extension; a new gap has not been established.
-The next deliverable is a focused account within the existing report. No new
-model, sample or repeat owner review is needed. Broader searching and a stated
-case-selection rationale would precede any new empirical expansion.
+The focused account is complete within the existing report. Its central
+interpretation is that attempting relational repair does not establish achieved
+reconciliation. This exploratory version needs no new model, sample or repeat
+owner review. Broader searching and a stated case-selection rationale would
+precede any new empirical expansion.
 
 ## Useful distinctions
 - A self-description of peace differs from wishing peace for someone else.
