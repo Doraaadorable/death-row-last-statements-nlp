@@ -53,14 +53,23 @@ and 477 with nonzero TF-IDF features. These quantities describe different stages
 the present close reading uses candidate statements, not only modeled texts.
 
 Twenty complete statements were selected from an existing 50-person development
-sample for contrast. Earlier categories and discussions informed selection.
+sample for contrast. Earlier categories and discussions informed selection, including deliberate
+selection for apparent co-occurrence. Co-occurrence is therefore a selection
+feature, not a new finding from these cases.
 The [selection record](../reports/open_reading_selection_v1.json) and
 [workbook](OPEN_READING_WORKBOOK_v1.md) identify the cases. The sample is
 purposive and cannot estimate frequencies among the 480 documents or everyone
-executed. The eight development labels and previous NMF results were preserved;
+executed. Two source boundaries matter: #1 combines a media statement with separately
+marked spoken words; the fear passage belongs to the former. #49 retains the
+prisoner's message within a recorder-framed exchange with an attorney, whose
+reply is excluded from the candidate text. The analysis uses these retained
+texts, not necessarily complete execution-day utterances. Cases #138 and #219
+also appear in Zhuo and Chun (2026), so their reuse is not independent evidence.
+The eight development labels and previous NMF results were preserved;
 no new psychological scale was fitted.
 
-Each text was read in full and discussed with the project owner. Memos retain
+Selection and memo drafting were AI-assisted; the project owner discussed
+interpretations and revised readings. Each candidate text was read in full. Memos retain
 source-context hashes, exact passages, interpretations, alternatives and
 revisions. The comparison follows two organizing questions: what is accepted,
 explained or contested about responsibility and judgment; and how relationships
@@ -73,11 +82,13 @@ reliability estimate was undertaken for this reading.
 ### Acknowledgment does not resolve every question of responsibility
 In #508, the speaker accepts responsibility while describing the death as an
 accident and rejecting murder. The text supports distinguishing responsibility
-for a loss from intention and characterization of the act. In #595, a denial of
-intended harm similarly accompanies acknowledgment of wrong choices. #600
+for a loss from intention and characterization of the act. In #595, denial of intended harm and acknowledgment of wrong choices occur
+in different addresses; the latter follows words to wife and daughters and
+may concern departure or family roles rather than the victim's death. #600
 combines involvement with uncertain knowledge and a conditional offer of blame.
-These are different limits on an account, not interchangeable declarations of
-innocence.
+The sleep and car references in #600 also offer a possible nonintentional
+account, not simply uncertain memory. These readings remain distinct from an
+unqualified innocence assertion.
 
 Judgment of punishment is another question. #407 acknowledges wrongdoing and
 willingness to bear a penalty but questions its effects on loved ones. #138
@@ -93,7 +104,7 @@ the uncle's response or proving that the relationship has been repaired.
 In #595, the turn from the victim's family to wife and daughters changes the
 object of apology toward leaving or giving up on family roles. Some referents
 remain uncertain. #433 promises continuing presence for a loved one, while #49
-contains only a message of love to a mother. Such language can maintain a bond
+retains a message of love to a mother from a larger recorded exchange. Such language can maintain a bond
 in speech, but neither sincerity nor deliberate image management follows from
 affection alone. Requests for forgiveness also do not establish that forgiveness
 or reconciliation occurred, a distinction already central to Smith (2019).
@@ -125,7 +136,9 @@ our reading retains the narrower claim when context is insufficient.
 
 Emotional attribution also matters. #508 describes his own peace; #32 wishes
 peace for another person. #1 distinguishes lack of fear about the body from fear
-directed toward God. #219 and #583 preserve injustice claims as their statements
+directed toward God; awe and concern about divine judgment remain alternative
+readings, not an established emotional category. The fear passage is in the
+media statement, not the separately marked spoken portion. #219 and #583 preserve injustice claims as their statements
 end. Together these cases resist reducing approaching death to one positive or
 negative state. Silence about a feeling is not evidence that it was absent.
 

@@ -23,7 +23,16 @@ that development material for contrast. Their selection used earlier categories
 and discussions; this is a purposive comparison, not a prevalence sample.
 
 The [workbook](OPEN_READING_WORKBOOK_v1.md) preserves each complete candidate
-text and its existing source-context hash. Every memo separates evidence,
+text and its existing source-context hash. Selection and memo wording were AI-assisted, with interpretations discussed
+and revised by the project owner. Co-occurrence informed purposive selection;
+its presence in these cases is not an independent discovery.
+
+Source checks on 8 November 2026 confirm that #1 combines a media statement
+and separately marked spoken words; its fear passage belongs to the former.
+#49 retains a prisoner's attributed message from a recorder-framed exchange
+with an attorney. Candidate completeness is not source-event completeness.
+
+Every memo separates evidence,
 interpretation and alternative readings. All 20 statements were examined in dialogue with the project owner. Memos
 now incorporate her interpretations, subsequent refinements and unresolved
 readings. Completion refers to discussion of the texts, not agreement on every
@@ -120,8 +129,9 @@ characterization of the act, the penalty and its effects. They do not demonstrat
 that the speakers privately resolved every moral conflict. They show why a
 single confession/denial or acceptance/rejection summary can omit what is said.
 
-Boundary cases strengthen this interpretation. #595 denies intending harm while
-acknowledging wrong choices. #600 combines partial involvement, uncertain event
+#595 denies intending harm, but its wrong-choices language follows the
+address to wife and daughters and may concern family roles or departure. It
+should not be assumed to acknowledge the victim's death. #600 combines partial involvement, uncertain event
 knowledge and a conditional offer to take blame. Neither should be reduced to
 an unqualified confession or a complete denial. By contrast, #58 explicitly
 asserts innocence. These are different textual positions, not judgments about
@@ -628,7 +638,10 @@ in context; it does not by itself establish serenity, approval of the sentence,
 or absence of fear. Neither the family's reconciliation nor their relief can be
 inferred from his wishes.
 
-The frozen statement contains no explicit reference to God, prayer or heaven.
+The frozen statement contains no explicit naming of God, prayer or heaven,
+but its good-fight phrase could be a scriptural echo, an idiom or a reference
+to legal struggle. Its meaning is unresolved. This case does not establish an
+absence of religious expression, and a vocabulary-only absence claim is withdrawn.
 Nevertheless, the independent source chain documents a request for religious
 support, his anticipation of its significance, and reported provision at execution.
 The execution report also includes a response to prayer absent from the official
@@ -637,7 +650,7 @@ event; their difference need not be a transcription error.
 
 **Case-level result:** the content of a final statement and the circumstances of
 spiritual support are distinct evidence. In this case, a reading confined to
-religious words in the final statement would miss documented religious practice
+religious words in the final statement could miss documented religious practice
 and the expressed importance of a pastoral relationship. Conversely, pastoral
 presence does not establish that religion produced his remorse, readiness or
 emotional relief. This observation concerns this case and source boundary; it is
@@ -666,7 +679,7 @@ Murphy was selected after the Ramirez case to test whether desired spiritual
 support can be treated as a uniform package of presence, prayer and touch. This
 is an institutional and preference contrast, not a second completed psychological
 case. It is outside the frozen executed-person corpus: a local search found no
-Murphy record in either the 603-row inventory or the 480-row candidate corpus.
+Patrick Henry Murphy record in either the 603-row inventory or the 480-row candidate corpus.
 That absence establishes only the boundary of these frozen files, not his current
 legal or vital status. The events examined here are limited to 2019.
 
@@ -767,11 +780,11 @@ The full statements and revised alternatives remain in the workbook.
 
 | Contrast | Cases | Supported observation | Limit or challenging case |
 | --- | --- | --- | --- |
-| Harm, intent and responsibility | 508, 595, 600, 524 | Accounts of harm coexist with limits on intention, role or knowledge | These limits differ; none alone establishes legal innocence or impaired memory |
+| Harm, intent and responsibility | 508, 595, 600, 524 | Contrast-selected texts distinguish loss, intention, role and knowledge | #595 may refer to family departure; #600 also offers a sleep/car explanation; no legal fact is established |
 | Responsibility and judgment of punishment | 407, 138, 11 | Accepting consequences, presenting reform and evaluating deservedness are different claims | #11 is explicit about deservedness but supplies little emotional detail; #138 questions execution's purpose |
 | Relationships under impending separation | 330, 433, 49 | Affection, thanks and messages to loved ones maintain connection in speech | #49 names one relationship only; #433's final apology has an unresolved object |
 | Forgiveness and moral position | 413, 600, 461 | Seeking mercy, invoking a duty to forgive and granting forgiveness position people differently | #413 emphasizes injury caused; #461's grant of forgiveness does not supply an account of the original offense |
-| Death understood through faith | 153, 1, 39 | Religious offering, preparation for another life and a favorable destination give departure meaning | #1 distinguishes bodily fear from fear directed toward God; #39 does not explicitly identify fear or a religion |
+| Meanings attributed to departure | 153, 1, 39 | Religious offering and another-life language occur in #153 and #1; #39 names a favorable destination | #1 combines media/spoken sources and leaves awe versus concern about divine judgment unresolved; #39 has frozen F=0 and only a possible spiritual reading |
 | Resistance and ending the statement | 58, 219, 583 | A statement can close while preserving an innocence or injustice claim | Readiness in #58 does not retract its challenge; allegations in #219 and #583 are not independently verified |
 | Sparse language and another person's peace | 15, 32 | Readiness or a wish for another's peace can be recorded without a fuller psychological account | The record does not justify filling silence with acceptance, fearlessness or remorse |
 
@@ -813,3 +826,11 @@ transcript; the located news report does not establish the experience of the
 requested spiritual support. No additional modeling or manual coding is required
 to complete the present exploratory result.
 
+
+## Source and interpretation corrections after review (8 November 2026)
+The draft now discloses the #138/#219 overlap with Zhuo and Chun and distinguishes
+selection-informed co-occurrence from the interpretation of its objects. #595's
+wrong choices may concern family departure; #600's sleep/car account may explain
+nonintentional involvement. #413's waiting remark to Irene and Jack remains an
+unresolved possible reunion reference. #39 is not classified as faith evidence.
+No frozen candidate text or label has been altered by these corrections.

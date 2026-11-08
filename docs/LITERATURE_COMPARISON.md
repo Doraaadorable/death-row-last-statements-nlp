@@ -303,3 +303,12 @@ requires additional positioning; no publication gap is declared here.
 No new annotation, neural-network training or policy regression follows from
 these four readings. The Murphy audio is now optional context, not a blocker
 for the main expression study.
+
+### Page corrections checked after external review
+Pargament et al. (2011), printed pp. 54–55 (PDF pp. 4–5), explicitly state
+that positive coping is not invariably adaptive and negative coping is not
+invariably maladaptive. The earlier pp. 72–73 anchor concerns other limitations;
+it should not be used as the location of that qualification.
+Malaga and Delgado (2020), Article p. 5, Muestra, explicitly state that 9 of
+70 declined a statement or remained silent. The nine is directly reported,
+not only inferred by subtracting 61 from 70.

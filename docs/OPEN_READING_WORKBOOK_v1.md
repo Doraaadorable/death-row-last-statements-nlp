@@ -121,7 +121,7 @@ Yes I do, I know this no way makes up for all the pain and suffering I gave you.
 
 He gives priority to the suffering he says he caused, explicitly comparing it with his punishment. Repeated apologies, harm acknowledgment and doubt about worthiness support a reading of strong self-reproach. He wishes peace for those harmed, then repeatedly seeks forgiveness from families and God. The religious closing can be read as seeking acceptance and relief amid that self-reproach.
 
-**Alternative readings and unresolved points:** The owner experiences a strong movement from painful recollection toward a future wish for peace. That peace is wished for the addressee, not reported as the speaker's own achieved state. Punishment is not a direct measure of inner pain; the closing does not establish that relief has actually been obtained.
+**Alternative readings and unresolved points:** The owner experiences a strong movement from painful recollection toward a future wish for peace. That peace is wished for the addressee, not reported as the speaker's own achieved state. Punishment is not a direct measure of inner pain; the closing does not establish that relief has actually been obtained. The statement to Irene and Jack about waiting may suggest future reunion, but its intended setting and meaning are unspecified.
 
 Source context SHA-256: `39c7272d30b349db6a6d757a74847cb38ee9b9196001e42744f920994021c00f`
 
@@ -181,7 +181,7 @@ First and foremost, I would like to give all praises to God. If it wasn't for hi
 
 He asks the victim's family for forgiveness while denying an intention to hurt her. The hoped-for afterlife encounter is read as a wish for reconciliation, rather than evidence of romantic fixation. Turning to wife and daughters, he apologizes for giving up and leaving them, and explicitly says they did nothing wrong. The owner reads guilt about absence from husband/father roles, strong family connection and an attempt to relieve family self-blame. Wrong choices and their consequences then summarize a broader life account.
 
-**Alternative readings and unresolved points:** The exact acts meant by giving up and quitting are unspecified. The text does not determine a legal category of intent or establish that reconciliation was granted. Wrong choices is a broad acknowledgment, not a complete confession to a specified act. The initial attachment/fixation reading was revised in discussion toward possible reconciliation.
+**Alternative readings and unresolved points:** The exact acts meant by giving up and quitting are unspecified. The text does not determine a legal category of intent or establish that reconciliation was granted. Wrong choices follows the address to wife and daughters and may concern family departure or broader life decisions; it cannot be securely assigned to the victim's death. It is not a complete confession to a specified act. The initial attachment/fixation reading was revised in discussion toward possible reconciliation.
 
 Source context SHA-256: `706f99e53b766ff8a8445dee82b363a5ee999525100dc0a35d0f10ed642041d3`
 
@@ -201,7 +201,7 @@ Sir, Ma'am, I am so sorry, I ask that you please, please don't hate me and that 
 
 He acknowledges a part in the event and harm to both families, while leaving his role vague, claiming uncertain knowledge and conditionally offering to take blame. His desired response is much clearer: forgiveness and an end to hatred. Invoking a religious consequence for not forgiving makes the owner feel pressured to forgive. He closes by interpreting his situation as God's will and departure as going home to Jesus.
 
-**Alternative readings and unresolved points:** Uncertain event knowledge does not establish confusion, impairment or memory loss. The owner experiences an imbalance between limited responsibility detail and forceful forgiveness requests, and questions sincerity. That response is recorded without treating insincerity or intentional coercion as known. Explicit harm acknowledgment and wishes to undo events remain part of the account. Going to heaven is an interpretation of the reunion language, not the original wording.
+**Alternative readings and unresolved points:** The sleep claim and reference to entering the car also provide a possible nonintentional causal account; they are not merely a report of memory uncertainty. Neither that explanation nor impairment is independently established. The owner experiences an imbalance between limited responsibility detail and forceful forgiveness requests, and questions sincerity. That response is recorded without treating insincerity or intentional coercion as known. Explicit harm acknowledgment and wishes to undo events remain part of the account. Going to heaven is an interpretation of the reunion language, not the original wording.
 
 Source context SHA-256: `170deea6881b11055f224ae33f6c0c3617f5d772099b4a08bc06c22ce929632a`
 
@@ -401,9 +401,11 @@ Yes, I do. I love you. Asdadu an la ilah illa Allah, Asdadu an la ilah illa Alla
 
 **Evidence anchors:** “absolutely no fear of what may happen to this body”; “My fear is for Allah, God only”; “As a devout Muslim”; “Be strong”.
 
-He explicitly denies fear concerning what happens to his body while directing fear toward God. The owner reads the latter as reverence or awe within the stated faith, rather than equating it with bodily terror. The account of material life as preparation for the next life supplies a framework for approaching death, followed by love, testimony and encouragement.
+**Source boundary (checked against TDCJ, 8 November 2026):** The candidate combines two separately marked sections, Statement to the Media and Spoken. The fear passage is in the media section; the source does not establish when it was delivered relative to the spoken words.
 
-**Alternative readings and unresolved points:** The objects and meanings of fear differ; neither a single fear score nor a blanket fearlessness label captures the distinction. The text records his self-description and belief, not proof that religion eliminated every fear. Recorded ellipses limit claims about the original utterance.
+He explicitly denies fear concerning what happens to his body while directing fear toward God. The owner reads the latter as reverence or awe within the stated faith, rather than equating it with bodily terror. The account of material life as preparation for the next life supplies a framework for approaching death. The separate spoken section contains love, testimony and encouragement.
+
+**Alternative readings and unresolved points:** Reverence or awe and concern about divine judgment remain alternative readings of fear for God; the reference to divine power over life and death does not settle them. The objects and meanings of fear differ; neither a single fear score nor a blanket fearlessness label captures the distinction. The text records his self-description and belief, not proof that religion eliminated every fear. Recorded ellipses limit claims about the original utterance.
 
 Source context SHA-256: `d1cac34b824b865aa10902c9067e5296be8a629251175bcea221df374ab78a30`
 
@@ -420,6 +422,8 @@ Tell Mom I love her.
 **Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “Tell Mom I love her”.
+
+**Source boundary (checked against TDCJ, 8 November 2026):** The official page frames this as a message when his attorney entered the witness room and records the attorney replying with affection. The candidate retains the prisoner's attributed words only. Its brevity is partly a consequence of extraction and does not describe the whole source exchange.
 
 He asks that love be conveyed to his mother. The owner reads attachment at leave-taking and initially describes the mother as the only remaining tie to the world. The final memo retains the narrower observation: she is the only relationship explicitly named in this short record.
 
