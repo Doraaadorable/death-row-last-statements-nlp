@@ -191,3 +191,12 @@ equate reader-perceived forgiveness pressure with negative religious coping.
 The main next step is a compact synthesis relating the existing case findings
 to these precedents. Murphy audio is optional contextual evidence and no longer
 a dependency of the main study. No new manual coding or model run is requested.
+
+## Research narrative assembled (8 November 2026)
+RESEARCH_DRAFT.md now connects the question, literature, methods and four
+contextual findings in a single readable narrative. The extended report and
+workbook remain the evidence trail. No new data, labels or analyses were added.
+Next review the draft's interpretation and scope with an academic adviser;
+the current claim is a contextual exploratory analysis, not a new psychological
+mechanism or policy effect. Additional material should address a named evidence
+gap. No download or coding task is currently required of the project owner.

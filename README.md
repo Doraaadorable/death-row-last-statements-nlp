@@ -8,6 +8,7 @@ How do people facing execution express emotions, maintain relationships, and
 make sense of death and their own situation in their final statements?
 
 ## Start here
+- [Research draft](docs/RESEARCH_DRAFT.md): a compact narrative connecting the question, prior work, method and findings.
 - [Exploratory report](docs/PSYCHOLOGICAL_EXPRESSION_REPORT.md): case comparisons, literature and conclusions.
 - [Literature comparison](docs/LITERATURE_COMPARISON.md): full-text methods, overlapping examples and the focused comparison.
 - [Current research plan](docs/CURRENT_RESEARCH_PLAN.md): question, literature and next steps.
