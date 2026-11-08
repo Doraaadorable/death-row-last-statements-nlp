@@ -587,6 +587,78 @@ are enough to show some material exists, not enough to establish that design.
 This is a bounded next-source task, not a request for another broad owner-labeling
 round or a claim that a new study has already been completed.
 
+## Documentary extension: John Henry Ramirez (#576)
+
+### Selection and source chain
+This is a purposively selected institutional-context case, outside the completed
+20-case reading set. Selection followed the availability check: a named Supreme
+Court case could potentially connect a request, actual accommodation and an
+attributable account of its significance. It is not a representative additional
+sample or a search for a favorable psychological outcome. Sources were checked
+on November 8, 2026; the underlying events occurred in 2021–2022.
+
+| Evidence | Dated source and location | What it establishes |
+| --- | --- | --- |
+| Request and judicial decision | Supreme Court, *Ramirez v. Collier*, March 24, 2022, majority opinion, Parts I and III–IV; [official opinion](https://www.supremecourt.gov/opinions/21pdf/21-5592_feah.pdf) | Ramirez requested audible prayer and pastoral touch; Texas restricted them. The Court found likely success on the RLUIPA claim and entitlement to preliminary relief on the circumstances addressed. This is a legal record, not a psychological outcome measure. |
+| Anticipated personal significance | Ken Camp, Baptist Standard, October 3, 2022, reporting a May 25 interview at Polunsky; [article](https://baptiststandard.com/news/texas/corpus-christi-pastor-plans-to-pray-in-death-chamber/) | Ramirez attributed spiritual significance to Moore's presence, prayer and touch, and described an affectionate bond with him. These are Ramirez's statements as reported by an interviewer, before execution. |
+| Actual provision | Juan A. Lozano, Associated Press, October 5, 2022, updated 8:35 p.m., republished by Click2Houston; [report](https://www.click2houston.com/news/national/2022/10/05/texas-inmate-who-fought-prayer-touch-rules-to-be-executed/) | The report describes Moore placing his hand on Ramirez's chest, praying, and Ramirez responding to the prayer. This supports occurrence of accommodation; it does not measure its subjective effectiveness. |
+| Final public expression | TDCJ, October 5, 2022; [official statement](https://www.tdcj.texas.gov/death_row/dr_info/ramirezjohnlast.html), also frozen candidate corpus #576 | Ramirez addresses Castro's family, expresses remorse, hopes for their comfort, expresses love to his own circle and closes with readiness. The archived statement is a bounded transcription, not a complete record of the execution. |
+
+The court's opinion is used for the legal history rather than treating the
+plaintiff's pleadings as independently verified personal experience. The interview
+and execution report are journalism, with their respective attribution and
+observational limits. The judicial decision predates the execution; the fact that
+accommodation was provided is established separately by the execution report.
+
+### Reading the evidence together
+In the reported May interview, Ramirez said: “He's my brother. I've grown to love
+him.” He also described wanting Moore's touch and prayer during the transition to
+death. This supports a reading of support as both a religious practice and a
+relationship with a particular trusted person. It does not establish how much
+fear he felt, whether the relationship changed his mental health, or that everyone
+would experience this practice in the same way.
+
+His final statement begins with the victim's family and an attempted communication
+through a victim-advocacy program. He acknowledges the limits of what he could
+say or do for them, expresses regret and remorse, and hopes they find comfort.
+Here, comfort is wished for the listeners; it is not his own report of feeling
+comforted. The statement then turns to love for his wife, son, friends and others,
+including Dana, before closing: “I am ready Warden.” The closing permits proceeding
+in context; it does not by itself establish serenity, approval of the sentence,
+or absence of fear. Neither the family's reconciliation nor their relief can be
+inferred from his wishes.
+
+The frozen statement contains no explicit reference to God, prayer or heaven.
+Nevertheless, the independent source chain documents a request for religious
+support, his anticipation of its significance, and reported provision at execution.
+The execution report also includes a response to prayer absent from the official
+last-statement transcription. These sources cover different boundaries of the
+event; their difference need not be a transcription error.
+
+**Case-level result:** the content of a final statement and the circumstances of
+spiritual support are distinct evidence. In this case, a reading confined to
+religious words in the final statement would miss documented religious practice
+and the expressed importance of a pastoral relationship. Conversely, pastoral
+presence does not establish that religion produced his remorse, readiness or
+emotional relief. This observation concerns this case and source boundary; it is
+not an estimated frequency of such omissions across the corpus.
+
+### What remains open
+There is no comparable before/after psychological assessment, no untreated
+comparison, and no direct self-report after the accommodation whose effect is at
+issue. This case therefore supports an account of anticipated meaning and actual
+arrangements, not a causal conclusion about comfort. It also cannot adjudicate
+abolition versus retention, deterrence or government costs.
+
+The next bounded task is a contrasting documentary case selected for its ability
+to challenge this account: for example, requested support denied or modified,
+with attributable personal material. An absence of religious words is not a
+selection rule for absence of faith or support. Record any missing provision or
+personal-experience evidence as unknown. Before adding a new case, check whether
+it contributes a different institutional arrangement rather than merely another
+illustration of comfort. No new coding round is needed for the present result.
+
+
 ## Current result and next research decision
 The exploratory project now includes a corpus preparation trail, earlier topic
 analysis, 20 discussed reading memos, a full-text literature comparison, a reproducible summary of the 50 frozen

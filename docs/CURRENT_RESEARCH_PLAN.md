@@ -88,8 +88,9 @@ exposure or psychological-outcome groups.
 
 The prioritized extension is a contextual documentary case study of spiritual
 support. It requires a dated request/decision, actual provision or an explicit
-unknown, and attributable personal material. No new cases have yet been selected
-or psychologically analyzed. Direct causal estimates of support, stays,
+unknown, and attributable personal material. A first purposive case, John Henry Ramirez (#576), now links a legal
+request, reported provision, an attributed pre-execution interview and the final
+statement. It documents anticipated significance, not psychological effectiveness. Direct causal estimates of support, stays,
 commutation or abolition remain deferred pending suitable evidence.
 
 Reproduce the availability check with
@@ -99,8 +100,9 @@ Reproduce the availability check with
 ## Next-stage decision before selecting new cases
 Keep the current psychological-expression study and its focused forgiveness
 comparison. The first availability check favors spiritual accommodation as a bounded
-documentary context. Next verify individual request, actual provision and
-attributable personal material before any additional case interpretation.
+documentary context. The first case shows that documented spiritual support may be absent from the
+religious vocabulary of a final statement. Next seek one contrasting arrangement
+with an attributable account, rather than generalizing from this example.
 Do not treat the calendar groups as a causal comparison.
 
 Do not add a broad psychological codebook or reopen the completed 20-case
