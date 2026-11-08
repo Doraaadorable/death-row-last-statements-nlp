@@ -817,9 +817,8 @@ readings, including cases too sparse to support an elaborate account.
 The synthesis is integrated in RESEARCH_DRAFT.md. Further expansion should
 answer a specific missing question. The Murphy interview audio remains optional
 context; its absence does not block the main study. The located news report
-does not establish the experience of the requested support. An independent
-reader could examine how the interpretations travel to another reading, but no
-reader has yet been recruited and no such result is claimed.
+does not establish the experience of the requested support. A subsequent open-ended human reader response is now available and described
+in RESEARCH_DRAFT.md. It adds contrasting readings, not a reliability statistic.
 
 
 ## Source and interpretation corrections after review (8 November 2026)
@@ -829,3 +828,14 @@ wrong choices may concern family departure; #600's sleep/car account may explain
 nonintentional involvement. #413's waiting remark to Irene and Jack remains an
 unresolved possible reunion reference. #39 is not classified as faith evidence.
 No frozen candidate text or label has been altered by these corrections.
+
+## Subsequent reader response
+One additional human reader completed an intentionally open-ended reading of
+ten known texts. The owner confirmed no prior exposure to project interpretations,
+translation assistance, and permission for anonymous paraphrase, quotation and
+publication. Original feedback and conditions are saved under reports/reader_response_v1.txt
+and reports/reader_response_context_v1.json. The task prioritized intuitive
+responses rather than mandatory completion of a coding form. Reader feelings
+are evidence of that reader's encounter, while claims about speakers remain
+interpretations. Differences concerning #15, #32 and #1 are retained in the draft;
+no agreement score or population audience effect is claimed.

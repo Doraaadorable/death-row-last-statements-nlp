@@ -72,9 +72,10 @@ retain source-context hashes, exact passages, interpretations, alternatives and
 revisions. The comparison follows two organizing questions: what is accepted,
 explained or contested about responsibility and judgment; and how relationships and
 approaching death are described. These are interpretive lenses rather than exclusive
-categories. Single-reader reactions are retained as reflexive notes, not generalized
-audience responses. No second independent coding or new reliability estimate was
-undertaken for this reading.
+categories. The original owner reactions are retained as reflexive notes, not
+generalized audience responses. No fixed-label second coding or reliability
+estimate was undertaken. A subsequent open-ended reader response is described
+below.
 
 ## Findings
 ### Acknowledgment does not resolve every question of responsibility
@@ -139,6 +140,36 @@ separately marked spoken portion. #219 and #583 preserve injustice claims as the
 statements end. Together these cases resist reducing approaching death to one positive
 or negative state. Silence about a feeling is not evidence that it was absent.
 
+## Subsequent open-ended reader response
+A second human reader responded to ten of the already selected texts. The owner
+confirmed that the reader had not previously seen or discussed the project's
+interpretations, used translation assistance, and agreed to anonymous paraphrase,
+quotation and publication of the complete feedback. The translation product and
+outputs were not recorded. The owner deliberately invited authentic intuitive
+responses rather than requiring answers to all three packet questions. This is
+an open-ended reading exercise, not an incomplete fixed-label coding task.
+The [original feedback](../reports/reader_response_v1.txt) and
+[context record](../reports/reader_response_context_v1.json) preserve its basis.
+
+This response shares some attention to addressees and responsibility objects,
+while offering richer psychological interpretations of sparse statements. For
+#15, Reader B describes fatigue and withdrawal where the initial memo leaves
+emotion unspecified. For #32, an initial gift/acceptance interpretation is later
+qualified by uncertainty about what this refers to. For #1, concern about divine
+judgment receives greater emphasis than awe. These differences are retained;
+they are not resolved by taking a majority vote. The feedback also revises its
+inference that #49's mother was absent.
+
+Feelings of discomfort, tenderness or heaviness are meaningful accounts of this
+reader's encounter with the texts. They are not errors merely because the
+original speaker did not name those feelings. A further claim about that
+speaker's fatigue, motives or deepest fear, however, remains an interpretation
+requiring evidence. This distinction allows emotional engagement without
+turning a reader's experience into a diagnosis of the person speaking.
+No agreement rate is calculated: responses were open-ended, the original owner
+reading was guided differently, and no common fixed coding task was completed.
+One additional reader also cannot establish how audiences generally respond.
+
 ## Discussion and limits
 The central result is a contextual account of psychological expression in which
 responsibility, relationships, religion and judgments of punishment need not
@@ -151,7 +182,7 @@ of retained documents, explicit alternative readings and sparse cases that limit
 interpretation. It is not a demonstrated field-wide novelty, a validated measure of
 mental state, or a causal test of religious care or capital-punishment policy.
 
-Selection from development material, prior exposure, one owner's interpretive
+Selection from development material, prior exposure, the owner's interpretive
 participation, recording and translation boundaries, and the absence of listeners'
 responses constrain conclusions. A final public statement supplies no within-person
 trajectory and cannot establish private sincerity, actual reform, or effects of

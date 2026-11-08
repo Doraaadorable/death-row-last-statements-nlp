@@ -1,0 +1,39 @@
+{
+  "recorded_date": "2026-11-08",
+  "reader_alias": "Reader B",
+  "source": "project_owner_confirmation",
+  "human_reader": true,
+  "prior_exposure_to_project_interpretations_or_discussion": false,
+  "reported_assistance": [
+    "translation tool"
+  ],
+  "translation_tool_name": null,
+  "translation_outputs_preserved": false,
+  "reading_instruction": "Owner intentionally prioritized authentic intuitive responses; completing all three questions was optional.",
+  "purpose": "Open-ended reader response and interpretive comparison, not fixed-label reliability measurement.",
+  "anonymous_permission": {
+    "paraphrase": true,
+    "direct_quotation": true,
+    "publish_complete_feedback": true
+  },
+  "case_ids": [
+    15,
+    508,
+    49,
+    413,
+    11,
+    595,
+    32,
+    407,
+    1,
+    600
+  ],
+  "response_file": "reader_response_v1.txt",
+  "response_sha256": "5499d0b27d07ac10a8c9f12c52ce9055cc82ed80b697be8eaa3d2c85e67f1073",
+  "not_established": [
+    "reader professional or cultural background",
+    "specific translation product and settings",
+    "time spent reading"
+  ],
+  "analysis_status": "Comparison made after receipt; disagreements retained; no agreement score."
+}

@@ -28,8 +28,10 @@ needed for those source checks. Literature page ambiguities were checked.
 1. The consistency pass across draft, report and README is complete: source
    boundaries, selection-informed co-occurrence and optional institutional work
    are aligned. The institutional extension is an appendix in the draft.
-2. Ask whether a second reader is available for a bounded independent reading.
-   Do not claim this has been arranged or that it validates psychological states.
+2. A second human reader has now supplied open-ended responses to ten texts,
+   without prior exposure to project interpretations and with translation help.
+   Their permission and reading conditions are recorded; retain disagreements
+   and reader emotions without treating them as the speakers' mental states.
 3. Before designing a comparison of published operational definitions, check
    related work and formulate a question that could yield an informative negative
    result. This may be a methodological extension; it must not replace the
@@ -45,3 +47,10 @@ The processed data are not tracked in Git. The latest review package supplied
 local snapshots, which enabled independent byte-identical reproduction of the
 two current descriptive outputs. Raw HTML and upstream extraction tables were
 not included.
+
+## Open reading purpose
+The owner intentionally made completion of the packet questions optional to
+preserve intuitive, personal responses. This is an appropriate open-ended task.
+Do not call it failed coding or demand agreement with the original memos. The
+next task is to integrate the response while preserving the distinction between
+reader experience and claims about the speaker. No new reading round is required.
