@@ -63,3 +63,11 @@ on the current draft from an academic adviser. No adviser has been contacted
 by this project, and no additional participant or result is implied. Further
 research should follow that scope decision rather than automatically adding
 labels, notebooks or case collections.
+
+## Draft structure revision
+The draft now follows abstract, question/prior research, materials/source boundaries/
+procedure, four findings, one additional reader-response section, discussion, ethics,
+institutional appendix and references. Reader roles and ten-case composition are
+explicit. Consent is accurately attributed to the owner's written confirmation,
+not to a separately signed participant form. Possible challenges to interpretations
+are described as prospective work, not completed tests.
