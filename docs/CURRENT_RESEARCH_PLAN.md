@@ -1,73 +1,50 @@
 # Current research plan
 
-Updated 8 November 2026 after review of research draft 11e1c69.
+Updated 8 November 2026 after the research draft's structural revision.
 
-## Question
+## Question and scope
 How do people facing execution express feelings, sustain relationships and make
 sense of responsibility and death in their final statements?
 
-## Completed material
-- Twenty purposively selected candidate statements have been discussed and
-  synthesized; the workbook retains texts, evidence anchors and alternatives.
-- RESEARCH_DRAFT.md is the compact narrative; the extended report and literature
-  comparison contain the evidence trail.
-- Frozen 50-person labels and earlier NMF remain unchanged background work.
-- Religious-coping and phenomenological precedents substantially cover the broad
-  themes. Co-occurrence informed selection and is not a new discovery.
-- Institutional cases remain a separate documentary extension. Murphy audio is
-  optional and unavailable here; it is not a dependency of the main narrative.
+The draft addresses this question by interpretive illustration using twenty
+purposively selected candidate documents. It does not describe the full range
+or frequency of expression, establish a new mechanism, or measure private states.
+Co-occurrence informed selection; the contribution is contextual comparison.
 
-## Corrections completed after review
-The draft and evidence notes disclose #1's media/spoken merge, #49's extracted
-exchange, #138/#219 literature overlap and selection/memo assistance. Interpretive
-alternatives are retained for #1, #39, #413, #595, #600 and #576. The official
-TDCJ pages for #1, #49 and #576 were checked directly; no owner download is
-needed for those source checks. Literature page ambiguities were checked.
+## Completed work
+- RESEARCH_DRAFT.md is the compact narrative with source boundaries, four findings,
+  an additional reader exploration, discussion, ethics, appendix and references.
+- Reader A is the project owner; guided readings of all twenty texts underlie
+  the workbook. The extended report and literature comparison preserve detail.
+- Reader B supplied open-ended responses to ten known texts, without prior
+  exposure to project interpretations and with translation help, as confirmed
+  by Reader A. Intuitive feelings were deliberately prioritized over mandatory
+  completion of questions. Differences and self-corrections remain intact.
+- Original reader feedback and context are under reports/reader_response_v1.txt
+  and reports/reader_response_context_v1.json. Anonymous permissions are recorded
+  through Reader A's written confirmation, not a separate signed reader form.
+- The source table identifies merged, extracted and editorial material, as well
+  as overlap with published examples. Frozen corpus and labels remain unchanged.
+- Earlier NMF/syntax work is background; Ramirez/Murphy material is an appendix.
+  Murphy audio remains optional and is not a dependency of the main study.
 
-## Next decisions
-1. The consistency pass across draft, report and README is complete: source
-   boundaries, selection-informed co-occurrence and optional institutional work
-   are aligned. The institutional extension is an appendix in the draft.
-2. A second human reader has now supplied open-ended responses to ten texts,
-   without prior exposure to project interpretations and with translation help.
-   Their permission and reading conditions are recorded; retain disagreements
-   and reader emotions without treating them as the speakers' mental states.
-3. Before designing a comparison of published operational definitions, check
-   related work and formulate a question that could yield an informative negative
-   result. This may be a methodological extension; it must not replace the
-   owner's substantive interest in psychological expression without discussion.
+## Next step
+Seek substantive academic feedback on the current draft's contribution and the
+most useful further question. No adviser contact has been made by the project.
+Do not automatically add cases, coding, questionnaires or models. A comparison
+of published operational definitions is a possible future design requiring
+its own rationale; it must not displace the substantive question by default.
 
-No new coding, model training or data collection has been started. The current
-contribution is a transparent contextual comparison, not a demonstrated novel
-mechanism, prevalence estimate or policy effect.
+## Possible challenges to the interpretation
+Evidence-based reader disagreements may require revisiting particular readings.
+Different published definitions could change summaries, and previously unexamined
+texts could expose omitted concerns. None of these further studies has been run.
+Reader B's feedback is not a fixed-label reliability test or population study.
 
-## Reproduction
-Extract the published data snapshot before running the descriptive scripts.
-The processed data are not tracked in Git. The latest review package supplied
-local snapshots, which enabled independent byte-identical reproduction of the
-two current descriptive outputs. Raw HTML and upstream extraction tables were
-not included.
-
-## Open reading purpose
-The owner intentionally made completion of the packet questions optional to
-preserve intuitive, personal responses. This is an appropriate open-ended task.
-Do not call it failed coding or demand agreement with the original memos. The
-response is now integrated, including a ten-case comparison and focused readings
-of sparse texts and forgiveness appeals. Reader experience remains distinct from
-claims about the speaker. No new reading round is required.
-
-## Current-stage completion
-The corrected narrative, literature positioning, source boundaries and open
-reader comparison are assembled. The next external step is substantive feedback
-on the current draft from an academic adviser. No adviser has been contacted
-by this project, and no additional participant or result is implied. Further
-research should follow that scope decision rather than automatically adding
-labels, notebooks or case collections.
-
-## Draft structure revision
-The draft now follows abstract, question/prior research, materials/source boundaries/
-procedure, four findings, one additional reader-response section, discussion, ethics,
-institutional appendix and references. Reader roles and ten-case composition are
-explicit. Consent is accurately attributed to the owner's written confirmation,
-not to a separately signed participant form. Possible challenges to interpretations
-are described as prospective work, not completed tests.
+## Reproduction and historical records
+Extract the data-v1 snapshot before running current descriptive scripts; processed
+data are not Git-tracked. The prior review package supplied local snapshots and
+the reviewer reported byte-identical reruns of both descriptive outputs. Raw HTML
+and upstream extraction tables were not included. Historical manifests, labels,
+notebooks, protocols and raw reader responses preserve their original records;
+current research claims are stated in the draft and the present plan.

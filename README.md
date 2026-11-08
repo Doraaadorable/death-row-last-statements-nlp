@@ -28,39 +28,31 @@ criticism, and farewell/closure/readiness. Values are 1, 0 and u (unresolved).
 These describe textual expression; they are not a psychological scale.
 
 ## Current work
-A second human reader's open-ended responses to ten texts are now included,
-with confirmed reading conditions and anonymous permission. The comparison
-retains emotional responses and disagreements without scoring them as errors
-or treating them as the speakers' mental states.
+The [research draft](docs/RESEARCH_DRAFT.md) presents an exploratory contextual
+reading of twenty purposively selected Texas candidate documents. It examines
+objects and addressees of responsibility, relationships, religion and approaching
+death. Apparent co-occurrence informed selection, so it is not presented as a
+new discovery or a corpus frequency result.
 
-The literature comparison now includes targeted checks of religious-coping
-research (Smith 2018/2020), descriptive phenomenology (Malaga & Delgado 2020),
-and the distinction between coping theory and Brief RCOPE assessment. These
-are close precedents; multiple religious functions are not claimed as new.
+Reader A is the project owner, whose guided readings underlie the memos. Reader B
+subsequently responded to ten selected texts without prior exposure to project
+interpretations and with translation help, as confirmed by Reader A. The task
+intentionally prioritized intuitive feelings. Original feedback and conditions
+are recorded; disagreements and emotional responses are retained without an
+agreement score or claims about speakers' private mental states.
 
-The report now ends with a synthesis of all 20 discussed statements: responsibility,
-attachment, religious meaning and readiness are compared without reducing them
-to a single psychological state. External institutional cases remain separate.
+The draft includes a source-boundary table, four findings, one additional
+reader-response section, discussion, ethics, an institutional appendix and
+references. It distinguishes retained candidates from original source events,
+including #1's two source sections and #49's attorney exchange. The literature
+comparison records close precedents and does not claim an established new gap.
+Permission for anonymous use of Reader B's feedback was confirmed in writing
+by Reader A; no separate signed participant form is claimed.
 
-The 20-case workbook now contains contextual reading memos and alternative
-interpretations. All 20 cases have been discussed with the project owner; the memos now
-record refinements, reading responses and unresolved interpretations. The accompanying report examines
-responsibility and judgment, family connection, spiritual meaning and readiness.
-
-A reproducible descriptive summary adds raw 1/0/u counts and all 28 label
-pairs for the existing 50-person development sample. Run
-`python src/summarize_expression_sample.py` after extracting the snapshot.
-These are sample descriptions, not corpus prevalence estimates.
-
-The case comparisons show why readiness should be separated from endorsement
-of punishment, and why harm acknowledgment, intent and involvement need
-separate interpretation. These are exploratory observations from purposively
-selected texts, not corpus prevalence estimates. Close precedents include
-Schuck & Ward (2008) and Zhuo & Chun (2026); a new literature gap is not established. The two key full texts have now been
-checked; Smith (2019) has also been checked in full for forgiveness framing. A focused six-case analysis of relational repair and the boundaries of
-forgiveness is complete in the report: seeking or granting forgiveness does not
-establish that reconciliation has occurred. The comparison retains ambiguous
-responsibility, changes of addressee and the owner's reading responses separately.
+A reproducible descriptive summary supplies raw 1/0/u counts and all 28 pairs
+for the frozen 50-record development sample. Run
+`python src/summarize_expression_sample.py` after extracting the data snapshot.
+These are sample descriptions, not psychological scores or population estimates.
 
 ## Institutional context
 The current report also examines how religious meaning and perceived punishment

@@ -12,6 +12,30 @@ changes separately. Execution 82 is an indirect recorder summary; 83 and 238
 have no retained TF-IDF features. The current inclusion ledger is
 reports/inclusion_ledger_v2.csv.
 
+## Current contextual reading
+The main narrative is [RESEARCH_DRAFT.md](RESEARCH_DRAFT.md), with detailed
+memos in [OPEN_READING_WORKBOOK_v1.md](OPEN_READING_WORKBOOK_v1.md).
+Reader A is the project owner. Twenty candidate documents were purposively
+selected from the 50-person development sample; co-occurrence informed selection.
+Memo drafting and selection were AI-assisted, with Reader A discussing and
+revising interpretations. Source boundaries are listed in the draft, including
+#1's media/spoken merge and #49's extracted exchange. No original recording
+completeness, psychological scale or population prevalence is inferred.
+
+Reader B subsequently read ten already selected texts: the four sparse cases
+#15, #11, #32, #49 and six contrasts #508, #413, #595, #407, #1, #600. Reader A
+confirmed no prior exposure to project interpretations, translation assistance
+and permission for anonymous paraphrase, quotation and complete publication.
+The intentionally open-ended instruction prioritized genuine feelings, without
+mandatory completion of the packet questions. Original feedback and context are
+in reports/reader_response_v1.txt and reports/reader_response_context_v1.json.
+Permission is recorded through Reader A's written confirmation, not a separate
+signed reader form. No reliability coefficient or generalized audience effect
+is reported. The response does not change the frozen corpus or labels.
+
+The NMF and predicate workflows below are earlier supporting work. Institutional
+Ramirez/Murphy material is an appendix, separate from the 20-document comparison.
+
 ## Exploratory NMF
 Run python src/run_nmf_v2.py after preparing the released corpus. Numeric
 references are in results/reference_numeric_v1/. Shared features and topic
@@ -29,7 +53,7 @@ inclusion evidence, and 04 for component interpretation. Some extraction and
 inclusion rebuilding steps need raw HTML or upstream tables outside data-v1.
 
 ## Supporting predicate experiments
-The current discussion records contain 42 selected propositions in 19 documents:
+The historical predicate discussion records contain 42 selected propositions in 19 documents:
 12 focus boundaries are confirmed and 30 are proposed. Raw decision CSVs and
 historical numerical outputs remain under reports/ and results/.
 

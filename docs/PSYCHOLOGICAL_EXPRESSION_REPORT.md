@@ -1,5 +1,12 @@
 # Responsibility, connection and approaching death in Texas last statements
 
+Current roles: Reader A is the project owner, whose guided readings underlie
+the 20-case memos. Reader B provided a subsequent open-ended response to ten
+known texts with translation assistance and no prior exposure to project
+interpretations, as confirmed by Reader A. The current narrative is
+[RESEARCH_DRAFT.md](RESEARCH_DRAFT.md); this document provides supporting detail.
+
+
 Exploratory report; institutional-context framing updated 8 November 2026.
 
 ## Research question
@@ -24,7 +31,7 @@ and discussions; this is a purposive comparison, not a prevalence sample.
 
 The [workbook](OPEN_READING_WORKBOOK_v1.md) preserves each complete candidate
 text and its existing source-context hash. Selection and memo wording were AI-assisted, with interpretations discussed
-and revised by the project owner. Co-occurrence informed purposive selection;
+and revised by Reader A. Co-occurrence informed purposive selection;
 its presence in these cases is not an independent discovery.
 
 Source checks on 8 November 2026 confirm that #1 combines a media statement
@@ -33,7 +40,7 @@ and separately marked spoken words; its fear passage belongs to the former.
 with an attorney. Candidate completeness is not source-event completeness.
 
 Every memo separates evidence,
-interpretation and alternative readings. All 20 statements were examined in dialogue with the project owner. Memos
+interpretation and alternative readings. All 20 statements were examined in dialogue with Reader A. Memos
 now incorporate her interpretations, subsequent refinements and unresolved
 readings. Completion refers to discussion of the texts, not agreement on every
 possible meaning or a new set of frozen labels. No new reference labels have been assigned.
@@ -180,15 +187,15 @@ observation, not the speaker's own identification of a particular emotion.
 ### 5. A reading response can shift without revealing the speaker's motive
 The discussion of #461 documented movement from irritation at the accusation,
 to sympathy with the family address, to suspicion that the sequence solicits
-sympathy. The owner connected the sympathy to her own strong family orientation.
+sympathy. Reader A connected the sympathy to her own strong family orientation.
 This is a useful reflexive record of one encounter with the text.
 
 The statement foregrounds the speaker's treatment and family, while leaving the
 original offense and its victims unmentioned. That distribution of attention is
 observable. Deliberate manipulation, hypocrisy and an absence of private remorse
 are not established. Genuine attachment and a self-presentational function are
-also compatible. No audience experiment or independent reader sample was
-conducted, so this episode is not a finding about how readers generally react.
+also compatible. This #461 episode concerns Reader A; it was not included in Reader B's
+ten-text packet. Neither response is a population audience finding.
 
 ## Case contrasts and evidence trail
 | Comparison | Executions | What the comparison supports |
@@ -214,17 +221,17 @@ texts or the earlier labels:
 | 413 | Strong self-reproach is supported; the closing may seek relief, but does not establish achieved peace. The earlier peace wish addresses others. |
 | 138 | Friends being punished may refer to suffering a loss or to imprisoned friends; neither is silently resolved. Completed punishment is not a statement that sins were erased. |
 | 595 | A hoped-for encounter with the victim is read as possible reconciliation, not established fixation. Family apologies address absence; broad wrong-choice language does not specify every act. |
-| 600 | Religious conditionality can be experienced as pressure to forgive. The owner's doubt about sincerity is separated from the observable lack of responsibility detail. |
+| 600 | Religious conditionality can be experienced as pressure to forgive. Reader A's doubt about sincerity is separated from the observable lack of responsibility detail. |
 | 58, 219, 583 | Readiness and ending a speech coexist with continued protest. Helplessness, irony and resistance are contextual readings, not personality diagnoses. |
 | 153 | Offering death for a religious purpose is distinguished from declaring the punishment deserved. |
-| 524 | The owner withdrew sarcasm in favor of anticipated hostility after reading the context. |
+| 524 | Reader A withdrew sarcasm in favor of anticipated hostility after reading the context. |
 | 11, 15 | Desert is an explicit evaluation; bare readiness does not identify emotion. |
 | 32, 39, 1, 49 | Identify whose peace, what destination, what object of fear and which explicitly named relationship; do not fill missing content with presumed experience. |
 
-In #600, the owner felt that linking another person's forgiveness to God's
+In #600, Reader A felt that linking another person's forgiveness to God's
 forgiveness imposed a moral burden on the listener. This concerns the experienced
 force of the words; a deliberate intention to coerce is not established.
-In #433, the owner moved from a sense of moral distance in the declaration of
+In #433, Reader A moved from a sense of moral distance in the declaration of
 love to greater closeness in the forgiveness requests. Together with #461,
 these responses show why the analyst's reactions should be recorded as reactions,
 not converted into facts about the speaker or other listeners.
@@ -316,7 +323,7 @@ find peace also does not describe peace already obtained by the speaker.
 #407 provides a contrasting configuration. He says he understands his uncle
 cannot forgive him and still calls himself a nephew. Instead of a completed
 repair, the text presents the persistence of a relationship claim where repair
-is unresolved. The owner reads a wish to remain recognized as family. That
+is unresolved. Reader A reads a wish to remain recognized as family. That
 reading concerns the relation he tries to sustain, not evidence that his uncle
 accepts it or that he privately fears abandonment.
 
@@ -333,7 +340,7 @@ full responsibility or no responsibility.
 
 The religious argument changes the terms of the appeal. Connecting refusal to
 forgive with exclusion from divine forgiveness can make forgiveness sound like
-an obligation for the listener. In discussion, the owner experienced this as
+an obligation for the listener. In discussion, Reader A experienced this as
 pressure and felt that the strong request was not matched by equivalent detail
 about responsibility. That is a documented reading response, not proof of
 intentional manipulation or the response of the victim's family.
@@ -351,7 +358,7 @@ he calls an atrocity. He thereby speaks from the position of the person wronged
 by execution and authorized, in his own account, to forgive.
 
 His turn toward parents and home then makes family connection salient. The
-owner's reaction moved from irritation, through sympathy, to concern about
+Reader A's reaction moved from irritation, through sympathy, to concern about
 self-presentation. None of those responses establishes insincerity. The
 observable contrast is that he discusses his treatment and family while not
 discussing the original offense or its victims. Those omissions describe the
@@ -365,7 +372,7 @@ on the different relations each utterance constructs.
 
 ### 4. A change of addressee can change what the apology is about
 In #595, an appeal to the victim's family includes a denial of intending harm
-and a wished-for afterlife encounter with the dead person. The owner came to
+and a wished-for afterlife encounter with the dead person. Reader A came to
 read this as possible reconciliation rather than fixation. The statement then
 addresses wife and daughters about giving up and leaving, explicitly telling
 them they did nothing wrong. The latter apology concerns absence and family
@@ -427,7 +434,7 @@ a population estimate or a demonstration of a previously unstudied phenomenon.
 
 ## Religious care, judicial punishment and policy context
 
-The owner's broader interest concerns how religious care, judicial severity and
+Reader A's broader interest concerns how religious care, judicial severity and
 retention or abolition of capital punishment affect people under death sentence.
 The existing forgiveness comparison is one part of that interest. Three
 questions should be kept distinct: how people describe their experience, what
@@ -448,7 +455,7 @@ without measuring its duration, quality or psychological effect.
 | 1: “My fear is for Allah, God only” | A distinction in the object and meaning of fear | Elimination of every fear through religious support |
 | 600: “this is the will of God” | Religious interpretation of the present situation | Agreement with the court's justification or measured emotional relief |
 
-The potential functions discussed by the owner remain useful questions: comfort,
+The potential functions discussed by Reader A remain useful questions: comfort,
 relief, belonging, self-understanding, mercy, an afterlife and moral authority.
 They are not presumed benefits in every religious statement. #413's self-reproach,
 #600's forgiveness pressure and #508's appeal to divine knowledge show why a
@@ -593,7 +600,7 @@ unknown; do not substitute a before/after word-count comparison.
 A causal policy study is deferred unless individual exposure, comparable outcomes
 and a credible comparison become available. The 28 later candidate statements
 are enough to show some material exists, not enough to establish that design.
-This extension does not require another owner-labeling round or establish an effect study.
+This extension does not require another Reader A labeling round or establish an effect study.
 
 ## Documentary extension: John Henry Ramirez (#576)
 
@@ -755,7 +762,7 @@ which interpretations are supported by the person's wording, which remain
 plausible alternatives, and which require institutional or relational evidence.
 Keep the Murphy material in a separate external-context section. Do not combine
 it with the 20 statements or the 50-label sample to create a new denominator.
-No new model or owner labeling round is needed for that synthesis.
+No new model or Reader A labeling round is needed for that synthesis.
 
 
 ## Synthesis of the completed 20-case reading
@@ -831,7 +838,7 @@ No frozen candidate text or label has been altered by these corrections.
 
 ## Subsequent reader response
 One additional human reader completed an intentionally open-ended reading of
-ten known texts. The owner confirmed no prior exposure to project interpretations,
+ten known texts. Reader A confirmed no prior exposure to project interpretations,
 translation assistance, and permission for anonymous paraphrase, quotation and
 publication. Original feedback and conditions are saved under reports/reader_response_v1.txt
 and reports/reader_response_context_v1.json. The task prioritized intuitive
@@ -860,7 +867,7 @@ public. Whether the mother was present remains unknown; the reader explicitly
 corrects the earlier inference of absence.
 
 #15 is similarly brief but produces a different response. Reader B writes
-“读起来有点冷，也有点让人难受” and interprets withdrawal and fatigue. The owner's
+“读起来有点冷，也有点让人难受” and interprets withdrawal and fatigue. Reader A's
 earlier memo declines to identify an emotion. These responses address different
 questions: a reader can feel coldness or sadness in encountering a text even
 when the text cannot establish that its speaker is emotionally cold or tired.

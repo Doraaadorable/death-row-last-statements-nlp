@@ -7,23 +7,31 @@ informed by known label combinations and discussion; see
 ../reports/open_reading_selection_v1.json. Existing labels are deliberately not
 repeated next to each case, but this is not blind reading: they were known.
 
-Do not assign new psychological categories yet. Read whole statements first.
-For each, write a short open memo in your own words:
-- What is explicitly said? Anchor an observation in exact wording.
-- Who is experiencing, speaking to, or referring to whom?
-- What meanings or communicative functions seem possible, and why?
-- What alternative reading or counterexample challenges the first interpretation?
-- What cannot be known from this record? Leave new observations open.
+## Reading roles and current use
+Reader A is the project owner; the guided discussion of all 20 texts is complete.
+Reader B subsequently gave intentionally open-ended responses to a purposive
+10-document subset. Reader B had not seen or discussed project interpretations
+before reading, according to Reader A's confirmation, and used translation help.
+The two exercises are not interchangeable coding tasks. The original memos below
+record Reader A's discussion, not Reader B's responses. The latter are preserved
+in [the response file](../reports/reader_response_v1.txt) with a
+[context record](../reports/reader_response_context_v1.json).
 
-These are reading prompts, not a new coding scheme. Do not require every case
-to display emotion, coexistence or tension. Absence of wording is not absence
-of a feeling. Editorial annotations and religious quotations retain their
-recorded form but are not direct psychological self-reports. The source links
-are provenance; no live pages were re-fetched to construct this workbook.
+Initial reading prompts concerned exact wording, addressees, possible meanings,
+alternatives and uncertainty. They were guides, not mandatory categories. Memos
+retain revisions rather than requiring every text to display emotion or tension.
+No new frozen labels were assigned. Reader B was invited to prioritize intuitive
+feelings, with completion of the packet questions optional.
 
-Read in small sessions. The first three are suggested for discussion; there is
-no requirement to complete all 20 before the next conversation. All 20 cases have now been discussed with the project owner. Memos preserve
-revised readings and unresolved alternatives; they are not new frozen labels.
+## Source boundaries
+The full retained candidate is not necessarily the full source exchange or a
+continuous spoken statement. #1 joins separately marked media/spoken sections;
+#49 extracts the prisoner's words from an attorney exchange. #153 includes the
+editorial [have], #461 a recorder's crying annotation, and #600 the unchanged
+possible transcription issue feel asleep. #138/#219 overlap with Zhuo and Chun
+Examples 15/19. See [the draft's source table](RESEARCH_DRAFT.md) for the compact
+summary. Frozen candidate wording below is unchanged; source checks for #1 and
+#49 on 8 November 2026 are recorded in the relevant memos.
 
 ## Reading 1: execution 508
 
@@ -35,7 +43,7 @@ I would like to tell the Canfield family I'm sorry; sorry for your loss. I wish 
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; wording synthesized from the reading discussion.
+**Review status:** Discussed with Reader A; wording synthesized from the reading discussion.
 
 **Evidence anchors:** “sorry for your loss”; “I take full responsibility”; “it was an accident”; “you know I'm at peace”; “I'm ready Warden”.
 
@@ -55,7 +63,7 @@ First of all I would like to tell my Uncle Kyle that I am sorry. I have been sor
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; wording synthesized from the reading discussion.
+**Review status:** Discussed with Reader A; wording synthesized from the reading discussion.
 
 **Evidence anchors:** “I know I was wrong”; “I take this penalty as a man”; “This doesn't solve anything”; “I am still your nephew”.
 
@@ -75,7 +83,7 @@ Yes, I want to start off by saying to everyone know that's involved in this atro
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; wording synthesized from the reading discussion.
+**Review status:** Discussed with Reader A; wording synthesized from the reading discussion.
 
 **Evidence anchors:** “this atrocity”; “they are all forgiven by me”; “Mom, I love you”; “Coming home dad”.
 
@@ -95,11 +103,11 @@ Yes, I do. I want to say first that I love you Pam. I love you, Ann, Jenny, Carl
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “I love you Pam”; “I am so sorry you are going through what you are now”; “we are both headed to a better place”.
 
-He addresses named loved ones with affection and thanks. His sorrow concerns what an addressee is currently going through; the better-place expression is read primarily as an attempt to comfort that person. Requests to pass on hugs and love sustain connections as he leaves. The owner also reads concern, attachment and reluctance to part in the whole statement.
+He addresses named loved ones with affection and thanks. His sorrow concerns what an addressee is currently going through; the better-place expression is read primarily as an attempt to comfort that person. Requests to pass on hugs and love sustain connections as he leaves. Reader A also reads concern, attachment and reluctance to part in the whole statement.
 
 **Alternative readings and unresolved points:** Thanks and love are explicit. Reluctance to part is a contextual reading rather than a named feeling. The referents of both and them, and the meaning of a better place, remain uncertain; neither religious affiliation nor a specific family situation is established.
 
@@ -115,13 +123,13 @@ Yes I do, I know this no way makes up for all the pain and suffering I gave you.
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “My punishment is nothing compared to the pain and sorrow I have caused”; “I hope that someday you can find peace”; “I have done some horrible things”.
 
 He gives priority to the suffering he says he caused, explicitly comparing it with his punishment. Repeated apologies, harm acknowledgment and doubt about worthiness support a reading of strong self-reproach. He wishes peace for those harmed, then repeatedly seeks forgiveness from families and God. The religious closing can be read as seeking acceptance and relief amid that self-reproach.
 
-**Alternative readings and unresolved points:** The owner experiences a strong movement from painful recollection toward a future wish for peace. That peace is wished for the addressee, not reported as the speaker's own achieved state. Punishment is not a direct measure of inner pain; the closing does not establish that relief has actually been obtained. The statement to Irene and Jack about waiting may suggest future reunion, but its intended setting and meaning are unspecified.
+**Alternative readings and unresolved points:** Reader A experiences a strong movement from painful recollection toward a future wish for peace. That peace is wished for the addressee, not reported as the speaker's own achieved state. Punishment is not a direct measure of inner pain; the closing does not establish that relief has actually been obtained. The statement to Irene and Jack about waiting may suggest future reunion, but its intended setting and meaning are unspecified.
 
 Source context SHA-256: `39c7272d30b349db6a6d757a74847cb38ee9b9196001e42744f920994021c00f`
 
@@ -135,13 +143,13 @@ Yes, I have to say that I am sorry for all the pain that I have caused you and y
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “I am sorry for all the pain that I have caused you and your family”; “I only have love in my heart”; “My baby I will always be with you”.
 
-He acknowledges causing pain, describes his heart as containing only love, and repeatedly asks to be forgiven. The owner initially hears moral distance or elevation in the positive self-description, then experiences renewed closeness in his requests for acceptance. The promise of continuing presence for a loved one is read as comfort, attachment and a wish for connection beyond physical absence.
+He acknowledges causing pain, describes his heart as containing only love, and repeatedly asks to be forgiven. Reader A initially hears moral distance or elevation in the positive self-description, then experiences renewed closeness in his requests for acceptance. The promise of continuing presence for a loved one is read as comfort, attachment and a wish for connection beyond physical absence.
 
-**Alternative readings and unresolved points:** The final apology may concern impending separation and inability to accompany a loved one, or return to the harm acknowledged at the opening. Neither object is specified. Love is explicitly self-described; calm is not. Moral elevation and closeness describe the owner's changing reading response, not established intentions.
+**Alternative readings and unresolved points:** The final apology may concern impending separation and inability to accompany a loved one, or return to the harm acknowledged at the opening. Neither object is specified. Love is explicitly self-described; calm is not. Moral elevation and closeness describe Reader A's changing reading response, not established intentions.
 
 Source context SHA-256: `0ccf3fbe1b885f57407854023a1ae2aa6b5e044f7c6120cc0cc62ae9c98f4817`
 
@@ -155,13 +163,13 @@ I want to thank the Lord for giving me this opportunity to get to know Him. He h
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “He has changed me in the past two months”; “I feel like I am not a threat to society anymore”; “my friends are now being punished”; “killing me is not going to solve nothing”.
 
 He presents a changed present self through religion, good prison conduct and the claim that he is no longer a threat. He uses that account to question execution's purpose, expresses sorrow to the family, and invokes Jesus' love in opposition to execution. The contrast between his completed punishment and his friends' current punishment links his self-account to others' suffering.
 
-**Alternative readings and unresolved points:** The owner retains two readings of friends being punished: people suffering his loss, and prisoners continuing to undergo punishment. The former has closer support from the execution critique; the latter is possible given the later mention of friends on death row. Fear driving religion, sins being erased, explicit admission of the original crime and divine forgiveness are not directly stated.
+**Alternative readings and unresolved points:** Reader A retains two readings of friends being punished: people suffering his loss, and prisoners continuing to undergo punishment. The former has closer support from the execution critique; the latter is possible given the later mention of friends on death row. Fear driving religion, sins being erased, explicit admission of the original crime and divine forgiveness are not directly stated.
 
 Source context SHA-256: `809351f9b1d2eaf96e10cbf307cd21aa86b02d843d27cc6070cad552d660e683`
 
@@ -175,11 +183,11 @@ First and foremost, I would like to give all praises to God. If it wasn't for hi
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “I never meant to hurt her”; “I'm sorry for giving up”; “I made wrong choices”; “it wasn't your fault”.
 
-He asks the victim's family for forgiveness while denying an intention to hurt her. The hoped-for afterlife encounter is read as a wish for reconciliation, rather than evidence of romantic fixation. Turning to wife and daughters, he apologizes for giving up and leaving them, and explicitly says they did nothing wrong. The owner reads guilt about absence from husband/father roles, strong family connection and an attempt to relieve family self-blame. Wrong choices and their consequences then summarize a broader life account.
+He asks the victim's family for forgiveness while denying an intention to hurt her. The hoped-for afterlife encounter is read as a wish for reconciliation, rather than evidence of romantic fixation. Turning to wife and daughters, he apologizes for giving up and leaving them, and explicitly says they did nothing wrong. Reader A reads guilt about absence from husband/father roles, strong family connection and an attempt to relieve family self-blame. Wrong choices and their consequences then summarize a broader life account.
 
 **Alternative readings and unresolved points:** The exact acts meant by giving up and quitting are unspecified. The text does not determine a legal category of intent or establish that reconciliation was granted. Wrong choices follows the address to wife and daughters and may concern family departure or broader life decisions; it cannot be securely assigned to the victim's death. It is not a complete confession to a specified act. The initial attachment/fixation reading was revised in discussion toward possible reconciliation.
 
@@ -195,13 +203,13 @@ Sir, Ma'am, I am so sorry, I ask that you please, please don't hate me and that 
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “for the part that I played”; “I don't know what happened”; “I will take the blame if it will help”; “please don't hate me”.
 
-He acknowledges a part in the event and harm to both families, while leaving his role vague, claiming uncertain knowledge and conditionally offering to take blame. His desired response is much clearer: forgiveness and an end to hatred. Invoking a religious consequence for not forgiving makes the owner feel pressured to forgive. He closes by interpreting his situation as God's will and departure as going home to Jesus.
+He acknowledges a part in the event and harm to both families, while leaving his role vague, claiming uncertain knowledge and conditionally offering to take blame. His desired response is much clearer: forgiveness and an end to hatred. Invoking a religious consequence for not forgiving makes Reader A feel pressured to forgive. He closes by interpreting his situation as God's will and departure as going home to Jesus.
 
-**Alternative readings and unresolved points:** The sleep claim and reference to entering the car also provide a possible nonintentional causal account; they are not merely a report of memory uncertainty. Neither that explanation nor impairment is independently established. The owner experiences an imbalance between limited responsibility detail and forceful forgiveness requests, and questions sincerity. That response is recorded without treating insincerity or intentional coercion as known. Explicit harm acknowledgment and wishes to undo events remain part of the account. Going to heaven is an interpretation of the reunion language, not the original wording.
+**Alternative readings and unresolved points:** The sleep claim and reference to entering the car also provide a possible nonintentional causal account; they are not merely a report of memory uncertainty. Neither that explanation nor impairment is independently established. Reader A experiences an imbalance between limited responsibility detail and forceful forgiveness requests, and questions sincerity. That response is recorded without treating insincerity or intentional coercion as known. Explicit harm acknowledgment and wishes to undo events remain part of the account. Going to heaven is an interpretation of the reunion language, not the original wording.
 
 Source context SHA-256: `170deea6881b11055f224ae33f6c0c3617f5d772099b4a08bc06c22ce929632a`
 
@@ -215,13 +223,13 @@ I am innocent, innocent, innocent. Make no mistake about this; I owe society not
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “I am innocent, innocent, innocent”; “I owe society nothing”; “I am ready”.
 
-Repeated innocence assertions, rejection of a debt to society and an appeal to continue human-rights work precede readiness. The owner reads powerlessness and resignation in facing execution, while the action appeal preserves resistance and a desire for others to continue. Readiness does not withdraw the innocence claim.
+Repeated innocence assertions, rejection of a debt to society and an appeal to continue human-rights work precede readiness. Reader A reads powerlessness and resignation in facing execution, while the action appeal preserves resistance and a desire for others to continue. Readiness does not withdraw the innocence claim.
 
-**Alternative readings and unresolved points:** Innocence is the speaker's asserted position, not an adjudication of the case. The owner's sense of helplessness is one contextual reading; the appeal to action challenges a reading of complete surrender. No single named emotion is directly reported.
+**Alternative readings and unresolved points:** Innocence is the speaker's asserted position, not an adjudication of the case. Reader A's sense of helplessness is one contextual reading; the appeal to action challenges a reading of complete surrender. No single named emotion is directly reported.
 
 Source context SHA-256: `445d8ebd8ea912ca14efb97dda707ff81ab859bfc9bba6d76bf77e7be93749be`
 
@@ -235,13 +243,13 @@ I understand that Michael Skains is supposed to be here somewhere. They did ever
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “All this evidence is being saved”; “It ain't going to be destroyed just because I'm dead”; “Everybody's got to go sooner or later”.
 
-He seeks to preserve evidence and his account of wrongful conviction beyond his death, describing another person as having escaped. The owner reads profound grievance and a desire for the innocence claim to remain heard. The closing reminder that listeners will also die is read as ironic, provocative resistance: their present position does not exempt them from mortality.
+He seeks to preserve evidence and his account of wrongful conviction beyond his death, describing another person as having escaped. Reader A reads profound grievance and a desire for the innocence claim to remain heard. The closing reminder that listeners will also die is read as ironic, provocative resistance: their present position does not exempt them from mortality.
 
-**Alternative readings and unresolved points:** Claims about evidence and the person who escaped remain his allegations. Irony and provocation are contextual interpretations of the closing; common mortality alone does not establish calm, fearlessness or a threat. The imagined queue toward death is the owner's paraphrase, not additional source wording.
+**Alternative readings and unresolved points:** Claims about evidence and the person who escaped remain his allegations. Irony and provocation are contextual interpretations of the closing; common mortality alone does not establish calm, fearlessness or a threat. The imagined queue toward death is Reader A's paraphrase, not additional source wording.
 
 Source context SHA-256: `24fbaa0a852473373e157d4314acfe4de6d3495fe24c2d3084fe2c0d7a69aed9`
 
@@ -255,11 +263,11 @@ What is occurring here tonight is not justice, it’s murder of an innocent man 
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “not justice”; “murder of an innocent man”; “I was denied DNA”; “I have no further words”.
 
-He organizes his statement around alleged evidentiary and appeal barriers, asserts innocence, and describes execution as murder. The owner hears grievance and resistance, with a more case-focused form than the mortality-directed irony in #219. His final words end the speech without retracting that challenge.
+He organizes his statement around alleged evidentiary and appeal barriers, asserts innocence, and describes execution as murder. Reader A hears grievance and resistance, with a more case-focused form than the mortality-directed irony in #219. His final words end the speech without retracting that challenge.
 
 **Alternative readings and unresolved points:** The evidentiary allegations have not been independently checked. Resistance to an asserted injustice is a more specific description than a rebellious personality. This statement does not identify private emotions, and closing the speech is not endorsement of execution.
 
@@ -275,11 +283,11 @@ I’d like to say that for the murders of Ray Hazelwood and Frank Collier, I’m
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “I’m sorry for that pain it has caused you”; “I’ll miss you”; “forgive me of my sins”; “offer up my death for the conversion of sinners”.
 
-He expresses sorrow for pain connected with the named murders, affection and anticipated missing of friends, and a belief in meeting again. The owner reads separation alongside hope for reunion within faith. Petitions for mercy and forgiveness present a sinner identity; offering his death for others' conversion gives death a religious purpose.
+He expresses sorrow for pain connected with the named murders, affection and anticipated missing of friends, and a belief in meeting again. Reader A reads separation alongside hope for reunion within faith. Petitions for mercy and forgiveness present a sinner identity; offering his death for others' conversion gives death a religious purpose.
 
 **Alternative readings and unresolved points:** The initial reading of death as deserved punishment was refined: religious offering, acknowledgment of sin and endorsement of execution are distinct. Neither deservedness nor the depth of devotion is directly established. The causal attribution in the apology remains less explicit than in #413; the frozen unresolved harm label is not changed.
 
@@ -295,13 +303,13 @@ Thank you for being here. I am sorry for all of the pain that I have caused my f
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “the pain that I have caused my family”; “I know you probably hate me”; “I didn't know what happened”; “I wish y'all peace and love”.
 
 He acknowledges pain to family and friends and anticipates that police officers may hate him. Describing the event as too fast and himself as not knowing what happened both expresses uncertain knowledge and may explain his conduct. Wishes for peace, love and shared faith then offer a different relational direction.
 
-**Alternative readings and unresolved points:** The owner withdrew the initial sarcasm reading after considering the whole statement, preferring anticipated hostility from police. The hostility is attributed by the speaker, not reported by officers. Knowledge uncertainty is not action denial. Peace is wished for addressees, not reported as his own state.
+**Alternative readings and unresolved points:** Reader A withdrew the initial sarcasm reading after considering the whole statement, preferring anticipated hostility from police. The hostility is attributed by the speaker, not reported by officers. Knowledge uncertainty is not action denial. Peace is wished for addressees, not reported as his own state.
 
 Source context SHA-256: `6c6891f16de08a4ec0174c84fcaa26f1b52e6bafba8dfd72b4d9200881ca6c1a`
 
@@ -315,11 +323,11 @@ I deserve this. Tell everyone I said goodbye.
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “I deserve this”; “Tell everyone I said goodbye”.
 
-He says he deserves what is occurring and asks for a farewell to be conveyed. The owner reads a posture of bearing the consequences of one's actions and perceives earnestness. Unlike bare readiness, the statement includes an evaluation of deservedness.
+He says he deserves what is occurring and asks for a farewell to be conveyed. Reader A reads a posture of bearing the consequences of one's actions and perceives earnestness. Unlike bare readiness, the statement includes an evaluation of deservedness.
 
 **Alternative readings and unresolved points:** This is context-dependent, plausibly the imminent punishment, but its full scope is unstated. Earnestness is a reading response rather than established sincerity. The statement does not specify an offense or name calm, remorse or another emotion.
 
@@ -335,11 +343,11 @@ I have no last words. I am ready.
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “I have no last words”; “I am ready”.
 
-He gives no further substantive statement and indicates readiness. In discussion, the owner finds insufficient information to identify an emotion; the memo retains closure and readiness without elaborating a psychological account.
+He gives no further substantive statement and indicates readiness. In discussion, Reader A finds insufficient information to identify an emotion; the memo retains closure and readiness without elaborating a psychological account.
 
 **Alternative readings and unresolved points:** Readiness is compatible with active willingness, resignation or other states. The text does not distinguish them or establish approval of execution. No inference about absent affection, fear or remorse is made.
 
@@ -355,11 +363,11 @@ I hope Mrs. Howard can find peace in this.
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “I hope Mrs. Howard can find peace in this”.
 
-He wishes peace for Mrs. Howard. The owner reads in this as potentially the imminent execution or his death, with the death sentence another possible referent. The statement is directed toward someone else's hoped-for peace rather than his own feeling.
+He wishes peace for Mrs. Howard. Reader A reads in this as potentially the imminent execution or his death, with the death sentence another possible referent. The statement is directed toward someone else's hoped-for peace rather than his own feeling.
 
 **Alternative readings and unresolved points:** The exact referent of this and Mrs. Howard's identity are unstated. The wish does not establish an apology, a response by Mrs. Howard or relief actually obtained.
 
@@ -375,11 +383,11 @@ I’m going to a beautiful place. O.K., Warden, roll ‘em.
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “I’m going to a beautiful place”; “O.K., Warden, roll ‘em”.
 
-He gives the approaching destination a positive description and then signals the warden to proceed. The owner reads possible self-comfort and a spiritual interpretation of death, perhaps serving to ease fear or tension.
+He gives the approaching destination a positive description and then signals the warden to proceed. Reader A reads possible self-comfort and a spiritual interpretation of death, perhaps serving to ease fear or tension.
 
 **Alternative readings and unresolved points:** Fear, tension and successful emotional relief are not explicitly reported. A religious meaning is plausible without a named faith. The closing does not establish calm, courage or endorsement of punishment.
 
@@ -397,13 +405,13 @@ Yes, I do. I love you. Asdadu an la ilah illa Allah, Asdadu an la ilah illa Alla
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “absolutely no fear of what may happen to this body”; “My fear is for Allah, God only”; “As a devout Muslim”; “Be strong”.
 
 **Source boundary (checked against TDCJ, 8 November 2026):** The candidate combines two separately marked sections, Statement to the Media and Spoken. The fear passage is in the media section; the source does not establish when it was delivered relative to the spoken words.
 
-He explicitly denies fear concerning what happens to his body while directing fear toward God. The owner reads the latter as reverence or awe within the stated faith, rather than equating it with bodily terror. The account of material life as preparation for the next life supplies a framework for approaching death. The separate spoken section contains love, testimony and encouragement.
+He explicitly denies fear concerning what happens to his body while directing fear toward God. Reader A reads the latter as reverence or awe within the stated faith, rather than equating it with bodily terror. The account of material life as preparation for the next life supplies a framework for approaching death. The separate spoken section contains love, testimony and encouragement.
 
 **Alternative readings and unresolved points:** Reverence or awe and concern about divine judgment remain alternative readings of fear for God; the reference to divine power over life and death does not settle them. The objects and meanings of fear differ; neither a single fear score nor a blanket fearlessness label captures the distinction. The text records his self-description and belief, not proof that religion eliminated every fear. Recorded ellipses limit claims about the original utterance.
 
@@ -419,13 +427,13 @@ Tell Mom I love her.
 
 ### Open memo
 
-**Review status:** Discussed with the project owner; memo revised to reflect the reading discussion.
+**Review status:** Discussed with Reader A; memo revised to reflect the reading discussion.
 
 **Evidence anchors:** “Tell Mom I love her”.
 
 **Source boundary (checked against TDCJ, 8 November 2026):** The official page frames this as a message when his attorney entered the witness room and records the attorney replying with affection. The candidate retains the prisoner's attributed words only. Its brevity is partly a consequence of extraction and does not describe the whole source exchange.
 
-He asks that love be conveyed to his mother. The owner reads attachment at leave-taking and initially describes the mother as the only remaining tie to the world. The final memo retains the narrower observation: she is the only relationship explicitly named in this short record.
+He asks that love be conveyed to his mother. Reader A reads attachment at leave-taking and initially describes the mother as the only remaining tie to the world. The final memo retains the narrower observation: she is the only relationship explicitly named in this short record.
 
 **Alternative readings and unresolved points:** Only mentioning a mother is not evidence that no other attachments exist. The statement provides no explicit position on guilt, punishment or death and does not establish the intensity or exclusivity of attachment.
 

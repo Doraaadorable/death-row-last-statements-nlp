@@ -1,7 +1,14 @@
 # Full-text literature comparison and research decision
 
+Current roles: Reader A is the project owner, whose guided readings underlie
+the 20-case memos. Reader B provided a subsequent open-ended response to ten
+known texts with translation assistance and no prior exposure to project
+interpretations, as confirmed by Reader A. The current narrative is
+[RESEARCH_DRAFT.md](RESEARCH_DRAFT.md); this document provides supporting detail.
+
+
 Updated 8 November 2026 after targeted review of four additional supplied PDFs. The 20-case reading
-discussion is complete. This comparison requires no new owner annotation.
+discussion is complete. This comparison requires no new Reader A annotation.
 
 ## Sources and access
 | Study | Material actually examined | Page convention |
@@ -195,7 +202,7 @@ with a classification or sincerity-prediction task.
 | 508 | How can apology for loss coexist with an accident explanation? | Broad responsibility is not a specified admission of intent |
 
 These are ways of comparing already discussed material, not new reference labels.
-No new sample has been selected, and no additional owner annotation is needed to
+No new sample has been selected, and no additional Reader A annotation is needed to
 write this comparison. Short affection-only and readiness-only statements remain
 in the full workbook as boundary cases; not every statement must contain a
 forgiveness exchange.
@@ -213,11 +220,12 @@ novelty claim; a difference in analytic granularity is not itself proof of a gap
 papers are enough to demonstrate strong overlap, not enough to prove the absence
 of every narrower contribution.
 
-For the current portfolio report, proceed with the focused comparison using
-existing memos. If expanding into a new empirical study, specify why additional
+The current draft now incorporates the focused comparison using the existing
+memos. If expanding into a new empirical study, specify why additional
 cases are needed and how they might challenge the account before selecting them.
-An independently recruited second reader would strengthen a later study, but
-repeating the owner's completed 20-case review is not required now. Frequency
+Reader B has since supplied open-ended responses to ten of the known texts;
+this is not standardized second coding or validation. Repeating Reader A's
+completed 20-case review is not required now. Frequency
 estimates would need a separate coding and sampling plan.
 
 ## Religious coping and phenomenological analysis: supplied PDFs checked 8 November 2026
@@ -273,7 +281,7 @@ Accordingly, a religious appeal that a reader experiences as pressure is not
 automatically negative religious coping. The former concerns an interpersonal
 appeal and its reception; the latter concerns a theoretical pattern of religious
 struggle. Nor does a positive-sounding prayer demonstrate successful coping.
-Our #600 reading can discuss a conditional forgiveness appeal and the owner's
+Our #600 reading can discuss a conditional forgiveness appeal and Reader A's
 reaction while leaving intention, the recipients' responses and psychological
 outcome unresolved. This distinction is especially important before extending
 the framework to Murphy's Buddhist practice.

@@ -35,5 +35,9 @@
     "specific translation product and settings",
     "time spent reading"
   ],
-  "analysis_status": "Comparison made after receipt; disagreements retained; no agreement score."
+  "analysis_status": "Comparison made after receipt; disagreements retained; no agreement score.",
+  "permission_evidence": "Written confirmation from Reader A in the project conversation; no separately signed Reader B form held.",
+  "reader_A": "project owner",
+  "packet_prompts": "Feelings, addressees, responsibility and alternative readings; answers optional under owner instruction.",
+  "subset_selection": "Purposive subset of existing twenty: four sparse cases and six responsibility/relationship/religious-expression contrasts; not a preregistered or random selection."
 }
