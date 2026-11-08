@@ -28,6 +28,11 @@ criticism, and farewell/closure/readiness. Values are 1, 0 and u (unresolved).
 These describe textual expression; they are not a psychological scale.
 
 ## Current work
+A second human reader's open-ended responses to ten texts are now included,
+with confirmed reading conditions and anonymous permission. The comparison
+retains emotional responses and disagreements without scoring them as errors
+or treating them as the speakers' mental states.
+
 The literature comparison now includes targeted checks of religious-coping
 research (Smith 2018/2020), descriptive phenomenology (Malaga & Delgado 2020),
 and the distinction between coping theory and Brief RCOPE assessment. These

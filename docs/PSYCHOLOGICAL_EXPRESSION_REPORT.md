@@ -839,3 +839,82 @@ responses rather than mandatory completion of a coding form. Reader feelings
 are evidence of that reader's encounter, while claims about speakers remain
 interpretations. Differences concerning #15, #32 and #1 are retained in the draft;
 no agreement score or population audience effect is claimed.
+
+## What the open reading adds: emotion, relation and interpretation
+
+This comparison uses Reader B's original responses, not a new coding of the
+prisoners' mental states. Quotations below remain in Chinese; accompanying
+English explanations are analytical paraphrases, not a verified translation
+produced by the reader's translation tool. No distribution of audience reactions
+is inferred from one person.
+
+### Sparse statements can produce substantial emotional responses
+For #49, Reader B writes “这一刻有人接住了这句话”: the attorney's reply is
+experienced as receiving or answering the message. The response describes
+sadness and intimacy even while correctly keeping the attorney's words separate
+from the prisoner's expression. This adds a relational reading of the recorded
+exchange rather than additional information about the prisoner's inner state.
+It also demonstrates why the exchange context matters: the retained message is
+addressed through a particular person, not simply emitted toward an abstract
+public. Whether the mother was present remains unknown; the reader explicitly
+corrects the earlier inference of absence.
+
+#15 is similarly brief but produces a different response. Reader B writes
+“读起来有点冷，也有点让人难受” and interprets withdrawal and fatigue. The owner's
+earlier memo declines to identify an emotion. These responses address different
+questions: a reader can feel coldness or sadness in encountering a text even
+when the text cannot establish that its speaker is emotionally cold or tired.
+Both the felt response and the narrower evidentiary reading are retained.
+
+For #32, the reader initially understands the hoped-for peace as making death
+a gift. In the overall reflection, however, the referent of this becomes open
+again. The earlier reading should not be deleted as a mistake, nor should it be
+quoted alone as a settled conclusion. Its movement exposes how a sympathetic
+interpretation of purpose can coexist with uncertainty about reference. The
+statement's wish for another person's peace remains the textual starting point.
+
+### Relational concern does not necessarily remove discomfort
+The responses to #413 and #600 both attend to repeated forgiveness requests,
+but the felt relationships differ. In #413, repetition is experienced as words
+being insufficient, with religious address offering a possible place to turn.
+In #600, the consequence attached to withholding forgiveness evokes resistance.
+Reader B also preserves a possible concern for people being trapped in hatred,
+without being able to conclusively rank the readings. The contrast concerns
+this reader's encounter with two appeals; it does not demonstrate that one
+speaker was sincere and the other manipulative.
+
+Likewise, affection does not have a single reception. #407's insistence on
+remaining a nephew evokes pain and dignity, whereas #508's insistence on an
+accident account evokes unease about how a victim's family might receive it.
+The reader's imagined reception is not the family's actual testimony. It does,
+however, make explicit the relational perspective through which the reader
+interprets the statement.
+
+### Comparison across all ten responses
+| Case | Reader B's emphasis | Relation to existing interpretation | Question left open |
+| --- | --- | --- | --- |
+| 15 | Fatigue, enclosure and a cold or difficult reading experience | More psychological elaboration than the initial memo | Speaker's emotional state and prior emotional processing |
+| 508 | Responsibility without accepting the name murder; reassurance to family | Similar distinction of objects, with stronger narrative-management interpretation | Rehearsal, private conscience and actual family reception |
+| 49 | A message of love received within an exchange; sadness | Adds relational significance to the source-context correction | Mother's presence and attorney's intention |
+| 413 | Self-reproach, difficulty asking and repeated appeal; possible reunion | Similar emphasis on harm, with an additional reading of waiting | Whether reunion is the intended referent or relief was obtained |
+| 11 | An unqualified moral verdict and a sense of finality | Stronger closure interpretation than the initial memo | Scope of this and any unexpressed reservation |
+| 595 | Absence from wife/daughter roles and removal of their self-blame | Develops the family-address reading | Whether absence is feared more than death; referents of wrong choices and it |
+| 32 | Death as a gift, later uncertainty about this | Substantial interpretive difference with internal revision | Intended referent, purpose and approval of punishment |
+| 407 | Humility, persistence of kinship and dignity | Similar relational concern, with emphasis on gendered self-presentation | Uncle's beliefs and response; achieved reconciliation |
+| 1 | Concern about divine judgment; solemnity | Weights judgment more heavily than awe | Exact meaning of fear; no evidence of a psychological transfer over time |
+| 600 | Not being hated; resistance to a forgiveness obligation; competing concern | Similar interpersonal tension, with several unresolved alternatives | Deepest fear, intention, actual coercion or recipients' experience |
+
+### Consequence for the substantive study
+The additional reading gives a small, situated account of how these statements
+can be encountered emotionally. Shortness does not imply an emotionally empty
+encounter, and love or faith does not guarantee a uniformly comforting response.
+These are observations about this reading, not prevalence claims or explanations
+of general audience behavior. They sit beside the main question of expressed
+feelings and relationships without replacing it with a reader-accuracy task.
+
+For the main analysis, keep three layers visible: the expression in its source
+context; an interpretation of the speaker's situation; and the reader's own
+emotional response. They can inform one another without being interchangeable.
+No additional compulsory questionnaire or consensus exercise follows from this
+comparison. A future dialogue could explore differences, but the first written
+responses should remain intact.

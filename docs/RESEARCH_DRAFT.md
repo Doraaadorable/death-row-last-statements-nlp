@@ -170,6 +170,22 @@ No agreement rate is calculated: responses were open-ended, the original owner
 reading was guided differently, and no common fixed coding task was completed.
 One additional reader also cannot establish how audiences generally respond.
 
+### Emotional engagement without a single reception
+For #49, the attorney's reply is experienced by Reader B as someone receiving
+the message, adding an intimate relational reading without assigning the
+attorney's words to the prisoner. For #15, the same reader describes coldness,
+sadness and fatigue, while the initial memo leaves the speaker's emotion
+unspecified. This is not a contest between feeling and rigor: the reader's felt
+encounter and a claim about the speaker's state require different accounts.
+
+The contrast between #413 and #600 is also informative. Reader B experiences
+repetition in the former as language becoming insufficient amid self-reproach;
+in the latter, the religious consequence attached to not forgiving prompts
+resistance. The reader nevertheless retains a possible concern for the
+listeners' well-being. We preserve these competing readings rather than
+concluding sincerity, manipulation or a uniform effect of religious language.
+The extended report traces all ten responses and their unresolved questions.
+
 ## Discussion and limits
 The central result is a contextual account of psychological expression in which
 responsibility, relationships, religion and judgments of punishment need not
@@ -183,7 +199,7 @@ interpretation. It is not a demonstrated field-wide novelty, a validated measure
 mental state, or a causal test of religious care or capital-punishment policy.
 
 Selection from development material, prior exposure, the owner's interpretive
-participation, recording and translation boundaries, and the absence of listeners'
+participation, recording and translation boundaries, and the absence of original addressees'
 responses constrain conclusions. A final public statement supplies no within-person
 trajectory and cannot establish private sincerity, actual reform, or effects of
 prolonged confinement. Different people across calendar periods do not constitute a

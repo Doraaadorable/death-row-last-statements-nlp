@@ -52,5 +52,14 @@ not included.
 The owner intentionally made completion of the packet questions optional to
 preserve intuitive, personal responses. This is an appropriate open-ended task.
 Do not call it failed coding or demand agreement with the original memos. The
-next task is to integrate the response while preserving the distinction between
-reader experience and claims about the speaker. No new reading round is required.
+response is now integrated, including a ten-case comparison and focused readings
+of sparse texts and forgiveness appeals. Reader experience remains distinct from
+claims about the speaker. No new reading round is required.
+
+## Current-stage completion
+The corrected narrative, literature positioning, source boundaries and open
+reader comparison are assembled. The next external step is substantive feedback
+on the current draft from an academic adviser. No adviser has been contacted
+by this project, and no additional participant or result is implied. Further
+research should follow that scope decision rather than automatically adding
+labels, notebooks or case collections.
