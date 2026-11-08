@@ -9,7 +9,7 @@ sense of their situation, particularly when discussing responsibility and death?
 Chinese: 面对执行时，人们如何表达感受、维系关系，并在谈论责任与死亡时理解自身处境？
 
 The aim is to understand psychological expression in context. The unit of
-interpretation is the complete recorded statement; shorter passages provide
+interpretation is the retained person-level candidate document; shorter passages provide
 traceable evidence within that statement. This report concerns public language,
 not a diagnosis of private experience or a determination of actual guilt.
 
@@ -146,7 +146,7 @@ forgiveness requests and continuing presence for a loved one.
 
 Family language is not confined to accounts of victimhood or defense. #413
 pairs explicit harm acknowledgment with thanks and relationships; #49 contains
-only a request to convey love to a mother. These contrasts challenge the idea
+a message to a mother retained from a recorder-framed attorney exchange. These contrasts challenge the idea
 that affection itself establishes either moral evasion or moral redemption.
 They also distinguish a statement's content from an inferred personality trait:
 a particular family address does not establish that family values dominate the
@@ -158,7 +158,7 @@ In #413, religious petitions accompany explicit acknowledgment of harm. #153
 frames departure through mercy, reunion and a religious purpose for death.
 #600 invokes a religious obligation in an appeal for forgiveness, which could
 be heard as consolation or as pressure. #1 explicitly differentiates bodily
-fear from fear directed toward God.
+fear from fear directed toward God, whose meaning may be awe or concern about divine judgment.
 
 Faith is therefore not treated as one emotion, one coping mechanism or a proxy
 for acceptance. The wording can identify a judge, a source of mercy, a future
@@ -400,7 +400,7 @@ specific language and relationships.
 
 ### Boundary and alternative cases
 The comparison should not make forgiveness the meaning of every final statement.
-#49 only requests that love be conveyed to a mother; #15 does not provide enough
+#49 retains a request that love be conveyed to a mother within an attorney exchange; #15 does not provide enough
 information to name an emotion. Their brevity does not license a missing
 forgiveness narrative. #58 expresses readiness while asserting innocence; it
 prevents procedural readiness from becoming a proxy for reconciliation.
@@ -507,11 +507,10 @@ statements. Preserve forgiveness as a focused comparison within that study,
 not its exclusive subject. Record new questions about support and policy as an
 explicit extension rather than attributing effects to the existing texts.
 
-The next evidence task is a feasibility check for one institutional contrast,
-not another round of labels for the same 20 statements. Before collecting data,
-establish that both exposed and comparison groups have comparable material
-and that the proposed outcome is observable. If that is not feasible, the
-contextual reading remains the appropriate result for this dataset.
+The availability check and two documentary records below were subsequently
+completed. They do not provide comparable exposed/unexposed psychological
+outcomes. The contextual reading remains the result supported by this dataset;
+the documentary extension supplies background rather than a policy-effect test.
 
 ## Feasibility check for an institutional extension
 
@@ -569,13 +568,13 @@ historical series of personal psychological outcomes. Its contents can change;
 it is not used to alter the frozen execution inventory or to create a historical
 comparison group.
 
-### Concrete next study and evidence threshold
+### Documentary extension and evidence threshold
 The feasible next question is contextual: **How do documented arrangements for
 spiritual support relate to the ways individuals describe support, faith and
 approaching death?** This sits within the overall psychological-expression
-question. The present check does not yet answer it.
+question. The availability check alone does not answer it; the following case records address only parts of the required evidence.
 
-Begin with a small documentary case feasibility check, keeping the existing
+The documentary cases below were assessed against these criteria, keeping the existing
 20-case work as background rather than repeatedly recoding it. Before analyzing
 any new person's experience, require:
 1. a dated primary record distinguishing the requested accommodation from the
@@ -594,8 +593,7 @@ unknown; do not substitute a before/after word-count comparison.
 A causal policy study is deferred unless individual exposure, comparable outcomes
 and a credible comparison become available. The 28 later candidate statements
 are enough to show some material exists, not enough to establish that design.
-This is a bounded next-source task, not a request for another broad owner-labeling
-round or a claim that a new study has already been completed.
+This extension does not require another owner-labeling round or establish an effect study.
 
 ## Documentary extension: John Henry Ramirez (#576)
 
@@ -663,13 +661,11 @@ issue. This case therefore supports an account of anticipated meaning and actual
 arrangements, not a causal conclusion about comfort. It also cannot adjudicate
 abolition versus retention, deterrence or government costs.
 
-The next bounded task is a contrasting documentary case selected for its ability
-to challenge this account: for example, requested support denied or modified,
-with attributable personal material. An absence of religious words is not a
-selection rule for absence of faith or support. Record any missing provision or
-personal-experience evidence as unknown. Before adding a new case, check whether
-it contributes a different institutional arrangement rather than merely another
-illustration of comfort. No new coding round is needed for the present result.
+The Murphy record below provides a preference and institutional contrast,
+but it does not meet the threshold for a paired psychological-outcome comparison.
+An absence of religious words is not a selection rule for absence of faith or
+support. Missing provision or personal-experience evidence remains unknown.
+No further case collection is currently required for the main research draft.
 
 
 ## Contrasting institutional record: Patrick Henry Murphy (2019)
@@ -818,13 +814,12 @@ they do not establish a new field-wide discovery. The current contribution is a
 traceable comparison linking whole statements, local expressions and revised
 readings, including cases too sparse to support an elaborate account.
 
-The next writing step is to integrate this synthesis with the existing
-literature comparison as a compact research narrative. Further expansion should
-answer a specific missing question. For the institutional extension, the
-priority missing material is the Murphy interview audio or an attributable
-transcript; the located news report does not establish the experience of the
-requested spiritual support. No additional modeling or manual coding is required
-to complete the present exploratory result.
+The synthesis is integrated in RESEARCH_DRAFT.md. Further expansion should
+answer a specific missing question. The Murphy interview audio remains optional
+context; its absence does not block the main study. The located news report
+does not establish the experience of the requested support. An independent
+reader could examine how the interpretations travel to another reading, but no
+reader has yet been recruited and no such result is claimed.
 
 
 ## Source and interpretation corrections after review (8 November 2026)

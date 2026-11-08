@@ -25,7 +25,9 @@ TDCJ pages for #1, #49 and #576 were checked directly; no owner download is
 needed for those source checks. Literature page ambiguities were checked.
 
 ## Next decisions
-1. Complete a consistency pass across the corrected draft and evidence report.
+1. The consistency pass across draft, report and README is complete: source
+   boundaries, selection-informed co-occurrence and optional institutional work
+   are aligned. The institutional extension is an appendix in the draft.
 2. Ask whether a second reader is available for a bounded independent reading.
    Do not claim this has been arranged or that it validates psychological states.
 3. Before designing a comparison of published operational definitions, check

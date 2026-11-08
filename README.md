@@ -12,7 +12,7 @@ make sense of death and their own situation in their final statements?
 - [Exploratory report](docs/PSYCHOLOGICAL_EXPRESSION_REPORT.md): case comparisons, literature and conclusions.
 - [Literature comparison](docs/LITERATURE_COMPARISON.md): full-text methods, overlapping examples and the focused comparison.
 - [Current research plan](docs/CURRENT_RESEARCH_PLAN.md): question, literature and next steps.
-- [Open reading workbook](docs/OPEN_READING_WORKBOOK_v1.md): 20 complete statements with evidence-linked reading memos.
+- [Open reading workbook](docs/OPEN_READING_WORKBOOK_v1.md): 20 retained candidate documents with evidence-linked reading memos and source boundaries.
 - [Eight-category annotation guide](docs/ANNOTATION_GUIDE.md): definitions for the existing development sample.
 - [Methods and reproduction](docs/METHODS.md): data preparation, exploratory models and supporting experiments.
 
@@ -64,8 +64,8 @@ care, judicial severity and retention/abolition are distinct research questions.
 The saved Texas last statements do not by themselves estimate the effects of
 pastoral support, sentencing severity or abolition. The first feasibility check located official religious-accommodation milestones
 and 28 candidate statements on/after 24 March 2022. These are calendar
-availability counts, not care effects. The next source task is documenting
-individual requests, actual support and attributable accounts. Reproduce the
+availability counts, not care effects. Ramirez and Murphy records are documented in the report; they do not supply
+a causal comparison. The compact draft keeps this material in an appendix. Reproduce the
 check with `python src/check_institutional_feasibility.py`.
 
 ## Completed exploratory analysis
