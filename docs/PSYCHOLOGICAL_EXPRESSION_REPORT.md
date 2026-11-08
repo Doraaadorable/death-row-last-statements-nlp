@@ -659,6 +659,69 @@ it contributes a different institutional arrangement rather than merely another
 illustration of comfort. No new coding round is needed for the present result.
 
 
+## Contrasting institutional record: Patrick Henry Murphy (2019)
+
+### Why examine this record
+Murphy was selected after the Ramirez case to test whether desired spiritual
+support can be treated as a uniform package of presence, prayer and touch. This
+is an institutional and preference contrast, not a second completed psychological
+case. It is outside the frozen executed-person corpus: a local search found no
+Murphy record in either the 603-row inventory or the 480-row candidate corpus.
+That absence establishes only the boundary of these frozen files, not his current
+legal or vital status. The events examined here are limited to 2019.
+
+### Evidence and attribution
+The March 28, 2019 petition and its appendices on the Supreme Court docket include
+counsel's February 28 request and the agency's March 5 response. Counsel sought
+a Buddhist adviser's presence and also requested avoidance of touch at death,
+explaining Murphy's religious preference. The agency excluded outside clergy
+from the chamber while offering other arrangements and agreeing that a chaplain
+need not touch him. These are documented requests and responses, not proof of
+what occurred in an execution.
+
+- [Petition and appendices](https://www.supremecourt.gov/DocketPDF/18/18-8615/94533/20190328130707260_murphy-sct-prohibit-FINAL.20190328.pdf): Appendix F, February 28 correspondence; Appendix G, March 5 response (also reproduced in Appendix H). The account of Murphy's preference is mediated by counsel, not a direct interview or psychological assessment.
+- [Supreme Court order](https://www.supremecourt.gov/opinions/18pdf/18a985_1a72.pdf), March 28, 2019, opening order: the Court stayed execution subject to the stated condition concerning a Buddhist adviser's presence. Justice Kavanaugh's accompanying explanation is a concurrence, not the Court's full merits opinion.
+- [Fifth Circuit majority opinion](https://law.justia.com/cases/federal/appellate-courts/ca5/19-70020/19-70020-2019-11-12.html), November 12, 2019, Parts II–III, pp. 3–9: after Texas barred all advisers from the chamber, the dispute also concerned unequal faith-specific access in the pre-execution holding area. The court declined to vacate the stay. Its discussion separates chamber access from earlier access; it does not measure distress.
+
+Sources checked November 8, 2026. The March and November stays concern their
+respective scheduled executions. Neither supplies an observed execution without
+the requested support. Do not label Murphy an untreated executed control.
+
+### What the contrast changes
+| Question | Ramirez | Murphy's 2019 record |
+| --- | --- | --- |
+| Desired contact | Pastoral touch sought, with a directly attributed interview about its significance | Counsel conveyed a preference against touch at death |
+| Desired presence | Particular pastor's presence, prayer and touch | Buddhist adviser's presence; faith-specific practice described in litigation |
+| Actual execution arrangement | Prayer and touch reported at October 2022 execution | Scheduled executions stayed; no corresponding executed-event observation in these sources |
+| Personal experience evidence | Reported May 2022 interview and official final statement | Counsel-mediated preference; no direct personal account analyzed here |
+| Defensible comparison | Meaning anticipated and accommodation reportedly delivered | Requested support differed; institutional access was contested |
+
+**Interpretive implication:** spiritual support should be understood in terms of
+fit with the person's stated preferences and religious practice, not a scale on
+which more contact necessarily means more comfort. This is an interpretation of
+two documentary records, not a demonstrated psychological mechanism or a claim
+that all members of either religion share these preferences.
+
+For the broader psychological-expression study, this redirects attention toward
+what a person seeks from religion: a trusted relationship, a particular practice,
+a way to approach death, or another purpose. It does not establish whether either
+person was less afraid, more reconciled or more accepting because of support.
+
+### Evidence gap and next step
+A published interview with Murphy has been located ([Keri Blakinger, November 11,
+2019](https://www.chron.com/local/behind-the-walls-podcast/article/LISTEN-Yoga-Buddha-and-death-row-An-interview-14824834.php)),
+but its audio has not been listened to or transcribed in this study. The page
+summary is not substituted for his words. Consequently, the earlier threshold
+for analyzing personal experience has not yet been met for this contrast.
+
+The next source task is to obtain and check that attributable interview, keeping
+its pre-execution context. If unavailable, retain this as an institutional
+boundary case and leave personal experience unknown. Do not enlarge the sample
+or train a model to fill that gap. The existing 20-case expression analysis and
+Ramirez case remain the completed interpretive material; this contrast adds a
+specific question about preference-sensitive support.
+
+
 ## Current result and next research decision
 The exploratory project now includes a corpus preparation trail, earlier topic
 analysis, 20 discussed reading memos, a full-text literature comparison, a reproducible summary of the 50 frozen

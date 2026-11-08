@@ -153,3 +153,14 @@ They provide one public statement per person; private experience and change
 over time remain outside this dataset. Availability of statements, audience,
 translation and institutional context shape the material. Quantitative summaries
 will use document-level denominators and retain unresolved readings.
+
+## Institutional contrast checked: Murphy (2019)
+The report now contrasts Ramirez's request for pastoral touch with counsel's
+record of Murphy's preference against touch at death. Murphy's scheduled
+executions were stayed; he is not an executed control without support. This
+contrast supports examining the fit between arrangements and individual
+preferences. It does not establish a psychological effect. A located interview
+audio remains unchecked, so Murphy is an institutional boundary case rather
+than a completed personal-experience case. Next check that interview if it can
+be obtained; otherwise retain the experience gap. No new owner labeling round
+is requested.
