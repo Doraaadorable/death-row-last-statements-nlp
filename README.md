@@ -52,8 +52,11 @@ The current report also examines how religious meaning and perceived punishment
 are connected to the speakers' emotional and relational expressions. Religious
 care, judicial severity and retention/abolition are distinct research questions.
 The saved Texas last statements do not by themselves estimate the effects of
-pastoral support, sentencing severity or abolition. A policy extension first
-requires an observable institutional change and comparable outcome material.
+pastoral support, sentencing severity or abolition. The first feasibility check located official religious-accommodation milestones
+and 28 candidate statements on/after 24 March 2022. These are calendar
+availability counts, not care effects. The next source task is documenting
+individual requests, actual support and attributable accounts. Reproduce the
+check with `python src/check_institutional_feasibility.py`.
 
 ## Completed exploratory analysis
 The six-component NMF reading identifies apology/forgiveness, affection,

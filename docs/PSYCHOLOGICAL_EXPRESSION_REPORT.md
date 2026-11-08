@@ -503,6 +503,90 @@ establish that both exposed and comparison groups have comparable material
 and that the proposed outcome is observable. If that is not feasible, the
 contextual reading remains the appropriate result for this dataset.
 
+## Feasibility check for an institutional extension
+
+Checked 8 November 2026. This check assesses available source structure, not
+psychological outcomes. It prioritizes a bounded religious-accommodation context
+rather than claiming an abolition or commutation effect from executed-only data.
+
+### Documented milestones
+- **21 April 2021:** the revised TDCJ procedure is described in the Fifth
+  Circuit record as allowing an adviser in the execution chamber (printed p. 5):
+  [official court record](https://www.govinfo.gov/content/pkg/USCOURTS-ca5-21-70004/pdf/USCOURTS-ca5-21-70004-0.pdf).
+- **24 March 2022:** *Ramirez v. Collier* addressed restrictions on religious
+  touch and audible prayer. The Court found likely success on the statutory
+  claim at the preliminary-relief stage:
+  [Supreme Court opinion](https://www.supremecourt.gov/opinions/21pdf/21-5592_feah.pdf).
+
+These dates do not establish individual receipt of care or universal compliance
+from that day. Adviser presence, permitted activity and actual provision must
+be distinguished. They are milestones for a source-availability check, not a
+completed legal history or a treatment assignment.
+
+### Saved corpus availability
+The dates were fixed from those documents before counting the saved corpus.
+Every inventory and candidate record is included in one calendar group; no
+keywords or emotional results were used to select a window.
+
+| Calendar group | Inventory records | Candidate statements |
+| --- | ---: | ---: |
+| Before 21 April 2021 | 570 | 450 |
+| 21 April 2021–23 March 2022 | 3 | 2 |
+| On/after 24 March 2022 | 30 | 28 |
+| Total | 603 | 480 |
+
+The saved snapshot ends on 7 October 2026. The groups describe material available
+in this snapshot; they are not counts of people known to receive or not receive
+religious care. The intermediate interval is especially sparse. Earlier records
+also span very different periods and should not be treated as one uniform
+no-care control group.
+
+Reproduce with `python src/check_institutional_feasibility.py`. The
+[availability result](../reports/institutional_feasibility_v1.json) records input
+hashes, milestone sources and all group IDs. The script checks unique IDs and
+matching inventory/candidate dates. No statement or label is changed.
+
+### Comparison of the two possible routes
+| Route | What is available in this check | Missing evidence | Decision |
+| --- | --- | --- | --- |
+| Spiritual accommodation around execution | Dated official procedural/court records and existing final statements | Actual request, approval and care for each person; comparable emotional outcomes | Prioritize a contextual documentary study; do not estimate a care effect yet |
+| Execution stay or sentence commutation | Public court/procedural records can identify particular decisions | Comparable personal material before/after and for people not ultimately executed | Requires a new source design; not supported by the current snapshot alone |
+| Retention versus abolition | The current corpus documents executed people in Texas | Affected population under abolition and comparable observations/outcomes | Do not use the current corpus as an abolition experiment |
+
+The [current TDCJ scheduled-executions page](https://www.tdcj.texas.gov/death_row/scheduled_executions.html)
+was checked as a potential source. It lists scheduled dates, not a complete
+historical series of personal psychological outcomes. Its contents can change;
+it is not used to alter the frozen execution inventory or to create a historical
+comparison group.
+
+### Concrete next study and evidence threshold
+The feasible next question is contextual: **How do documented arrangements for
+spiritual support relate to the ways individuals describe support, faith and
+approaching death?** This sits within the overall psychological-expression
+question. The present check does not yet answer it.
+
+Begin with a small documentary case feasibility check, keeping the existing
+20-case work as background rather than repeatedly recoding it. Before analyzing
+any new person's experience, require:
+1. a dated primary record distinguishing the requested accommodation from the
+   decision or rule;
+2. a source establishing what was actually provided, or an explicit unknown;
+3. that person's attributable statement about the significance of support,
+   with its date and context retained;
+4. a clear separation of the person's words, legal argument and third-party
+   interpretation.
+
+A lawyer's assertion is not automatically a direct psychological self-report.
+A legal entitlement is not evidence of uptake or effectiveness. If those sources
+are missing, describe the institutional issue and mark individual experience
+unknown; do not substitute a before/after word-count comparison.
+
+A causal policy study is deferred unless individual exposure, comparable outcomes
+and a credible comparison become available. The 28 later candidate statements
+are enough to show some material exists, not enough to establish that design.
+This is a bounded next-source task, not a request for another broad owner-labeling
+round or a claim that a new study has already been completed.
+
 ## Current result and next research decision
 The exploratory project now includes a corpus preparation trail, earlier topic
 analysis, 20 discussed reading memos, a full-text literature comparison, a reproducible summary of the 50 frozen

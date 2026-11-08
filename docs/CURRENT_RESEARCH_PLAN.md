@@ -79,12 +79,29 @@ The current Texas execution corpus does not contain an abolition-regime control
 group. Decade comparisons alone cannot estimate the effect of abolition. Retention,
 suspension, commutation and procedural reform must be distinguished.
 
+## Completed feasibility check
+The report now checks two dated religious-accommodation milestones in official
+court documents and counts the saved material around them. There are 450
+candidate texts before 21 April 2021, two until 23 March 2022, and 28 on/after
+24 March 2022. These are calendar availability groups, not verified care
+exposure or psychological-outcome groups.
+
+The prioritized extension is a contextual documentary case study of spiritual
+support. It requires a dated request/decision, actual provision or an explicit
+unknown, and attributable personal material. No new cases have yet been selected
+or psychologically analyzed. Direct causal estimates of support, stays,
+commutation or abolition remain deferred pending suitable evidence.
+
+Reproduce the availability check with
+`python src/check_institutional_feasibility.py`; the saved result is
+[here](../reports/institutional_feasibility_v1.json).
+
 ## Next-stage decision before selecting new cases
 Keep the current psychological-expression study and its focused forgiveness
-comparison. For a stronger institutional study, first conduct a bounded
-feasibility check of one contrast: documented spiritual-care access, sentence
-commutation/suspension, or a specified procedural change. Assess availability
-of actual exposure timing and comparable outcomes before choosing new cases.
+comparison. The first availability check favors spiritual accommodation as a bounded
+documentary context. Next verify individual request, actual provision and
+attributable personal material before any additional case interpretation.
+Do not treat the calendar groups as a causal comparison.
 
 Do not add a broad psychological codebook or reopen the completed 20-case
 review. No new owner annotation is requested for this framework update.
