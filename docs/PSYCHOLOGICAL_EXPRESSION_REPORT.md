@@ -1,6 +1,6 @@
 # Responsibility, connection and approaching death in Texas last statements
 
-Exploratory report, revised after the 20-case reading discussion, 7 November 2026.
+Exploratory report; institutional-context framing updated 8 November 2026.
 
 ## Research question
 How do people facing execution express feelings, sustain relationships and make
@@ -414,6 +414,94 @@ repair without establishing that repair has occurred**. The direction, object
 and terms of forgiveness clarify that attempt. This conclusion concerns the
 reviewed texts and aligns with an existing literature; it is not a causal model,
 a population estimate or a demonstration of a previously unstudied phenomenon.
+
+## Religious care, judicial punishment and policy context
+
+The owner's broader interest concerns how religious care, judicial severity and
+retention or abolition of capital punishment affect people under death sentence.
+The existing forgiveness comparison is one part of that interest. Three
+questions should be kept distinct: how people describe their experience, what
+institutional conditions they actually encounter, and what changing those
+conditions would cause. Current last statements directly support the first;
+the other two require additional evidence.
+
+### Religious language and experienced care
+Religious expression is not a record of how much pastoral support a person
+received. A prayer may address God without describing any encounter with a
+chaplain. Conversely, thanking a spiritual adviser identifies perceived support
+without measuring its duration, quality or psychological effect.
+
+| Case and exact wording | What the statement supports | What it does not establish |
+| --- | --- | --- |
+| 595: “To my spiritual advisors, I love y'all, thank you.” | Recognition of spiritual advisers and an appreciative relationship | Amount of care, its quality, or its causal effect |
+| 138: “He has changed me in the past two months.” | A religiously framed account of personal change | A measured before/after change or the cause of it |
+| 1: “My fear is for Allah, God only” | A distinction in the object and meaning of fear | Elimination of every fear through religious support |
+| 600: “this is the will of God” | Religious interpretation of the present situation | Agreement with the court's justification or measured emotional relief |
+
+The potential functions discussed by the owner remain useful questions: comfort,
+relief, belonging, self-understanding, mercy, an afterlife and moral authority.
+They are not presumed benefits in every religious statement. #413's self-reproach,
+#600's forgiveness pressure and #508's appeal to divine knowledge show why a
+single soothing function would be too narrow. Reader judgments of superiority
+or sincerity remain separate from the speaker's explicit claims.
+
+### Punishment severity and perceived justice
+A death sentence, the experienced conditions of confinement, and the perceived
+fairness of a trial are different dimensions. Calling a trial unfair does not
+measure its legal fairness, just as saying that a penalty is deserved does not
+measure fear or remorse. Statements can nevertheless show how those dimensions
+are interpreted and connected by the speaker.
+
+| Cases | Contrast in the already discussed texts | Psychological-expression question |
+| --- | --- | --- |
+| 407 and 11 | Willingness to bear a penalty while criticizing its consequences, versus an explicit statement of desert | How is responsibility connected to the meaning of punishment? |
+| 219 and 583 | Continued evidence/appeal claims and perceived procedural injustice | How are grievance and a wish to remain heard expressed near execution? |
+| 138 and 508 | Changed-self and accident accounts alongside criticism or qualified responsibility | How does a speaker explain the relation between present identity and punishment? |
+| 461 and 595 | Family address within different responsibility and forgiveness positions | How are threatened separation and continuing family identity expressed? |
+
+These comparisons concern narratives of punishment. They do not show that a
+harsher sentence causes defiance, that a fairer procedure causes remorse, or
+that one individual has experienced more psychological harm than another.
+The current eight-category labels contain no validated measure of judicial
+severity, psychiatric symptoms or receipt of religious care.
+
+### Retention, abolition and reform: a separate empirical extension
+The current corpus contains published statements of people who were executed
+in Texas. It has no group observed under an abolished death-penalty regime and
+no outcome trajectory for people whose sentences were commuted. Dividing these
+statements into decades would not create that missing policy comparison.
+Absence of a person's statement is not evidence of a particular psychological
+response to policy.
+
+A future policy-effects study would need a precisely defined change, actual
+exposure to it, a justified comparison and a defined outcome. For example:
+
+| Proposed question | Evidence needed beyond this corpus |
+| --- | --- |
+| Does access to spiritual care affect distress or perceived support? | Actual contact/access records, timing, repeated outcomes and a design addressing who receives care |
+| How does a sentence being commuted or execution suspended relate to hope, fear or future orientation? | Comparable material from affected and unaffected people, dated before/after the change; other simultaneous changes considered |
+| How does abolishing death sentences change the experience of people already sentenced? | The specific legal treatment of existing sentences, affected population, comparison jurisdictions or periods, and comparable outcomes |
+| How do changes in execution procedures affect public last statements? | Verified policy timing and implementation plus consistent recording practices and a defensible comparison |
+
+One policy question should be selected at a time. Do not assume that repeal,
+suspension, commutation and procedural reform are the same exposure. Nor should
+all people eligible for a study be restricted after the fact to those eventually
+executed: that would omit people whose outcome the policy may have changed.
+These are prospective design requirements; no policy-effect analysis or new
+sample has been undertaken here.
+
+### Research decision
+Continue the present study as an analysis of expressed experience: how religious
+meaning, relationships and perceived punishment are connected in the reviewed
+statements. Preserve forgiveness as a focused comparison within that study,
+not its exclusive subject. Record new questions about support and policy as an
+explicit extension rather than attributing effects to the existing texts.
+
+The next evidence task is a feasibility check for one institutional contrast,
+not another round of labels for the same 20 statements. Before collecting data,
+establish that both exposed and comparison groups have comparable material
+and that the proposed outcome is observable. If that is not feasible, the
+contextual reading remains the appropriate result for this dataset.
 
 ## Current result and next research decision
 The exploratory project now includes a corpus preparation trail, earlier topic

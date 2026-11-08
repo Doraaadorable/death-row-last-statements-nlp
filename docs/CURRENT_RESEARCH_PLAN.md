@@ -1,6 +1,6 @@
 # Current research plan
 
-Updated 7 November 2026.
+Updated 8 November 2026.
 
 ## Research question
 How do people facing execution express emotions, maintain relationships, and
@@ -8,8 +8,10 @@ make sense of death and their own situation in their final statements?
 
 The study examines psychological expression through complete texts. Its
 starting interests include emotion, relationships, responsibility, faith and
-understandings of death. Open reading will determine which analytic questions
-are useful enough to carry forward.
+understandings of death. Religious care, perceived judicial severity and
+death-penalty policy are contextual interests; they do not replace the focus
+on psychological expression. The completed reading set supports contextual
+comparison, while causal effects require a separate design.
 
 ## Existing materials
 - 480 candidate documents, with 479 prepared texts.
@@ -62,16 +64,30 @@ Run `python src/summarize_expression_sample.py` after extracting the snapshot.
 These summaries describe the old development coding, not population rates or
 independent confirmation of the reading comparisons.
 
+## Institutional-context extension
+The report now compares religious care and meaning, interpretations of punishment,
+and policy context using the existing discussed cases. Its three levels are:
+
+1. **Expressed experience:** what feelings, relationships and understandings the
+   speaker explicitly describes. This is the current study.
+2. **Institutional exposure:** the care, confinement, procedures or policy actually
+   experienced. These need dated external records, not inference from prayer.
+3. **Effects of change:** what would differ with another policy or support regime.
+   These need comparable groups/outcomes and an identification strategy.
+
+The current Texas execution corpus does not contain an abolition-regime control
+group. Decade comparisons alone cannot estimate the effect of abolition. Retention,
+suspension, commutation and procedural reform must be distinguished.
+
 ## Next-stage decision before selecting new cases
-1. The Smith full-text comparison is complete. Retain forgiveness direction
-   and the separation from reconciliation as established concepts.
-2. The candidate elaboration is how religious language connects locally to a
-   forgiveness appeal within a complete statement. First examine the already
-   discussed cases; do not infer that all religious-context requests perform
-   the same function or that this distinction is a proven gap.
-3. Only if new evidence would change the argument, document the selection
-   rationale before retrieving additional cases. A later second reader can
-   challenge the interpretation; no new owner labeling is requested now.
+Keep the current psychological-expression study and its focused forgiveness
+comparison. For a stronger institutional study, first conduct a bounded
+feasibility check of one contrast: documented spiritual-care access, sentence
+commutation/suspension, or a specified procedural change. Assess availability
+of actual exposure timing and comparable outcomes before choosing new cases.
+
+Do not add a broad psychological codebook or reopen the completed 20-case
+review. No new owner annotation is requested for this framework update.
 
 ## Useful distinctions
 - A self-description of peace differs from wishing peace for someone else.

@@ -47,6 +47,14 @@ forgiveness is complete in the report: seeking or granting forgiveness does not
 establish that reconciliation has occurred. The comparison retains ambiguous
 responsibility, changes of addressee and the owner's reading responses separately.
 
+## Institutional context
+The current report also examines how religious meaning and perceived punishment
+are connected to the speakers' emotional and relational expressions. Religious
+care, judicial severity and retention/abolition are distinct research questions.
+The saved Texas last statements do not by themselves estimate the effects of
+pastoral support, sentencing severity or abolition. A policy extension first
+requires an observable institutional change and comparable outcome material.
+
 ## Completed exploratory analysis
 The six-component NMF reading identifies apology/forgiveness, affection,
 case-related explanation, repeated prayer, thanks/support, and encouragement.
