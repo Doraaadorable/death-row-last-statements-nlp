@@ -1,6 +1,6 @@
 # Full-text literature comparison and research decision
 
-Updated 7 November 2026 after receipt of the two papers. The 20-case reading
+Updated 8 November 2026 after targeted review of four additional supplied PDFs. The 20-case reading
 discussion is complete. This comparison requires no new owner annotation.
 
 ## Sources and access
@@ -219,3 +219,87 @@ cases are needed and how they might challenge the account before selecting them.
 An independently recruited second reader would strengthen a later study, but
 repeating the owner's completed 20-case review is not required now. Frequency
 estimates would need a separate coding and sampling plan.
+
+## Religious coping and phenomenological analysis: supplied PDFs checked 8 November 2026
+
+The following assessment is based on targeted reading of the supplied methods,
+results, limitations and relevant tables, not an exhaustive appraisal of every
+reference or a systematic literature review. None of the supplied PDFs is
+redistributed in this repository.
+
+| Source | Material and analytic approach | Evidence locations | Consequence for this project |
+| --- | --- | --- | --- |
+| Smith (2018), [DOI](https://doi.org/10.1080/00380253.2018.1436942) | 537 execution records, 429 oral statements, 270 classified as religious; open coding followed by a religious-coping framework and aggregate time comparisons | Printed pp. 283–285, Fig. 1 on p. 286, discussion pp. 295–296, Appendix Table A1 on p. 300; supplied PDF has a cover page | Multiple religious functions and their co-occurrence are direct precedents, not a newly discovered gap |
+| Smith (2020), [DOI](https://doi.org/10.3390/rel11100500) | Same 1982–2016 record window and 429 oral statements; 269 religious statements in race/ethnicity analysis; four functions after omitting meaning due to small cells | PDF pp. 5–6, Table 1, discussion/limitations pp. 13–15, Appendix A | Context and group variation have already been examined; this is related work, not an independent replication of Smith (2018) |
+| Malaga & Delgado (2020), [DOI](https://doi.org/10.30849/ripijp.v54i1.982) | 70 executions, 9 without statements, 61 texts from August 2011–May 2017; descriptive phenomenological analysis of whole texts and meaning units | Article pp. 5–8, especially Table 2 on p. 7; Spanish full text | Experiential interpretation, addressees and links among themes already have a close methodological precedent |
+| Pargament, Feuille & Burdzy (2011), [DOI](https://doi.org/10.3390/rel2010051) | Development and psychometric review of religious-coping assessment; Brief RCOPE has two seven-item subscales | Printed pp. 52–57, Table 2 on p. 57, limitations pp. 72–73 | Provides theoretical distinctions, not a validated procedure for assigning questionnaire scores to historical statements |
+
+### What is already established in the closest work
+Smith (2018) organizes expressions around comfort/closeness to God, intimacy
+with others, control, life transformation and meaning. More than one function
+can occur within a statement. The initial coding involved the author and two
+external coders; the paper reports agreement above 90% followed by consensus,
+not a chance-adjusted coefficient. The account of five functions should not be
+confused with five empirically independent psychological dimensions.
+
+Smith (2020) explicitly uses the same record window and distinguishes 270
+religious statements at identification from 269 in the stratified analysis.
+Do not silently harmonize the denominators or assume that the supplied articles
+identify the reason for that one-record difference. Meaning was dropped for
+small cells, which is an analytic choice, not evidence that people lack meaning
+concerns. Comparisons surrounding the victim-witness policy use different
+people across periods; they do not establish individual change or an isolated
+policy effect.
+
+Malaga and Delgado's descriptive procedure moves from a whole-text reading to
+meaning units, psychologically sensitive descriptions and a structure connecting
+themes. Their discussion already considers different recipients. Table 2 places
+a preparation expression under acceptance and a willingness expression under
+resignation. This creates a useful point for comparison with our contextual
+reading, where bare readiness is retained without inferring either state.
+It is a difference in operational interpretation, not proof that the earlier
+study is wrong. Their argument about rehabilitation and low social desirability
+should not be imported as evidence of sincerity or behavioral reform here.
+
+### Important distinctions from the coping theory
+The five broad functions belong to the fuller theoretical/RCOPE framework;
+the Brief RCOPE is a different, shortened assessment organized around positive
+and negative coping. Pargament and colleagues explicitly caution that these
+terms do not guarantee beneficial or harmful outcomes in every context.
+Their review also emphasizes predominantly American Christian validation
+samples and needed adaptation for nontheistic contexts.
+
+Accordingly, a religious appeal that a reader experiences as pressure is not
+automatically negative religious coping. The former concerns an interpersonal
+appeal and its reception; the latter concerns a theoretical pattern of religious
+struggle. Nor does a positive-sounding prayer demonstrate successful coping.
+Our #600 reading can discuss a conditional forgiveness appeal and the owner's
+reaction while leaving intention, the recipients' responses and psychological
+outcome unresolved. This distinction is especially important before extending
+the framework to Murphy's Buddhist practice.
+
+### Checks and unresolved details
+Smith (2018), printed p. 286, states 9% for meaning in the paragraph, whereas
+Fig. 1 displays 3%. The supplied page was visually checked: this is not merely
+text extraction. Do not choose one value or reproduce either as a settled
+estimate without further clarification. The other headline percentages are
+conditional on the religious subset, not all executions. These published
+proportions are not directly comparable with our differently defined 50-record
+annotation sample.
+
+### Revised research decision
+Retain the broad psychological-expression question and the completed 20-case
+comparison. Use religious coping as a sensitizing framework for the local role
+of an expression, not a mandatory codebook, mental-health score or explanation
+of every statement. Distinguish the speaker's expressed needs, a statement's
+interpersonal function, actual support arrangements and observed outcomes.
+
+The defensible next writing product is a compact contextual account showing
+where our readings agree with, refine or remain unable to adjudicate earlier
+interpretations. The proposal that religious functions or addressee distinctions
+are themselves new is not supported. Whether the narrower distinction between
+forgiveness requests, moral obligation and reception constitutes a contribution
+requires additional positioning; no publication gap is declared here.
+No new annotation, neural-network training or policy regression follows from
+these four readings. The Murphy audio is now optional context, not a blocker
+for the main expression study.

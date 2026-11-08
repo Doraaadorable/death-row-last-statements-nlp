@@ -180,3 +180,14 @@ Show: Behind the Walls; episode: Yoga, Buddha and death row: An interview with
 'Texas 7' prisoner Patrick Murphy; listed November 11, 2019. A podcast directory
 lists approximately 26 minutes. Audio access remains unverified. Keep the
 existing interview-report evidence distinct from this missing recording.
+
+## Decision after religious-coping literature check (8 November 2026)
+Targeted methods/results/limitations reading of Smith (2018, 2020), Malaga &
+Delgado (2020) and Pargament et al. (2011) confirms close prior coverage of
+religious functions, co-occurrence, addressees and institutional context. See
+the added section in LITERATURE_COMPARISON.md for denominators and page anchors.
+Keep these as sensitizing concepts; do not apply Brief RCOPE scores to texts or
+equate reader-perceived forgiveness pressure with negative religious coping.
+The main next step is a compact synthesis relating the existing case findings
+to these precedents. Murphy audio is optional contextual evidence and no longer
+a dependency of the main study. No new manual coding or model run is requested.

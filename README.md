@@ -27,6 +27,11 @@ criticism, and farewell/closure/readiness. Values are 1, 0 and u (unresolved).
 These describe textual expression; they are not a psychological scale.
 
 ## Current work
+The literature comparison now includes targeted checks of religious-coping
+research (Smith 2018/2020), descriptive phenomenology (Malaga & Delgado 2020),
+and the distinction between coping theory and Brief RCOPE assessment. These
+are close precedents; multiple religious functions are not claimed as new.
+
 The report now ends with a synthesis of all 20 discussed statements: responsibility,
 attachment, religious meaning and readiness are compared without reducing them
 to a single psychological state. External institutional cases remain separate.
