@@ -27,6 +27,10 @@ criticism, and farewell/closure/readiness. Values are 1, 0 and u (unresolved).
 These describe textual expression; they are not a psychological scale.
 
 ## Current work
+The report now ends with a synthesis of all 20 discussed statements: responsibility,
+attachment, religious meaning and readiness are compared without reducing them
+to a single psychological state. External institutional cases remain separate.
+
 The 20-case workbook now contains contextual reading memos and alternative
 interpretations. All 20 cases have been discussed with the project owner; the memos now
 record refinements, reading responses and unresolved interpretations. The accompanying report examines

@@ -741,7 +741,7 @@ statistically independent, that a person is psychologically consistent, or that
 an unmentioned feeling is absent. Where the same passage bears on several
 questions, preserve it in context rather than forcing an exclusive category.
 
-The next substantive step is synthesis of the completed readings: identify
+The synthesis below identifies
 which interpretations are supported by the person's wording, which remain
 plausible alternatives, and which require institutional or relational evidence.
 Keep the Murphy material in a separate external-context section. Do not combine
@@ -749,25 +749,67 @@ it with the 20 statements or the 50-label sample to create a new denominator.
 No new model or owner labeling round is needed for that synthesis.
 
 
-## Current result and next research decision
-The exploratory project now includes a corpus preparation trail, earlier topic
-analysis, 20 discussed reading memos, a full-text literature comparison, a reproducible summary of the 50 frozen
-development records and this focused six-case analysis. The narrower question has an initial answer supported
-by the reviewed material. No further owner labeling is required to produce this
-version of the report.
+## Synthesis of the completed 20-case reading
 
-The supplied Smith (2019) full text now confirms direct prior coverage of
-forgiveness direction, religious warnings and the forgiveness/reconciliation
-distinction. The account above is a contextual elaboration, not the first
-statement of these distinctions. Smith's examples also contain wording matching
-our #413 and #433 passages; these are overlapping textual material, not an
-independent validation set. A stronger publication claim needs a justified
-extension beyond the current development cases. Before selecting anything
-new, state what a further case could change: for example, whether a forgiveness
-appeal clearly accepts the listener's refusal, or whether explicit reconciliation
-is reported. Such examples must not be assumed to exist, and a one-sided public
-statement still cannot verify the other person's experience.
+### Answer to the research question
+Across these selected statements, approaching death is expressed through
+accounts of responsibility, relations with others, and descriptions of what
+death means. These accounts need not converge on a single attitude. A person
+can acknowledge harm while contesting intent, maintain family attachment while
+challenging execution, or anticipate departure without naming an emotion.
+Religious language can connect these concerns, but its function depends on the
+particular passage and addressee.
 
-For now, retain the case-comparison result and its psychological-expression
-question. Do not substitute a classifier or add model complexity to compensate
-for an unestablished literature gap.
+This is an interpretive answer from the completed purposive reading, not a
+frequency claim about the corpus. The table below accounts for all 20 cases.
+It groups contrasts for exposition; membership is not a new exclusive label.
+The full statements and revised alternatives remain in the workbook.
+
+| Contrast | Cases | Supported observation | Limit or challenging case |
+| --- | --- | --- | --- |
+| Harm, intent and responsibility | 508, 595, 600, 524 | Accounts of harm coexist with limits on intention, role or knowledge | These limits differ; none alone establishes legal innocence or impaired memory |
+| Responsibility and judgment of punishment | 407, 138, 11 | Accepting consequences, presenting reform and evaluating deservedness are different claims | #11 is explicit about deservedness but supplies little emotional detail; #138 questions execution's purpose |
+| Relationships under impending separation | 330, 433, 49 | Affection, thanks and messages to loved ones maintain connection in speech | #49 names one relationship only; #433's final apology has an unresolved object |
+| Forgiveness and moral position | 413, 600, 461 | Seeking mercy, invoking a duty to forgive and granting forgiveness position people differently | #413 emphasizes injury caused; #461's grant of forgiveness does not supply an account of the original offense |
+| Death understood through faith | 153, 1, 39 | Religious offering, preparation for another life and a favorable destination give departure meaning | #1 distinguishes bodily fear from fear directed toward God; #39 does not explicitly identify fear or a religion |
+| Resistance and ending the statement | 58, 219, 583 | A statement can close while preserving an innocence or injustice claim | Readiness in #58 does not retract its challenge; allegations in #219 and #583 are not independently verified |
+| Sparse language and another person's peace | 15, 32 | Readiness or a wish for another's peace can be recorded without a fuller psychological account | The record does not justify filling silence with acceptance, fearlessness or remorse |
+
+### Three conclusions and their boundaries
+**Responsibility and attachment can coexist without resolving each other.**
+The texts show efforts to remain a relative, loved one or member of a faith
+community alongside disputes over responsibility and punishment. That supports
+analysis of relational concerns at death, not an inference that affection is
+either proof of reform or calculated concealment. #407's acknowledgment of an
+uncle's refusal particularly limits any claim that speaking affection achieves
+reconciliation.
+
+**Religion has several local roles rather than one emotional direction.**
+Compare requests for mercy in #413 and #153, religious authority in #508 and
+#600, and an account of another life in #1. These roles can occur alongside
+self-reproach, contested judgment or hoped-for connection. The material does not
+establish whether faith caused relief or whether any request was sincere.
+The externally documented Ramirez and Murphy material asks a related but
+different question about actual support and personal preference. It is not
+pooled with these 20 final statements.
+
+**Readiness is too broad a shortcut for acceptance.**
+The contrasts among #11, #15 and #58 distinguish deservedness, procedural closure
+and continuing challenge. Similarly, peace wished for a listener in #32 cannot
+be assigned to the speaker. The analytic gain comes from identifying the object
+and context of an expression before giving it a psychological interpretation.
+
+### Contribution and next decision
+These conclusions elaborate distinctions already present in the literature;
+they do not establish a new field-wide discovery. The current contribution is a
+traceable comparison linking whole statements, local expressions and revised
+readings, including cases too sparse to support an elaborate account.
+
+The next writing step is to integrate this synthesis with the existing
+literature comparison as a compact research narrative. Further expansion should
+answer a specific missing question. For the institutional extension, the
+priority missing material is the Murphy interview audio or an attributable
+transcript; the located news report does not establish the experience of the
+requested spiritual support. No additional modeling or manual coding is required
+to complete the present exploratory result.
+

@@ -167,3 +167,16 @@ of punishment, religious function and actual support as reading questions.
 Next synthesize the completed 20-case readings using these distinctions, keeping
 external interviews separate from final statements. No new model or owner
 labeling round is requested.
+
+## Completed synthesis and material request
+The report now includes a cross-case synthesis covering all 20 discussed
+statements, with explicit limits and sparse cases. This is the completed
+exploratory expression result, not a new annotation dataset. Next produce a
+compact narrative connecting these conclusions to the full-text literature
+comparison. For the separate institutional extension, request the November
+2019 Murphy interview audio or an attributable transcript if available:
+https://www.chron.com/local/behind-the-walls-podcast/article/LISTEN-Yoga-Buddha-and-death-row-An-interview-14824834.php
+Show: Behind the Walls; episode: Yoga, Buddha and death row: An interview with
+'Texas 7' prisoner Patrick Murphy; listed November 11, 2019. A podcast directory
+lists approximately 26 minutes. Audio access remains unverified. Keep the
+existing interview-report evidence distinct from this missing recording.
