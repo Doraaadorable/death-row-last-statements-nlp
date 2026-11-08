@@ -159,8 +159,11 @@ The report now contrasts Ramirez's request for pastoral touch with counsel's
 record of Murphy's preference against touch at death. Murphy's scheduled
 executions were stayed; he is not an executed control without support. This
 contrast supports examining the fit between arrangements and individual
-preferences. It does not establish a psychological effect. A located interview
-audio remains unchecked, so Murphy is an institutional boundary case rather
-than a completed personal-experience case. Next check that interview if it can
-be obtained; otherwise retain the experience gap. No new owner labeling round
-is requested.
+preferences. It does not establish a psychological effect. The November
+interview audio remains unchecked. A separate March CBS interview report adds
+limited personal material; support-specific experience remains unestablished.
+The report now separates emotional self-description, desired future, judgment
+of punishment, religious function and actual support as reading questions.
+Next synthesize the completed 20-case readings using these distinctions, keeping
+external interviews separate from final statements. No new model or owner
+labeling round is requested.

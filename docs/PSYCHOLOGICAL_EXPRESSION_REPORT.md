@@ -714,12 +714,39 @@ but its audio has not been listened to or transcribed in this study. The page
 summary is not substituted for his words. Consequently, the earlier threshold
 for analyzing personal experience has not yet been met for this contrast.
 
-The next source task is to obtain and check that attributable interview, keeping
-its pre-execution context. If unavailable, retain this as an institutional
-boundary case and leave personal experience unknown. Do not enlarge the sample
-or train a model to fill that gap. The existing 20-case expression analysis and
-Ramirez case remain the completed interpretive material; this contrast adds a
-specific question about preference-sensitive support.
+A separate source check located a [CBS interview report, March 27, 2019](https://www.cbsnews.com/texas/news/texas-7-death-row-inmate-patrick-murphy/).
+CBS reports peace alongside reluctance to die. This is an edited news report,
+not the unreviewed November podcast, and not an execution-day final statement.
+It adds limited attributable self-description; the support-specific experience
+gap remains. No conclusion about the psychological effect of the disputed
+accommodation follows. The earlier interview-audio task remains incomplete.
+
+### Reading framework for the existing psychological study
+The completed reading memos already require distinguishing procedural readiness,
+expressed peace, criticism of execution and religious meaning. Keep the following
+questions separate when writing the synthesis; they are reading prompts, not a
+new scoring instrument or a mandate to recode the corpus.
+
+| Question | Evidence required | Shortcut to avoid |
+| --- | --- | --- |
+| What feeling is expressed? | An attributable emotional self-description, with its immediate context | Inferring lack of fear from a closing formula |
+| What future is desired? | Explicit wishes about living, dying or what comes after death | Treating spiritual reunion as a wish for execution |
+| What judgment is made about punishment? | Words addressing fairness, proportionality or legitimacy | Treating readiness to proceed as approval of the sentence |
+| What is the role of religion here? | Local wording about comfort, belonging, authority, obligation or an afterlife | Giving every religious reference a comforting function |
+| What support was sought or received? | Dated request, response and evidence of provision | Treating religious vocabulary as evidence of actual care |
+
+Use these distinctions to organize the existing 20-case discussion and the
+external documentary extension. They do not show that the expressions are
+statistically independent, that a person is psychologically consistent, or that
+an unmentioned feeling is absent. Where the same passage bears on several
+questions, preserve it in context rather than forcing an exclusive category.
+
+The next substantive step is synthesis of the completed readings: identify
+which interpretations are supported by the person's wording, which remain
+plausible alternatives, and which require institutional or relational evidence.
+Keep the Murphy material in a separate external-context section. Do not combine
+it with the 20 statements or the 50-label sample to create a new denominator.
+No new model or owner labeling round is needed for that synthesis.
 
 
 ## Current result and next research decision
