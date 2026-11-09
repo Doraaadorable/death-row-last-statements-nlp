@@ -1,14 +1,13 @@
 # Codebook: apology and innocence claims
 
-Version 1.0 (draft; frozen when `protocol_lock.json` is created). Do not edit after coding starts. Any later change needs a new version and a note in the protocol.
+Version 1.0, frozen in `protocol_lock.json`. Do not edit after coding starts. Any later change needs a new version and a note in the protocol.
 
-These definitions follow the separation used by Eaton & Theuer (2009, pp. 334–335), who code apology, forgiveness requests, responsibility, admission of guilt, innocence, accident accounts and excuses as distinct variables.
-
-> **Before freezing:** compare both definitions below with the article's wording on pp. 334–335 and adjust them so they match. Record any intentional difference in the "Differences from Eaton & Theuer" section at the end.
+These definitions build on Eaton & Theuer (2009, pp. 334–335), who code apology, remorse, forgiveness requests, empathy, responsibility, admission of guilt, innocence, accident and excuse as separate variables. Where this codebook deliberately differs, the difference is listed at the end.
 
 ## What to read
 
-- Code **only the speaker's own words** in the text shown.
+- Read the English text as shown. You may look up single words, but do not use machine translation.
+- Code **only the speaker's own words**.
 - Ignore recorder or editorial material, such as `(crying)`, `[inaudible]` or `[have]`.
 - Quoted prayer or scripture counts only if the speaker uses it to say something in their own voice. Reciting "forgive us our trespasses" in the Lord's Prayer is **not** an apology.
 - Judge each statement as a whole, but code only what is said. Do not use case facts, outside knowledge or guesses about sincerity.
@@ -23,30 +22,47 @@ These definitions follow the separation used by Eaton & Theuer (2009, pp. 334–
 
 ## A. Apology
 
-**`1`:** the speaker explicitly apologizes, or says they are sorry, to someone, about something they did or a harm or loss connected to them.
+**`1`:** the speaker apologizes, or says they are sorry, in a way that takes something on themselves: either the apology is tied to their own act or the harm they caused, or it is a direct apology to someone with no object stated.
 
-- "I'm sorry for what I did." / "I apologize to the Smith family." → `1`
-- "I'm sorry for the pain I caused my mother." → `1` (the recipient does not have to be the victim's family)
-- "To the victim's family, I am so sorry for your loss." → `1`
-- "Sorry" as politeness ("Sorry, I forgot what I wanted to say") → `0`
-- A forgiveness request with no apology or sorrow ("Please forgive me") → `0`; mention it in the note
-- Sorrow about the situation with no harm or act tied to the speaker ("I'm sorry it came to this") → `u`, unless the context makes the reference clear
-- Remorse expressed without apology words ("I regret what I did every day") → `0`. Remorse is a separate concept; mention it in the note.
+| Example | Code |
+|---|---|
+| "I'm sorry for what I did." / "I apologize for taking your son's life." | `1` |
+| "I'm sorry for the pain I caused my mother." (any recipient, including the speaker's own family) | `1` |
+| "To the Smith family, I'm sorry." / "I want to apologize to the family." (direct apology, no object stated) | `1` |
+| "To the victim's family, I am so sorry for your loss." (condolence: sorrow about the family's loss, not tied to the speaker) | `0`; note "condolence" |
+| "I'm sorry for the pain you have been through." (sorrow for the other person's pain, not tied to the speaker) | `0`; note "condolence" |
+| "I'm sorry it came to this." (sorrow about the situation) | `0`, unless the context ties it to the speaker's act |
+| "Sorry, I forgot what I wanted to say." (politeness) | `0` |
+| "Please forgive me." (forgiveness request, no apology) | `0`; note "forgiveness request" |
+| "I regret what I did every day." (remorse, no apology) | `0`; note "remorse" |
+
+If a statement contains both a condolence and an apology ("I'm sorry for your loss. I'm sorry for what I did."), code `1`.
 
 ## B. Innocence claim
 
-**`1`:** the speaker asserts that they did not commit the crime they are being executed for, or that they are innocent or wrongly convicted.
+**`1`:** the speaker asserts that they should not stand convicted, either by denying the act or by claiming the act was lawful. In the note, write **F** or **L**:
 
-- "I am an innocent man." / "I did not kill her." / "You are executing the wrong person." → `1`
-- Denying the killing while admitting being present ("I was there, but I didn't shoot anyone") → `1`
-- An accident or self-defense account that admits the act ("It was an accident; I never meant to hurt him") → `0`; mention it in the note
-- Criticism of the trial, the death penalty or the system without denying the act → `0`
-- "God knows the truth" or "One day the truth will come out" with nothing else → `u`
+- **F (factual):** denies doing what they were convicted of.
+- **L (legal):** admits the act but claims it was legally justified, for example self-defense or defense of another person.
+
+| Example | Code |
+|---|---|
+| "I am an innocent man." / "I did not kill her." / "You are executing the wrong person." | `1`, F |
+| "I was there, but I didn't shoot anyone." (denies the killing) | `1`, F |
+| "I killed him, but it was self-defense." | `1`, L |
+| "It was an accident; I never meant to kill him." (admits a wrongful act, disputes intent) | `0`; note "accident" |
+| "I was on drugs, I wasn't myself." (excuse) | `0`; note "excuse" |
+| Criticism of the trial, the lawyers or the death penalty, without denying the act | `0` |
+| "God knows the truth." / "One day the truth will come out." (no explicit denial) | `0` |
+
+Use `u` only when the words could reasonably be read either way, for example "I didn't do what they say I did" when it is unclear whether the speaker denies the act or only the prosecution's version of it.
 
 ## Note column
 
-Use the note for anything that helps adjudication: a forgiveness request, remorse without apology, an accident account, the reason for a `u`, or a transcription problem.
+Write anything that helps adjudication: F or L for innocence claims, "condolence", "forgiveness request", "remorse", "accident", "excuse", the reason for a `u`, or a transcription problem.
 
 ## Differences from Eaton & Theuer
 
-_To be filled in before freezing._
+1. **Apology is narrower.** Eaton & Theuer code an apology whenever the speaker "specifically said they were sorry". Here, sorrow about the other person's loss or pain that is not tied to the speaker ("sorry for your loss") is `0`. It is closer to their separate *empathy* variable. Apology prevalence is therefore not directly comparable with their 32.5%.
+2. **Innocence includes legal justification.** Eaton & Theuer code claims of innocence separately from accident and excuse accounts; a self-defense account would probably fall outside their innocence variable. Here, self-defense and similar justification claims are `1` and marked **L**, so results can be reported both with and without them. Accident and excuse accounts are `0`, as in their scheme.
+3. **No uncertain-by-default rule.** Eaton & Theuer code every coder disagreement as "unclear" (their value 3). Here, disagreements are resolved by adjudication, and `u` is kept only for genuinely undecidable text.

@@ -7,11 +7,11 @@ Can automated text analysis measure what people say in their final statements as
 Published studies of these statements code them by hand: Eaton & Theuer (2009) report two-coder kappas of .89–.99. Computational work often uses cheaper measures such as keyword lists or topic models. Whether those measures work on short, formulaic, institutionally recorded text has not been tested. This study tests it:
 
 - **Sample:** 150 statements drawn at random from 430 that I have not previously read or labelled.
-- **Reference standard:** two coders work independently with a codebook aligned with Eaton & Theuer's definitions; kappa is reported before adjudication.
+- **Reference standard:** two coders work independently with a codebook based on Eaton & Theuer's definitions, with three documented differences; kappa is reported before adjudication.
 - **Methods compared:** a keyword dictionary, the project's six-topic NMF model and a zero-shot LLM (`claude-opus-5-5`), all frozen before coding starts.
 - **Outputs:** precision, recall and F1 with bootstrap intervals, plus a categorised error analysis.
 
-**Status:** the design, codebook, sample, coding sheets, method code and analysis code are complete and tested. Coding has not started, so there are no results yet. Details: [study/measurement_validity/](study/measurement_validity/README.md).
+**Status:** the design, codebook, sample, method code and analysis code were frozen on 9 November 2026 (`protocol_lock.json`). Human coding is under way; there are no results yet. Details: [study/measurement_validity/](study/measurement_validity/README.md).
 
 ## Data
 

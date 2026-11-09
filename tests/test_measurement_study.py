@@ -97,21 +97,25 @@ def test_end_to_end_with_simulated_coders(tmp_path, monkeypatch):
             truth = texts.candidate_text.map(lambda t, c=col: methods.dictionary_label(t, c)).astype(str)
             flip = rng.random(len(df)) < 0.1
             df[col] = np.where(flip, rng.choice(["1", "0", "u"], len(df)), truth)
+        df["innocence_type"] = np.where(df.innocence == "1", rng.choice(["F", "L"], len(df), p=[0.8, 0.2]), "")
         df["note"] = ""
         df.to_excel(coding / f"coder_{coder}_completed.xlsx", sheet_name="coding", index=False)
 
     analyze.agreement()
     agreement = pd.read_csv(outputs / "agreement.csv")
-    assert set(agreement.construct) == set(methods.CONSTRUCTS)
-    assert (agreement.kappa_three_category > 0.2).all()  # rare categories give lower kappa
+    assert set(methods.CONSTRUCTS) <= set(agreement.construct)
+    main = agreement[agreement.construct.isin(methods.CONSTRUCTS)]
+    assert (main.kappa_three_category > 0.2).all()  # rare categories give lower kappa
 
     adj = pd.read_excel(coding / "adjudication.xlsx", sheet_name="coding", dtype=str)
     adj["apology"] = adj["A_apology"].replace({"u": "0"})
     adj["innocence"] = adj["A_innocence"].replace({"u": "0"})
+    adj["innocence_type"] = np.where(adj.innocence == "1", adj["A_type"].fillna("F").replace("", "F"), "")
     adj.to_excel(coding / "adjudication_completed.xlsx", sheet_name="coding", index=False)
 
     analyze.evaluate()
     metrics = pd.read_csv(outputs / "method_metrics.csv")
     assert set(metrics.method) == {"dictionary", "nmf"}
-    assert len(metrics) == 4
+    assert set(metrics.construct) == {"apology", "innocence", "innocence_factual"}
+    assert len(metrics) == 6
     assert (outputs / "errors.csv").exists() and (outputs / "prevalence.csv").exists()

@@ -31,17 +31,21 @@ def write_sheet(path, rows, title):
     wb = Workbook()
     ws = wb.active
     ws.title = "coding"
-    headers = ["item_id", "text", "apology", "innocence", "note"]
+    headers = ["item_id", "text", "apology", "innocence", "innocence_type", "note"]
     ws.append(headers)
     for cell in ws[1]:
         cell.font = Font(bold=True)
     for item_id, text in rows:
-        ws.append([item_id, text, None, None, None])
+        ws.append([item_id, text, None, None, None, None])
     validation = DataValidation(type="list", formula1='"1,0,u"', allow_blank=True,
                                 showErrorMessage=True, error="Use 1, 0 or u")
     ws.add_data_validation(validation)
     validation.add(f"C2:D{len(rows) + 1}")
-    widths = {"A": 10, "B": 100, "C": 10, "D": 11, "E": 40}
+    type_validation = DataValidation(type="list", formula1='"F,L"', allow_blank=True,
+                                     showErrorMessage=True, error="Use F (factual) or L (legal), only when innocence is 1")
+    ws.add_data_validation(type_validation)
+    type_validation.add(f"E2:E{len(rows) + 1}")
+    widths = {"A": 10, "B": 100, "C": 10, "D": 11, "E": 15, "F": 40}
     for col, width in widths.items():
         ws.column_dimensions[col].width = width
     for row in ws.iter_rows(min_row=2):
@@ -51,7 +55,9 @@ def write_sheet(path, rows, title):
     info = wb.create_sheet("read_me")
     info.append([title])
     info.append(["Code each statement with the codebook (study/measurement_validity/CODEBOOK.md)."])
-    info.append(["Use 1, 0 or u in the apology and innocence columns. Do not discuss items with the other coder until both sheets are finished."])
+    info.append(["Use 1, 0 or u in the apology and innocence columns. When innocence is 1, choose F (factual) or L (legal) in innocence_type."])
+    info.append(["Read the English text; look up single words if needed, but do not use machine translation."])
+    info.append(["Do not discuss items with the other coder until both sheets are finished."])
     path.parent.mkdir(parents=True, exist_ok=True)
     wb.save(path)
 
