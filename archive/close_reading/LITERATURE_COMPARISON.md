@@ -1,6 +1,6 @@
 # Full-text literature comparison and research decision
 
-I compiled this comparison of the published studies on 8 November 2026. It records what each study measured, its denominators and coding procedures, and where my earlier close reading (now in [archive/close_reading/](../archive/close_reading/)) overlaps with published examples. It is also the basis for the current [measurement study](../study/measurement_validity/PROTOCOL.md): Eaton & Theuer (2009) supply the construct definitions and the two-coder reliability benchmark.
+I compiled this comparison of the published studies on 8 November 2026. It records what each study measured, its denominators and coding procedures, and where my earlier close reading (now in [archive/close_reading/](.)) overlaps with published examples. It is also the basis for the current [measurement study](../../study/measurement_validity/PROTOCOL.md): Eaton & Theuer (2009) supply the construct definitions and the two-coder reliability benchmark.
 
 In the sections below, "Reader A" is me and "Reader B" is the second reader of the archived close reading.
 

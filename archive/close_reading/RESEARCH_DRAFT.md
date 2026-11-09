@@ -22,7 +22,7 @@ examines forgiveness, and Smith (2020) considers race/ethnicity and institutiona
 context. Malaga and Delgado (2020) offer a closely related phenomenological
 analysis. Eaton and Theuer (2009) distinguish apology and remorse-related
 content, while Zhuo and Chun (2026) examine emotion and moral positioning in a
-restricted corpus. The [literature comparison](../../docs/LITERATURE_COMPARISON.md) records
+restricted corpus. The [literature comparison](LITERATURE_COMPARISON.md) records
 methods, denominators, page references and overlapping material.
 
 ## Materials, source boundaries and procedure
