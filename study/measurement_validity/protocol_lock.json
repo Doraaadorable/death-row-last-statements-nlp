@@ -1,11 +1,11 @@
 {
-  "version": "1.1",
-  "frozen_at_utc": "2026-11-09T20:49:46+00:00",
-  "reason": "Pre-coding amendment after external review: exposure flags, enforced lock, undefined estimates, separate LLM non-answers without model fallback, secondary NMF rule",
+  "version": "1.2",
+  "frozen_at_utc": "2026-11-09T21:01:33+00:00",
+  "reason": "Wording only: concise protocol text, stated purpose as groundwork for studying psychological expression, corrected nmf_top2 description. No rule, analysis, codebook, sample or prompt changes.",
   "files": {
-    "study/measurement_validity/PROTOCOL.md": "cf462c397e47673ee455bf3f1aa2350e1ab42da8d128fe62aff7a4c46d5ac798",
+    "study/measurement_validity/PROTOCOL.md": "8664951cfe19f63c19afbb5910eab61434e400afa505f3443ea421ed00c2a725",
     "study/measurement_validity/CODEBOOK.md": "6975fc7e9413570d5886f16b55dc79299f659b99fef11d88c79575c10632b88e",
-    "study/measurement_validity/methods.py": "0c114c8630c674077c116d7b8747dbc3b0f41dcc7942bbd53172810788232993",
+    "study/measurement_validity/methods.py": "8624981fa7fb984b47110d44fa297363e4e381bcc1c4c6083116800cb36e81ec",
     "study/measurement_validity/analyze.py": "f74083739a99a92c101ab10ff7937e8544e9088442abbe78c266f646f0dd5b87",
     "study/measurement_validity/llm_classify.py": "0cb704feeac2720220ad960cbeacc827734691f51dcf9d4afcd219acb6494725",
     "study/measurement_validity/freeze.py": "b60c353d32b48f504167d46f3a5a43f7043f810f980fcbbb3e44d847bca1a315",

@@ -2,9 +2,9 @@
 
 Before the current [measurement study](../../study/measurement_validity/README.md), I tried a finer-grained approach: break statements into propositions centred on a predicate ("I killed", "I did not kill"), code who says what about whom (admission, denial, negation, attribution), and test whether transparent rules or a dependency parser could recover those fields.
 
-**Why it stopped.** Every evaluation in this line used development documents I had already read and discussed, so none of it is independent evidence. The rules were informed by known examples, and the parser output only partly matched the reviewed selections (37 of 42 aligned by exact character offsets). The measurement study replaces it with a simpler, pre-registered question on a fresh random sample.
+**Why it stopped.** Every evaluation in this line used development documents I had already read and discussed, and the rules were built from those same examples, so the results could not show how the methods would do on new text. The parser output aligned with 37 of the 42 reviewed selections. The measurement study replaces this line with a simpler, pre-registered question on a fresh random sample.
 
-**These files are kept unchanged.** Several of them are hashed in earlier reports as evidence of what each run used (for example `reports/sampled_focus_smoke_v1.json`), so editing them would break that record. They were written during an AI-assisted workflow, and "the owner" in them means me.
+**These files are kept as written.** Earlier reports record their hashes as evidence of what each run used (for example `reports/sampled_focus_smoke_v1.json`). I wrote them with AI assistance, and "the owner" in them means me.
 
 | File | What it records |
 |---|---|
