@@ -1,84 +1,33 @@
-# Last Statements: Psychological Expression and Meaning
+# Measuring Language in Texas Last Statements
 
-An exploratory study of emotional expression, relational concerns and meaning
-making in published last statements from Texas execution records.
+Can automated text analysis measure what people say in their final statements as reliably as careful human coding? This project builds a reproducible corpus of the last statements published by the Texas Department of Criminal Justice, then tests keyword, topic-model and LLM measures of **apology** and **innocence claims** against blind two-coder human coding.
 
-## Research question
-How do people facing execution express emotions, maintain relationships, and
-make sense of death and their own situation in their final statements?
+## Current study: measurement validity
 
-## Start here
-- [Research draft](docs/RESEARCH_DRAFT.md): a compact narrative connecting the question, prior work, method and findings.
-- [Exploratory report](docs/PSYCHOLOGICAL_EXPRESSION_REPORT.md): case comparisons, literature and conclusions.
-- [Literature comparison](docs/LITERATURE_COMPARISON.md): full-text methods, overlapping examples and the focused comparison.
-- [Current research plan](docs/CURRENT_RESEARCH_PLAN.md): question, literature and next steps.
-- [Open reading workbook](docs/OPEN_READING_WORKBOOK_v1.md): 20 retained candidate documents with evidence-linked reading memos and source boundaries.
-- [Eight-category annotation guide](docs/ANNOTATION_GUIDE.md): definitions for the existing development sample.
-- [Methods and reproduction](docs/METHODS.md): data preparation, exploratory models and supporting experiments.
+Published studies of these statements code them by hand: Eaton & Theuer (2009) report two-coder kappas of .89–.99. Computational work often uses cheaper measures such as keyword lists or topic models. Whether those measures work on short, formulaic, institutionally recorded text has not been tested. This study tests it:
+
+- **Sample:** 150 statements drawn at random from 430 that I have not previously read or labelled.
+- **Reference standard:** two coders work independently with a codebook aligned with Eaton & Theuer's definitions; kappa is reported before adjudication.
+- **Methods compared:** a keyword dictionary, the project's six-topic NMF model and a zero-shot LLM (`claude-opus-5-5`), all frozen before coding starts.
+- **Outputs:** precision, recall and F1 with bootstrap intervals, plus a categorised error analysis.
+
+**Status:** the design, codebook, sample, coding sheets, method code and analysis code are complete and tested. Coding has not started, so there are no results yet. Details: [study/measurement_validity/](study/measurement_validity/README.md).
 
 ## Data
-The saved inventory contains 603 execution records. The candidate corpus has
-480 person-level documents; 479 are prepared for exploration and 477 have
-nonzero TF-IDF features. The coding-development sample contains 50 people,
-ten per decade.
 
-The eight nonexclusive categories cover affection, gratitude, faith/spirituality,
-apology/forgiveness, acknowledgment of harm, culpability disputes, justice
-criticism, and farewell/closure/readiness. Values are 1, 0 and u (unresolved).
-These describe textual expression; they are not a psychological scale.
+Source: [Texas Department of Criminal Justice, executed inmates](https://www.tdcj.texas.gov/death_row/executed_inmates.html), snapshot through 7 October 2026.
 
-## Current work
-The [research draft](docs/RESEARCH_DRAFT.md) presents an exploratory contextual
-reading of twenty purposively selected Texas candidate documents. It examines
-objects and addressees of responsibility, relationships, religion and approaching
-death. Apparent co-occurrence informed selection, so it is not presented as a
-new discovery or a corpus frequency result.
+- 603 execution records; 480 person-level statements; 477 with usable text features after preparation.
+- Speaker text is separated from recorder annotations, media statements and editorial insertions; see `src/prepare_model_text.py` and the inclusion ledger in `reports/`.
+- A 50-statement development sample was coded with an eight-category guide ([docs/ANNOTATION_GUIDE.md](docs/ANNOTATION_GUIDE.md)). It is used only for development and practice, never for evaluation.
 
-Reader A is the project owner, whose guided readings underlie the memos. Reader B
-subsequently responded to ten selected texts without prior exposure to project
-interpretations and with translation help, as confirmed by Reader A. The task
-intentionally prioritized intuitive feelings. Original feedback and conditions
-are recorded; disagreements and emotional responses are retained without an
-agreement score or claims about speakers' private mental states.
+The processed data are in the [data-v1 release](https://github.com/Doraaadorable/death-row-last-statements-nlp/releases/tag/data-v1) (SHA-256 `c56a4be1915cdaefd5ea1878da47d009f0cb9de8082401f7de241d42a7266168`). Extract it into the repository root.
 
-The draft includes a source-boundary table, four findings, one additional
-reader-response section, discussion, ethics, an institutional appendix and
-references. It distinguishes retained candidates from original source events,
-including #1's two source sections and #49's attorney exchange. The literature
-comparison records close precedents and does not claim an established new gap.
-Permission for anonymous use of Reader B's feedback was confirmed in writing
-by Reader A; no separate signed participant form is claimed.
+## Topic model
 
-A reproducible descriptive summary supplies raw 1/0/u counts and all 28 pairs
-for the frozen 50-record development sample. Run
-`python src/summarize_expression_sample.py` after extracting the data snapshot.
-These are sample descriptions, not psychological scores or population estimates.
+A six-topic NMF on TF-IDF features finds apology/forgiveness, family love, denial ("did not", "kill"), recited prayer, thanks and "stay strong" themes. Four- and eight-topic solutions, initialization stability, and sensitivity to short texts and to recited prayer are under `results/`. The model reproduces exactly from the released data (`python src/run_nmf_v2.py`). Interpretation notes: [docs/COMPONENT_REVIEW_k4_k6_k8.md](docs/COMPONENT_REVIEW_k4_k6_k8.md).
 
-## Institutional context
-The current report also examines how religious meaning and perceived punishment
-are connected to the speakers' emotional and relational expressions. Religious
-care, judicial severity and retention/abolition are distinct research questions.
-The saved Texas last statements do not by themselves estimate the effects of
-pastoral support, sentencing severity or abolition. The first feasibility check located official religious-accommodation milestones
-and 28 candidate statements on/after 24 March 2022. These are calendar
-availability counts, not care effects. Ramirez and Murphy records are documented in the report; they do not supply
-a causal comparison. The compact draft keeps this material in an appendix. Reproduce the
-check with `python src/check_institutional_feasibility.py`.
-
-## Completed exploratory analysis
-The six-component NMF reading identifies apology/forgiveness, affection,
-case-related explanation, repeated prayer, thanks/support, and encouragement.
-Four- and eight-component solutions, initialization comparisons and text-removal
-checks are retained under results/. The repeated-prayer removal is a targeted
-influence check. Component interpretations are in the
-[review notes](docs/COMPONENT_REVIEW_k4_k6_k8.md).
-
-The later predicate and syntax experiments provide supporting tools for source,
-negation and actor distinctions. Their code, tests and result tables remain
-available; current research focuses on contextual psychological expression.
-
-## Reproduction
-Install the core dependencies:
+## Reproduce
 
 ```bash
 python3 -m venv .venv
@@ -86,23 +35,27 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-Download data_snapshot_v1.zip from the [data-v1 release](https://github.com/Doraaadorable/death-row-last-statements-nlp/releases/tag/data-v1),
-verify SHA-256 `c56a4be1915cdaefd5ea1878da47d009f0cb9de8082401f7de241d42a7266168`,
-and extract it into the project root. Then open
-[notebook 01](notebooks/01_last_statements_analysis.ipynb).
-Additional workflows and the optional syntax environment are documented in
-[METHODS.md](docs/METHODS.md).
+Then download and extract the data-v1 snapshot as described above.
 
-## Interpretation and scope
-The material records public statements in an institutional setting. Conclusions
-concern expressed language and contextual interpretations, rather than private
-mental states, sincerity or actual guilt. The equal-decade development sample
-supports framework development; corpus-frequency estimates require a separate
-sampling and coding design. References and access status are recorded in the
-current research plan.
+Run the tests:
 
-## Source
-[Texas Department of Criminal Justice](https://www.tdcj.texas.gov/death_row/executed_inmates.html).
-Individual source links are retained in the corpus. The snapshot covers records
-through October 7, 2026. Raw data and local generated artifacts are excluded
-from Git; source statements and original coding values are preserved.
+```bash
+python -m pytest
+```
+
+Without the data snapshot, tests that need it are skipped. The syntax prototype tests also need `pip install -r requirements-syntax.txt`. Detailed workflows: [docs/METHODS.md](docs/METHODS.md).
+
+## Scope and ethics
+
+These are public statements made in an institutional setting, recorded and edited by the state. The project measures what is said. It does not judge sincerity, guilt or mental state. Victims' families are among the people addressed, and the analysis does not present a speaker's claims about a case as established fact.
+
+## Repository
+
+| Path | Contents |
+|---|---|
+| `study/measurement_validity/` | Current study: protocol, codebook, sample, coding sheets, methods, analysis |
+| `src/`, `tests/` | Data preparation, NMF and earlier syntax/claim experiments, with tests |
+| `results/`, `reports/` | Model outputs and audit records |
+| `docs/` | Methods, annotation guide, literature comparison, earlier experiment notes |
+| `notebooks/` | Exploratory notebooks (01 is the main entry point) |
+| `archive/` | An earlier qualitative close reading, kept as a record |

@@ -7,3 +7,5 @@ scipy
 scikit-learn
 matplotlib
 notebook
+openpyxl
+anthropic
