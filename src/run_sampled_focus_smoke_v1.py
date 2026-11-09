@@ -66,7 +66,7 @@ def build(root):
             'zero_focus_documents': sum(d['literal_focus_count'] == 0 for d in documents if d['stratum'] == stratum),
             'prediction_counts': dict(Counter(p['prediction'] for p in subset))}
     paths = ['src/focus_rules_v1.py', 'src/run_sampled_focus_smoke_v1.py',
-             'reports/evaluation_exposure_readiness_v1.json', 'docs/SAMPLED_FOCUS_SMOKE_PROTOCOL_v1.md']
+             'reports/evaluation_exposure_readiness_v1.json', 'archive/claim_syntax_experiments/SAMPLED_FOCUS_SMOKE_PROTOCOL_v1.md']
     return {'status': 'automatic_smoke_only_no_reference_labels', 'seed': 20261107,
             'sampling': sample, 'pool_sizes': {'candidate':92,'nonmatch':271},
             'conditional_inclusion_probabilities': {'candidate':10/92,'nonmatch':10/271},
