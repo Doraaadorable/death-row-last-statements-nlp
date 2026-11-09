@@ -126,7 +126,7 @@ def export_review(root, proposals, worksheet_path, documents_path, tag):
     hashes['owner_worksheet_input'] = hashlib.sha256(Path(worksheet_path).read_bytes()).hexdigest()
     hashes['owner_documents_input'] = hashlib.sha256(Path(documents_path).read_bytes()).hexdigest()
     hashes['frozen_corpus_input'] = hashlib.sha256((root/'data/processed/model_corpus_v1.csv').read_bytes()).hexdigest()
-    hashes['guideline_input'] = hashlib.sha256((root/'docs/SEMANTIC_CLAIM_GUIDELINE_v3_DRAFT.md').read_bytes()).hexdigest()
+    hashes['guideline_input'] = hashlib.sha256((root/'archive/claim_syntax_experiments/SEMANTIC_CLAIM_GUIDELINE_v3_DRAFT.md').read_bytes()).hexdigest()
     manifest = {'created_at':datetime.now(timezone.utc).isoformat(),'scope':'AI-assisted development; not independent validation; illustrative selections only', 'hashes':hashes, 'code_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
     (dest/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     return dest

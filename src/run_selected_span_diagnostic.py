@@ -44,7 +44,7 @@ def run(root):
             raise FileExistsError('Existing diagnostic differs; use a new version before changing rules.')
     inputs={'owner_decisions':sha(root/'reports/semantic_owner_decisions_v3_discussion.csv'),
             'model_corpus':sha(root/'data/processed/model_corpus_v1.csv'),
-            'protocol':sha(root/'docs/SELECTED_SPAN_RULE_DIAGNOSTIC_PROTOCOL_v1.md')}
+            'protocol':sha(root/'archive/claim_syntax_experiments/SELECTED_SPAN_RULE_DIAGNOSTIC_PROTOCOL_v1.md')}
     code={name:sha(root/'src'/name) for name in ['selected_span_rules.py','run_selected_span_diagnostic.py','semantic_screening.py','prepare_confirmed_claims.py','claim_adjudication_v3.py']}
     manifest={'inputs_sha256':inputs,'code_sha256':code,'output_sha256':{k:hashlib.sha256(v).hexdigest() for k,v in payloads.items()},
               'python':platform.python_version(),'pandas':pd.__version__,

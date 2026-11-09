@@ -1,6 +1,9 @@
 # Archive
 
-Earlier work kept as a record. Nothing here is part of the current [measurement study](../study/measurement_validity/README.md).
+Earlier work kept as records. Nothing here is part of the current [measurement study](../study/measurement_validity/README.md).
+
+- [close_reading/](#close_reading): qualitative reading of 20 development statements (8 November 2026)
+- [claim_syntax_experiments/](claim_syntax_experiments/README.md): proposition coding, rule and parser experiments (5–7 November 2026)
 
 ## close_reading/
 

@@ -56,7 +56,8 @@ class OwnerReviewTests(unittest.TestCase):
             dp=root/'documents.csv';docs.to_csv(dp,index=False)
             docs[['execution_number']].to_csv(root/'reports/semantic_development_document_coverage_v1.csv',index=False)
             (root/'data/processed/model_corpus_v1.csv').write_text('test source')
-            (root/'docs/SEMANTIC_CLAIM_GUIDELINE_v3_DRAFT.md').write_text('test guideline')
+            (root/'archive/claim_syntax_experiments').mkdir(parents=True,exist_ok=True)
+            (root/'archive/claim_syntax_experiments/SEMANTIC_CLAIM_GUIDELINE_v3_DRAFT.md').write_text('test guideline')
             dest=export_review(root,q,wp,dp,'test')
             manifest=json.loads((dest/'manifest.json').read_text())
             for name in ['all_decisions.csv','adjudicated_propositions.csv','document_decisions.csv']:

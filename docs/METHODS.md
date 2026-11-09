@@ -56,10 +56,12 @@ comparison in notebook 18 aligns 37 of 42 selections by exact offsets. Its
 remaining five use different phrase/head representations. Case provenance,
 reference values and proposed values are stored separately.
 
-For optional syntax work follow [SYNTACTIC_CANDIDATES_v1.md](SYNTACTIC_CANDIDATES_v1.md).
-Parser construction, source attribution, negation and presentation rules have
-documented gaps. These supporting outputs are distinct from psychological
-coding. The current research does not require further classifier development.
+The protocols and notes for these experiments are archived, unchanged, in
+[archive/claim_syntax_experiments/](../archive/claim_syntax_experiments/README.md);
+start with [SYNTACTIC_CANDIDATES_v1.md](../archive/claim_syntax_experiments/SYNTACTIC_CANDIDATES_v1.md)
+for the optional syntax work. Parser construction, source attribution, negation
+and presentation rules have documented gaps. This work is not part of the
+current measurement study.
 
 ## Reproduction records
 Input/code hashes accompany generated outputs. Version details for the original

@@ -54,8 +54,8 @@ These are public statements made in an institutional setting, recorded and edite
 | Path | Contents |
 |---|---|
 | `study/measurement_validity/` | Current study: protocol, codebook, sample, coding sheets, methods, analysis |
-| `src/`, `tests/` | Data preparation, NMF and earlier syntax/claim experiments, with tests |
+| `src/`, `tests/` | Corpus construction, topic model and archived experiments, with tests ([index](src/README.md)) |
 | `results/`, `reports/` | Model outputs and audit records |
-| `docs/` | Methods, annotation guide, literature comparison, earlier experiment notes |
-| `notebooks/` | Exploratory notebooks (01 is the main entry point) |
-| `archive/` | An earlier qualitative close reading, kept as a record |
+| `docs/` | Methods, annotation guide, literature comparison, topic-model notes ([index](docs/README.md)) |
+| `notebooks/` | Exploratory notebooks; 01 is the main entry point ([index](notebooks/README.md)) |
+| `archive/` | Earlier close reading and proposition/syntax experiments, kept as records ([index](archive/README.md)) |
