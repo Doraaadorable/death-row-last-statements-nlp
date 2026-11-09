@@ -15,6 +15,7 @@ A qualitative reading of 20 statements chosen from the 50-person development sam
 | `PSYCHOLOGICAL_EXPRESSION_REPORT.md` | Extended case comparisons |
 | `OPEN_READING_WORKBOOK_v1.md` | Evidence-linked memos for the 20 statements |
 | `CURRENT_RESEARCH_PLAN.md` | The plan as it stood on 8 November 2026 |
+| `LITERATURE_COMPARISON.md` | Full reading notes on the published studies, with page references |
 | `reader_response_v1.txt`, `reader_response_context_v1.json` | The second reader's response and reading conditions |
 | `open_reading_selection_v1.json`, `psychological_expression_pilot_v1.json` | Selection record and pilot summary |
 

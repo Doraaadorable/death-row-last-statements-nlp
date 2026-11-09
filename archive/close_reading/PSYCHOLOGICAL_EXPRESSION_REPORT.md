@@ -244,11 +244,11 @@ of affection or faith.
 
 ## Relation to existing research
 The sources below were checked on 7 November 2026. The two previously outstanding papers have now been supplied and read; the
-[full-text comparison](../../docs/LITERATURE_COMPARISON.md) records methods and page anchors.
+[full-text comparison](LITERATURE_COMPARISON.md) records methods and page anchors.
 
 | Source | Evidence accessed and relevance | Consequence for this project |
 | --- | --- | --- |
-| Schuck & Ward (2008), [DOI](https://doi.org/10.1177/0957926507083687) | Relevant sections of author-uploaded text checked; see the [literature comparison](../../docs/LITERATURE_COMPARISON.md) | The broad contextual approach has a direct precedent; it is not a new research gap |
+| Schuck & Ward (2008), [DOI](https://doi.org/10.1177/0957926507083687) | Relevant sections of author-uploaded text checked; see the [literature comparison](LITERATURE_COMPARISON.md) | The broad contextual approach has a direct precedent; it is not a new research gap |
 | Hirschmüller & Egloff (2016), [full text](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01985/full) | Methods/results: LIWC word proportions in 407 statements; more positive than negative emotion words | Word proportions answer a different question from the objects and functions of statements |
 | Eaton & Theuer (2009), [publication](https://doi.org/10.1080/07418820802245078) | Full text: separate apology, remorse, guilt and responsibility variables; 305 statements | Compare textual definitions and distinguish explicit peace from perceived peace |
 | Mehra et al. (2024), [full text](https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2024.1463692/full) | Methods/results: 466 statements, computational emotion/notion analysis including co-occurrence and sequencing | Neither mixed expression nor sequence alone can be claimed as novel |
