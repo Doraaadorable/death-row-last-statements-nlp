@@ -1,11 +1,16 @@
 {
-  "frozen_at_utc": "2026-11-09T05:38:18+00:00",
+  "version": "1.1",
+  "frozen_at_utc": "2026-11-09T20:49:46+00:00",
+  "reason": "Pre-coding amendment after external review: exposure flags, enforced lock, undefined estimates, separate LLM non-answers without model fallback, secondary NMF rule",
   "files": {
-    "study/measurement_validity/PROTOCOL.md": "f87dddf9e46d5a79af41ae4456ba1c2ff14509f58cc4811d39e222bce3230c51",
+    "study/measurement_validity/PROTOCOL.md": "cf462c397e47673ee455bf3f1aa2350e1ab42da8d128fe62aff7a4c46d5ac798",
     "study/measurement_validity/CODEBOOK.md": "6975fc7e9413570d5886f16b55dc79299f659b99fef11d88c79575c10632b88e",
-    "study/measurement_validity/methods.py": "af94cecc7b5dda60aa6fca951a31a5ade8423e17bf4baeda3e2a343846ef1801",
-    "study/measurement_validity/analyze.py": "956c5656b1334a4570c5fb24f188d9e0b01d40da4f88cac8646df47f7ae31b33",
+    "study/measurement_validity/methods.py": "0c114c8630c674077c116d7b8747dbc3b0f41dcc7942bbd53172810788232993",
+    "study/measurement_validity/analyze.py": "f74083739a99a92c101ab10ff7937e8544e9088442abbe78c266f646f0dd5b87",
+    "study/measurement_validity/llm_classify.py": "0cb704feeac2720220ad960cbeacc827734691f51dcf9d4afcd219acb6494725",
+    "study/measurement_validity/freeze.py": "b60c353d32b48f504167d46f3a5a43f7043f810f980fcbbb3e44d847bca1a315",
     "study/measurement_validity/sample.csv": "5c233b48b630d80fe07a20911bc6e6fd1bf87c88a2f9078b9eab9ac44534c931",
+    "study/measurement_validity/exposure.csv": "f01ad91be709ba6e72983a50d696a0f2a579f849f5092f72e64df1270f8217d9",
     "results/nmf_v2/document_weights_k6.csv": "34f82a256049327c631b34b5fea82001ddd826bab26e9f82e14c2d2015e157fb"
   },
   "sample_text_sha256": "dca7c111728368d3ea9e2dd9c486c9112973baa2adecac3a3c763acf612518db"
