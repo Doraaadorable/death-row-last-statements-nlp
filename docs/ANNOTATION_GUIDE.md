@@ -22,7 +22,7 @@ These are non-exclusive categories, not scores to sum. Retain `u`; do not automa
 - **Speaker and quotations.** Exclude third-party replies and editorial descriptions from speaker evidence. Religious quotations can establish religious content without establishing personal experiences or motives.
 - **Review.** Keep independent judgments before discussion. Review after seeing existing labels is non-blind review; agreement does not verify the speaker's intention.
 - **Revision and modeling.** Recheck comparable records whenever a definition changes. Keep uncertainty rather than converting u to 0. Split data by person; these 50 records are guideline-development data, not an independent test set.
-- **Approval and version control.** The user approved all v2 decisions on 5 November 2026. The register is frozen for this version; u retains semantic uncertainty. Future changes require a new version and review of comparable records.
+- **Approval and version control.** I approved all v2 decisions on 5 November 2026. The register is frozen for this version; u retains semantic uncertainty. Future changes require a new version and review of comparable records.
 
 ## Label definitions
 

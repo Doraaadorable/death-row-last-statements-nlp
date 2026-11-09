@@ -22,7 +22,7 @@ examines forgiveness, and Smith (2020) considers race/ethnicity and institutiona
 context. Malaga and Delgado (2020) offer a closely related phenomenological
 analysis. Eaton and Theuer (2009) distinguish apology and remorse-related
 content, while Zhuo and Chun (2026) examine emotion and moral positioning in a
-restricted corpus. The [literature comparison](LITERATURE_COMPARISON.md) records
+restricted corpus. The [literature comparison](../../docs/LITERATURE_COMPARISON.md) records
 methods, denominators, page references and overlapping material.
 
 ## Materials, source boundaries and procedure
@@ -33,7 +33,7 @@ TF-IDF features. The close reading uses candidate documents, not only modeled te
 
 Twenty documents were purposively selected from an existing 50-person development
 sample. Earlier categories and discussions informed selection, including deliberate
-selection for apparent co-occurrence. The [selection record](../reports/open_reading_selection_v1.json)
+selection for apparent co-occurrence. The [selection record](open_reading_selection_v1.json)
 and [workbook](OPEN_READING_WORKBOOK_v1.md) identify the cases. The eight development
 labels and previous NMF results remain unchanged background material.
 
@@ -43,8 +43,8 @@ The ten-document subset was purposive, not randomly sampled: it included all fou
 especially brief cases (#15, #11, #32, #49), together with #508, #413, #595, #407,
 #1 and #600 for contrasts in responsibility, relationships and religious expression.
 This describes the subset's composition, not a preregistered sampling rule or an
-independent test set. Its [reading conditions](../reports/reader_response_context_v1.json)
-and [original feedback](../reports/reader_response_v1.txt) are preserved.
+independent test set. Its [reading conditions](reader_response_context_v1.json)
+and [original feedback](reader_response_v1.txt) are preserved.
 
 ### Source boundaries
 The unit is a retained person-level document, not necessarily a complete or
@@ -192,7 +192,7 @@ assumed to remove the need for respectful contextual treatment.
 
 Reader B is anonymized. Reader A confirmed in writing in this conversation that
 Reader B agreed to anonymous paraphrase, direct quotation and publication of the
-complete response; the [context record](../reports/reader_response_context_v1.json)
+complete response; the [context record](reader_response_context_v1.json)
 documents that confirmation. This is not represented as a separately signed consent
 form from Reader B or as institutional ethics approval. Original wording and subsequent
 self-corrections are retained, and the frozen corpus and labels are unchanged.

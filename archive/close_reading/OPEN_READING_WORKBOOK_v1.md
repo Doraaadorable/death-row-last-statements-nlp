@@ -14,8 +14,8 @@ Reader B subsequently gave intentionally open-ended responses to a purposive
 before reading, according to Reader A's confirmation, and used translation help.
 The two exercises are not interchangeable coding tasks. The original memos below
 record Reader A's discussion, not Reader B's responses. The latter are preserved
-in [the response file](../reports/reader_response_v1.txt) with a
-[context record](../reports/reader_response_context_v1.json).
+in [the response file](reader_response_v1.txt) with a
+[context record](reader_response_context_v1.json).
 
 Initial reading prompts concerned exact wording, addressees, possible meanings,
 alternatives and uncertainty. They were guides, not mandatory categories. Memos

@@ -12,29 +12,13 @@ changes separately. Execution 82 is an indirect recorder summary; 83 and 238
 have no retained TF-IDF features. The current inclusion ledger is
 reports/inclusion_ledger_v2.csv.
 
-## Current contextual reading
-The main narrative is [RESEARCH_DRAFT.md](RESEARCH_DRAFT.md), with detailed
-memos in [OPEN_READING_WORKBOOK_v1.md](OPEN_READING_WORKBOOK_v1.md).
-Reader A is the project owner. Twenty candidate documents were purposively
-selected from the 50-person development sample; co-occurrence informed selection.
-Memo drafting and selection were AI-assisted, with Reader A discussing and
-revising interpretations. Source boundaries are listed in the draft, including
-#1's media/spoken merge and #49's extracted exchange. No original recording
-completeness, psychological scale or population prevalence is inferred.
+## Current study
+The [measurement study](../study/measurement_validity/README.md) compares a keyword dictionary, the NMF topic model below and an LLM with blind two-coder human coding of apology and innocence claims in a random sample of 150 statements. The 50 development records are excluded from that sample.
 
-Reader B subsequently read ten already selected texts: the four sparse cases
-#15, #11, #32, #49 and six contrasts #508, #413, #595, #407, #1, #600. Reader A
-confirmed no prior exposure to project interpretations, translation assistance
-and permission for anonymous paraphrase, quotation and complete publication.
-The intentionally open-ended instruction prioritized genuine feelings, without
-mandatory completion of the packet questions. Original feedback and context are
-in reports/reader_response_v1.txt and reports/reader_response_context_v1.json.
-Permission is recorded through Reader A's written confirmation, not a separate
-signed reader form. No reliability coefficient or generalized audience effect
-is reported. The response does not change the frozen corpus or labels.
+## Archived close reading
+An earlier qualitative reading of 20 purposively selected development records, with a second reader's open-ended response to ten of them, is in [archive/close_reading/](../archive/close_reading/). I drafted the memos and selection with AI assistance and revised the interpretations myself. It is kept as a record and is not part of the current study.
 
-The NMF and predicate workflows below are earlier supporting work. Institutional
-Ramirez/Murphy material is an appendix, separate from the 20-document comparison.
+The NMF and predicate workflows below are earlier supporting work.
 
 ## Exploratory NMF
 Run python src/run_nmf_v2.py after preparing the released corpus. Numeric

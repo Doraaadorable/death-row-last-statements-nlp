@@ -16,3 +16,7 @@ results/prayer_sensitivity_v1/selected_prayer_records.csv
 
 results/short_text_sensitivity_v2/short_records_in_comparison.csv
 results/prayer_sensitivity_v2/selected_prayer_records.csv
+
+# Files extracted from the data-v1 snapshot
+SNAPSHOT_README.md
+snapshot_manifest.json

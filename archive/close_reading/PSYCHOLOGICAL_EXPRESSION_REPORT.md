@@ -25,7 +25,7 @@ The project inventory contains 603 execution records, leading to 480 candidate
 person-level documents, 479 prepared texts and 477 nonzero-feature NMF texts.
 The existing development sample has 50 people, ten per decade. The present
 reading uses the 20 complete candidate texts listed in
-[the reading selection](../reports/open_reading_selection_v1.json), chosen from
+[the reading selection](open_reading_selection_v1.json), chosen from
 that development material for contrast. Their selection used earlier categories
 and discussions; this is a purposive comparison, not a prevalence sample.
 
@@ -87,7 +87,7 @@ Every row retains denominator 50; unresolved means at least one of the two
 labels is u. The display is chosen for interpretive relevance after the reading,
 not as a prespecified hypothesis test. All 28 pairs, their full five-way counts
 and supporting execution IDs are available in the
-[machine-readable summary](../reports/expression_sample_descriptive_v1.json).
+[machine-readable summary](../../reports/expression_sample_descriptive_v1.json).
 
 | Pair of existing categories | Both present | At least one unresolved | Denominator |
 | --- | ---: | ---: | ---: |
@@ -244,11 +244,11 @@ of affection or faith.
 
 ## Relation to existing research
 The sources below were checked on 7 November 2026. The two previously outstanding papers have now been supplied and read; the
-[full-text comparison](LITERATURE_COMPARISON.md) records methods and page anchors.
+[full-text comparison](../../docs/LITERATURE_COMPARISON.md) records methods and page anchors.
 
 | Source | Evidence accessed and relevance | Consequence for this project |
 | --- | --- | --- |
-| Schuck & Ward (2008), [DOI](https://doi.org/10.1177/0957926507083687) | Relevant sections of author-uploaded text checked; see the [literature comparison](LITERATURE_COMPARISON.md) | The broad contextual approach has a direct precedent; it is not a new research gap |
+| Schuck & Ward (2008), [DOI](https://doi.org/10.1177/0957926507083687) | Relevant sections of author-uploaded text checked; see the [literature comparison](../../docs/LITERATURE_COMPARISON.md) | The broad contextual approach has a direct precedent; it is not a new research gap |
 | Hirschmüller & Egloff (2016), [full text](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.01985/full) | Methods/results: LIWC word proportions in 407 statements; more positive than negative emotion words | Word proportions answer a different question from the objects and functions of statements |
 | Eaton & Theuer (2009), [publication](https://doi.org/10.1080/07418820802245078) | Full text: separate apology, remorse, guilt and responsibility variables; 305 statements | Compare textual definitions and distinguish explicit peace from perceived peace |
 | Mehra et al. (2024), [full text](https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2024.1463692/full) | Methods/results: 466 statements, computational emotion/notion analysis including co-occurrence and sequencing | Neither mixed expression nor sequence alone can be claimed as novel |
@@ -558,7 +558,7 @@ also span very different periods and should not be treated as one uniform
 no-care control group.
 
 Reproduce with `python src/check_institutional_feasibility.py`. The
-[availability result](../reports/institutional_feasibility_v1.json) records input
+[availability result](../../reports/institutional_feasibility_v1.json) records input
 hashes, milestone sources and all group IDs. The script checks unique IDs and
 matching inventory/candidate dates. No statement or label is changed.
 

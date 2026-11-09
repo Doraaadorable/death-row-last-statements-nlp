@@ -1,14 +1,8 @@
 # Full-text literature comparison and research decision
 
-Current roles: Reader A is the project owner, whose guided readings underlie
-the 20-case memos. Reader B provided a subsequent open-ended response to ten
-known texts with translation assistance and no prior exposure to project
-interpretations, as confirmed by Reader A. The current narrative is
-[RESEARCH_DRAFT.md](RESEARCH_DRAFT.md); this document provides supporting detail.
+I compiled this comparison of the published studies on 8 November 2026. It records what each study measured, its denominators and coding procedures, and where my earlier close reading (now in [archive/close_reading/](../archive/close_reading/)) overlaps with published examples. It is also the basis for the current [measurement study](../study/measurement_validity/PROTOCOL.md): Eaton & Theuer (2009) supply the construct definitions and the two-coder reliability benchmark.
 
-
-Updated 8 November 2026 after targeted review of four additional supplied PDFs. The 20-case reading
-discussion is complete. This comparison requires no new Reader A annotation.
+In the sections below, "Reader A" is me and "Reader B" is the second reader of the archived close reading.
 
 ## Sources and access
 | Study | Material actually examined | Page convention |
