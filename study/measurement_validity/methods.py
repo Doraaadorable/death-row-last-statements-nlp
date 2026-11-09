@@ -76,8 +76,7 @@ def nmf_label(weights_row, construct):
 
 def nmf_top2_label(weights_row, construct):
     """Secondary rule (protocol v1.1): the topic is among the document's two largest
-    topics and has a nonzero weight. It asks whether the theme is present at all,
-    not whether it dominates the statement. Uses no labels."""
+    topics and has a nonzero weight. A looser rule than nmf_label; uses no labels."""
     values = {k: float(v) for k, v in weights_row.items() if k.startswith("topic_")}
     topic = NMF_TOPIC[construct]
     if values.get(topic, 0.0) <= 0:

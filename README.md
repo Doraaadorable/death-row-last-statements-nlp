@@ -1,17 +1,19 @@
 # Measuring Language in Texas Last Statements
 
-Can automated text analysis measure what people say in their final statements as reliably as careful human coding? This project builds a reproducible corpus of the last statements published by the Texas Department of Criminal Justice, then tests keyword, topic-model and LLM measures of **apology** and **innocence claims** against blind two-coder human coding.
+How reliably can automated text analysis measure what people say in their final words? This project builds a reproducible corpus of the last statements published by the Texas Department of Criminal Justice, then tests keyword, topic-model and LLM measures of **apology** and **innocence claims** against blind two-coder human coding.
 
 ## Current study: measurement validity
 
-Published studies of these statements code them by hand: Eaton & Theuer (2009) report two-coder kappas of .89–.99. Computational work often uses cheaper measures such as keyword lists, topic models or, more recently, language models. This study checks how specific versions of those measures compare with blind two-coder coding for two constructs where the wording is easy to misread: apology versus condolence, and denial versus accident or system criticism.
+Eaton & Theuer (2009) coded these statements by hand, with two-coder kappas of .89–.99. Computational studies of similar texts usually rely on cheaper measures: keyword lists, topic models and, more recently, language models. The two constructs studied here are easy to misread. An apology can look like condolence ("sorry for your loss"), and an innocence claim can look like an accident account or criticism of the system.
 
-- **Sample:** 150 statements drawn at random from the 430 outside the development sample. Neither coder had read them; 35 appear in earlier project records and are flagged for a sensitivity analysis.
-- **Reference standard:** two coders work independently with a codebook based on Eaton & Theuer's definitions, with three documented differences; kappa is reported before adjudication.
-- **Methods compared:** a keyword dictionary, two decision rules on the project's six-topic NMF model, and a zero-shot LLM (`claude-opus-5-5`), all frozen before coding starts. Results describe these specific rules, not every method of each type.
-- **Outputs:** precision, recall and F1 with bootstrap intervals, plus a categorised error analysis.
+- **Sample:** 150 statements drawn at random from the 430 outside the 50-statement development sample that both coders have read. 35 appear in earlier project records and are analysed as a separate group.
+- **Reference standard:** two coders work independently with a codebook built on Eaton & Theuer's definitions; kappa is reported before adjudication.
+- **Methods compared:** a keyword dictionary, two decision rules on the project's six-topic NMF model, and a zero-shot LLM (`claude-opus-5-5`), all frozen before coding. Results apply to these specific rules.
+- **Outputs:** precision, recall and F1 with bootstrap intervals, and a categorised account of every error.
 
-**Status:** the design, codebook, sample, method code and analysis code were frozen on 9 November 2026 and amended once before coding (version 1.1, `protocol_lock.json`). Human coding is under way; there are no results yet. Details: [study/measurement_validity/](study/measurement_validity/README.md).
+The error analysis is the main contribution: it shows which look-alikes each method counts as apology or innocence, and so what a reported count would actually measure. That is the groundwork for later work on psychological expression in last statements.
+
+**Status:** design frozen on 9 November 2026 (version 1.2, `protocol_lock.json`); human coding is under way. Details: [study/measurement_validity/](study/measurement_validity/README.md).
 
 ## Data
 
@@ -19,7 +21,7 @@ Source: [Texas Department of Criminal Justice, executed inmates](https://www.tdc
 
 - 603 execution records; 480 person-level statements; 477 with usable text features after preparation.
 - Speaker text is separated from recorder annotations, media statements and editorial insertions; see `src/prepare_model_text.py` and the inclusion ledger in `reports/`.
-- A 50-statement development sample was coded with an eight-category guide ([docs/ANNOTATION_GUIDE.md](docs/ANNOTATION_GUIDE.md)). It is used only for development and practice, never for evaluation.
+- A 50-statement development sample was coded with an eight-category guide ([docs/ANNOTATION_GUIDE.md](docs/ANNOTATION_GUIDE.md)). It serves for development and coder practice and is excluded from evaluation.
 
 The processed data are in the [data-v1 release](https://github.com/Doraaadorable/death-row-last-statements-nlp/releases/tag/data-v1) (SHA-256 `c56a4be1915cdaefd5ea1878da47d009f0cb9de8082401f7de241d42a7266168`). Extract it into the repository root.
 
@@ -43,11 +45,11 @@ Run the tests:
 python -m pytest
 ```
 
-Without the data snapshot, tests that need it are skipped. The syntax prototype tests also need `pip install -r requirements-syntax.txt`. Detailed workflows: [docs/METHODS.md](docs/METHODS.md).
+Tests that need the data snapshot are skipped until it is extracted. The syntax prototype tests also need `pip install -r requirements-syntax.txt`. Detailed workflows: [docs/METHODS.md](docs/METHODS.md).
 
-## Scope and ethics
+## Ethics
 
-These are public statements made in an institutional setting, recorded and edited by the state. The project measures what is said. It does not judge sincerity, guilt or mental state. Victims' families are among the people addressed, and the analysis does not present a speaker's claims about a case as established fact.
+These are public statements, made in an institutional setting and recorded and edited by the state. The project studies what is said: a speaker's account of a case is analysed as their account, and sincerity and guilt are outside its scope. Victims' families are among the people the statements address, and the analysis is written with that in mind.
 
 ## Repository
 
@@ -58,4 +60,4 @@ These are public statements made in an institutional setting, recorded and edite
 | `results/`, `reports/` | Model outputs and audit records |
 | `docs/` | Methods, annotation guide, literature comparison, topic-model notes ([index](docs/README.md)) |
 | `notebooks/` | Exploratory notebooks; 01 is the main entry point ([index](notebooks/README.md)) |
-| `archive/` | Earlier close reading and proposition/syntax experiments, kept as records ([index](archive/README.md)) |
+| `archive/` | Earlier close reading and proposition/syntax experiments ([index](archive/README.md)) |

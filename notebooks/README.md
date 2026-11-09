@@ -13,7 +13,7 @@ Start with **01**. Run notebooks from this folder after extracting the data-v1 s
 
 ## Archived proposition and syntax experiments
 
-Development-only work, described in [archive/claim_syntax_experiments/](../archive/claim_syntax_experiments/README.md). These notebooks use already-read documents and report no independent evaluation.
+Development work on documents I had already read, described in [archive/claim_syntax_experiments/](../archive/claim_syntax_experiments/README.md).
 
 | Notebook | Contents |
 |---|---|

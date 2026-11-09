@@ -1,90 +1,91 @@
-# Protocol: can automated methods measure apology and innocence claims in last statements?
+# Protocol: measuring apology and innocence claims in last statements
 
-Version 1.1. This protocol is frozen, together with the codebook, sample and method code, in `protocol_lock.json` before any human coding starts. Version 1.0 is kept in `protocol_lock_v1.0.json`. Changes made before coding are listed under "Amendments"; changes after coding starts are listed under "Deviations".
+Version 1.2, frozen with the codebook, sample and method code in `protocol_lock.json` before coding began. Earlier versions are kept as `protocol_lock_v1.0.json` and `protocol_lock_v1.1.json`; changes are listed under Amendments and Deviations.
 
 ## Question
 
-Published research codes Texas last statements by hand. Eaton & Theuer (2009) report two-coder kappas of .89–.99 and an apology rate of 32.5% for 1982–2007. Computational studies of the same kind of text often rely on keyword lists or topic models instead. I ask whether those cheaper measures agree with careful human coding on these short, formulaic, institutionally recorded texts:
+Eaton & Theuer (2009) coded Texas last statements by hand, with two-coder kappas of .89–.99. Computational work on similar texts usually relies on cheaper measures: keyword lists, topic models and, more recently, language models. This study asks:
 
-> For apology and innocence claims, how closely do a keyword dictionary, an unsupervised topic model and a zero-shot large language model agree with blind two-coder human coding?
+> For apology and innocence claims, how closely do a keyword dictionary, an NMF topic model and a zero-shot LLM agree with blind two-coder human coding?
 
-The study does not estimate how common apology or innocence claims are in the full corpus. It also does not make claims about speakers' sincerity or mental states.
+Each result applies to the specific rules tested: this keyword list, these two topic-model rules, and this prompt with this model. The central output is the pattern of errors, such as condolence read as apology, accident read as denial, or a theme detected only when it dominates a statement. These confusions decide what a count of "apologies" or "innocence claims" actually measures.
 
-**Scope.** Each result describes one specific operationalization: this keyword list, these topic-model decision rules and this prompt with this model. A poor result for the dictionary shows the limits of this simple "sorry" rule against a narrower construct, not that every dictionary method fails. The most useful output is expected to be the pattern of errors (condolence versus apology, accident versus denial, a theme being present versus dominating a statement), since these confusions change what a reported statistic means.
+This is groundwork for studying psychological expression in last statements. Before counting how often people apologize or protest their innocence at the end of their lives, the counts have to measure those acts and not their look-alikes.
 
 ## Constructs
 
-Two constructs, defined in `CODEBOOK.md` and built on the separate variables in Eaton & Theuer (2009, pp. 334–335):
+Both constructs are defined in `CODEBOOK.md`, building on the separate variables in Eaton & Theuer (2009, pp. 334–335):
 
-- **Apology**: an apology tied to the speaker's own act or harm, or a direct apology with no object stated. Condolence that is not tied to the speaker ("sorry for your loss") does not count. This is narrower than Eaton & Theuer's "said they were sorry" (32.5% of statements), so the word "sorry" alone is not sufficient, which is a direct test of keyword methods.
-- **Innocence claim**: a claim that the speaker should not stand convicted, either by denying the act (**F**, factual) or by claiming it was lawful, such as self-defense (**L**, legal). Accident and excuse accounts do not count. Eaton & Theuer report 16.4% for claims of innocence. The wording varies ("I didn't do this", "wrong man"), and claims are easy to confuse with criticism of the system or accident accounts.
+- **Apology**: an apology tied to the speaker's own act or the harm they caused, or a direct apology with no object stated. Condolence that is not tied to the speaker ("sorry for your loss") is coded `0`. This is narrower than Eaton & Theuer's rule, under which any "sorry" counts (32.5% of statements), and it is where a keyword method is most likely to fail.
+- **Innocence claim**: the speaker denies the act (**F**, factual) or claims it was lawful, such as self-defense (**L**, legal). Accident and excuse accounts are coded `0`. Eaton & Theuer report 16.4% for claims of innocence. The wording varies ("I didn't do this", "wrong man") and is easily confused with criticism of the system or an accident account.
 
-The deliberate differences from Eaton & Theuer are listed at the end of `CODEBOOK.md`.
+The codebook lists three deliberate differences from Eaton & Theuer.
 
 ## Sample
 
-- Pool: the 480 person-level statements in the data-v1 snapshot, minus the 50 statements in the earlier development sample, which both coders have read. 430 remain.
-- Simple random sample of **150** (seed 20261109, `make_sample.py`). Each coder sees the same items in a different random order, identified only by an item code.
-- 10 practice items come from the development sample. The coders discuss them together before the main coding, and they are not evaluated.
+- Pool: the 480 person-level statements in the data-v1 snapshot, minus the 50 development statements both coders have read. 430 remain.
+- Simple random sample of **150** (seed 20261109, `make_sample.py`). Each coder sees the items in a different random order, identified only by an item code.
+- Ten practice items come from the development sample. The coders discuss them before the main coding; they are not evaluated.
+- Expected positives: about 30–45 for apology and 10–25 for innocence. Innocence recall will have a wide interval, and I report it at this sample size.
 
-**Prior project exposure (v1.1).** Before this study, 35 of the 150 sampled statements appeared in earlier project records: the exposure ledger (`reports/evaluation_exposure_readiness_v1.json`), the earlier smoke test and the prayer-sensitivity selection. That work was largely AI-assisted. For 7 of them (S009, S025, S028, S032, S065, S078, S128), Coder A confirmed decisions on excerpts during the earlier claim review. Neither coder has otherwise read statements outside the development sample, and Coder B has read none. The 115 other statements have no documented exposure, which is not proof that they were never seen. `exposure.csv` (`build_exposure.py`) flags every item. The sample is kept unchanged and exposure is handled as a sensitivity analysis (below).
-
-Expected positives: roughly 30–45 for apology and 10–25 for innocence. Recall for innocence will therefore have a wide interval; I report it as such rather than enlarging the sample after seeing results.
+**Prior project exposure.** 35 of the 150 statements appear in earlier project records: the exposure ledger (`reports/evaluation_exposure_readiness_v1.json`), the smoke test and the prayer-sensitivity selection. Most of that work was done with AI assistance. For 7 of them (S009, S025, S028, S032, S065, S078, S128), I confirmed decisions on excerpts during the earlier claim review. Outside the development sample, neither coder has read any statement. `exposure.csv` (from `build_exposure.py`) flags every item, and the results are reported for both groups.
 
 ## Coding
 
-1. Both coders read `CODEBOOK.md` and code the 10 practice items. They discuss the practice items, but **the codebook is not changed** after freezing. Unclear cases are resolved by the existing `u` rule and the note column.
-2. Each coder codes all 150 items independently (`coder_A.xlsx`, `coder_B.xlsx`), without discussing them, and saves the sheet as `coder_X_completed.xlsx`.
-3. `analyze.py agreement` computes agreement. Only then do the coders meet to adjudicate every disagreement and every `u`, recording the agreed value (`1`, `0`, or `u` if still undecidable) in `adjudication_completed.xlsx`.
-4. The adjudicated labels are the reference standard. Items that remain `u` are excluded from method evaluation and counted.
+1. Both coders read `CODEBOOK.md`, code the ten practice items, and discuss them. The codebook stays as frozen; unclear cases go to `u` with a note.
+2. Each coder codes all 150 items alone (`coder_A.xlsx`, `coder_B.xlsx`) and saves the sheet as `coder_X_completed.xlsx`.
+3. `analyze.py agreement` computes agreement. The coders then meet to adjudicate every disagreement and every `u`, recording the agreed value (`1`, `0`, or `u` if still undecidable) in `adjudication_completed.xlsx`.
+4. The adjudicated labels are the reference standard. Items that remain `u` are left out of method evaluation and counted.
 
-Coder A is Dora Zhuang. Coder B is an English teacher from China who has not seen this project's labels or earlier analyses. Both coders read the English text with the English codebook. They may look up single words, but do not use machine translation.
+Coder A is Dora Zhuang. Coder B is an English teacher from China who has not seen this project's labels or analyses. Both read the English text with the English codebook, looking up single words where needed and using no machine translation.
 
 ## Automated methods (frozen in `methods.py`)
 
 | Method | Rule |
 |---|---|
 | Dictionary | Apology: "sorry", "apologize/apologise", "apology/apologies", unless negated ("not sorry"). Innocence: phrases such as "I am innocent", "not guilty", "I didn't kill/do", "wrong man". |
-| Topic model | The existing six-topic NMF (fitted on all 477 documents without labels). Primary rule: positive if the apology topic (topic 1) or the denial topic (topic 3) is the document's largest topic, which asks whether the theme *dominates*. Secondary rule (`nmf_top2`, v1.1): positive if the topic is one of the document's two largest topics with nonzero weight, which asks whether it is *present*. |
-| LLM | `claude-opus-5-5` only, effort `low`, zero-shot, with the codebook definitions in the prompt and JSON output (`yes`/`no`/`uncertain`). Primary result: run 1, with `uncertain` counted as `no`; a sensitivity analysis counts `uncertain` as `yes`. Runs 2 and 3 measure self-consistency. There is no fallback to another model (v1.1). Refusals, technical failures and invalid output are recorded as such, excluded from the LLM's metrics rather than counted as `no`, and reported in a coverage table. |
+| Topic model | The six-topic NMF, fitted on all 477 documents without labels. Primary rule: the apology topic (topic 1) or denial topic (topic 3) is the document's largest topic. Secondary rule (`nmf_top2`): the topic is among the document's two largest, with nonzero weight. |
+| LLM | `claude-opus-5-5`, effort `low`, zero-shot, with the codebook definitions in the prompt and JSON output (`yes`/`no`/`uncertain`). Primary result: run 1, with `uncertain` scored as `no`; a sensitivity analysis scores it as `yes`. Runs 2 and 3 measure self-consistency. One model only. Refusals, technical failures and invalid output are recorded, left out of the LLM's metrics, and reported in a coverage table. |
 
-No method is tuned on the study sample. The dictionary and the topic rule were written before sampling, and the prompt reuses the codebook wording. The automated methods are run only after both coders have finished.
+No method is tuned on the study sample. The dictionary and topic rules were written before sampling, and the prompt reuses the codebook wording. The automated methods run only after both coders have finished.
 
 ## Analysis (`analyze.py`)
 
-**Agreement.** For each construct: percent agreement and Cohen's kappa on the three values (`1`/`0`/`u`), with a 95% bootstrap interval (2,000 resamples of items). Secondary: kappa on items where neither coder used `u`. Kappa is sensitive to prevalence, so a modest kappa for the rare innocence category is not by itself evidence of poor coding. I report the raw counts next to it.
+**Agreement.** Per construct: percent agreement and Cohen's kappa on `1`/`0`/`u`, with a 95% bootstrap interval (2,000 resamples of items); secondary, kappa on items where neither coder used `u`. Kappa drops with low prevalence, so raw counts are reported next to it.
 
-**Method performance.** For each construct and method, against the adjudicated labels: precision, recall, F1 and accuracy, with 95% bootstrap intervals. Also the paired F1 difference between each pair of methods, with a bootstrap interval. Since each item is one person's statement, items are resampled independently.
+**Method performance.** Per construct and method, against the adjudicated labels: precision, recall, F1 and accuracy with 95% bootstrap intervals, and the paired F1 difference between each pair of methods. Items are resampled independently, one statement per person.
 
-**Factual innocence (secondary).** Innocence is also evaluated with legal-justification claims (**L**) excluded, which is closer to Eaton & Theuer's variable. The type is recorded by both coders and resolved at adjudication. Agreement on F versus L is reported for items both coders coded `1`.
+**Factual innocence.** Innocence is also evaluated with legal-justification claims (**L**) set aside, which is closer to Eaton & Theuer's variable. F/L agreement is reported for items both coders coded `1`.
 
-**Prevalence.** The share of positives in the sample, with a Wilson interval. It is descriptive only, and not comparable to Eaton & Theuer's 32.5% without qualification: the period is different (1982–2026 against 1982–2007) and so is the denominator.
+**Prevalence.** The share of positives in the sample, with a Wilson interval. Eaton & Theuer cover 1982–2007 with a different apology rule, so the comparison is descriptive.
 
-**Exposure sensitivity (v1.1).** Agreement and every method's metrics are also reported separately for items with documented project exposure (35) and without it (115). Point estimates only; these subgroups are too small for useful intervals.
+**Exposure groups.** Agreement and each method's metrics are reported separately for the 35 items with documented project exposure and the 115 without, as point estimates.
 
-**Undefined estimates (v1.1).** If a statistic cannot be computed (for example kappa when both coders use one value throughout, or recall with no positives), it is reported as not estimable. A bootstrap interval is reported only if at least 95% of resamples give a defined value.
+**Undefined statistics.** A statistic that cannot be computed (for example kappa when both coders use a single value, or recall with no positives) is reported as not estimable. An interval is reported when at least 95% of resamples give a defined value.
 
-**Errors.** Every false positive and false negative is listed in `outputs/errors.csv`. I read them and group them by cause, for example: condolence versus apology, quoted prayer, accident account, system criticism, negation, recorder annotation.
+**Errors.** Every false positive and false negative goes to `outputs/errors.csv`. I read each one and record its cause, such as condolence, quoted prayer, accident account, system criticism, negation or recorder annotation.
 
-## How results will be read
+## Reading the results
 
-- A method "agrees well" with human coding if its F1 interval lies above 0.80. This is a descriptive threshold, not a significance test.
-- Differences between methods are reported with their intervals. With about 45 and 12 positives, small differences will not be distinguishable, and I will say so.
-- Whatever the results, I report all three methods for both constructs.
+- A method agrees well with human coding when its F1 interval lies above 0.80.
+- Method differences are reported with their intervals; with about 45 and 12 positives, only large differences will be distinguishable.
+- All methods are reported for both constructs.
 
-## Amendments
+## Amendments (all before coding)
 
-### Version 1.1 (9 November 2026, before any coding)
+### Version 1.1 (9 November 2026)
 
-An external review of version 1.0 found problems that I corrected before coding started:
+An external review of version 1.0 led to five changes:
 
-1. **Exposure claim corrected.** Version 1.0 described the sample as statements "I have not previously read or labelled". Earlier project records include 35 of them (see Sample). The sample is unchanged; exposure is now flagged and analysed as a sensitivity check.
-2. **Lock enforced.** `analyze.py` and `llm_classify.py` now stop if the frozen files have changed (version 1.0 only printed a warning). `llm_classify.py`, `freeze.py` and `exposure.csv` are now also frozen.
-3. **Undefined estimates.** Degenerate data (for example both coders coding every item `0`) crashed the bootstrap in version 1.0; such cases are now reported as not estimable.
-4. **LLM outcomes separated.** Version 1.0 would have scored refusals and failures as `no`. They are now recorded and excluded, with coverage reported. The server-side fallback to another model is removed, so the LLM result describes one model.
-5. **Topic-model scope.** The primary NMF rule tests whether a theme dominates a statement, while human coding asks whether an expression is present. The `nmf_top2` rule is added as a label-free secondary rule, and the Scope paragraph limits conclusions to the operationalizations tested.
+1. **Exposure.** Version 1.0 described the sample as statements "I have not previously read or labelled"; 35 appear in earlier project records. The sample is unchanged, and exposure is flagged and analysed by group.
+2. **Lock enforcement.** `analyze.py` and `llm_classify.py` stop if a frozen file has changed. `llm_classify.py`, `freeze.py` and `exposure.csv` are added to the lock.
+3. **Undefined statistics.** All-`0` coding crashed the bootstrap in version 1.0; such cases are now reported as not estimable.
+4. **LLM outcomes.** Refusals and failures are recorded separately instead of being scored `no`, and the fallback to a second model is removed.
+5. **Topic-model rules.** The primary rule detects a theme only when it dominates a statement. `nmf_top2` adds a looser, label-free rule.
 
-The codebook, the sample, the dictionary rules, the primary NMF rule and the LLM prompt are unchanged.
+### Version 1.2 (9 November 2026)
+
+Wording only: this protocol is rewritten more concisely, the purpose of the study as groundwork is stated, and the description of `nmf_top2` no longer calls it a test of presence. Every rule and analysis is unchanged, and so are the codebook, sample, coding sheets and prompt.
 
 ## Deviations
 

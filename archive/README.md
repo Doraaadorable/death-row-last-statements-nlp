@@ -1,13 +1,13 @@
 # Archive
 
-Earlier work kept as records. Nothing here is part of the current [measurement study](../study/measurement_validity/README.md).
+Earlier stages of the project, kept as records. The current work is the [measurement study](../study/measurement_validity/README.md).
 
 - [close_reading/](#close_reading): qualitative reading of 20 development statements (8 November 2026)
 - [claim_syntax_experiments/](claim_syntax_experiments/README.md): proposition coding, rule and parser experiments (5–7 November 2026)
 
 ## close_reading/
 
-A qualitative reading of 20 purposively selected statements from the 50-person development sample (8 November 2026), with a second reader's open-ended response to ten of them. The selection and memo drafting were AI-assisted; I discussed and revised every interpretation. Co-occurrence of themes informed the selection, so the reading illustrates rather than estimates anything. The draft itself concludes that it agrees with prior research and does not establish a new finding, which is why the project moved to the measurement study.
+A qualitative reading of 20 statements chosen from the 50-person development sample for their themes (8 November 2026), with a second reader's open-ended response to ten of them. I selected the statements and drafted the memos with AI assistance, and revised every interpretation myself. Its conclusions largely matched published research, which is what led me to ask a measurement question instead.
 
 | File | Contents |
 |---|---|

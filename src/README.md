@@ -37,7 +37,7 @@ Run scripts from the repository root, for example `python src/run_nmf_v2.py`. Mo
 
 ## 4. Archived proposition and syntax experiments
 
-Earlier development work, described in [archive/claim_syntax_experiments/](../archive/claim_syntax_experiments/README.md). The scripts still run and have tests, but they are not part of the current study.
+Earlier development work, described in [archive/claim_syntax_experiments/](../archive/claim_syntax_experiments/README.md). The scripts still run and are covered by tests.
 
 `semantic_screening.py`, `claim_adjudication_v3.py`, `audit_claim_consistency.py`, `audit_semantic_scope_v1.py`, `prepare_confirmed_claims.py`, `build_confirmed_snapshot40.py`, `build_evaluation_exposure_v1.py`, `focus_rules_v1.py`, `focus_candidates_v2.py`, `run_sampled_focus_smoke_v1.py`, `audit_smoke_failures_v1.py`, `run_candidate_structure_check_v2.py`, `selected_span_rules.py`, `run_selected_span_diagnostic.py`, `syntactic_candidates_v1.py`, `run_syntactic_candidates_v1.py`, `syntax_semantics_v1.py`, `run_syntax_semantics_v1.py`, `compare_confirmed_syntax_v1.py`
 
