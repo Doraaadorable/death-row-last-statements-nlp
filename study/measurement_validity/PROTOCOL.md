@@ -12,10 +12,12 @@ The study does not estimate how common apology or innocence claims are in the fu
 
 ## Constructs
 
-Two constructs, defined in `CODEBOOK.md` and aligned with the separate variables in Eaton & Theuer (2009, pp. 334–335):
+Two constructs, defined in `CODEBOOK.md` and built on the separate variables in Eaton & Theuer (2009, pp. 334–335):
 
-- **Apology**: common (about 30% of statements), with a clear lexical signal ("sorry") that is easy to over-count.
-- **Innocence claim**: rare (about 5–10%), with varied wording ("I didn't do this", "wrong man"), and easy to confuse with criticism of the system or accident accounts.
+- **Apology**: an apology tied to the speaker's own act or harm, or a direct apology with no object stated. Condolence that is not tied to the speaker ("sorry for your loss") does not count. This is narrower than Eaton & Theuer's "said they were sorry" (32.5% of statements), so the word "sorry" alone is not sufficient, which is a direct test of keyword methods.
+- **Innocence claim**: a claim that the speaker should not stand convicted, either by denying the act (**F**, factual) or by claiming it was lawful, such as self-defense (**L**, legal). Accident and excuse accounts do not count. Eaton & Theuer report 16.4% for claims of innocence. The wording varies ("I didn't do this", "wrong man"), and claims are easy to confuse with criticism of the system or accident accounts.
+
+The deliberate differences from Eaton & Theuer are listed at the end of `CODEBOOK.md`.
 
 ## Sample
 
@@ -23,7 +25,7 @@ Two constructs, defined in `CODEBOOK.md` and aligned with the separate variables
 - Simple random sample of **150** (seed 20261109, `make_sample.py`). Each coder sees the same items in a different random order, identified only by an item code.
 - 10 practice items come from the development sample. The coders discuss them together before the main coding, and they are not evaluated.
 
-Expected positives: about 45 for apology and about 10–15 for innocence. Recall for innocence will therefore have a wide interval; I report it as such rather than enlarging the sample after seeing results.
+Expected positives: roughly 30–45 for apology and 10–25 for innocence. Recall for innocence will therefore have a wide interval; I report it as such rather than enlarging the sample after seeing results.
 
 ## Coding
 
@@ -32,7 +34,7 @@ Expected positives: about 45 for apology and about 10–15 for innocence. Recall
 3. `analyze.py agreement` computes agreement. Only then do the coders meet to adjudicate every disagreement and every `u`, recording the agreed value (`1`, `0`, or `u` if still undecidable) in `adjudication_completed.xlsx`.
 4. The adjudicated labels are the reference standard. Items that remain `u` are excluded from method evaluation and counted.
 
-Coder A is Dora Zhuang. Coder B is a second reader who has not seen this project's labels or earlier analyses.
+Coder A is Dora Zhuang. Coder B is an English teacher from China who has not seen this project's labels or earlier analyses. Both coders read the English text with the English codebook. They may look up single words, but do not use machine translation.
 
 ## Automated methods (frozen in `methods.py`)
 
@@ -49,6 +51,8 @@ No method is tuned on the study sample. The dictionary and the topic rule were w
 **Agreement.** For each construct: percent agreement and Cohen's kappa on the three values (`1`/`0`/`u`), with a 95% bootstrap interval (2,000 resamples of items). Secondary: kappa on items where neither coder used `u`. Kappa is sensitive to prevalence, so a modest kappa for the rare innocence category is not by itself evidence of poor coding. I report the raw counts next to it.
 
 **Method performance.** For each construct and method, against the adjudicated labels: precision, recall, F1 and accuracy, with 95% bootstrap intervals. Also the paired F1 difference between each pair of methods, with a bootstrap interval. Since each item is one person's statement, items are resampled independently.
+
+**Factual innocence (secondary).** Innocence is also evaluated with legal-justification claims (**L**) excluded, which is closer to Eaton & Theuer's variable. The type is recorded by both coders and resolved at adjudication. Agreement on F versus L is reported for items both coders coded `1`.
 
 **Prevalence.** The share of positives in the sample, with a Wilson interval. It is descriptive only, and not comparable to Eaton & Theuer's 32.5% without qualification: the period is different (1982–2026 against 1982–2007) and so is the denominator.
 

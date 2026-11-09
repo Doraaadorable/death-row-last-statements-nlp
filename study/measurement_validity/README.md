@@ -1,6 +1,6 @@
 # Measurement study: apology and innocence claims
 
-**Status: design ready, not yet frozen. No coding done yet.**
+**Status: design frozen on 9 November 2026 (`protocol_lock.json`). Coding under way; no results yet.**
 
 Can a keyword dictionary, a topic model and an LLM measure apology and innocence claims in Texas last statements as well as blind two-coder human coding? The full design is in [PROTOCOL.md](PROTOCOL.md) and the definitions are in [CODEBOOK.md](CODEBOOK.md).
 
@@ -11,7 +11,7 @@ Can a keyword dictionary, a topic model and an LLM measure apology and innocence
 | 1 | Dora | Check both definitions in `CODEBOOK.md` against Eaton & Theuer (2009, pp. 334–335). Edit them if needed, and fill in "Differences from Eaton & Theuer". | `CODEBOOK.md` |
 | 2 | Dora | Freeze the design and commit the lock file. | `python study/measurement_validity/freeze.py` |
 | 3 | Both coders | Read the codebook, code `coding/practice.xlsx` separately, then discuss the 10 practice items together. | `coding/practice.xlsx` |
-| 4 | Each coder alone | Code all 150 items. Do not discuss them. Save as `coder_A_completed.xlsx` / `coder_B_completed.xlsx` in `coding/`. | `coding/coder_A.xlsx`, `coding/coder_B.xlsx` |
+| 4 | Each coder alone | Code all 150 items: `apology`, `innocence` and, when innocence is 1, `innocence_type` (F or L). Do not discuss them. Save as `coder_A_completed.xlsx` / `coder_B_completed.xlsx` in `coding/`. | `coding/coder_A.xlsx`, `coding/coder_B.xlsx` |
 | 5 | Dora | Compute agreement and create the adjudication sheet. | `python study/measurement_validity/analyze.py agreement` |
 | 6 | Both coders | Discuss each listed item and enter the agreed value. Save as `coding/adjudication_completed.xlsx`. | `coding/adjudication.xlsx` |
 | 7 | Dora | Run the LLM classifier (needs an Anthropic API key; about 450 requests). | `python study/measurement_validity/llm_classify.py` |

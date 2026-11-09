@@ -83,11 +83,11 @@ Code only what the speaker says. Ignore recorder or editorial notes in brackets 
 Quoted prayer or scripture counts only if the speaker uses it to speak in their own voice.
 Do not use outside knowledge about the case and do not judge sincerity."""
 
-LLM_INSTRUCTIONS = """Code the statement below for two variables. For each, answer "yes", "no" or "uncertain".
+LLM_INSTRUCTIONS = """Code the statement below for two variables. For each, answer "yes", "no" or "uncertain". Use "uncertain" only when the words could reasonably be read either way.
 
-APOLOGY: "yes" if the speaker explicitly apologizes, or says they are sorry, to someone, about something they did or a harm or loss connected to them. The recipient can be anyone. "Sorry" used as politeness is "no". A forgiveness request without apology or sorrow is "no". Remorse without apology words is "no". Sorrow about the situation with no harm or act tied to the speaker is "uncertain".
+APOLOGY: "yes" if the speaker apologizes, or says they are sorry, in a way that takes something on themselves: either the apology is tied to their own act or the harm they caused (for example "I'm sorry for what I did", "I'm sorry for the pain I caused my mother"), or it is a direct apology to someone with no object stated (for example "To the Smith family, I'm sorry"). The recipient can be anyone. "No" for: condolence that is not tied to the speaker ("I am so sorry for your loss", "I'm sorry for the pain you have been through"); sorrow about the situation ("I'm sorry it came to this"); "sorry" used as politeness; a forgiveness request without an apology; remorse or regret without an apology. If a statement has both a condolence and an apology, answer "yes".
 
-INNOCENCE: "yes" if the speaker asserts they did not commit the crime they are being executed for, or that they are innocent or wrongly convicted, including denying the killing while admitting being present. An accident or self-defense account that admits the act is "no". Criticism of the trial or the death penalty without denying the act is "no". A bare statement such as "God knows the truth" is "uncertain".
+INNOCENCE: "yes" if the speaker asserts they should not stand convicted, either by denying the act they were convicted of (for example "I am an innocent man", "I did not kill her", "I was there, but I didn't shoot anyone") or by admitting the act but claiming it was legally justified, such as self-defense. "No" for: an accident account that admits a wrongful act but disputes intent; an excuse such as intoxication; criticism of the trial, the lawyers or the death penalty without denying the act; a statement such as "God knows the truth" with no explicit denial.
 
 Statement:
 <statement>
