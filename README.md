@@ -4,14 +4,14 @@ Can automated text analysis measure what people say in their final statements as
 
 ## Current study: measurement validity
 
-Published studies of these statements code them by hand: Eaton & Theuer (2009) report two-coder kappas of .89–.99. Computational work often uses cheaper measures such as keyword lists or topic models. Whether those measures work on short, formulaic, institutionally recorded text has not been tested. This study tests it:
+Published studies of these statements code them by hand: Eaton & Theuer (2009) report two-coder kappas of .89–.99. Computational work often uses cheaper measures such as keyword lists, topic models or, more recently, language models. This study checks how specific versions of those measures compare with blind two-coder coding for two constructs where the wording is easy to misread: apology versus condolence, and denial versus accident or system criticism.
 
-- **Sample:** 150 statements drawn at random from 430 that I have not previously read or labelled.
+- **Sample:** 150 statements drawn at random from the 430 outside the development sample. Neither coder had read them; 35 appear in earlier project records and are flagged for a sensitivity analysis.
 - **Reference standard:** two coders work independently with a codebook based on Eaton & Theuer's definitions, with three documented differences; kappa is reported before adjudication.
-- **Methods compared:** a keyword dictionary, the project's six-topic NMF model and a zero-shot LLM (`claude-opus-5-5`), all frozen before coding starts.
+- **Methods compared:** a keyword dictionary, two decision rules on the project's six-topic NMF model, and a zero-shot LLM (`claude-opus-5-5`), all frozen before coding starts. Results describe these specific rules, not every method of each type.
 - **Outputs:** precision, recall and F1 with bootstrap intervals, plus a categorised error analysis.
 
-**Status:** the design, codebook, sample, method code and analysis code were frozen on 9 November 2026 (`protocol_lock.json`). Human coding is under way; there are no results yet. Details: [study/measurement_validity/](study/measurement_validity/README.md).
+**Status:** the design, codebook, sample, method code and analysis code were frozen on 9 November 2026 and amended once before coding (version 1.1, `protocol_lock.json`). Human coding is under way; there are no results yet. Details: [study/measurement_validity/](study/measurement_validity/README.md).
 
 ## Data
 

@@ -113,9 +113,74 @@ def test_end_to_end_with_simulated_coders(tmp_path, monkeypatch):
     adj["innocence_type"] = np.where(adj.innocence == "1", adj["A_type"].fillna("F").replace("", "F"), "")
     adj.to_excel(coding / "adjudication_completed.xlsx", sheet_name="coding", index=False)
 
+    # Simulated LLM output with every kind of non-answer.
+    outputs.mkdir(exist_ok=True)
+    llm_rows = []
+    for k, item in enumerate(sample.item_id):
+        answer = {0: "refused", 1: "failed", 2: "invalid", 3: "uncertain"}.get(k, "yes" if k % 3 else "no")
+        llm_rows.append({"run": 1, "item_id": item, "apology": answer, "innocence": answer, "status": "ok"})
+    pd.DataFrame(llm_rows).to_csv(outputs / "llm_predictions.csv", index=False)
+
     analyze.evaluate()
     metrics = pd.read_csv(outputs / "method_metrics.csv")
-    assert set(metrics.method) == {"dictionary", "nmf"}
+    assert set(metrics.method) == {"dictionary", "nmf", "nmf_top2", "llm", "llm_uncertain_as_1"}
     assert set(metrics.construct) == {"apology", "innocence", "innocence_factual"}
-    assert len(metrics) == 6
-    assert (outputs / "errors.csv").exists() and (outputs / "prevalence.csv").exists()
+    llm = metrics[(metrics.method == "llm") & (metrics.construct == "apology")].iloc[0]
+    assert llm.n_no_answer >= 1 and llm.n_evaluated <= 147  # refused/failed/invalid excluded, not scored 0
+    dictionary = metrics[(metrics.method == "dictionary") & (metrics.construct == "apology")].iloc[0]
+    assert dictionary.n_no_answer == 0
+    coverage = pd.read_csv(outputs / "llm_coverage.csv")
+    assert {"refused", "failed", "invalid", "uncertain"} <= set(coverage.answer)
+    sensitivity = pd.read_csv(outputs / "exposure_sensitivity.csv")
+    assert set(sensitivity.group) == {"documented project exposure", "no documented exposure"}
+    for name in ("errors.csv", "prevalence.csv", "method_differences.csv"):
+        assert (outputs / name).exists()
+
+    # An unexpected LLM answer must stop the evaluation rather than be scored.
+    bad = pd.DataFrame(llm_rows)
+    bad.loc[5, "apology"] = "maybe"
+    bad.to_csv(outputs / "llm_predictions.csv", index=False)
+    with pytest.raises(SystemExit):
+        analyze.evaluate()
+
+
+def test_bootstrap_degenerate_data_is_not_estimable():
+    zeros = np.array(["0"] * 150)
+    assert np.isnan(analyze.cohen_kappa(zeros, zeros))
+    lo, hi = analyze.bootstrap(lambda i: analyze.cohen_kappa(zeros[i], zeros[i]), 150)
+    assert np.isnan(lo) and np.isnan(hi)
+    assert all(np.isnan(analyze.bootstrap(lambda i: 1.0, 0)))
+    y = np.zeros(20, int)  # no positives: recall undefined in every resample
+    assert all(np.isnan(analyze.bootstrap(lambda i: analyze.classification_metrics(y[i], y[i])["recall"], 20)))
+
+
+def test_nmf_top2_rule():
+    row = {"topic_1": 0.2, "topic_2": 0.5, "topic_3": 0.1, "topic_4": 0.0, "topic_5": 0.0, "topic_6": 0.0}
+    assert methods.nmf_label(row, "apology") == 0      # not the largest topic
+    assert methods.nmf_top2_label(row, "apology") == 1  # but present among the top two
+    assert methods.nmf_top2_label(row, "innocence") == 0
+    assert methods.nmf_top2_label({f"topic_{i}": 0.0 for i in range(1, 7)}, "apology") == 0
+
+
+def test_freeze_check_detects_changes(tmp_path, monkeypatch):
+    import json
+    freeze = importlib.import_module("freeze")
+    lock = json.loads((STUDY / "protocol_lock.json").read_text())
+    lock["files"]["study/measurement_validity/methods.py"] = "0" * 64
+    fake = tmp_path / "protocol_lock.json"
+    fake.write_text(json.dumps(lock))
+    monkeypatch.setattr(freeze, "LOCK", fake)
+    assert freeze.check() is False
+    monkeypatch.setattr(freeze, "LOCK", tmp_path / "missing.json")
+    assert freeze.check() is False
+
+
+def test_amendment_refused_once_results_exist(tmp_path, monkeypatch):
+    freeze = importlib.import_module("freeze")
+    (tmp_path / "coding").mkdir()
+    (tmp_path / "coding" / "coder_A_completed.xlsx").write_text("x")
+    (tmp_path / "protocol_lock.json").write_text("{}")
+    monkeypatch.setattr(freeze, "HERE", tmp_path)
+    monkeypatch.setattr(freeze, "LOCK", tmp_path / "protocol_lock.json")
+    with pytest.raises(SystemExit, match="record a deviation"):
+        freeze.amend("9.9", "test")

@@ -41,12 +41,24 @@ def cohen_kappa(a, b, categories=VALUES):
     return float("nan") if expected == 1 else float((observed - expected) / (1 - expected))
 
 
+MIN_DEFINED_SHARE = 0.95  # protocol v1.1
+
+
 def bootstrap(stat, n, n_boot=N_BOOT, seed=BOOT_SEED):
-    """Percentile 95% interval of stat(index_array) over resampled items."""
+    """Percentile 95% interval of stat(index_array) over resampled items.
+
+    Returns (nan, nan), meaning "not estimable", when there are no items or when fewer
+    than 95% of resamples give a defined value (for example kappa when every resample
+    has a single category, or recall when resamples contain no positives).
+    """
+    if n == 0:
+        return float("nan"), float("nan")
     rng = np.random.default_rng(seed)
-    draws = np.array([stat(rng.integers(0, n, n)) for _ in range(n_boot)])
-    draws = draws[~np.isnan(draws)]
-    return float(np.percentile(draws, 2.5)), float(np.percentile(draws, 97.5))
+    draws = np.array([stat(rng.integers(0, n, n)) for _ in range(n_boot)], dtype=float)
+    defined = draws[~np.isnan(draws)]
+    if len(defined) < MIN_DEFINED_SHARE * n_boot:
+        return float("nan"), float("nan")
+    return float(np.percentile(defined, 2.5)), float(np.percentile(defined, 97.5))
 
 
 def classification_metrics(gold, pred):
@@ -125,6 +137,14 @@ def agreement():
                      "kappa2_ci_low": lo2, "kappa2_ci_high": hi2,
                      "coder_A_u": int((x == "u").sum()), "coder_B_u": int((y == "u").sum()),
                      "coder_A_positive": int((x == "1").sum()), "coder_B_positive": int((y == "1").sum())})
+    exposure = pd.read_csv(HERE / "exposure.csv").set_index("item_id").project_exposure.reindex(a.index)
+    for col in methods.CONSTRUCTS:
+        for group, flag in (("documented project exposure", 1), ("no documented exposure", 0)):
+            m = (exposure == flag).to_numpy()
+            x, y = a[col].to_numpy()[m], b[col].to_numpy()[m]
+            rows.append({"construct": f"{col} [{group}]", "n_items": int(m.sum()),
+                         "percent_agreement": float(np.mean(x == y)) if m.any() else float("nan"),
+                         "kappa_three_category": cohen_kappa(x, y)})
     both_innocent = (a.innocence == "1") & (b.innocence == "1")
     rows.append({"construct": "innocence_type (items both coded 1)", "n_items": int(both_innocent.sum()),
                  "percent_agreement": float(np.mean(a.innocence_type[both_innocent] == b.innocence_type[both_innocent]))
@@ -200,7 +220,8 @@ def automated_predictions(sample):
         for col in methods.CONSTRUCTS:
             rows.append({"item_id": item.item_id, "construct": col,
                          "dictionary": methods.dictionary_label(item.candidate_text, col),
-                         "nmf": methods.nmf_label(w, col)})
+                         "nmf": methods.nmf_label(w, col),
+                         "nmf_top2": methods.nmf_top2_label(w, col)})
     return pd.DataFrame(rows)
 
 
@@ -210,18 +231,30 @@ def evaluate():
     auto = automated_predictions(sample)
     llm_path = OUTPUTS / "llm_predictions.csv"
     if llm_path.exists():
-        llm = pd.read_csv(llm_path)
+        llm = pd.read_csv(llm_path, dtype=str)
+        coverage = (llm.melt(id_vars=["run", "item_id"], value_vars=list(methods.CONSTRUCTS),
+                             var_name="construct", value_name="answer")
+                    .groupby(["run", "construct", "answer"]).size().rename("count").reset_index())
+        coverage.to_csv(OUTPUTS / "llm_coverage.csv", index=False)
+        print(coverage.pivot_table(index=["run", "construct"], columns="answer", values="count", fill_value=0))
+        run1 = llm[llm.run == "1"].set_index("item_id")
         for col in methods.CONSTRUCTS:
-            primary = llm[llm.run == 1].set_index("item_id")[col]
-            auto.loc[auto.construct == col, "llm"] = auto.loc[auto.construct == col, "item_id"].map(
-                primary.map(lambda v: methods.LLM_VALUE.get(v, 0)))
+            answers = auto.loc[auto.construct == col, "item_id"].map(run1[col])
+            # Non-answers (refused, failed, invalid) stay missing; they are never scored as 0.
+            auto.loc[auto.construct == col, "llm"] = answers.map(methods.LLM_VALUE)
+            auto.loc[auto.construct == col, "llm_uncertain_as_1"] = answers.map(
+                {**methods.LLM_VALUE, "uncertain": 1})
+        unexpected = set(llm[list(methods.CONSTRUCTS)].stack()) - set(methods.LLM_VALUE) - set(methods.LLM_NON_ANSWERS)
+        if unexpected:
+            raise SystemExit(f"Unexpected LLM answers: {sorted(unexpected)}")
     else:
         print("No LLM predictions found; evaluating dictionary and NMF only.")
-    method_cols = [m for m in ("dictionary", "nmf", "llm") if m in auto.columns]
+    method_cols = [m for m in ("dictionary", "nmf", "nmf_top2", "llm", "llm_uncertain_as_1") if m in auto.columns]
     auto.to_csv(OUTPUTS / "auto_predictions.csv", index=False)
     gold.reset_index().to_csv(OUTPUTS / "gold_labels.csv", index=False)
 
-    metric_rows, diff_rows, prev_rows, error_rows = [], [], [], []
+    metric_rows, diff_rows, prev_rows, error_rows, exposure_rows = [], [], [], [], []
+    exposure = pd.read_csv(HERE / "exposure.csv").set_index("item_id").project_exposure
     texts = sample.merge(pd.read_csv(ROOT / "data/processed/person_corpus_exploratory_v1.csv",
                                      keep_default_na=False)[["execution_number", "candidate_text"]],
                          on="execution_number").set_index("item_id").candidate_text
@@ -235,32 +268,44 @@ def evaluate():
         lo, hi = wilson(int(y.sum()), len(y))
         prev_rows.append({"construct": col, "n": len(y), "excluded_u": int((g == "u").sum()),
                           "positives": int(y.sum()), "prevalence": float(y.mean()), "ci_low": lo, "ci_high": hi})
-        preds = auto[auto.construct == pred_col].set_index("item_id").loc[kept, method_cols].astype(int)
+        preds = auto[auto.construct == pred_col].set_index("item_id").loc[kept, method_cols]
+        gold_y = pd.Series(y, index=kept)
         for m in method_cols:
-            p = preds[m].to_numpy()
-            res = classification_metrics(y, p)
+            answered = preds[m].notna()
+            yy, p = gold_y[answered].to_numpy(), preds.loc[answered, m].astype(int).to_numpy()
+            res = classification_metrics(yy, p)
             for stat in ("precision", "recall", "f1"):
                 res[f"{stat}_ci_low"], res[f"{stat}_ci_high"] = bootstrap(
-                    lambda i, s=stat: classification_metrics(y[i], p[i])[s], len(y))
-            metric_rows.append({"construct": col, "method": m, **res})
-            for item, gv, pv in zip(kept, y, p):
+                    lambda i, s=stat: classification_metrics(yy[i], p[i])[s], len(yy))
+            metric_rows.append({"construct": col, "method": m, "n_evaluated": int(answered.sum()),
+                                "n_no_answer": int((~answered).sum()), **res})
+            for item, gv, pv in zip(preds.index[answered], yy, p):
                 if gv != pv:
                     error_rows.append({"construct": col, "method": m, "item_id": item,
                                        "error": "false_positive" if pv else "false_negative",
                                        "text": texts.loc[item]})
+            for group, flag in (("documented project exposure", 1), ("no documented exposure", 0)):
+                in_group = answered & (exposure.reindex(preds.index) == flag).to_numpy()
+                g_res = classification_metrics(gold_y[in_group].to_numpy(),
+                                               preds.loc[in_group, m].astype(int).to_numpy())
+                exposure_rows.append({"construct": col, "method": m, "group": group,
+                                      "n": int(in_group.sum()), **g_res})
         for i, m1 in enumerate(method_cols):
             for m2 in method_cols[i + 1:]:
-                p1, p2 = preds[m1].to_numpy(), preds[m2].to_numpy()
-                delta = classification_metrics(y, p2)["f1"] - classification_metrics(y, p1)["f1"]
-                lo_d, hi_d = bootstrap(lambda i: classification_metrics(y[i], p2[i])["f1"]
-                                       - classification_metrics(y[i], p1[i])["f1"], len(y))
-                diff_rows.append({"construct": col, "comparison": f"{m2} minus {m1}", "f1_difference": delta,
-                                  "ci_low": lo_d, "ci_high": hi_d})
+                both = preds[m1].notna() & preds[m2].notna()
+                yy = gold_y[both].to_numpy()
+                p1, p2 = preds.loc[both, m1].astype(int).to_numpy(), preds.loc[both, m2].astype(int).to_numpy()
+                delta = classification_metrics(yy, p2)["f1"] - classification_metrics(yy, p1)["f1"]
+                lo_d, hi_d = bootstrap(lambda i: classification_metrics(yy[i], p2[i])["f1"]
+                                       - classification_metrics(yy[i], p1[i])["f1"], len(yy))
+                diff_rows.append({"construct": col, "comparison": f"{m2} minus {m1}", "n_items": int(both.sum()),
+                                  "f1_difference": delta, "ci_low": lo_d, "ci_high": hi_d})
     pd.DataFrame(prev_rows).to_csv(OUTPUTS / "prevalence.csv", index=False)
     metrics_df = pd.DataFrame(metric_rows)
     metrics_df.to_csv(OUTPUTS / "method_metrics.csv", index=False)
     pd.DataFrame(diff_rows).to_csv(OUTPUTS / "method_differences.csv", index=False)
     pd.DataFrame(error_rows).to_csv(OUTPUTS / "errors.csv", index=False)
+    pd.DataFrame(exposure_rows).to_csv(OUTPUTS / "exposure_sensitivity.csv", index=False)
     print(pd.DataFrame(prev_rows).round(3).to_string(index=False))
     print(metrics_df[["construct", "method", "precision", "recall", "f1", "f1_ci_low", "f1_ci_high"]]
           .round(3).to_string(index=False))
@@ -268,7 +313,11 @@ def evaluate():
 
 if __name__ == "__main__":
     import freeze
-    freeze.check()
     parser = argparse.ArgumentParser()
     parser.add_argument("step", choices=["agreement", "evaluate"])
-    {"agreement": agreement, "evaluate": evaluate}[parser.parse_args().step]()
+    parser.add_argument("--allow-unfrozen", action="store_true",
+                        help="run even if the design differs from protocol_lock.json (for testing only)")
+    args = parser.parse_args()
+    if not freeze.check() and not args.allow_unfrozen:
+        raise SystemExit("Stopped: the design does not match protocol_lock.json.")
+    {"agreement": agreement, "evaluate": evaluate}[args.step]()

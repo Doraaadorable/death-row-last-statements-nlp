@@ -66,11 +66,24 @@ NMF_TOPIC = {"apology": "topic_1", "innocence": "topic_3"}
 
 
 def nmf_label(weights_row, construct):
-    """weights_row: mapping topic_1..topic_6 -> weight. Zero-weight documents are 0."""
+    """Primary rule: the topic is the document's largest topic.
+    weights_row maps topic_1..topic_6 -> weight. Zero-weight documents are 0."""
     values = {k: float(v) for k, v in weights_row.items() if k.startswith("topic_")}
     if not values or max(values.values()) <= 0:
         return 0
     return int(max(values, key=values.get) == NMF_TOPIC[construct])
+
+
+def nmf_top2_label(weights_row, construct):
+    """Secondary rule (protocol v1.1): the topic is among the document's two largest
+    topics and has a nonzero weight. It asks whether the theme is present at all,
+    not whether it dominates the statement. Uses no labels."""
+    values = {k: float(v) for k, v in weights_row.items() if k.startswith("topic_")}
+    topic = NMF_TOPIC[construct]
+    if values.get(topic, 0.0) <= 0:
+        return 0
+    top2 = sorted(values, key=values.get, reverse=True)[:2]
+    return int(topic in top2)
 
 
 # ---------------------------------------------------------------- 3. LLM classifier
@@ -105,5 +118,9 @@ LLM_SCHEMA = {
 }
 
 # Primary scoring of the LLM: "yes" -> 1; "no" and "uncertain" -> 0.
-# The number of "uncertain" answers is reported separately.
+# The number of "uncertain" answers is reported separately, and a sensitivity
+# analysis scores "uncertain" as 1.
 LLM_VALUE = {"yes": 1, "no": 0, "uncertain": 0}
+# Protocol v1.1: these outcomes are not answers. They are excluded from LLM metrics
+# (never scored as 0) and reported as a coverage table.
+LLM_NON_ANSWERS = ("refused", "failed", "invalid")
