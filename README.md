@@ -9,7 +9,7 @@ Eaton & Theuer (2009) coded these statements by hand, with two-coder kappas of .
 - **Sample:** 150 statements drawn at random from the 430 outside the 50-statement development sample that both coders have read. 35 appear in earlier project records and are analysed as a separate group.
 - **Reference standard:** two coders work independently with a codebook built on Eaton & Theuer's definitions; kappa is reported before adjudication.
 - **Methods compared:** a keyword dictionary, two decision rules on the project's six-topic NMF model, and a zero-shot LLM (`claude-opus-5-5`), all frozen before coding. Results apply to these specific rules.
-- **Proposed addition (draft version 1.3):** a BERT classifier trained on Eaton & Theuer's expert codes, against a TF-IDF logistic-regression baseline trained on the same labels, with condolence coded separately so that their broader apology variable can be compared like for like.
+- **Proposed addition (draft version 1.3):** a BERT classifier trained on Eaton & Theuer's expert codes, against a TF-IDF logistic-regression baseline trained on the same labels, with condolence coded separately so that their broader apology variable can be approximated.
 - **Outputs:** precision, recall and F1 with bootstrap intervals, and a categorised account of every error.
 
 The error analysis is the main contribution: it shows which look-alikes each method counts as apology or innocence, and so what a reported count would actually measure. That is the groundwork for later work on psychological expression in last statements.

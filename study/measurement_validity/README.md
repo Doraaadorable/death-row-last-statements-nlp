@@ -28,8 +28,8 @@ Each coder needs about 2–3 hours for 150 statements (median 71 words each).
 
 | File | Purpose |
 |---|---|
-| `PROTOCOL.md`, `CODEBOOK.md` | Design and definitions (frozen) |
-| `methods.py` | Dictionary rules, topic-model rule, LLM prompt and schema (frozen) |
+| `PROTOCOL.md`, `CODEBOOK.md` | Design and definitions (version 1.3 draft; 1.2 frozen in `protocol_lock.json`) |
+| `methods.py` | Dictionary rules, topic-model rule, LLM prompt and schema |
 | `make_sample.py` | Drew the 150-item sample and wrote the coding sheets |
 | `build_exposure.py`, `exposure.csv` | Flags the 35 items that appear in earlier project records |
 | `sample.csv` | Item code to execution number |

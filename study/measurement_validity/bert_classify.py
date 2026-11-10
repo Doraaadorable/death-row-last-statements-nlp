@@ -75,6 +75,12 @@ def training_labels(source):
     else:
         labels = pd.read_csv(CODING / "eaton_theuer_labels.csv", dtype=str)
         labels["execution_number"] = labels.execution_number.astype(int)
+        duplicated = sorted(set(labels.execution_number[labels.execution_number.duplicated()]))
+        if duplicated:
+            raise SystemExit(f"Execution numbers appear more than once in the converted codes: {duplicated[:10]}")
+        unknown = sorted(set(labels.execution_number) - set(texts_by_execution().index))
+        if unknown:
+            raise SystemExit(f"Execution numbers not in the corpus: {unknown[:10]}; fix the matching first.")
         labels = labels.set_index("execution_number")[list(methods.CONSTRUCTS)]
         dropped = int(labels.index.isin(sample).sum())
         labels = labels[~labels.index.isin(sample)]
@@ -83,6 +89,11 @@ def training_labels(source):
     if bad:
         raise SystemExit(f"Training labels must be 1, 0 or u; found {sorted(bad)}")
     return labels, int(dropped), coders
+
+
+def has_both_classes(labels):
+    """A training subset needs positives and negatives; a run without them is skipped and reported."""
+    return labels.nunique() == 2
 
 
 def curve_subsets(index, fractions=CURVE_FRACTIONS, seed=CURVE_SEED):
@@ -186,7 +197,7 @@ def run(source, model_name=MODEL, seeds=SEEDS):
     test_texts = sample.execution_number.map(texts).tolist()
     labels, dropped, coders = training_labels(source)
 
-    rows, counts, revision = [], {}, None
+    rows, counts, revision, skipped = [], {}, None, []
     for construct in methods.CONSTRUCTS:
         coded = labels[construct][labels[construct] != "u"]
         counts[construct] = {"statements": int(len(coded)), "positives": int((coded == "1").sum()),
@@ -199,6 +210,10 @@ def run(source, model_name=MODEL, seeds=SEEDS):
         subsets = curve_subsets(coded.index)
         for size, members in subsets.items():
             subset = coded[coded.index.isin(members)]
+            if not has_both_classes(subset):
+                skipped.append({"construct": construct, "training_size": size, "reason": "single class"})
+                print(f"{construct}: {size} statements hold a single class; run skipped")
+                continue
             for seed in seeds:
                 probs, revision = train_and_predict(model_name, subset.index.map(texts).tolist(),
                                                     subset.tolist(), test_texts, seed, device)
@@ -211,7 +226,7 @@ def run(source, model_name=MODEL, seeds=SEEDS):
     meta = {"labels": source, "model": model_name, "model_revision": revision, "device": device,
             "gpu": torch.cuda.get_device_name(0) if device == "cuda" else None,
             "torch": torch.__version__, "transformers": transformers.__version__,
-            "training": counts, "dropped_study_sample_statements": dropped,
+            "training": counts, "dropped_study_sample_statements": dropped, "skipped_runs": skipped,
             "settings": {"max_tokens": MAX_TOKENS, "head_tokens": HEAD_TOKENS, "learning_rate": LEARNING_RATE,
                          "epochs": EPOCHS, "batch_size": BATCH_SIZE, "weight_decay": WEIGHT_DECAY,
                          "warmup_fraction": WARMUP_FRACTION, "seeds": list(seeds)}}

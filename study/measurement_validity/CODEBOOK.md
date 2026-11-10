@@ -1,6 +1,6 @@
 # Codebook: apology, condolence and innocence claims
 
-Version 1.1 (protocol version 1.3; version 1.0 had no condolence variable), frozen in `protocol_lock.json`. Do not edit after coding starts. Any later change needs a new version and a note in the protocol.
+Version 1.1: draft for protocol version 1.3, under review. Version 1.0, without the condolence variable, is the frozen version in `protocol_lock.json`. Do not edit after coding starts. Any later change needs a new version and a note in the protocol.
 
 These definitions build on Eaton & Theuer (2009, pp. 334–335), who code apology, remorse, forgiveness requests, empathy, responsibility, admission of guilt, innocence, accident and excuse as separate variables. Where this codebook deliberately differs, the difference is listed at the end.
 
@@ -50,7 +50,7 @@ If a statement contains both a condolence and an apology ("I'm sorry for your lo
 | "My heart goes out to you." / "I know you are hurting." (sympathy without "sorry" or "apologize") | `0` |
 | "Sorry, I forgot what I wanted to say." (politeness) | `0` |
 
-Condolence is coded independently of apology: a statement can be `1` for both. Together the two give Eaton & Theuer's broader apology variable, which counts any "sorry" (see the differences below).
+Condolence is coded independently of apology: a statement can be `1` for both. Together the two approximate Eaton & Theuer's broader apology variable, which counts any "sorry" (see the differences below).
 
 ## B. Innocence claim
 
@@ -77,6 +77,6 @@ Write anything that helps adjudication: "forgiveness request", "remorse", "accid
 
 ## Differences from Eaton & Theuer
 
-1. **Apology is narrower.** Eaton & Theuer code an apology whenever the speaker "specifically said they were sorry". Here, sorrow about the other person's loss or pain that is not tied to the speaker ("sorry for your loss") is `0` for apology and `1` for condolence, which is close to their separate *empathy* variable. Apology or condolence (`apology_broad` in the analysis) corresponds to their apology variable, and its prevalence is the one to set beside their 32.5%.
+1. **Apology is narrower.** Eaton & Theuer code an apology whenever the speaker "specifically said they were sorry". Here, sorrow about the other person's loss or pain that is not tied to the speaker ("sorry for your loss") is `0` for apology and `1` for condolence, which is close to their separate *empathy* variable. Apology or condolence (`apology_broad` in the analysis) approximates their apology variable, and its prevalence is the one to set beside their 32.5%. Whether every condolence in this sense, such as "sorry it came to this", counts as an apology for them is checked against their coding guide and, on the statements both studies coded, against their codes.
 2. **Innocence includes legal justification.** Eaton & Theuer code claims of innocence separately from accident and excuse accounts; a self-defense account would probably fall outside their innocence variable. Here, self-defense and similar justification claims are `1` and marked **L**, so results can be reported both with and without them. Accident and excuse accounts are `0`, as in their scheme.
 3. **No uncertain-by-default rule.** Eaton & Theuer code every coder disagreement as "unclear" (their value 3). Here, disagreements are resolved by adjudication, and `u` is kept only for genuinely undecidable text.

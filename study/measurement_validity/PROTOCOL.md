@@ -21,7 +21,7 @@ This is groundwork for studying psychological expression in last statements. Bef
 Both constructs are defined in `CODEBOOK.md`, building on the separate variables in Eaton & Theuer (2009, pp. 334–335):
 
 - **Apology**: an apology tied to the speaker's own act or the harm they caused, or a direct apology with no object stated. Condolence that is not tied to the speaker ("sorry for your loss") is coded `0`. This is narrower than Eaton & Theuer's rule, under which any "sorry" counts (32.5% of statements), and it is where a keyword method is most likely to fail.
-- **Condolence** (added in version 1.3): "sorry" about another person's loss or pain, or about the situation, not tied to the speaker's own act. It is coded by people only. Apology or condolence (`apology_broad`) corresponds to Eaton & Theuer's apology variable.
+- **Condolence** (added in version 1.3): "sorry" about another person's loss or pain, or about the situation, not tied to the speaker's own act. It is coded by people only. Apology or condolence (`apology_broad`) approximates Eaton & Theuer's apology variable; how closely is measured on the statements both studies coded (see Two teams of human coders).
 - **Innocence claim**: the speaker denies the act (**F**, factual) or claims it was lawful, such as self-defense (**L**, legal). Accident and excuse accounts are coded `0`. Eaton & Theuer report 16.4% for claims of innocence. The wording varies ("I didn't do this", "wrong man") and is easily confused with criticism of the system or an accident account.
 
 The codebook lists three deliberate differences from Eaton & Theuer.
@@ -56,7 +56,7 @@ No method is tuned on the study sample. The dictionary and topic rules were writ
 
 ## Supervised methods (version 1.3, `bert_classify.py`, `tfidf_classify.py`)
 
-**Primary training set: Eaton & Theuer's codes.** Their two raters coded 305 statements from executions in 1982–2007, with kappas of .89–.99. Their apology variable maps to `apology` and their claims-of-innocence variable to `innocence`; present is `1`, absent `0`, unclear `u` (their unclear also holds coder disagreements, which are therefore left out of training). Statements are matched to execution numbers by name and execution date. The codes are third-party data: they stay outside version control (`coding/eaton_theuer*` is in `.gitignore`), are used only under the terms the authors set, and only statistics derived from them are published. 98 of the 150 study-sample statements fall in their period; these are removed from training and used only for the comparison of the two teams of human coders below. The two coders of this study code only the study sample.
+**Primary training set: Eaton & Theuer's codes.** Their two raters coded 305 statements from executions in 1982–2007, with kappas of .89–.99. Their apology variable maps to `apology` and their claims-of-innocence variable to `innocence`; present is `1`, absent `0`, unclear `u` (their unclear also holds coder disagreements, which are therefore left out of training). Statements are matched to execution numbers by name and execution date. The codes are third-party data: they stay outside version control (`coding/eaton_theuer*` is in `.gitignore`), are used only under the terms the authors set, and only statistics derived from them are published. 98 of the 150 study-sample statements fall in their period; those they coded are removed from training and used only for the comparison of the two teams of human coders below. How many statements they coded, how many match this corpus, and so the size of the training set (at most about 200) and its positive counts are known only after matching. Matching stops on duplicate or unmatched execution numbers; the counts of matched, removed and usable statements and of positives are recorded in `outputs/<model>_run_eaton_theuer.json`. The two coders of this study code only the study sample.
 
 Their definitions differ from this codebook in two ways that shape the result (codebook differences 1 and 2):
 
@@ -67,7 +67,7 @@ Their definitions differ from this codebook in two ways that shape the result (c
 
 **Model and training.** `google-bert/bert-base-uncased`, fine-tuned separately for each construct as a binary classifier. Items coded `u` are left out of training. Statements longer than 512 tokens keep their first 128 and last 382 tokens. Learning rate 2e-5, 4 epochs, batch size 16, weight decay 0.01, linear schedule with 10% warmup, cross-entropy with the positive class weighted by the negative-to-positive ratio. These settings are fixed in advance: there is no hyperparameter search and no validation split. Five seeds are trained; the prediction is `1` when the mean positive-class probability over the five seeds is at least 0.5.
 
-**Learning curve.** The same recipe is also trained on nested random subsets of 25% and 50% of the training statements (seed 20261111), five seeds each.
+**Learning curve.** The same recipe is also trained on nested random subsets of 25% and 50% of the training statements (seed 20261111), five seeds each. A subset, or a full training set, that contains only one class is not trained; the run is listed as skipped and reported as not estimable. The training rules are not changed to fill it.
 
 The model revision, library versions, GPU and training counts are written to `outputs/bert_run_<labels>.json`.
 
@@ -102,7 +102,9 @@ The model revision, library versions, GPU and training counts are written to `ou
 - A method agrees well with human coding when its F1 interval lies above 0.80.
 - Method differences are reported with their intervals; with about 45 and 12 positives, only large differences will be distinguishable.
 - All methods are reported for both constructs.
-- The supervised method learns from expert human coding, so its result shows whether that coding is learnable from about 200 examples and transfers to this codebook; the learning curve shows whether more coded statements would be likely to help.
+- Errors on narrow apology that disappear under `apology_broad` are differences between coding definitions, not failures of a model; the two scores are reported side by side for that reason.
+- A model's score describes agreement with human coding of the text on this evaluation set. It is not evidence about the speakers' inner states.
+- The supervised method learns from expert human coding, so its result shows whether that coding is learnable from at most about 200 examples and transfers to this codebook; the learning curve shows whether more coded statements would be likely to help.
 
 ## Amendments (all before coding)
 
