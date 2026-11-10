@@ -7,7 +7,8 @@ Run on a GPU (Colab) after both coders have finished the study sample:
     python study/measurement_validity/bert_classify.py --labels eaton_theuer
 
 Training labels:
-  own            coding/train_A_completed.xlsx (coder A, frozen codebook, items in training_sample.csv)
+  own            coding/train_A_completed.xlsx and train_B_completed.xlsx (140 statements each,
+                 frozen codebook, items in training_sample.csv)
   eaton_theuer   coding/eaton_theuer_labels.csv (execution_number, apology, innocence as 1/0/u),
                  converted from Eaton & Theuer's codes; statements in the study sample are dropped
 
@@ -53,12 +54,21 @@ def texts_by_execution():
 
 
 def training_labels(source):
-    """Training statements with labels as strings 1/0/u, indexed by execution_number."""
+    """Training labels as strings 1/0/u indexed by execution_number, the number of study-sample
+    statements dropped, and which coder labelled each statement (None for Eaton & Theuer)."""
     sample = set(pd.read_csv(HERE / "sample.csv").execution_number)
+    coders = None
     if source == "own":
-        sheet = pd.read_excel(CODING / "train_A_completed.xlsx", sheet_name="coding", dtype=str)
-        sheet = sheet.merge(pd.read_csv(HERE / "training_sample.csv", dtype={"item_id": str}), on="item_id")
+        assignment = pd.read_csv(HERE / "training_sample.csv", dtype={"item_id": str})
+        sheets = []
+        for coder, items in assignment.groupby("coder"):
+            sheet = pd.read_excel(CODING / f"train_{coder}_completed.xlsx", sheet_name="coding", dtype=str)
+            if set(sheet.item_id) != set(items.item_id):
+                raise SystemExit(f"train_{coder}_completed.xlsx does not hold coder {coder}'s training items.")
+            sheets.append(sheet.merge(items, on="item_id"))
+        sheet = pd.concat(sheets)
         labels = sheet.set_index("execution_number")[list(methods.CONSTRUCTS)]
+        coders = sheet.set_index("execution_number").coder
         dropped = labels.index.isin(sample).sum()
         if dropped:
             raise SystemExit(f"{dropped} training statements are in the study sample.")
@@ -72,7 +82,7 @@ def training_labels(source):
     bad = set(labels.stack()) - {"1", "0", "u"}
     if bad:
         raise SystemExit(f"Training labels must be 1, 0 or u; found {sorted(bad)}")
-    return labels, int(dropped)
+    return labels, int(dropped), coders
 
 
 def curve_subsets(index, fractions=CURVE_FRACTIONS, seed=CURVE_SEED):
@@ -174,13 +184,18 @@ def run(source, model_name=MODEL, seeds=SEEDS):
     texts = texts_by_execution()
     sample = pd.read_csv(HERE / "sample.csv")
     test_texts = sample.execution_number.map(texts).tolist()
-    labels, dropped = training_labels(source)
+    labels, dropped, coders = training_labels(source)
 
     rows, counts, revision = [], {}, None
     for construct in methods.CONSTRUCTS:
         coded = labels[construct][labels[construct] != "u"]
         counts[construct] = {"statements": int(len(coded)), "positives": int((coded == "1").sum()),
                              "excluded_u": int((labels[construct] == "u").sum())}
+        if coders is not None:
+            counts[construct]["by_coder"] = {
+                c: {"statements": int((coders.reindex(coded.index) == c).sum()),
+                    "positives": int(((coders.reindex(coded.index) == c) & (coded == "1")).sum())}
+                for c in sorted(coders.unique())}
         subsets = curve_subsets(coded.index) if source == "own" else {len(coded): set(coded.index)}
         for size, members in subsets.items():
             subset = coded[coded.index.isin(members)]

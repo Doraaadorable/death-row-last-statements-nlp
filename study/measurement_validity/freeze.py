@@ -33,7 +33,8 @@ FROZEN = [
 ]
 RESULT_FILES = ["coding/coder_A_completed.xlsx", "coding/coder_B_completed.xlsx", "outputs/agreement.csv",
                 "outputs/llm_predictions.csv", "outputs/method_metrics.csv",
-                "coding/train_A_completed.xlsx", "outputs/bert_predictions_own.csv"]
+                "coding/train_A_completed.xlsx", "coding/train_B_completed.xlsx",
+                "outputs/bert_predictions_own.csv"]
 
 
 def sha(path):
