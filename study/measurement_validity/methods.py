@@ -123,3 +123,10 @@ LLM_VALUE = {"yes": 1, "no": 0, "uncertain": 0}
 # Protocol v1.1: these outcomes are not answers. They are excluded from LLM metrics
 # (never scored as 0) and reported as a coverage table.
 LLM_NON_ANSWERS = ("refused", "failed", "invalid")
+
+
+# ---------------------------------------------------------------- supervised method (protocol v1.3)
+
+# bert_classify.py trains five seeds on the full training set; the prediction is 1 when
+# the mean positive-class probability over the five seeds is at least this threshold.
+BERT_THRESHOLD = 0.5

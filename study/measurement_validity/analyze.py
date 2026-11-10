@@ -7,7 +7,9 @@
 2. After adjudication is filled in and saved as coding/adjudication_completed.xlsx:
        python study/measurement_validity/analyze.py evaluate
    Writes outputs/gold_labels.csv, outputs/auto_predictions.csv, outputs/method_metrics.csv,
-   outputs/method_differences.csv, outputs/prevalence.csv and outputs/errors.csv.
+   outputs/method_differences.csv, outputs/prevalence.csv and outputs/errors.csv; with BERT
+   predictions, also outputs/bert_seed_metrics.csv and outputs/coder_specific_f1.csv; with
+   Eaton & Theuer's codes, outputs/eaton_theuer_agreement.csv.
 """
 import argparse
 import sys
@@ -249,11 +251,24 @@ def evaluate():
             raise SystemExit(f"Unexpected LLM answers: {sorted(unexpected)}")
     else:
         print("No LLM predictions found; evaluating dictionary and NMF only.")
-    method_cols = [m for m in ("dictionary", "nmf", "nmf_top2", "llm", "llm_uncertain_as_1") if m in auto.columns]
+    bert_runs = {}
+    for source, name in (("own", "bert"), ("eaton_theuer", "bert_et")):
+        path = OUTPUTS / f"bert_predictions_{source}.csv"
+        if path.exists():
+            runs = pd.read_csv(path, dtype={"item_id": str})
+            bert_runs[name] = runs
+            full = runs[runs.training_size == runs.groupby("construct").training_size.transform("max")]
+            mean_prob = full.groupby(["item_id", "construct"]).prob.mean()
+            auto[name] = [int(mean_prob[(i, c)] >= methods.BERT_THRESHOLD)
+                          for i, c in zip(auto.item_id, auto.construct)]
+    method_cols = [m for m in ("dictionary", "nmf", "nmf_top2", "llm", "llm_uncertain_as_1", "bert", "bert_et")
+                   if m in auto.columns]
+    coders = {c: read_sheet(find_sheet(c)) for c in ("A", "B")}
     auto.to_csv(OUTPUTS / "auto_predictions.csv", index=False)
     gold.reset_index().to_csv(OUTPUTS / "gold_labels.csv", index=False)
 
     metric_rows, diff_rows, prev_rows, error_rows, exposure_rows = [], [], [], [], []
+    seed_rows, coder_rows, et_rows = [], [], []
     exposure = pd.read_csv(HERE / "exposure.csv").set_index("item_id").project_exposure
     texts = sample.merge(pd.read_csv(ROOT / "data/processed/person_corpus_exploratory_v1.csv",
                                      keep_default_na=False)[["execution_number", "candidate_text"]],
@@ -290,6 +305,22 @@ def evaluate():
                                                preds.loc[in_group, m].astype(int).to_numpy())
                 exposure_rows.append({"construct": col, "method": m, "group": group,
                                       "n": int(in_group.sum()), **g_res})
+        # BERT: every seed and training-set size separately (seed spread and learning curve).
+        for name, runs in bert_runs.items():
+            for (size, seed), run in runs[runs.construct == pred_col].groupby(["training_size", "seed"]):
+                prob = run.set_index("item_id").prob.reindex(kept)
+                seed_rows.append({"construct": col, "method": name, "training_size": size, "seed": seed,
+                                  **classification_metrics(y, (prob >= methods.BERT_THRESHOLD).astype(int))})
+        # Each method against each coder's own labels, before adjudication. A method trained on
+        # coder A's labels may agree more with coder A than with coder B.
+        if col in methods.CONSTRUCTS:
+            all_preds = auto[auto.construct == col].set_index("item_id")
+            for m in method_cols:
+                for coder, sheet in coders.items():
+                    raw = sheet[col].reindex(all_preds.index)
+                    use = raw.isin(["1", "0"]) & all_preds[m].notna()
+                    coder_rows.append({"construct": col, "method": m, "coder": coder, "n": int(use.sum()),
+                                       **classification_metrics(raw[use].astype(int), all_preds.loc[use, m].astype(int))})
         for i, m1 in enumerate(method_cols):
             for m2 in method_cols[i + 1:]:
                 both = preds[m1].notna() & preds[m2].notna()
@@ -300,6 +331,26 @@ def evaluate():
                                        - classification_metrics(yy[i], p1[i])["f1"], len(yy))
                 diff_rows.append({"construct": col, "comparison": f"{m2} minus {m1}", "n_items": int(both.sum()),
                                   "f1_difference": delta, "ci_low": lo_d, "ci_high": hi_d})
+    # Eaton & Theuer's codes against the adjudicated labels, for sample statements they coded.
+    et_path = CODING / "eaton_theuer_labels.csv"
+    if et_path.exists():
+        et = pd.read_csv(et_path, dtype=str).fillna("")
+        et["execution_number"] = et.execution_number.astype(int)
+        et = sample.merge(et, on="execution_number").set_index("item_id")
+        for col, et_col in targets.items():
+            both = gold.index.intersection(et.index)
+            g, e = gold.loc[both, col], et.loc[both, et_col].str.strip().str.lower()
+            use = g.isin(["1", "0"]) & e.isin(["1", "0"])
+            et_rows.append({"construct": col, "n_overlap": len(both), "n_compared": int(use.sum()),
+                            "agreement": float((g[use] == e[use]).mean()) if use.any() else float("nan"),
+                            "kappa": cohen_kappa(g[use], e[use], ("1", "0")),
+                            "both_1": int(((g[use] == "1") & (e[use] == "1")).sum()),
+                            "only_human_1": int(((g[use] == "1") & (e[use] == "0")).sum()),
+                            "only_eaton_theuer_1": int(((g[use] == "0") & (e[use] == "1")).sum())})
+        pd.DataFrame(et_rows).to_csv(OUTPUTS / "eaton_theuer_agreement.csv", index=False)
+    if seed_rows:
+        pd.DataFrame(seed_rows).to_csv(OUTPUTS / "bert_seed_metrics.csv", index=False)
+    pd.DataFrame(coder_rows).to_csv(OUTPUTS / "coder_specific_f1.csv", index=False)
     pd.DataFrame(prev_rows).to_csv(OUTPUTS / "prevalence.csv", index=False)
     metrics_df = pd.DataFrame(metric_rows)
     metrics_df.to_csv(OUTPUTS / "method_metrics.csv", index=False)

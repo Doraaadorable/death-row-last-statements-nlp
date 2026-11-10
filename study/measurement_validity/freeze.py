@@ -23,13 +23,17 @@ FROZEN = [
     "study/measurement_validity/methods.py",
     "study/measurement_validity/analyze.py",
     "study/measurement_validity/llm_classify.py",
+    "study/measurement_validity/bert_classify.py",
+    "study/measurement_validity/make_training_sample.py",
+    "study/measurement_validity/training_sample.csv",
     "study/measurement_validity/freeze.py",
     "study/measurement_validity/sample.csv",
     "study/measurement_validity/exposure.csv",
     "results/nmf_v2/document_weights_k6.csv",
 ]
 RESULT_FILES = ["coding/coder_A_completed.xlsx", "coding/coder_B_completed.xlsx", "outputs/agreement.csv",
-                "outputs/llm_predictions.csv", "outputs/method_metrics.csv"]
+                "outputs/llm_predictions.csv", "outputs/method_metrics.csv",
+                "coding/train_A_completed.xlsx", "outputs/bert_predictions_own.csv"]
 
 
 def sha(path):
