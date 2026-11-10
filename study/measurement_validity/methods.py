@@ -127,6 +127,6 @@ LLM_NON_ANSWERS = ("refused", "failed", "invalid")
 
 # ---------------------------------------------------------------- supervised method (protocol v1.3)
 
-# bert_classify.py trains five seeds on the full training set; the prediction is 1 when
-# the mean positive-class probability over the five seeds is at least this threshold.
-BERT_THRESHOLD = 0.5
+# Supervised methods (bert_classify.py, tfidf_classify.py): the prediction is 1 when the
+# positive-class probability, averaged over seeds for BERT, is at least this threshold.
+SUPERVISED_THRESHOLD = 0.5

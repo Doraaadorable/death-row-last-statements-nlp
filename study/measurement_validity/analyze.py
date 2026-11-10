@@ -8,7 +8,7 @@
        python study/measurement_validity/analyze.py evaluate
    Writes outputs/gold_labels.csv, outputs/auto_predictions.csv, outputs/method_metrics.csv,
    outputs/method_differences.csv, outputs/prevalence.csv and outputs/errors.csv; with BERT
-   predictions, also outputs/bert_seed_metrics.csv; always outputs/coder_specific_f1.csv and
+   or TF-IDF predictions, also outputs/supervised_run_metrics.csv; always outputs/coder_specific_f1.csv and
    outputs/method_agreement.csv; with
    Eaton & Theuer's codes, outputs/eaton_theuer_agreement.csv.
 """
@@ -268,18 +268,19 @@ def evaluate():
             raise SystemExit(f"Unexpected LLM answers: {sorted(unexpected)}")
     else:
         print("No LLM predictions found; evaluating dictionary and NMF only.")
-    bert_runs = {}
-    for source, name in (("eaton_theuer", "bert"), ("own", "bert_own")):
-        path = OUTPUTS / f"bert_predictions_{source}.csv"
+    supervised_runs = {}
+    for model, source, name in (("bert", "eaton_theuer", "bert"), ("bert", "own", "bert_own"),
+                                ("tfidf", "eaton_theuer", "tfidf"), ("tfidf", "own", "tfidf_own")):
+        path = OUTPUTS / f"{model}_predictions_{source}.csv"
         if path.exists():
             runs = pd.read_csv(path, dtype={"item_id": str})
-            bert_runs[name] = runs
+            supervised_runs[name] = runs
             full = runs[runs.training_size == runs.groupby("construct").training_size.transform("max")]
             mean_prob = full.groupby(["item_id", "construct"]).prob.mean()
-            auto[name] = [int(mean_prob[(i, c)] >= methods.BERT_THRESHOLD)
+            auto[name] = [int(mean_prob[(i, c)] >= methods.SUPERVISED_THRESHOLD)
                           for i, c in zip(auto.item_id, auto.construct)]
-    method_cols = [m for m in ("dictionary", "nmf", "nmf_top2", "llm", "llm_uncertain_as_1", "bert", "bert_own")
-                   if m in auto.columns]
+    method_cols = [m for m in ("dictionary", "nmf", "nmf_top2", "llm", "llm_uncertain_as_1",
+                               "tfidf", "tfidf_own", "bert", "bert_own") if m in auto.columns]
     coders = {c: read_sheet(find_sheet(c)) for c in ("A", "B")}
     auto.to_csv(OUTPUTS / "auto_predictions.csv", index=False)
     gold.reset_index().to_csv(OUTPUTS / "gold_labels.csv", index=False)
@@ -325,12 +326,12 @@ def evaluate():
                                                preds.loc[in_group, m].astype(int).to_numpy())
                 exposure_rows.append({"construct": col, "method": m, "group": group,
                                       "n": int(in_group.sum()), **g_res})
-        # BERT: every seed and training-set size separately (seed spread and learning curve).
-        for name, runs in bert_runs.items():
+        # Supervised methods: every seed and training-set size separately (seed spread, learning curve).
+        for name, runs in supervised_runs.items():
             for (size, seed), run in runs[runs.construct == pred_col].groupby(["training_size", "seed"]):
                 prob = run.set_index("item_id").prob.reindex(kept)
                 seed_rows.append({"construct": col, "method": name, "training_size": size, "seed": seed,
-                                  **classification_metrics(y, (prob >= methods.BERT_THRESHOLD).astype(int))})
+                                  **classification_metrics(y, (prob >= methods.SUPERVISED_THRESHOLD).astype(int))})
         # Each method against each coder's own labels, before adjudication. A trained method
         # may follow one coder's reading more closely than the other's.
         if col in methods.CONSTRUCTS:
@@ -377,7 +378,7 @@ def evaluate():
                             "only_eaton_theuer_1": int(((g[use] == "0") & (e[use] == "1")).sum())})
         pd.DataFrame(et_rows).to_csv(OUTPUTS / "eaton_theuer_agreement.csv", index=False)
     if seed_rows:
-        pd.DataFrame(seed_rows).to_csv(OUTPUTS / "bert_seed_metrics.csv", index=False)
+        pd.DataFrame(seed_rows).to_csv(OUTPUTS / "supervised_run_metrics.csv", index=False)
     pd.DataFrame(coder_rows).to_csv(OUTPUTS / "coder_specific_f1.csv", index=False)
     pd.DataFrame(pair_rows).to_csv(OUTPUTS / "method_agreement.csv", index=False)
     kept = gold.index[gold.condolence != "u"]

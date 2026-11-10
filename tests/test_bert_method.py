@@ -17,6 +17,7 @@ sys.path.insert(0, str(STUDY))
 import methods  # noqa: E402
 
 bert = importlib.import_module("bert_classify")
+tfidf = importlib.import_module("tfidf_classify")
 analyze = importlib.import_module("analyze")
 HAS_DATA = (ROOT / "data/processed/person_corpus_exploratory_v1.csv").exists()
 HAS_TORCH = importlib.util.find_spec("torch") is not None and importlib.util.find_spec("transformers") is not None
@@ -90,7 +91,7 @@ def _simulated_coding(coding, texts, rng):
 def test_bert_end_to_end(tmp_path, monkeypatch):
     coding, outputs = tmp_path / "coding", tmp_path / "outputs"
     coding.mkdir()
-    for module in (bert, analyze):
+    for module in (bert, tfidf, analyze):
         monkeypatch.setattr(module, "CODING", coding)
         monkeypatch.setattr(module, "OUTPUTS", outputs)
     corpus = pd.read_csv(ROOT / "data/processed/person_corpus_exploratory_v1.csv", keep_default_na=False)
@@ -132,10 +133,14 @@ def test_bert_end_to_end(tmp_path, monkeypatch):
     meta = pd.read_json(outputs / "bert_run_eaton_theuer.json", typ="series")
     assert meta["dropped_study_sample_statements"] == 150
 
+    for source in ("own", "eaton_theuer"):
+        tfidf.run(source)
     analyze.evaluate()
     metrics = pd.read_csv(outputs / "method_metrics.csv")
+    assert {"tfidf", "tfidf_own"} <= set(metrics.method)
     assert {"bert", "bert_own"} <= set(metrics.method)
-    seeds = pd.read_csv(outputs / "bert_seed_metrics.csv")
+    seeds = pd.read_csv(outputs / "supervised_run_metrics.csv")
+    assert set(seeds[seeds.method == "tfidf"].training_size) == {82, 165, 330}
     assert set(seeds[seeds.method == "bert_own"].training_size) == {69, 138, 275, 70, 140, 280}
     assert set(seeds[seeds.method == "bert"].training_size) == {82, 165, 330}  # 480 minus the 150 sample
     pairs = pd.read_csv(outputs / "method_agreement.csv")
@@ -157,6 +162,32 @@ def test_training_sheet_must_hold_the_coders_items(tmp_path, monkeypatch):
                                                   sheet_name="coding", index=False)
     with pytest.raises(SystemExit, match="does not hold"):
         bert.training_labels("own")
+
+
+@needs_data
+def test_tfidf_baseline_is_deterministic_and_learns(tmp_path, monkeypatch):
+    """Trained on dictionary labels, the baseline should recover the dictionary on the sample."""
+    coding, outputs = tmp_path / "coding", tmp_path / "outputs"
+    coding.mkdir()
+    for module in (bert, tfidf):
+        monkeypatch.setattr(module, "CODING", coding)
+        monkeypatch.setattr(module, "OUTPUTS", outputs)
+    for name in ("coder_A_completed.xlsx", "coder_B_completed.xlsx"):
+        (coding / name).write_text("x")
+    corpus = pd.read_csv(ROOT / "data/processed/person_corpus_exploratory_v1.csv", keep_default_na=False)
+    et = corpus[["execution_number"]].copy()
+    for col in methods.CONSTRUCTS:
+        et[col] = corpus.candidate_text.map(lambda t, c=col: methods.dictionary_label(t, c)).astype(str)
+    et.to_csv(coding / "eaton_theuer_labels.csv", index=False)
+    tfidf.run("eaton_theuer")
+    first = pd.read_csv(outputs / "tfidf_predictions_eaton_theuer.csv")
+    tfidf.run("eaton_theuer")
+    assert first.equals(pd.read_csv(outputs / "tfidf_predictions_eaton_theuer.csv"))
+    full = first[(first.construct == "apology") & (first.training_size == first.training_size.max())]
+    sample = pd.read_csv(STUDY / "sample.csv").merge(corpus, on="execution_number")
+    truth = sample.set_index("item_id").candidate_text.map(lambda t: methods.dictionary_label(t, "apology"))
+    pred = (full.set_index("item_id").prob >= methods.SUPERVISED_THRESHOLD).astype(int)
+    assert (pred == truth.reindex(pred.index)).mean() > 0.85
 
 
 def test_training_labels_reject_invalid_values(tmp_path, monkeypatch):

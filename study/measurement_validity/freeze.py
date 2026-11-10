@@ -20,10 +20,12 @@ LOCK = HERE / "protocol_lock.json"
 FROZEN = [
     "study/measurement_validity/PROTOCOL.md",
     "study/measurement_validity/CODEBOOK.md",
+    "study/measurement_validity/OSF_REGISTRATION.md",
     "study/measurement_validity/methods.py",
     "study/measurement_validity/analyze.py",
     "study/measurement_validity/llm_classify.py",
     "study/measurement_validity/bert_classify.py",
+    "study/measurement_validity/tfidf_classify.py",
     "study/measurement_validity/make_training_sample.py",
     "study/measurement_validity/training_sample.csv",
     "study/measurement_validity/freeze.py",
@@ -34,7 +36,8 @@ FROZEN = [
 RESULT_FILES = ["coding/coder_A_completed.xlsx", "coding/coder_B_completed.xlsx", "outputs/agreement.csv",
                 "outputs/llm_predictions.csv", "outputs/method_metrics.csv",
                 "coding/train_A_completed.xlsx", "coding/train_B_completed.xlsx",
-                "outputs/bert_predictions_eaton_theuer.csv", "outputs/bert_predictions_own.csv"]
+                "outputs/bert_predictions_eaton_theuer.csv", "outputs/bert_predictions_own.csv",
+                "outputs/tfidf_predictions_eaton_theuer.csv", "outputs/tfidf_predictions_own.csv"]
 
 
 def sha(path):

@@ -54,7 +54,7 @@ Coder A is Dora Zhuang. Coder B is an English teacher from China who has not see
 
 No method is tuned on the study sample. The dictionary and topic rules were written before sampling, and the prompt reuses the codebook wording. The automated methods run only after both coders have finished.
 
-## Supervised method (version 1.3, `bert_classify.py`)
+## Supervised methods (version 1.3, `bert_classify.py`, `tfidf_classify.py`)
 
 **Primary training set: Eaton & Theuer's codes.** Their two raters coded 305 statements from executions in 1982–2007, with kappas of .89–.99. Their apology variable maps to `apology` and their claims-of-innocence variable to `innocence`; present is `1`, absent `0`, unclear `u` (their unclear also holds coder disagreements, which are therefore left out of training). Statements are matched to execution numbers by name and execution date. The codes are third-party data: they stay outside version control (`coding/eaton_theuer*` is in `.gitignore`), are used only under the terms the authors set, and only statistics derived from them are published. 98 of the 150 study-sample statements fall in their period; these are removed from training and used only for the comparison of the two teams of human coders below. The two coders of this study code only the study sample.
 
@@ -71,13 +71,15 @@ Their definitions differ from this codebook in two ways that shape the result (c
 
 The model revision, library versions, GPU and training counts are written to `outputs/bert_run_<labels>.json`.
 
+**Supervised baseline (`tfidf_classify.py`).** TF-IDF on word unigrams and bigrams (lowercased, minimum document frequency 2, sublinear term frequency) with logistic regression (C = 1, balanced class weights, liblinear). It is trained on exactly the same statements, labels and learning-curve subsets as BERT, with settings fixed in advance. The fit is deterministic, so there is one run per training size. The comparison of `bert` with `tfidf` separates what BERT adds from what supervision on these labels alone achieves.
+
 ## Analysis (`analyze.py`)
 
 **Agreement.** Per construct: percent agreement and Cohen's kappa on `1`/`0`/`u`, with a 95% bootstrap interval (2,000 resamples of items); secondary, kappa on items where neither coder used `u`. Kappa drops with low prevalence, so raw counts are reported next to it.
 
 **Method performance.** Per construct and method, against the adjudicated labels: precision, recall, F1 and accuracy with 95% bootstrap intervals, and the paired F1 difference between each pair of methods. Items are resampled independently, one statement per person.
 
-**Supervised method.** `bert` (Eaton & Theuer's codes) and, if used, `bert_own` (this codebook) enter every table above as further methods, including the paired F1 differences. Cohen's kappa between the predictions of every pair of methods is reported (`method_agreement.csv`), so that the expected closeness of `bert` and the dictionary on apology is measured rather than assumed. Per seed and training size, F1 is reported without intervals (`bert_seed_metrics.csv`): the spread across seeds shows how stable fine-tuning is at this data size, and the three training sizes form the learning curve.
+**Supervised methods.** `bert` and `tfidf` (Eaton & Theuer's codes) and, if used, `bert_own` and `tfidf_own` (this codebook) enter every table above as further methods, including the paired F1 differences. Cohen's kappa between the predictions of every pair of methods is reported (`method_agreement.csv`), so that the expected closeness of `bert` and the dictionary on apology is measured rather than assumed. Per seed and training size, F1 is reported without intervals (`supervised_run_metrics.csv`): the spread across BERT seeds shows how stable fine-tuning is at this data size, and the three training sizes form the learning curve for both models.
 
 **Coder imprint.** Before adjudication, every method is scored against each coder's own labels (`coder_specific_f1.csv`). If the fallback training set is used, a gap between F1 against coder A and against coder B that is larger for `bert_own` than for the unsupervised methods would show the model following one coder's reading; training labels by coder are counted in `bert_run_own.json`.
 
@@ -125,9 +127,10 @@ Adds the supervised method, at the suggestion of the supervising professor, befo
 1. **Condolence** is added to the codebook (version 1.1) and the coding sheets, and `apology_broad` (apology or condolence) is added as a target, so that results can be set against Eaton & Theuer's apology variable without giving up the distinction between apology and condolence. No coding had started.
 2. **Primary training set**: Eaton & Theuer's codes, requested from the authors on 9 November 2026, with the mapping rules above.
 3. **Fallback training set**: the remaining 280 statements, 140 coded by each coder, used if the codes have not arrived by 15 January 2027 (`make_training_sample.py`, `training_sample.csv`, `coding/train_A.xlsx`, `coding/train_B.xlsx`).
-4. **`bert_classify.py`**, with the model and training settings above, and `BERT_THRESHOLD` in `methods.py`.
+4. **`bert_classify.py`** and the TF-IDF baseline **`tfidf_classify.py`**, with the settings above, and `SUPERVISED_THRESHOLD` in `methods.py`.
 5. **Analysis**: the supervised method in all tables, per-seed and learning-curve results, agreement between methods, coder-specific F1 and the comparison with Eaton & Theuer's codes (`analyze.py`).
-6. **Lock**: `bert_classify.py`, `make_training_sample.py` and `training_sample.csv` are added to the lock; the training sheets and BERT predictions are added to the results that block later amendments.
+6. **Registration**: when version 1.3 is frozen, it is registered on OSF with the text in `OSF_REGISTRATION.md`, with this protocol and the codebook attached.
+7. **Lock**: `OSF_REGISTRATION.md`, `bert_classify.py`, `tfidf_classify.py`, `make_training_sample.py` and `training_sample.csv` are added to the lock; the training sheets and supervised predictions are added to the results that block later amendments.
 
 The study sample, the items and order of the coding sheets, the unsupervised methods and the LLM prompt are unchanged.
 
