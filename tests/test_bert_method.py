@@ -79,6 +79,7 @@ def _simulated_coding(coding, texts, rng):
         for col in methods.CONSTRUCTS:
             truth = texts.candidate_text.map(lambda t, c=col: methods.dictionary_label(t, c)).astype(str)
             df[col] = np.where(rng.random(len(df)) < 0.1, rng.choice(["1", "0"], len(df)), truth)
+        df["condolence"] = "0"
         df["innocence_type"] = np.where(df.innocence == "1", "F", "")
         df.to_excel(coding / f"coder_{coder}_completed.xlsx", sheet_name="coding", index=False)
     df.to_excel(coding / "adjudication_completed.xlsx", sheet_name="coding", index=False)  # B's labels agreed

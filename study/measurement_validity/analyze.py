@@ -31,6 +31,9 @@ OUTPUTS = HERE / "outputs"
 N_BOOT = 2000
 BOOT_SEED = 20261110
 VALUES = ("1", "0", "u")
+# Human-coded variables: the method constructs plus condolence (codebook 1.1), which is
+# coded only by people and combines with apology into Eaton & Theuer's broader variable.
+CODED = (*methods.CONSTRUCTS, "condolence")
 
 
 # ---------------------------------------------------------------- statistics
@@ -88,9 +91,18 @@ def wilson(k, n, z=1.959964):
 
 # ---------------------------------------------------------------- inputs
 
+def apology_broad(apology, condolence):
+    """Eaton & Theuer's apology variable: apology or condolence; u when undecided and not 1."""
+    apology, condolence = np.asarray(apology), np.asarray(condolence)
+    return np.select([(apology == "1") | (condolence == "1"), (apology == "u") | (condolence == "u")],
+                     ["1", "u"], "0")
+
+
 def read_sheet(path):
     df = pd.read_excel(path, sheet_name="coding", dtype=str).fillna("")
-    for col in methods.CONSTRUCTS:
+    for col in CODED:
+        if col not in df.columns:
+            df[col] = ""
         df[col] = df[col].str.strip().str.lower().replace({"1.0": "1", "0.0": "0"})
     if "innocence_type" not in df.columns:
         df["innocence_type"] = ""
@@ -101,7 +113,7 @@ def read_sheet(path):
 
 
 def check_complete(df, name):
-    for col in methods.CONSTRUCTS:
+    for col in CODED:
         bad = df.index[~df[col].isin(VALUES)].tolist()
         if bad:
             raise SystemExit(f"{name}: {col} has missing or invalid values for {bad[:10]}")
@@ -126,7 +138,9 @@ def agreement():
     check_complete(b, "coder B")
     n = len(a)
     rows = []
-    for col in methods.CONSTRUCTS:
+    for df in (a, b):
+        df["apology_broad"] = apology_broad(df.apology, df.condolence)
+    for col in (*CODED, "apology_broad"):
         x, y = a[col].to_numpy(), b[col].to_numpy()
         k3 = cohen_kappa(x, y)
         lo3, hi3 = bootstrap(lambda i: cohen_kappa(x[i], y[i]), n)
@@ -141,7 +155,7 @@ def agreement():
                      "coder_A_u": int((x == "u").sum()), "coder_B_u": int((y == "u").sum()),
                      "coder_A_positive": int((x == "1").sum()), "coder_B_positive": int((y == "1").sum())})
     exposure = pd.read_csv(HERE / "exposure.csv").set_index("item_id").project_exposure.reindex(a.index)
-    for col in methods.CONSTRUCTS:
+    for col in CODED:
         for group, flag in (("documented project exposure", 1), ("no documented exposure", 0)):
             m = (exposure == flag).to_numpy()
             x, y = a[col].to_numpy()[m], b[col].to_numpy()[m]
@@ -157,30 +171,32 @@ def agreement():
     result.to_csv(OUTPUTS / "agreement.csv", index=False)
     print(result.round(3).to_string(index=False))
 
-    need = a.index[(a.apology != b.apology) | (a.innocence != b.innocence)
-                   | (a.apology == "u") | (a.innocence == "u")
-                   | (b.apology == "u") | (b.innocence == "u")
-                   | (both_innocent & (a.innocence_type != b.innocence_type))]
+    disagree = np.zeros(n, bool)
+    for col in CODED:
+        disagree |= ((a[col] != b[col]) | (a[col] == "u") | (b[col] == "u")).to_numpy()
+    need = a.index[disagree | (both_innocent & (a.innocence_type != b.innocence_type)).to_numpy()]
     wb = Workbook()
     ws = wb.active
     ws.title = "coding"
-    ws.append(["item_id", "text", "A_apology", "B_apology", "apology", "A_innocence", "B_innocence",
-               "innocence", "A_type", "B_type", "innocence_type", "A_note", "B_note", "decision_note"])
+    ws.append(["item_id", "text", "A_apology", "B_apology", "apology", "A_condolence", "B_condolence",
+               "condolence", "A_innocence", "B_innocence", "innocence", "A_type", "B_type", "innocence_type",
+               "A_note", "B_note", "decision_note"])
     for cell in ws[1]:
         cell.font = Font(bold=True)
     for item in need:
         ws.append([item, a.at[item, "text"], a.at[item, "apology"], b.at[item, "apology"], None,
+                   a.at[item, "condolence"], b.at[item, "condolence"], None,
                    a.at[item, "innocence"], b.at[item, "innocence"], None,
                    a.at[item, "innocence_type"], b.at[item, "innocence_type"], None,
                    a.at[item, "note"], b.at[item, "note"], None])
-    for col, width in {"A": 9, "B": 80, "E": 10, "H": 10, "K": 14, "L": 30, "M": 30, "N": 40}.items():
+    for col, width in {"A": 9, "B": 80, "E": 10, "H": 11, "K": 10, "N": 14, "O": 30, "P": 30, "Q": 40}.items():
         ws.column_dimensions[col].width = width
     for row in ws.iter_rows(min_row=2):
         for cell in row:
             cell.alignment = Alignment(wrap_text=True, vertical="top")
     wb.save(CODING / "adjudication.xlsx")
     print(f"\n{len(need)} items need discussion -> {CODING / 'adjudication.xlsx'}")
-    print("Fill the apology and innocence columns with the agreed value (1, 0 or u) for every row,")
+    print("Fill the apology, condolence and innocence columns with the agreed value (1, 0 or u) for every row,")
     print("and innocence_type (F or L) wherever the agreed innocence value is 1,")
     print("then save it as coding/adjudication_completed.xlsx.")
 
@@ -190,19 +206,19 @@ def agreement():
 def gold_labels():
     a, b = read_sheet(find_sheet("A")), read_sheet(find_sheet("B"))
     gold = pd.DataFrame(index=a.index)
-    for col in methods.CONSTRUCTS:
+    for col in CODED:
         gold[col] = np.where(a[col] == b[col], a[col], "")
     gold["innocence_type"] = np.where(a.innocence_type == b.innocence_type, a.innocence_type, "")
     path = CODING / "adjudication_completed.xlsx"
     if path.exists():
         adj = read_sheet(path)
-        for col in [*methods.CONSTRUCTS, "innocence_type"]:
+        for col in [*CODED, "innocence_type"]:
             gold.loc[adj.index, col] = adj[col]
     gold.loc[gold.innocence != "1", "innocence_type"] = ""
     missing_type = gold.index[(gold.innocence == "1") & ~gold.innocence_type.isin(["F", "L"])].tolist()
     if missing_type:
         raise SystemExit(f"innocence_type missing for adjudicated innocence claims: {missing_type[:10]}")
-    for col in methods.CONSTRUCTS:
+    for col in CODED:
         missing = gold.index[~gold[col].isin(VALUES)].tolist()
         if missing:
             raise SystemExit(f"Adjudication missing for {col}: {missing[:10]}")
@@ -276,7 +292,10 @@ def evaluate():
                          on="execution_number").set_index("item_id").candidate_text
     # Secondary target: factual innocence only (legal-justification claims are excluded).
     gold["innocence_factual"] = np.where(gold.innocence_type == "L", "u", gold.innocence)
-    targets = {"apology": "apology", "innocence": "innocence", "innocence_factual": "innocence"}
+    # Secondary target: Eaton & Theuer's broader apology (apology or condolence).
+    gold["apology_broad"] = apology_broad(gold.apology, gold.condolence)
+    targets = {"apology": "apology", "apology_broad": "apology",
+               "innocence": "innocence", "innocence_factual": "innocence"}
     for col, pred_col in targets.items():
         g = gold[col]
         kept = g.index[g != "u"]
@@ -361,6 +380,12 @@ def evaluate():
         pd.DataFrame(seed_rows).to_csv(OUTPUTS / "bert_seed_metrics.csv", index=False)
     pd.DataFrame(coder_rows).to_csv(OUTPUTS / "coder_specific_f1.csv", index=False)
     pd.DataFrame(pair_rows).to_csv(OUTPUTS / "method_agreement.csv", index=False)
+    kept = gold.index[gold.condolence != "u"]
+    k = int((gold.condolence[kept] == "1").sum())
+    lo, hi = wilson(k, len(kept))
+    prev_rows.append({"construct": "condolence", "n": len(kept), "excluded_u": int((gold.condolence == "u").sum()),
+                      "positives": k, "prevalence": k / len(kept) if len(kept) else float("nan"),
+                      "ci_low": lo, "ci_high": hi})
     pd.DataFrame(prev_rows).to_csv(OUTPUTS / "prevalence.csv", index=False)
     metrics_df = pd.DataFrame(metric_rows)
     metrics_df.to_csv(OUTPUTS / "method_metrics.csv", index=False)
