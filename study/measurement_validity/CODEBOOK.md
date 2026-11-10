@@ -54,7 +54,7 @@ Condolence is coded independently of apology: a statement can be `1` for both. T
 
 ## B. Innocence claim
 
-**`1`:** the speaker asserts that they should not stand convicted, either by denying the act or by claiming the act was lawful. In the note, write **F** or **L**:
+**`1`:** the speaker asserts that they should not stand convicted, either by denying the act or by claiming the act was lawful. In the `innocence_type` column, write **F** or **L**:
 
 - **F (factual):** denies doing what they were convicted of.
 - **L (legal):** admits the act but claims it was legally justified, for example self-defense or defense of another person.
@@ -73,7 +73,7 @@ Use `u` only when the words could reasonably be read either way, for example "I 
 
 ## Note column
 
-Write anything that helps adjudication: F or L for innocence claims, "forgiveness request", "remorse", "accident", "excuse", the reason for a `u`, or a transcription problem.
+Write anything that helps adjudication: "forgiveness request", "remorse", "accident", "excuse", the reason for a `u`, or a transcription problem.
 
 ## Differences from Eaton & Theuer
 
