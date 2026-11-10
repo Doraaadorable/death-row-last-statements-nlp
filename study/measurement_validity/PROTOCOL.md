@@ -1,6 +1,6 @@
 # Protocol: measuring apology and innocence claims in last statements
 
-Version 1.3, frozen with the codebook, samples and method code in `protocol_lock.json` before coding of the study sample was completed. Earlier versions are kept as `protocol_lock_v1.0.json` to `protocol_lock_v1.2.json`; changes are listed under Amendments and Deviations.
+Version 1.3, frozen with the codebook, samples and method code in `protocol_lock.json` before coding of the study sample began. Earlier versions are kept as `protocol_lock_v1.0.json` to `protocol_lock_v1.2.json`; changes are listed under Amendments and Deviations.
 
 ## Question
 
@@ -12,7 +12,7 @@ Version 1.3 adds a supervised question:
 
 > Can a BERT classifier trained on Eaton & Theuer's expert coding reproduce this study's blind human coding on statements it has not seen?
 
-Each result applies to the specific rules tested: this keyword list, these two topic-model rules, this prompt with this model, and this fine-tuning recipe with these training labels. For apology, the supervised result also measures how far a model carries Eaton & Theuer's broader definition into a narrower one. The central output is the pattern of errors, such as condolence read as apology, accident read as denial, or a theme detected only when it dominates a statement. These confusions decide what a count of "apologies" or "innocence claims" actually measures.
+Each result applies to the specific rules tested: this keyword list, these two topic-model rules, this prompt with this model, and this fine-tuning recipe with these training labels. For apology, every method is scored on both this codebook's definition and Eaton & Theuer's broader one, so the results also show how far a model trained on the broader definition separates apology from condolence. The central output is the pattern of errors, such as condolence read as apology, accident read as denial, or a theme detected only when it dominates a statement. These confusions decide what a count of "apologies" or "innocence claims" actually measures.
 
 This is groundwork for studying psychological expression in last statements. Before counting how often people apologize or protest their innocence at the end of their lives, the counts have to measure those acts and not their look-alikes.
 
@@ -21,6 +21,7 @@ This is groundwork for studying psychological expression in last statements. Bef
 Both constructs are defined in `CODEBOOK.md`, building on the separate variables in Eaton & Theuer (2009, pp. 334–335):
 
 - **Apology**: an apology tied to the speaker's own act or the harm they caused, or a direct apology with no object stated. Condolence that is not tied to the speaker ("sorry for your loss") is coded `0`. This is narrower than Eaton & Theuer's rule, under which any "sorry" counts (32.5% of statements), and it is where a keyword method is most likely to fail.
+- **Condolence** (added in version 1.3): "sorry" about another person's loss or pain, or about the situation, not tied to the speaker's own act. It is coded by people only. Apology or condolence (`apology_broad`) corresponds to Eaton & Theuer's apology variable.
 - **Innocence claim**: the speaker denies the act (**F**, factual) or claims it was lawful, such as self-defense (**L**, legal). Accident and excuse accounts are coded `0`. Eaton & Theuer report 16.4% for claims of innocence. The wording varies ("I didn't do this", "wrong man") and is easily confused with criticism of the system or an accident account.
 
 The codebook lists three deliberate differences from Eaton & Theuer.
@@ -59,7 +60,7 @@ No method is tuned on the study sample. The dictionary and topic rules were writ
 
 Their definitions differ from this codebook in two ways that shape the result (codebook differences 1 and 2):
 
-- **Apology.** They code an apology whenever the speaker said they were sorry, including sorrow for the family's loss; this codebook codes that as `0`. A model trained on their labels learns the broader definition and is expected to mark condolences as apologies when scored against the adjudicated labels. Its apology predictions are expected to be close to the keyword dictionary's, which detects the same word.
+- **Apology.** They code an apology whenever the speaker said they were sorry, including sorrow for the family's loss. A model trained on their labels learns this broader definition, so its primary apology comparison is with `apology_broad` (apology or condolence). Scored against this codebook's narrower apology, it is expected to mark condolences as apologies; that score measures whether anything in their labels lets the model separate the two. Its apology predictions are expected to be close to the keyword dictionary's, which detects the same word.
 - **Innocence.** Their variable probably excludes legal justification, so the model's innocence predictions are compared with factual innocence as well as with all innocence claims.
 
 **Fallback training set: this study's codebook.** If Eaton & Theuer's codes have not arrived by 15 January 2027, or cannot be matched to the corpus, the training set is the 280 statements outside the study sample and the development sample (`training_sample.csv`, `make_training_sample.py`, seed 20261111), split at random into 140 per coder. Each coder codes their half alone with the frozen codebook (`coding/train_A.xlsx`, `coding/train_B.xlsx`), after adjudication of the study sample. If both sets exist, both models are reported, `bert` (Eaton & Theuer) and `bert_own` (this codebook).
@@ -84,7 +85,9 @@ The model revision, library versions, GPU and training counts are written to `ou
 
 **Factual innocence.** Innocence is also evaluated with legal-justification claims (**L**) set aside, which is closer to Eaton & Theuer's variable. F/L agreement is reported for items both coders coded `1`.
 
-**Prevalence.** The share of positives in the sample, with a Wilson interval. Eaton & Theuer cover 1982–2007 with a different apology rule, so the comparison is descriptive.
+**Broad apology.** Every method's apology prediction is also scored against `apology_broad`, apology or condolence, which is `u` when neither is `1` and either is `u`. Agreement between the coders is reported for condolence and `apology_broad` as for the other variables, and condolence is adjudicated with them.
+
+**Prevalence.** The share of positives in the sample, with a Wilson interval, for every target and for condolence. Eaton & Theuer cover 1982–2007, so the comparison of `apology_broad` with their 32.5% is descriptive.
 
 **Exposure groups.** Agreement and each method's metrics are reported separately for the 35 items with documented project exposure and the 115 without, as point estimates.
 
@@ -117,15 +120,16 @@ Wording only: this protocol is rewritten more concisely, the purpose of the stud
 
 ### Version 1.3 (November 2026)
 
-Adds the supervised method, at the suggestion of the supervising professor, before either coder finished the study sample:
+Adds the supervised method, at the suggestion of the supervising professor, before either coder started the study sample:
 
-1. **Primary training set**: Eaton & Theuer's codes, requested from the authors on 9 November 2026, with the mapping rules above.
-2. **Fallback training set**: the remaining 280 statements, 140 coded by each coder, used if the codes have not arrived by 15 January 2027 (`make_training_sample.py`, `training_sample.csv`, `coding/train_A.xlsx`, `coding/train_B.xlsx`).
-3. **`bert_classify.py`**, with the model and training settings above, and `BERT_THRESHOLD` in `methods.py`.
-4. **Analysis**: the supervised method in all tables, per-seed and learning-curve results, agreement between methods, coder-specific F1 and the comparison with Eaton & Theuer's codes (`analyze.py`).
-5. **Lock**: `bert_classify.py`, `make_training_sample.py` and `training_sample.csv` are added to the lock; the training sheets and BERT predictions are added to the results that block later amendments.
+1. **Condolence** is added to the codebook (version 1.1) and the coding sheets, and `apology_broad` (apology or condolence) is added as a target, so that results can be set against Eaton & Theuer's apology variable without giving up the distinction between apology and condolence. No coding had started.
+2. **Primary training set**: Eaton & Theuer's codes, requested from the authors on 9 November 2026, with the mapping rules above.
+3. **Fallback training set**: the remaining 280 statements, 140 coded by each coder, used if the codes have not arrived by 15 January 2027 (`make_training_sample.py`, `training_sample.csv`, `coding/train_A.xlsx`, `coding/train_B.xlsx`).
+4. **`bert_classify.py`**, with the model and training settings above, and `BERT_THRESHOLD` in `methods.py`.
+5. **Analysis**: the supervised method in all tables, per-seed and learning-curve results, agreement between methods, coder-specific F1 and the comparison with Eaton & Theuer's codes (`analyze.py`).
+6. **Lock**: `bert_classify.py`, `make_training_sample.py` and `training_sample.csv` are added to the lock; the training sheets and BERT predictions are added to the results that block later amendments.
 
-The study sample, codebook, coding sheets, unsupervised methods and LLM prompt are unchanged.
+The study sample, the items and order of the coding sheets, the unsupervised methods and the LLM prompt are unchanged.
 
 ## Deviations
 
