@@ -133,11 +133,14 @@ def test_bert_end_to_end(tmp_path, monkeypatch):
 
     analyze.evaluate()
     metrics = pd.read_csv(outputs / "method_metrics.csv")
-    assert {"bert", "bert_et"} <= set(metrics.method)
+    assert {"bert", "bert_own"} <= set(metrics.method)
     seeds = pd.read_csv(outputs / "bert_seed_metrics.csv")
-    assert set(seeds[seeds.method == "bert"].training_size) == {69, 138, 275, 70, 140, 280}
+    assert set(seeds[seeds.method == "bert_own"].training_size) == {69, 138, 275, 70, 140, 280}
+    assert set(seeds[seeds.method == "bert"].training_size) == {82, 165, 330}  # 480 minus the 150 sample
+    pairs = pd.read_csv(outputs / "method_agreement.csv")
+    assert "dictionary vs bert" in set(pairs.methods)
     coder = pd.read_csv(outputs / "coder_specific_f1.csv")
-    assert set(coder.coder) == {"A", "B"} and "bert" in set(coder.method)
+    assert set(coder.coder) == {"A", "B"} and {"bert", "bert_own"} <= set(coder.method)
     agreement = pd.read_csv(outputs / "eaton_theuer_agreement.csv")
     assert (agreement.n_overlap == 150).all()
 

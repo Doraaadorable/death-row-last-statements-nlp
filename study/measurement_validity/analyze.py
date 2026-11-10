@@ -8,7 +8,8 @@
        python study/measurement_validity/analyze.py evaluate
    Writes outputs/gold_labels.csv, outputs/auto_predictions.csv, outputs/method_metrics.csv,
    outputs/method_differences.csv, outputs/prevalence.csv and outputs/errors.csv; with BERT
-   predictions, also outputs/bert_seed_metrics.csv and outputs/coder_specific_f1.csv; with
+   predictions, also outputs/bert_seed_metrics.csv; always outputs/coder_specific_f1.csv and
+   outputs/method_agreement.csv; with
    Eaton & Theuer's codes, outputs/eaton_theuer_agreement.csv.
 """
 import argparse
@@ -252,7 +253,7 @@ def evaluate():
     else:
         print("No LLM predictions found; evaluating dictionary and NMF only.")
     bert_runs = {}
-    for source, name in (("own", "bert"), ("eaton_theuer", "bert_et")):
+    for source, name in (("eaton_theuer", "bert"), ("own", "bert_own")):
         path = OUTPUTS / f"bert_predictions_{source}.csv"
         if path.exists():
             runs = pd.read_csv(path, dtype={"item_id": str})
@@ -261,14 +262,14 @@ def evaluate():
             mean_prob = full.groupby(["item_id", "construct"]).prob.mean()
             auto[name] = [int(mean_prob[(i, c)] >= methods.BERT_THRESHOLD)
                           for i, c in zip(auto.item_id, auto.construct)]
-    method_cols = [m for m in ("dictionary", "nmf", "nmf_top2", "llm", "llm_uncertain_as_1", "bert", "bert_et")
+    method_cols = [m for m in ("dictionary", "nmf", "nmf_top2", "llm", "llm_uncertain_as_1", "bert", "bert_own")
                    if m in auto.columns]
     coders = {c: read_sheet(find_sheet(c)) for c in ("A", "B")}
     auto.to_csv(OUTPUTS / "auto_predictions.csv", index=False)
     gold.reset_index().to_csv(OUTPUTS / "gold_labels.csv", index=False)
 
     metric_rows, diff_rows, prev_rows, error_rows, exposure_rows = [], [], [], [], []
-    seed_rows, coder_rows, et_rows = [], [], []
+    seed_rows, coder_rows, et_rows, pair_rows = [], [], [], []
     exposure = pd.read_csv(HERE / "exposure.csv").set_index("item_id").project_exposure
     texts = sample.merge(pd.read_csv(ROOT / "data/processed/person_corpus_exploratory_v1.csv",
                                      keep_default_na=False)[["execution_number", "candidate_text"]],
@@ -321,6 +322,14 @@ def evaluate():
                     use = raw.isin(["1", "0"]) & all_preds[m].notna()
                     coder_rows.append({"construct": col, "method": m, "coder": coder, "n": int(use.sum()),
                                        **classification_metrics(raw[use].astype(int), all_preds.loc[use, m].astype(int))})
+        if col in methods.CONSTRUCTS:
+            for i, m1 in enumerate(method_cols):
+                for m2 in method_cols[i + 1:]:
+                    both = all_preds[m1].notna() & all_preds[m2].notna()
+                    pair = all_preds.loc[both, [m1, m2]].astype(int).astype(str)
+                    pair_rows.append({"construct": col, "methods": f"{m1} vs {m2}", "n": int(both.sum()),
+                                      "agreement": float((pair[m1] == pair[m2]).mean()),
+                                      "kappa": cohen_kappa(pair[m1], pair[m2], ("1", "0"))})
         for i, m1 in enumerate(method_cols):
             for m2 in method_cols[i + 1:]:
                 both = preds[m1].notna() & preds[m2].notna()
@@ -351,6 +360,7 @@ def evaluate():
     if seed_rows:
         pd.DataFrame(seed_rows).to_csv(OUTPUTS / "bert_seed_metrics.csv", index=False)
     pd.DataFrame(coder_rows).to_csv(OUTPUTS / "coder_specific_f1.csv", index=False)
+    pd.DataFrame(pair_rows).to_csv(OUTPUTS / "method_agreement.csv", index=False)
     pd.DataFrame(prev_rows).to_csv(OUTPUTS / "prevalence.csv", index=False)
     metrics_df = pd.DataFrame(metric_rows)
     metrics_df.to_csv(OUTPUTS / "method_metrics.csv", index=False)
