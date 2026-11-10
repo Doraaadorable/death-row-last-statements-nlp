@@ -129,8 +129,7 @@ Adds the supervised method, at the suggestion of the supervising professor, befo
 3. **Fallback training set**: the remaining 280 statements, 140 coded by each coder, used if the codes have not arrived by 15 January 2027 (`make_training_sample.py`, `training_sample.csv`, `coding/train_A.xlsx`, `coding/train_B.xlsx`).
 4. **`bert_classify.py`** and the TF-IDF baseline **`tfidf_classify.py`**, with the settings above, and `SUPERVISED_THRESHOLD` in `methods.py`.
 5. **Analysis**: the supervised method in all tables, per-seed and learning-curve results, agreement between methods, coder-specific F1 and the comparison with Eaton & Theuer's codes (`analyze.py`).
-6. **Registration**: when version 1.3 is frozen, it is registered on OSF with the text in `OSF_REGISTRATION.md`, with this protocol and the codebook attached.
-7. **Lock**: `OSF_REGISTRATION.md`, `bert_classify.py`, `tfidf_classify.py`, `make_training_sample.py` and `training_sample.csv` are added to the lock; the training sheets and supervised predictions are added to the results that block later amendments.
+6. **Lock**: `bert_classify.py`, `tfidf_classify.py`, `make_training_sample.py` and `training_sample.csv` are added to the lock; the training sheets and supervised predictions are added to the results that block later amendments.
 
 The study sample, the items and order of the coding sheets, the unsupervised methods and the LLM prompt are unchanged.
 

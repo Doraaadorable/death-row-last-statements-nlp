@@ -20,7 +20,6 @@ LOCK = HERE / "protocol_lock.json"
 FROZEN = [
     "study/measurement_validity/PROTOCOL.md",
     "study/measurement_validity/CODEBOOK.md",
-    "study/measurement_validity/OSF_REGISTRATION.md",
     "study/measurement_validity/methods.py",
     "study/measurement_validity/analyze.py",
     "study/measurement_validity/llm_classify.py",
