@@ -20,3 +20,6 @@ results/prayer_sensitivity_v2/selected_prayer_records.csv
 # Files extracted from the data-v1 snapshot
 SNAPSHOT_README.md
 snapshot_manifest.json
+
+# Third-party annotations (Eaton & Theuer): never committed
+study/measurement_validity/coding/eaton_theuer*

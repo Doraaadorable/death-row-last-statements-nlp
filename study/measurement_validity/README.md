@@ -1,6 +1,6 @@
 # Measurement study: apology, condolence and innocence claims
 
-**Status: design version 1.3 (`protocol_lock.json`; earlier versions in `protocol_lock_v1.0.json` to `protocol_lock_v1.2.json`). Coding not yet started.**
+**Status: version 1.3 is a draft under review by the supervising professor; the last frozen version is 1.2 (`protocol_lock.json`). Coding has not started. Eaton & Theuer's codes have been requested and not yet received.**
 
 Can a keyword dictionary, a topic model, an LLM and a BERT classifier trained on Eaton & Theuer's coding measure apology and innocence claims in Texas last statements as well as blind two-coder human coding? The full design is in [PROTOCOL.md](PROTOCOL.md) and the definitions are in [CODEBOOK.md](CODEBOOK.md).
 

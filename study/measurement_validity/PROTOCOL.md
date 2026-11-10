@@ -1,6 +1,6 @@
 # Protocol: measuring apology and innocence claims in last statements
 
-Version 1.3, frozen with the codebook, samples and method code in `protocol_lock.json` before coding of the study sample began. Earlier versions are kept as `protocol_lock_v1.0.json` to `protocol_lock_v1.2.json`; changes are listed under Amendments and Deviations.
+**Version 1.3: draft under review by the supervising professor.** The last frozen version is 1.2 (`protocol_lock.json`; versions 1.0 and 1.1 in `protocol_lock_v1.0.json` and `protocol_lock_v1.1.json`). Version 1.3 will be frozen with the codebook, samples and method code before coding begins, and this paragraph updated. Changes are listed under Amendments and Deviations.
 
 ## Question
 
@@ -56,7 +56,7 @@ No method is tuned on the study sample. The dictionary and topic rules were writ
 
 ## Supervised method (version 1.3, `bert_classify.py`)
 
-**Primary training set: Eaton & Theuer's codes.** Their two raters coded 305 statements from executions in 1982–2007, with kappas of .89–.99. Their apology variable maps to `apology` and their claims-of-innocence variable to `innocence`; present is `1`, absent `0`, unclear `u` (their unclear also holds coder disagreements, which are therefore left out of training). Statements are matched to execution numbers by name and execution date. 98 of the 150 study-sample statements fall in their period; these are removed from training and used only for the comparison of the two teams of human coders below. The two coders of this study code only the study sample.
+**Primary training set: Eaton & Theuer's codes.** Their two raters coded 305 statements from executions in 1982–2007, with kappas of .89–.99. Their apology variable maps to `apology` and their claims-of-innocence variable to `innocence`; present is `1`, absent `0`, unclear `u` (their unclear also holds coder disagreements, which are therefore left out of training). Statements are matched to execution numbers by name and execution date. The codes are third-party data: they stay outside version control (`coding/eaton_theuer*` is in `.gitignore`), are used only under the terms the authors set, and only statistics derived from them are published. 98 of the 150 study-sample statements fall in their period; these are removed from training and used only for the comparison of the two teams of human coders below. The two coders of this study code only the study sample.
 
 Their definitions differ from this codebook in two ways that shape the result (codebook differences 1 and 2):
 
