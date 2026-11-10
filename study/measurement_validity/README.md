@@ -17,6 +17,7 @@ Can a keyword dictionary, a topic model, an LLM and a BERT classifier trained on
 | 7 | Dora | Convert Eaton & Theuer's codes to `coding/eaton_theuer_labels.csv`. Only if they have not arrived by 15 January 2027: each coder codes 140 training statements instead (`coding/train_A.xlsx`, `coding/train_B.xlsx`). | `coding/eaton_theuer_labels.csv` |
 | 8 | Dora | Run the LLM classifier (needs an Anthropic API key; about 450 requests). | `python study/measurement_validity/llm_classify.py` |
 | 9 | Dora | Train BERT on a GPU (Colab) on Eaton & Theuer's codes (or, as fallback, `--labels own`). | `python study/measurement_validity/bert_classify.py --labels eaton_theuer` |
+| 9b | Dora | Train the TF-IDF baseline on the same labels (CPU, seconds). | `python study/measurement_validity/tfidf_classify.py --labels eaton_theuer` |
 | 10 | Dora | Evaluate all methods. | `python study/measurement_validity/analyze.py evaluate` |
 
 Each coder needs about 2–3 hours for 150 statements (median 71 words each).
@@ -37,6 +38,7 @@ Each coder needs about 2–3 hours for 150 statements (median 71 words each).
 | `llm_classify.py` | Runs the LLM classifier |
 | `make_training_sample.py`, `training_sample.csv` | Fallback training set: 280 statements, 140 per coder, and their coding sheets |
 | `bert_classify.py` | Fine-tunes and applies the BERT classifier |
+| `tfidf_classify.py` | Supervised baseline: TF-IDF with logistic regression, same training labels |
 | `analyze.py` | Agreement, adjudication sheet, method evaluation |
 | `outputs/` | Results (created by the scripts) |
 
