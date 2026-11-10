@@ -10,9 +10,9 @@ Eaton & Theuer (2009) coded Texas last statements by hand, with two-coder kappas
 
 Version 1.3 adds a supervised question:
 
-> Can a BERT classifier trained on human-coded statements reproduce that coding on statements it has not seen, and does it matter whose coding it learns from: this study's codebook or Eaton & Theuer's?
+> Can a BERT classifier trained on Eaton & Theuer's expert coding reproduce this study's blind human coding on statements it has not seen?
 
-Each result applies to the specific rules tested: this keyword list, these two topic-model rules, this prompt with this model, and this fine-tuning recipe with these training labels. The central output is the pattern of errors, such as condolence read as apology, accident read as denial, or a theme detected only when it dominates a statement. These confusions decide what a count of "apologies" or "innocence claims" actually measures.
+Each result applies to the specific rules tested: this keyword list, these two topic-model rules, this prompt with this model, and this fine-tuning recipe with these training labels. For apology, the supervised result also measures how far a model carries Eaton & Theuer's broader definition into a narrower one. The central output is the pattern of errors, such as condolence read as apology, accident read as denial, or a theme detected only when it dominates a statement. These confusions decide what a count of "apologies" or "innocence claims" actually measures.
 
 This is groundwork for studying psychological expression in last statements. Before counting how often people apologize or protest their innocence at the end of their lives, the counts have to measure those acts and not their look-alikes.
 
@@ -55,13 +55,18 @@ No method is tuned on the study sample. The dictionary and topic rules were writ
 
 ## Supervised method (version 1.3, `bert_classify.py`)
 
-**Training set A: this study's codebook.** All 280 statements outside the study sample and the development sample (`training_sample.csv`, `make_training_sample.py`, seed 20261111), split at random into 140 per coder. After adjudication of the study sample, each coder codes their half alone with the frozen codebook (`coding/train_A.xlsx`, `coding/train_B.xlsx`). Splitting the work means the training labels carry both coders' readings rather than one, at half the coding time each; the agreement measured on the study sample describes how consistent the two halves are. Together with the study sample and the development sample, this covers the whole corpus of 480 statements.
+**Primary training set: Eaton & Theuer's codes.** Their two raters coded 305 statements from executions in 1982–2007, with kappas of .89–.99. Their apology variable maps to `apology` and their claims-of-innocence variable to `innocence`; present is `1`, absent `0`, unclear `u` (their unclear also holds coder disagreements, which are therefore left out of training). Statements are matched to execution numbers by name and execution date. 98 of the 150 study-sample statements fall in their period; these are removed from training and used only for the comparison of the two teams of human coders below. The two coders of this study code only the study sample.
 
-**Training set B: Eaton & Theuer's codes, if they are received.** Their two raters coded 305 statements from executions in 1982–2007; 98 of the 150 study-sample statements fall in that period. Their apology variable maps to `apology` and their claims-of-innocence variable to `innocence`; present is `1`, absent `0`, unclear `u` (their unclear also holds coder disagreements, which are therefore left out of training). Statements are matched to execution numbers by name and execution date. Study-sample statements are removed from training; their codes are used only for the human comparison below. Their apology rule counts any "sorry", and their innocence variable probably excludes legal justification (codebook differences 1 and 2). Model B is therefore expected to over-detect apology relative to this codebook, and its innocence predictions are compared with factual innocence as well as with all innocence claims.
+Their definitions differ from this codebook in two ways that shape the result (codebook differences 1 and 2):
+
+- **Apology.** They code an apology whenever the speaker said they were sorry, including sorrow for the family's loss; this codebook codes that as `0`. A model trained on their labels learns the broader definition and is expected to mark condolences as apologies when scored against the adjudicated labels. Its apology predictions are expected to be close to the keyword dictionary's, which detects the same word.
+- **Innocence.** Their variable probably excludes legal justification, so the model's innocence predictions are compared with factual innocence as well as with all innocence claims.
+
+**Fallback training set: this study's codebook.** If Eaton & Theuer's codes have not arrived by 15 January 2027, or cannot be matched to the corpus, the training set is the 280 statements outside the study sample and the development sample (`training_sample.csv`, `make_training_sample.py`, seed 20261111), split at random into 140 per coder. Each coder codes their half alone with the frozen codebook (`coding/train_A.xlsx`, `coding/train_B.xlsx`), after adjudication of the study sample. If both sets exist, both models are reported, `bert` (Eaton & Theuer) and `bert_own` (this codebook).
 
 **Model and training.** `google-bert/bert-base-uncased`, fine-tuned separately for each construct as a binary classifier. Items coded `u` are left out of training. Statements longer than 512 tokens keep their first 128 and last 382 tokens. Learning rate 2e-5, 4 epochs, batch size 16, weight decay 0.01, linear schedule with 10% warmup, cross-entropy with the positive class weighted by the negative-to-positive ratio. These settings are fixed in advance: there is no hyperparameter search and no validation split. Five seeds are trained; the prediction is `1` when the mean positive-class probability over the five seeds is at least 0.5.
 
-**Learning curve.** For training set A, the same recipe is also trained on nested random subsets of 25% and 50% of the coded statements (seed 20261111), five seeds each.
+**Learning curve.** The same recipe is also trained on nested random subsets of 25% and 50% of the training statements (seed 20261111), five seeds each.
 
 The model revision, library versions, GPU and training counts are written to `outputs/bert_run_<labels>.json`.
 
@@ -71,9 +76,9 @@ The model revision, library versions, GPU and training counts are written to `ou
 
 **Method performance.** Per construct and method, against the adjudicated labels: precision, recall, F1 and accuracy with 95% bootstrap intervals, and the paired F1 difference between each pair of methods. Items are resampled independently, one statement per person.
 
-**Supervised method.** `bert` (training set A) and `bert_et` (training set B) enter every table above as further methods, including the paired F1 differences. Per seed and training size, F1 is reported without intervals (`bert_seed_metrics.csv`): the spread across seeds shows how stable fine-tuning is at this data size, and the three training sizes form the learning curve.
+**Supervised method.** `bert` (Eaton & Theuer's codes) and, if used, `bert_own` (this codebook) enter every table above as further methods, including the paired F1 differences. Cohen's kappa between the predictions of every pair of methods is reported (`method_agreement.csv`), so that the expected closeness of `bert` and the dictionary on apology is measured rather than assumed. Per seed and training size, F1 is reported without intervals (`bert_seed_metrics.csv`): the spread across seeds shows how stable fine-tuning is at this data size, and the three training sizes form the learning curve.
 
-**Coder imprint.** Before adjudication, every method is scored against each coder's own labels (`coder_specific_f1.csv`). A gap between F1 against coder A and against coder B that is larger for `bert` than for the unsupervised methods would show the model following one coder's reading rather than the codebook. Training labels by coder are counted in `bert_run_own.json`.
+**Coder imprint.** Before adjudication, every method is scored against each coder's own labels (`coder_specific_f1.csv`). If the fallback training set is used, a gap between F1 against coder A and against coder B that is larger for `bert_own` than for the unsupervised methods would show the model following one coder's reading; training labels by coder are counted in `bert_run_own.json`.
 
 **Two teams of human coders.** For study-sample statements that Eaton & Theuer coded, their codes are compared with the adjudicated labels: agreement, kappa and the counts of statements only one side marked `1` (`eaton_theuer_agreement.csv`).
 
@@ -92,7 +97,7 @@ The model revision, library versions, GPU and training counts are written to `ou
 - A method agrees well with human coding when its F1 interval lies above 0.80.
 - Method differences are reported with their intervals; with about 45 and 12 positives, only large differences will be distinguishable.
 - All methods are reported for both constructs.
-- The supervised method learns from human coding, so its result shows whether that coding is learnable from about 280 examples; the learning curve shows whether more coded statements would be likely to help.
+- The supervised method learns from expert human coding, so its result shows whether that coding is learnable from about 200 examples and transfers to this codebook; the learning curve shows whether more coded statements would be likely to help.
 
 ## Amendments (all before coding)
 
@@ -114,11 +119,11 @@ Wording only: this protocol is rewritten more concisely, the purpose of the stud
 
 Adds the supervised method, at the suggestion of the supervising professor, before either coder finished the study sample:
 
-1. **Training set A**: the remaining 280 statements, 140 coded by each coder after adjudication (`make_training_sample.py`, `training_sample.csv`, `coding/train_A.xlsx`, `coding/train_B.xlsx`).
-2. **Training set B**: Eaton & Theuer's codes, requested from the authors on 9 November 2026, with the mapping rules above. If they do not arrive, `bert_et` and the comparison of the two teams of coders are not reported.
+1. **Primary training set**: Eaton & Theuer's codes, requested from the authors on 9 November 2026, with the mapping rules above.
+2. **Fallback training set**: the remaining 280 statements, 140 coded by each coder, used if the codes have not arrived by 15 January 2027 (`make_training_sample.py`, `training_sample.csv`, `coding/train_A.xlsx`, `coding/train_B.xlsx`).
 3. **`bert_classify.py`**, with the model and training settings above, and `BERT_THRESHOLD` in `methods.py`.
-4. **Analysis**: the supervised method in all tables, per-seed and learning-curve results, coder-specific F1 and the comparison with Eaton & Theuer's codes (`analyze.py`).
-5. **Lock**: `bert_classify.py`, `make_training_sample.py` and `training_sample.csv` are added to the lock; `coding/train_A_completed.xlsx`, `coding/train_B_completed.xlsx` and `outputs/bert_predictions_own.csv` are added to the results that block later amendments.
+4. **Analysis**: the supervised method in all tables, per-seed and learning-curve results, agreement between methods, coder-specific F1 and the comparison with Eaton & Theuer's codes (`analyze.py`).
+5. **Lock**: `bert_classify.py`, `make_training_sample.py` and `training_sample.csv` are added to the lock; the training sheets and BERT predictions are added to the results that block later amendments.
 
 The study sample, codebook, coding sheets, unsupervised methods and LLM prompt are unchanged.
 

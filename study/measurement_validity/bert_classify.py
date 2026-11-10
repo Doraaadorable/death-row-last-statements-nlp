@@ -3,14 +3,14 @@
 Trains on human-coded statements outside the study sample and predicts the 150 sample items.
 Run on a GPU (Colab) after both coders have finished the study sample:
 
-    python study/measurement_validity/bert_classify.py --labels own
-    python study/measurement_validity/bert_classify.py --labels eaton_theuer
+    python study/measurement_validity/bert_classify.py --labels eaton_theuer   # primary
+    python study/measurement_validity/bert_classify.py --labels own            # fallback
 
 Training labels:
-  own            coding/train_A_completed.xlsx and train_B_completed.xlsx (140 statements each,
-                 frozen codebook, items in training_sample.csv)
   eaton_theuer   coding/eaton_theuer_labels.csv (execution_number, apology, innocence as 1/0/u),
                  converted from Eaton & Theuer's codes; statements in the study sample are dropped
+  own            coding/train_A_completed.xlsx and train_B_completed.xlsx (140 statements each,
+                 frozen codebook, items in training_sample.csv)
 
 Writes outputs/bert_predictions_<labels>.csv (item_id, construct, training_size, seed, prob)
 and outputs/bert_run_<labels>.json (model revision, library versions, training counts).
@@ -196,7 +196,7 @@ def run(source, model_name=MODEL, seeds=SEEDS):
                 c: {"statements": int((coders.reindex(coded.index) == c).sum()),
                     "positives": int(((coders.reindex(coded.index) == c) & (coded == "1")).sum())}
                 for c in sorted(coders.unique())}
-        subsets = curve_subsets(coded.index) if source == "own" else {len(coded): set(coded.index)}
+        subsets = curve_subsets(coded.index)
         for size, members in subsets.items():
             subset = coded[coded.index.isin(members)]
             for seed in seeds:
