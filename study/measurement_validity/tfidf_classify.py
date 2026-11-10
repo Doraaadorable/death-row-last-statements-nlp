@@ -7,10 +7,12 @@ in seconds, after both coders have finished the study sample:
     python study/measurement_validity/tfidf_classify.py --labels eaton_theuer   # primary
     python study/measurement_validity/tfidf_classify.py --labels own            # fallback
 
-Writes outputs/tfidf_predictions_<labels>.csv (item_id, construct, training_size, seed, prob).
+Writes outputs/tfidf_predictions_<labels>.csv (item_id, construct, training_size, seed, prob)
+and outputs/tfidf_run_<labels>.json (training counts and skipped runs).
 The fit is deterministic; seed is recorded as 0.
 """
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -48,19 +50,27 @@ def run(source):
     texts = bert_classify.texts_by_execution()
     sample = pd.read_csv(HERE / "sample.csv")
     test_texts = sample.execution_number.map(texts).tolist()
-    labels, _, _ = bert_classify.training_labels(source)
+    labels, dropped, _ = bert_classify.training_labels(source)
 
-    rows = []
+    rows, counts, skipped = [], {}, []
     for construct in methods.CONSTRUCTS:
         coded = labels[construct][labels[construct] != "u"]
+        counts[construct] = {"statements": int(len(coded)), "positives": int((coded == "1").sum()),
+                             "excluded_u": int((labels[construct] == "u").sum())}
         for size, members in bert_classify.curve_subsets(coded.index).items():
             subset = coded[coded.index.isin(members)]
+            if not bert_classify.has_both_classes(subset):
+                skipped.append({"construct": construct, "training_size": size, "reason": "single class"})
+                continue
             fitted = model().fit(subset.index.map(texts).tolist(), subset.astype(int).to_numpy())
             probs = fitted.predict_proba(test_texts)[:, 1]
             rows += [{"item_id": i, "construct": construct, "training_size": size, "seed": 0, "prob": float(p)}
                      for i, p in zip(sample.item_id, probs)]
     OUTPUTS.mkdir(exist_ok=True)
     pd.DataFrame(rows).to_csv(OUTPUTS / f"tfidf_predictions_{source}.csv", index=False)
+    meta = {"labels": source, "training": counts, "dropped_study_sample_statements": dropped,
+            "skipped_runs": skipped, "settings": {"ngrams": list(NGRAMS), "min_df": MIN_DF, "C": C}}
+    (OUTPUTS / f"tfidf_run_{source}.json").write_text(json.dumps(meta, indent=2) + "\n")
     print(f"TF-IDF baseline trained on {source} labels; predictions written.")
 
 

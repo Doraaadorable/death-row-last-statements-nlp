@@ -190,6 +190,38 @@ def test_tfidf_baseline_is_deterministic_and_learns(tmp_path, monkeypatch):
     assert (pred == truth.reindex(pred.index)).mean() > 0.85
 
 
+@needs_data
+@pytest.mark.parametrize("ids, message", [([1, 1], "more than once"), ([999999], "not in the corpus")])
+def test_eaton_theuer_matching_is_checked(tmp_path, monkeypatch, ids, message):
+    monkeypatch.setattr(bert, "CODING", tmp_path)
+    pd.DataFrame({"execution_number": ids, "apology": "1", "innocence": "0"}).to_csv(
+        tmp_path / "eaton_theuer_labels.csv", index=False)
+    with pytest.raises(SystemExit, match=message):
+        bert.training_labels("eaton_theuer")
+
+
+@needs_data
+def test_single_class_runs_are_skipped_and_reported(tmp_path, monkeypatch):
+    coding, outputs = tmp_path / "coding", tmp_path / "outputs"
+    coding.mkdir()
+    for module in (bert, tfidf):
+        monkeypatch.setattr(module, "CODING", coding)
+        monkeypatch.setattr(module, "OUTPUTS", outputs)
+    for name in ("coder_A_completed.xlsx", "coder_B_completed.xlsx"):
+        (coding / name).write_text("x")
+    corpus = pd.read_csv(ROOT / "data/processed/person_corpus_exploratory_v1.csv", keep_default_na=False)
+    et = corpus[["execution_number"]].copy()
+    et["apology"] = corpus.candidate_text.map(lambda t: methods.dictionary_label(t, "apology")).astype(str)
+    et["innocence"] = "0"  # no positives anywhere
+    et.to_csv(coding / "eaton_theuer_labels.csv", index=False)
+    tfidf.run("eaton_theuer")
+    meta = pd.read_json(outputs / "tfidf_run_eaton_theuer.json", typ="series")
+    assert {r["construct"] for r in meta["skipped_runs"]} == {"innocence"}
+    assert len(meta["skipped_runs"]) == 3
+    preds = pd.read_csv(outputs / "tfidf_predictions_eaton_theuer.csv")
+    assert set(preds.construct) == {"apology"}
+
+
 def test_training_labels_reject_invalid_values(tmp_path, monkeypatch):
     monkeypatch.setattr(bert, "CODING", tmp_path)
     pd.DataFrame({"execution_number": [1], "apology": ["yes"], "innocence": ["0"]}).to_csv(

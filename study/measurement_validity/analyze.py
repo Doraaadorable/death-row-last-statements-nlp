@@ -277,8 +277,9 @@ def evaluate():
             supervised_runs[name] = runs
             full = runs[runs.training_size == runs.groupby("construct").training_size.transform("max")]
             mean_prob = full.groupby(["item_id", "construct"]).prob.mean()
-            auto[name] = [int(mean_prob[(i, c)] >= methods.SUPERVISED_THRESHOLD)
-                          for i, c in zip(auto.item_id, auto.construct)]
+            # A construct whose full training set was skipped (single class) has no prediction.
+            auto[name] = [int(mean_prob[(i, c)] >= methods.SUPERVISED_THRESHOLD) if (i, c) in mean_prob.index
+                          else np.nan for i, c in zip(auto.item_id, auto.construct)]
     method_cols = [m for m in ("dictionary", "nmf", "nmf_top2", "llm", "llm_uncertain_as_1",
                                "tfidf", "tfidf_own", "bert", "bert_own") if m in auto.columns]
     coders = {c: read_sheet(find_sheet(c)) for c in ("A", "B")}
