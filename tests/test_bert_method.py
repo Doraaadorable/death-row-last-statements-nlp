@@ -30,6 +30,7 @@ def test_training_set_is_disjoint_from_study_and_development_samples():
     development = set(pd.read_csv(ROOT / "data/processed/annotation_development_v2.csv").execution_number)
     corpus = pd.read_csv(ROOT / "data/processed/person_corpus_exploratory_v1.csv")
     assert len(training) == training.execution_number.nunique() == 280
+    assert training.coder.value_counts().to_dict() == {"A": 140, "B": 140}
     assert not set(training.execution_number) & (sample | development)
     assert set(training.execution_number) | sample | development == set(corpus.execution_number)
 
@@ -78,6 +79,7 @@ def _simulated_coding(coding, texts, rng):
         for col in methods.CONSTRUCTS:
             truth = texts.candidate_text.map(lambda t, c=col: methods.dictionary_label(t, c)).astype(str)
             df[col] = np.where(rng.random(len(df)) < 0.1, rng.choice(["1", "0"], len(df)), truth)
+        df["condolence"] = "0"
         df["innocence_type"] = np.where(df.innocence == "1", "F", "")
         df.to_excel(coding / f"coder_{coder}_completed.xlsx", sheet_name="coding", index=False)
     df.to_excel(coding / "adjudication_completed.xlsx", sheet_name="coding", index=False)  # B's labels agreed
@@ -102,15 +104,20 @@ def test_bert_end_to_end(tmp_path, monkeypatch):
     _simulated_coding(coding, texts, rng)
 
     training = pd.read_csv(STUDY / "training_sample.csv").merge(corpus, on="execution_number")
-    sheet = pd.DataFrame({"item_id": training.item_id, "text": training.candidate_text})
-    for col in methods.CONSTRUCTS:
-        sheet[col] = training.candidate_text.map(lambda t, c=col: methods.dictionary_label(t, c)).astype(str)
-    sheet.loc[:4, "apology"] = "u"
-    sheet.to_excel(coding / "train_A_completed.xlsx", sheet_name="coding", index=False)
+    for coder, items in training.groupby("coder"):
+        sheet = pd.DataFrame({"item_id": items.item_id, "text": items.candidate_text})
+        for col in methods.CONSTRUCTS:
+            sheet[col] = items.candidate_text.map(lambda t, c=col: methods.dictionary_label(t, c)).astype(str)
+        if coder == "A":
+            sheet.iloc[:5, sheet.columns.get_loc("apology")] = "u"
+        sheet.to_excel(coding / f"train_{coder}_completed.xlsx", sheet_name="coding", index=False)
 
     model_dir = tmp_path / "tiny-bert"
     _tiny_bert(model_dir, corpus.candidate_text)
     bert.run("own", model_name=str(model_dir), seeds=(1, 2))
+    run_info = pd.read_json(outputs / "bert_run_own.json", typ="series")
+    assert run_info["training"]["apology"]["by_coder"]["A"]["statements"] == 135
+    assert run_info["training"]["apology"]["by_coder"]["B"]["statements"] == 140
     preds = pd.read_csv(outputs / "bert_predictions_own.csv")
     assert set(preds.training_size[preds.construct == "apology"]) == {69, 138, 275}  # 5 items coded u
     assert len(preds) == 2 * 3 * 2 * 150
@@ -127,13 +134,29 @@ def test_bert_end_to_end(tmp_path, monkeypatch):
 
     analyze.evaluate()
     metrics = pd.read_csv(outputs / "method_metrics.csv")
-    assert {"bert", "bert_et"} <= set(metrics.method)
+    assert {"bert", "bert_own"} <= set(metrics.method)
     seeds = pd.read_csv(outputs / "bert_seed_metrics.csv")
-    assert set(seeds[seeds.method == "bert"].training_size) == {69, 138, 275, 70, 140, 280}
+    assert set(seeds[seeds.method == "bert_own"].training_size) == {69, 138, 275, 70, 140, 280}
+    assert set(seeds[seeds.method == "bert"].training_size) == {82, 165, 330}  # 480 minus the 150 sample
+    pairs = pd.read_csv(outputs / "method_agreement.csv")
+    assert "dictionary vs bert" in set(pairs.methods)
     coder = pd.read_csv(outputs / "coder_specific_f1.csv")
-    assert set(coder.coder) == {"A", "B"} and "bert" in set(coder.method)
+    assert set(coder.coder) == {"A", "B"} and {"bert", "bert_own"} <= set(coder.method)
     agreement = pd.read_csv(outputs / "eaton_theuer_agreement.csv")
     assert (agreement.n_overlap == 150).all()
+
+
+@needs_data
+def test_training_sheet_must_hold_the_coders_items(tmp_path, monkeypatch):
+    monkeypatch.setattr(bert, "CODING", tmp_path)
+    training = pd.read_csv(STUDY / "training_sample.csv")
+    for coder in ("A", "B"):  # sheets swapped between coders
+        other = "B" if coder == "A" else "A"
+        pd.DataFrame({"item_id": training.item_id[training.coder == other], "apology": "0",
+                      "innocence": "0"}).to_excel(tmp_path / f"train_{coder}_completed.xlsx",
+                                                  sheet_name="coding", index=False)
+    with pytest.raises(SystemExit, match="does not hold"):
+        bert.training_labels("own")
 
 
 def test_training_labels_reject_invalid_values(tmp_path, monkeypatch):

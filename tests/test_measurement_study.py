@@ -97,6 +97,9 @@ def test_end_to_end_with_simulated_coders(tmp_path, monkeypatch):
             truth = texts.candidate_text.map(lambda t, c=col: methods.dictionary_label(t, c)).astype(str)
             flip = rng.random(len(df)) < 0.1
             df[col] = np.where(flip, rng.choice(["1", "0", "u"], len(df)), truth)
+        condolence = texts.candidate_text.str.lower().str.contains("sorry") & texts.candidate_text.str.lower().str.contains("loss")
+        df["condolence"] = np.where(rng.random(len(df)) < 0.1, rng.choice(["1", "0", "u"], len(df)),
+                                    condolence.map({True: "1", False: "0"}))
         df["innocence_type"] = np.where(df.innocence == "1", rng.choice(["F", "L"], len(df), p=[0.8, 0.2]), "")
         df["note"] = ""
         df.to_excel(coding / f"coder_{coder}_completed.xlsx", sheet_name="coding", index=False)
@@ -110,6 +113,7 @@ def test_end_to_end_with_simulated_coders(tmp_path, monkeypatch):
     adj = pd.read_excel(coding / "adjudication.xlsx", sheet_name="coding", dtype=str)
     adj["apology"] = adj["A_apology"].replace({"u": "0"})
     adj["innocence"] = adj["A_innocence"].replace({"u": "0"})
+    adj["condolence"] = adj["A_condolence"].replace({"u": "0"})
     adj["innocence_type"] = np.where(adj.innocence == "1", adj["A_type"].fillna("F").replace("", "F"), "")
     adj.to_excel(coding / "adjudication_completed.xlsx", sheet_name="coding", index=False)
 
@@ -124,7 +128,9 @@ def test_end_to_end_with_simulated_coders(tmp_path, monkeypatch):
     analyze.evaluate()
     metrics = pd.read_csv(outputs / "method_metrics.csv")
     assert set(metrics.method) == {"dictionary", "nmf", "nmf_top2", "llm", "llm_uncertain_as_1"}
-    assert set(metrics.construct) == {"apology", "innocence", "innocence_factual"}
+    assert set(metrics.construct) == {"apology", "apology_broad", "innocence", "innocence_factual"}
+    assert {"condolence", "apology_broad"} <= set(agreement.construct)
+    assert "condolence" in set(pd.read_csv(outputs / "prevalence.csv").construct)
     llm = metrics[(metrics.method == "llm") & (metrics.construct == "apology")].iloc[0]
     assert llm.n_no_answer >= 1 and llm.n_evaluated <= 147  # refused/failed/invalid excluded, not scored 0
     dictionary = metrics[(metrics.method == "dictionary") & (metrics.construct == "apology")].iloc[0]
@@ -152,6 +158,12 @@ def test_bootstrap_degenerate_data_is_not_estimable():
     assert all(np.isnan(analyze.bootstrap(lambda i: 1.0, 0)))
     y = np.zeros(20, int)  # no positives: recall undefined in every resample
     assert all(np.isnan(analyze.bootstrap(lambda i: analyze.classification_metrics(y[i], y[i])["recall"], 20)))
+
+
+def test_apology_broad_combines_apology_and_condolence():
+    apology = ["1", "0", "0", "u", "0", "u"]
+    condolence = ["0", "1", "0", "0", "u", "1"]
+    assert list(analyze.apology_broad(apology, condolence)) == ["1", "1", "0", "u", "u", "1"]
 
 
 def test_nmf_top2_rule():
