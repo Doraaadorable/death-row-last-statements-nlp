@@ -55,7 +55,7 @@ No method is tuned on the study sample. The dictionary and topic rules were writ
 
 ## Supervised method (version 1.3, `bert_classify.py`)
 
-**Training set A: this study's codebook.** All 280 statements outside the study sample and the development sample (`training_sample.csv`, `make_training_sample.py`, seed 20261111). Coder A codes them alone with the frozen codebook after adjudication of the study sample, in `coding/train_A.xlsx`. Together with the study sample and the development sample, this covers the whole corpus of 480 statements.
+**Training set A: this study's codebook.** All 280 statements outside the study sample and the development sample (`training_sample.csv`, `make_training_sample.py`, seed 20261111), split at random into 140 per coder. After adjudication of the study sample, each coder codes their half alone with the frozen codebook (`coding/train_A.xlsx`, `coding/train_B.xlsx`). Splitting the work means the training labels carry both coders' readings rather than one, at half the coding time each; the agreement measured on the study sample describes how consistent the two halves are. Together with the study sample and the development sample, this covers the whole corpus of 480 statements.
 
 **Training set B: Eaton & Theuer's codes, if they are received.** Their two raters coded 305 statements from executions in 1982–2007; 98 of the 150 study-sample statements fall in that period. Their apology variable maps to `apology` and their claims-of-innocence variable to `innocence`; present is `1`, absent `0`, unclear `u` (their unclear also holds coder disagreements, which are therefore left out of training). Statements are matched to execution numbers by name and execution date. Study-sample statements are removed from training; their codes are used only for the human comparison below. Their apology rule counts any "sorry", and their innocence variable probably excludes legal justification (codebook differences 1 and 2). Model B is therefore expected to over-detect apology relative to this codebook, and its innocence predictions are compared with factual innocence as well as with all innocence claims.
 
@@ -73,7 +73,7 @@ The model revision, library versions, GPU and training counts are written to `ou
 
 **Supervised method.** `bert` (training set A) and `bert_et` (training set B) enter every table above as further methods, including the paired F1 differences. Per seed and training size, F1 is reported without intervals (`bert_seed_metrics.csv`): the spread across seeds shows how stable fine-tuning is at this data size, and the three training sizes form the learning curve.
 
-**Coder imprint.** Training set A is coded by coder A alone. Before adjudication, every method is scored against each coder's own labels (`coder_specific_f1.csv`). A gap between F1 against coder A and against coder B that is larger for `bert` than for the unsupervised methods would show the model learning coder A's reading rather than the codebook.
+**Coder imprint.** Before adjudication, every method is scored against each coder's own labels (`coder_specific_f1.csv`). A gap between F1 against coder A and against coder B that is larger for `bert` than for the unsupervised methods would show the model following one coder's reading rather than the codebook. Training labels by coder are counted in `bert_run_own.json`.
 
 **Two teams of human coders.** For study-sample statements that Eaton & Theuer coded, their codes are compared with the adjudicated labels: agreement, kappa and the counts of statements only one side marked `1` (`eaton_theuer_agreement.csv`).
 
@@ -114,11 +114,11 @@ Wording only: this protocol is rewritten more concisely, the purpose of the stud
 
 Adds the supervised method, at the suggestion of the supervising professor, before either coder finished the study sample:
 
-1. **Training set A**: the remaining 280 statements, coded by coder A after adjudication (`make_training_sample.py`, `training_sample.csv`, `coding/train_A.xlsx`).
+1. **Training set A**: the remaining 280 statements, 140 coded by each coder after adjudication (`make_training_sample.py`, `training_sample.csv`, `coding/train_A.xlsx`, `coding/train_B.xlsx`).
 2. **Training set B**: Eaton & Theuer's codes, requested from the authors on 9 November 2026, with the mapping rules above. If they do not arrive, `bert_et` and the comparison of the two teams of coders are not reported.
 3. **`bert_classify.py`**, with the model and training settings above, and `BERT_THRESHOLD` in `methods.py`.
 4. **Analysis**: the supervised method in all tables, per-seed and learning-curve results, coder-specific F1 and the comparison with Eaton & Theuer's codes (`analyze.py`).
-5. **Lock**: `bert_classify.py`, `make_training_sample.py` and `training_sample.csv` are added to the lock; `coding/train_A_completed.xlsx` and `outputs/bert_predictions_own.csv` are added to the results that block later amendments.
+5. **Lock**: `bert_classify.py`, `make_training_sample.py` and `training_sample.csv` are added to the lock; `coding/train_A_completed.xlsx`, `coding/train_B_completed.xlsx` and `outputs/bert_predictions_own.csv` are added to the results that block later amendments.
 
 The study sample, codebook, coding sheets, unsupervised methods and LLM prompt are unchanged.
 

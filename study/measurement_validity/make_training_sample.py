@@ -4,12 +4,14 @@ Run once from the repository root:
     python study/measurement_validity/make_training_sample.py
 
 The training set is every statement outside the study sample and the development sample
-(280 statements). Coder A codes them with the frozen codebook after adjudication of the
-study sample. No training statement is in the study sample.
+(280 statements), split at random into 140 for each coder. Each coder codes their half alone
+with the frozen codebook after adjudication of the study sample. No training statement is in
+the study sample.
 
 Outputs (in study/measurement_validity/):
-  training_sample.csv         item_id -> execution_number
-  coding/train_A.xlsx         280 items in random order
+  training_sample.csv         item_id -> execution_number, coder
+  coding/train_A.xlsx         coder A's 140 items in random order
+  coding/train_B.xlsx         coder B's 140 items in random order
 """
 from pathlib import Path
 
@@ -31,12 +33,16 @@ def main():
 
     rng = np.random.default_rng(SEED)
     order = pool.iloc[rng.permutation(len(pool))]
-    ids = [f"T{i:03d}" for i in range(1, N_ITEMS + 1)]
-    pd.DataFrame({"item_id": ids, "execution_number": order.execution_number.to_numpy()}).to_csv(
-        HERE / "training_sample.csv", index=False)
-    write_sheet(HERE / "coding/train_A.xlsx", list(zip(ids, order.candidate_text)),
-                f"Coder A: training set for the supervised method, {N_ITEMS} statements")
-    print(f"Training set: {N_ITEMS} statements; median {int(pool.word_count.median())} words.")
+    half = N_ITEMS // 2
+    training = pd.DataFrame({"item_id": [f"T{i:03d}" for i in range(1, N_ITEMS + 1)],
+                             "execution_number": order.execution_number.to_numpy(),
+                             "coder": ["A"] * half + ["B"] * half,
+                             "text": order.candidate_text.to_numpy()})
+    training[["item_id", "execution_number", "coder"]].to_csv(HERE / "training_sample.csv", index=False)
+    for coder, items in training.groupby("coder"):
+        write_sheet(HERE / f"coding/train_{coder}.xlsx", list(zip(items.item_id, items.text)),
+                    f"Coder {coder}: training set for the supervised method, {len(items)} statements")
+    print(f"Training set: {N_ITEMS} statements, {half} per coder; median {int(pool.word_count.median())} words.")
 
 
 if __name__ == "__main__":

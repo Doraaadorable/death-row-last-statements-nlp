@@ -14,7 +14,7 @@ Can a keyword dictionary, a topic model, an LLM and a BERT classifier trained on
 | 4 | Each coder alone | Code all 150 items: `apology`, `innocence` and, when innocence is 1, `innocence_type` (F or L). Do not discuss them. Save as `coder_A_completed.xlsx` / `coder_B_completed.xlsx` in `coding/`. | `coding/coder_A.xlsx`, `coding/coder_B.xlsx` |
 | 5 | Dora | Compute agreement and create the adjudication sheet. | `python study/measurement_validity/analyze.py agreement` |
 | 6 | Both coders | Discuss each listed item and enter the agreed value. Save as `coding/adjudication_completed.xlsx`. | `coding/adjudication.xlsx` |
-| 7 | Coder A | Code the 280 training statements alone (about 4–5 hours). Save as `coding/train_A_completed.xlsx`. | `coding/train_A.xlsx` |
+| 7 | Each coder alone | Code your 140 training statements (about 2–2.5 hours). Save as `coding/train_A_completed.xlsx` / `coding/train_B_completed.xlsx`. | `coding/train_A.xlsx`, `coding/train_B.xlsx` |
 | 8 | Dora | Run the LLM classifier (needs an Anthropic API key; about 450 requests). | `python study/measurement_validity/llm_classify.py` |
 | 9 | Dora | Train BERT on a GPU (Colab): on training set A, and on Eaton & Theuer's codes if received. | `python study/measurement_validity/bert_classify.py --labels own` |
 | 10 | Dora | Evaluate all methods. | `python study/measurement_validity/analyze.py evaluate` |
@@ -35,7 +35,7 @@ Each coder needs about 2–3 hours for 150 statements (median 71 words each).
 | `coding/` | Coding sheets, practice items, adjudication |
 | `freeze.py` | Creates, amends and checks `protocol_lock.json` |
 | `llm_classify.py` | Runs the LLM classifier |
-| `make_training_sample.py`, `training_sample.csv` | The 280 training statements and their coding sheet |
+| `make_training_sample.py`, `training_sample.csv` | The 280 training statements, 140 per coder, and their coding sheets |
 | `bert_classify.py` | Fine-tunes and applies the BERT classifier |
 | `analyze.py` | Agreement, adjudication sheet, method evaluation |
 | `outputs/` | Results (created by the scripts) |

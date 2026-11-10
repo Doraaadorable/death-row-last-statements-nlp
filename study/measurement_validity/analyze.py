@@ -311,8 +311,8 @@ def evaluate():
                 prob = run.set_index("item_id").prob.reindex(kept)
                 seed_rows.append({"construct": col, "method": name, "training_size": size, "seed": seed,
                                   **classification_metrics(y, (prob >= methods.BERT_THRESHOLD).astype(int))})
-        # Each method against each coder's own labels, before adjudication. A method trained on
-        # coder A's labels may agree more with coder A than with coder B.
+        # Each method against each coder's own labels, before adjudication. A trained method
+        # may follow one coder's reading more closely than the other's.
         if col in methods.CONSTRUCTS:
             all_preds = auto[auto.construct == col].set_index("item_id")
             for m in method_cols:
