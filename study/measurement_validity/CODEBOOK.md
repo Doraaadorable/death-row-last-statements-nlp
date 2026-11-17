@@ -17,7 +17,7 @@ These definitions build on Eaton & Theuer (2009, pp. 334–335), who code apolog
 | Value | Use when |
 |---|---|
 | `1` | The text clearly meets the definition. |
-| `0` | It does not. Silence is `0`: a statement that never mentions the crime is `0` for all three. |
+| `0` | It does not. **Silence is `0`: a statement that never mentions the crime is `0` for all three, not `u`.** |
 | `u` | There is relevant text, but you cannot decide between `1` and `0` from the words alone. Use sparingly, and say why in the note. |
 
 ## A. Apology
@@ -45,12 +45,14 @@ If a statement contains both a condolence and an apology ("I'm sorry for your lo
 | Example | Code |
 |---|---|
 | "I am so sorry for your loss." / "I'm sorry for the pain you have been through." | `1` |
+| "I apologize for your loss." (the word is "apologize", but the object is the other person's loss) | `1`; apology `0` |
 | "I'm sorry it came to this." / "I'm sorry we all had to be here." | `1` |
 | "I'm sorry for what I did." (tied to the speaker's act: apology, not condolence) | `0` |
+| "To the family, I'm sorry." (direct apology, no object stated: apology, not condolence) | `0`; apology `1` |
 | "My heart goes out to you." / "I know you are hurting." (sympathy without "sorry" or "apologize") | `0` |
 | "Sorry, I forgot what I wanted to say." (politeness) | `0` |
 
-Condolence is coded independently of apology: a statement can be `1` for both. Together the two approximate Eaton & Theuer's broader apology variable, which counts any "sorry" (see the differences below).
+**How apology and condolence fit together.** Classify each "sorry" or "apologize" in a statement by what it is about: the speaker's own act or the harm it caused, or a direct apology with no object stated, is apology; another person's loss or pain, or the situation, is condolence. One "sorry" belongs to one category. The statement is then `1` for every category that any of its "sorry"s belongs to, so a statement can be `1` for both ("I'm sorry for your loss. I'm sorry for what I did."). Together the two approximate Eaton & Theuer's broader apology variable, which counts any "sorry" (see the differences below).
 
 ## B. Innocence claim
 
